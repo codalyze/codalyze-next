@@ -1,0 +1,25 @@
+{
+  "name": "codalyze-next",
+  "version": "1.0.0",
+  "description": "Codalyze Marketing Website on next.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codalyze/codalyze-next.git"
+  },
+  "keywords": [
+    "next.js",
+    "react.js",
+    "marketing-website",
+    "ssr"
+  ],
+  "author": "Naisheel Verdhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codalyze/codalyze-next/issues"
+  },
+  "homepage": "https://github.com/codalyze/codalyze-next#readme"
+}
