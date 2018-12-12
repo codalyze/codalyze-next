@@ -1,9 +1,10 @@
 import React from 'react';
+import {Title} from '../styles/global';
 
 const HomePage = () => (
-  <div>
+  <Title>
     HomePage
-  </div>
+  </Title>
 );
 
 export default HomePage;
