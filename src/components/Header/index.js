@@ -1,15 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
-import * as Styled from './styles';
+import React from "react";
+import Link from "next/link";
+import * as Styled from "./styles";
 
-const headerLinks = [{
-}];
+const headerLinks = [
+  {
+    name: "Work",
+    href: "work"
+  },
+  {
+    name: "Services",
+    href: "services"
+  },
+  {
+    name: "About",
+    href: "about-us"
+  },
+  {
+    name: "Career",
+    href: "career"
+  },
+  {
+    name: "Start a project",
+    href: "start-a-project"
+  }
+];
 
-const HeaderLink = ({href, name}) => (
+const HeaderLink = ({ href, name }) => (
   <Link href={href} passHref prefetch>
-    <Styled.HeaderA>
-      {name}
-    </Styled.HeaderA>
+    <Styled.HeaderA>{name}</Styled.HeaderA>
   </Link>
 );
 
@@ -25,11 +43,9 @@ export default () => (
       </div>
 
       <Styled.Flex>
-        <HeaderLink href="/work" name="Work" />
-        <HeaderLink href="/services" name="Services" />
-        <HeaderLink href="/about-us" name="About" />
-        <HeaderLink href="/career" name="Career" />
-        <HeaderLink href="/start-a-project" name="Start a project" />
+        {headerLinks.map((x, index) => {
+          return <HeaderLink href={`/${x.href}`} name={x.name} key={index} />;
+        })}
       </Styled.Flex>
     </Styled.FlexContainer>
   </Styled.Nav>
