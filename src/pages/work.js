@@ -1,9 +1,10 @@
 import React from 'react';
+import { Title2 } from '../utils/globalStyles';
 
 const WorkPage = () => (
-  <div>
+  <Title2>
     Work
-  </div>
+  </Title2>
 );
 
 export default WorkPage;
