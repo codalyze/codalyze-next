@@ -24,3 +24,7 @@ export const subTitle = styled.h4`
 export const twoBlocks = styled.div`
   width: 50%;
 `;
+
+export const HomeBannerImg = styled.img`
+  width: 100%;
+`;

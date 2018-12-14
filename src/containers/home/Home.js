@@ -3,13 +3,15 @@ import Header from "../../components/Header";
 import HomeBanner from "../../components/HomeBanner";
 import { Title } from "../../utils/globalStyles";
 import Strategy from "../home/strategy";
+import SpecializeIn from "../home/specialize";
 
 const HomePage = () => (
   <div>
     <Header />
     <HomeBanner />
     <Strategy />
-    <Title>HomePage 1</Title>
+    <SpecializeIn />
+    {/* <Title>HomePage 1</Title> */}
   </div>
 );
 
