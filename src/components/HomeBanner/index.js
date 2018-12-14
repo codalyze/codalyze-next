@@ -12,7 +12,7 @@ export default () => (
       </Styled.subTitle>
     </Styled.twoBlocks>
     <Styled.twoBlocks>
-      <img src="/static/images/rubik-cube-banner.png" />
+      <Styled.HomeBannerImg src="/static/images/rubik-cube-banner.png"></Styled.HomeBannerImg>
     </Styled.twoBlocks>
   </Styled.FlexContainer>
 );

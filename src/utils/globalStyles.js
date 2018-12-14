@@ -45,3 +45,7 @@ export const threeBlocks = css`
 export const fourBlocks = css`
   width: 25%;
 `;
+
+export const img = css`
+  width: 100%;
+`;
