@@ -1,5 +1,12 @@
 import React from "react";
 import * as Styled from "./styles";
+import Link from "next/link";
+
+const OurService = ({ href }) => (
+  <Link href={href} passHref prefetch>
+    <Styled.specializeBtn>our service</Styled.specializeBtn>
+  </Link>
+);
 
 const SpecializeIn = () => (
   <Styled.specializeRow>
@@ -10,7 +17,7 @@ const SpecializeIn = () => (
     </Styled.specializeContent>
     <Styled.specializeAreas>
       <Styled.specializeAreasBlocks>
-        <img src="../static/images/optimize-aproach.png" />
+        <Styled.specializeAreasImage src="../static/images/optimize-aproach.png" />
         <Styled.specializeAreasTitle>
           Optimize Approach
         </Styled.specializeAreasTitle>
@@ -21,7 +28,7 @@ const SpecializeIn = () => (
       </Styled.specializeAreasBlocks>
 
       <Styled.specializeAreasBlocks>
-        <img src="../static/images/high-low-risk.png" />
+        <Styled.specializeAreasImage src="../static/images/high-low-risk.png" />
         <Styled.specializeAreasTitle>
           High Tech, Low Risk
         </Styled.specializeAreasTitle>
@@ -32,7 +39,7 @@ const SpecializeIn = () => (
       </Styled.specializeAreasBlocks>
 
       <Styled.specializeAreasBlocks>
-        <img src="../static/images/focused-product-teams.png" />
+        <Styled.specializeAreasImage src="../static/images/focused-product-teams.png" />
         <Styled.specializeAreasTitle>
           Focused Product Teams
         </Styled.specializeAreasTitle>
@@ -41,7 +48,12 @@ const SpecializeIn = () => (
           of the project
         </Styled.specializeAreasContent>
       </Styled.specializeAreasBlocks>
+      
     </Styled.specializeAreas>
+    <Styled.specializehelp>
+          See how can we be of your help.
+        </Styled.specializehelp>
+        <OurService href={"/services"} />
   </Styled.specializeRow>
 );
 
