@@ -49,3 +49,26 @@ export const fourBlocks = css`
 export const img = css`
   width: 100%;
 `;
+
+export const CenterImg = css`
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+`;
+
+export const paragraphCenter = css`
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+`;
+
+export const mainButton = css`
+  background: #5cca8f;
+  border: none;
+  color: #fff;
+  padding: 14px 68px;
+  font-size: 22px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+`;
