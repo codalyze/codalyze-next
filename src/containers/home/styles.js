@@ -150,3 +150,25 @@ export const specializeBtn = styled.button`
   margin: 0 auto;
   display: block;
 `;
+
+export const clientsLogoBlock = styled.div`
+ 
+`;
+
+export const clientsRow = styled.div`
+  ${global.fullRow};
+  ${global.container}
+`;
+
+export const companyLogoRow = styled(strategyBlockOne)`
+  margin-bottom: 10px;
+`;
+
+export const startaProject = styled.button`
+${global.mainButton}
+`;
+
+export const clientTitle = styled.h2`
+
+`;
+
