@@ -4,6 +4,7 @@ import HomeBanner from "../../components/HomeBanner";
 import { Title } from "../../utils/globalStyles";
 import Strategy from "../home/strategy";
 import SpecializeIn from "../home/specialize";
+import Clients from "../home/clients";
 
 const HomePage = () => (
   <div>
@@ -11,6 +12,7 @@ const HomePage = () => (
     <HomeBanner />
     <Strategy />
     <SpecializeIn />
+    <Clients />
     {/* <Title>HomePage 1</Title> */}
   </div>
 );
