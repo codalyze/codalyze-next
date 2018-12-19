@@ -26,7 +26,6 @@ export const strategyBlockOne = styled.div`
 
 export const strategyBlockTwo = styled.div`
   ${global.twoBlocks};
-  color: #fff;
 `;
 
 export const strategyInfoNum = styled.h3`
@@ -151,13 +150,18 @@ export const specializeBtn = styled.button`
   display: block;
 `;
 
-export const clientsLogoBlock = styled.div`
- 
-`;
-
 export const clientsRow = styled.div`
   ${global.fullRow};
   ${global.container}
+`;
+
+export const clientsLogoBlock = styled.div`
+  width: 60%;
+`;
+
+export const clientsAboutBlock = styled.div`
+width: 39%;
+padding-top: 11%;
 `;
 
 export const companyLogoRow = styled(strategyBlockOne)`
@@ -165,10 +169,28 @@ export const companyLogoRow = styled(strategyBlockOne)`
 `;
 
 export const startaProject = styled.button`
-${global.mainButton}
+  ${global.mainButton}
 `;
 
 export const clientTitle = styled.h2`
-
+  font-size: 70px;
+  color: #d9d9d9;
+  border-bottom: 5px solid #dfefe9;
+  padding-bottom: 15px;
+  width: 73%;
 `;
+
+export const clientSubTitle  = styled(strategySubTitle)`
+  margin: 0 0 100px;
+`;
+
+export const clientLogoList = styled(strategyBlockOne)`
+  width: 90%;
+  justify-items: inherit;
+`;
+
+export const clientLogoRow = styled(strategyStatsBlock)`
+  margin-bottom: 35%;
+`;
+
 
