@@ -160,8 +160,8 @@ export const clientsLogoBlock = styled.div`
 `;
 
 export const clientsAboutBlock = styled.div`
-width: 39%;
-padding-top: 11%;
+  width: 39%;
+  padding-top: 11%;
 `;
 
 export const companyLogoRow = styled(strategyBlockOne)`
@@ -180,7 +180,7 @@ export const clientTitle = styled.h2`
   width: 73%;
 `;
 
-export const clientSubTitle  = styled(strategySubTitle)`
+export const clientSubTitle = styled(strategySubTitle)`
   margin: 0 0 100px;
 `;
 
@@ -193,4 +193,19 @@ export const clientLogoRow = styled(strategyStatsBlock)`
   margin-bottom: 35%;
 `;
 
+export const techStack = styled.div`
+  ${global.fullRow};
+  ${global.container}
+`;
 
+export const techStackTitle = styled(homepageBlocksTitle)`
+  text-align: center;
+`;
+
+export const techStackSubTitle = styled(strategySubTitle)`
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+`;
