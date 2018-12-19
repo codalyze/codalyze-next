@@ -7,7 +7,6 @@ const clientsLogo = [
   "../static/images/fitcircle.png",
   "../static/images/tick.png",
   "../static/images/stashhd.png",
-
   "../static/images/leaf.png",
   "../static/images/loudcloud.png"
 ];
@@ -23,29 +22,29 @@ export default () => (
     <Styled.FlexContainer>
       <Styled.clientsLogoBlock>
         <Styled.clientTitle>Clients</Styled.clientTitle>
-        <Styled.strategyBlockOne>
+        <Styled.clientLogoList>
           {clientsLogo.map((x, id) => {
             return (
-              <Styled.strategyStatsBlock>
+              <Styled.clientLogoRow>
                 <Styled.strategyStats>
                   <img src={x} />
                 </Styled.strategyStats>
-              </Styled.strategyStatsBlock>
+              </Styled.clientLogoRow>
             );
           })}
-        </Styled.strategyBlockOne>
+        </Styled.clientLogoList>
       </Styled.clientsLogoBlock>
-      <Styled.strategyBlockTwo>
+      <Styled.clientsAboutBlock>
         <Styled.strategyTitle>
           We're just as excited about your idea
         </Styled.strategyTitle>
-        <Styled.strategySubTitle>
+        <Styled.clientSubTitle>
           You'll be working with a small, dedicated team built to fit the needs
           of your project. Enjoy deep focus and productive relationships.
           Partner with us and we'll make your code and team better.
-        </Styled.strategySubTitle>
+        </Styled.clientSubTitle>
         <StartProject href={"/start-a-project"} />
-      </Styled.strategyBlockTwo>
+      </Styled.clientsAboutBlock>
     </Styled.FlexContainer>
   </Styled.clientsRow>
 );
