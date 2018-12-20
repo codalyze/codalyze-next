@@ -193,9 +193,15 @@ export const clientLogoRow = styled(strategyStatsBlock)`
   margin-bottom: 35%;
 `;
 
+export const techStackRow = styled.div`
+  ${global.fullRow};
+  background: #f9f7f7;
+`;
+
 export const techStack = styled.div`
   ${global.fullRow};
   ${global.container}
+  padding: 75px 0;
 `;
 
 export const techStackTitle = styled(homepageBlocksTitle)`
@@ -208,4 +214,32 @@ export const techStackSubTitle = styled(strategySubTitle)`
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
+`;
+
+export const techLogoRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+ 
+
+`;
+
+export const techLogoBlock = styled.div`
+  ${global.threeBlocks};
+  padding-bottom: 100px;
+  &:nth-child(2) {
+    margin: 0 auto;
+    text-align: center;
+  };
+  &:nth-child(5) {
+    margin: 0 auto;
+    text-align: center;
+  };
+  &:nth-child(3) {
+    margin: 0 auto;
+    text-align: right;
+  };
+  &:nth-child(6) {
+    margin: 0 auto;
+    text-align: right;
+  };
 `;
