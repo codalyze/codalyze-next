@@ -51,6 +51,4 @@ export default () => (
   </Styled.Nav>
 );
 
-// export default () => (
-//   <div>xx</div>
-// )
+
