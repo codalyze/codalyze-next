@@ -1,3 +1,4 @@
-module.exports = (phase, {defaultConfig}) => {
-  return defaultConfig;
-};
+const withSass = require('@zeit/next-sass');
+
+
+module.exports = withSass({});

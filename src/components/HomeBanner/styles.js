@@ -7,8 +7,12 @@ export const Flex = styled.div`
 
 export const FlexContainer = styled.div`
   ${global.flexRow}
-  ${global.container}
-  padding: 50px 0;
+  // ${global.container}
+  padding: 125px 6vw;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 `;
 
 export const mainTitle = styled.h2`
@@ -22,5 +26,12 @@ export const subTitle = styled.h4`
 `;
 
 export const twoBlocks = styled.div`
-  width: 50%;
+  width: 100%;
+  &:nth-child(2) {
+    text-align: right;
+  }
+`;
+
+export const bannerImage = styled.img`
+  width: 80%;
 `;

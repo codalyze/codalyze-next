@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import { css } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const metrics = {
-  containerWidth: 1200
+  containerWidth: 1800
 };
 
 export const Title = styled.h1`
@@ -13,6 +12,7 @@ export const Title = styled.h1`
 export const Title2 = styled.h1`
   color: black;
   font-size: 50px;
+  margin-top: 0;
 `;
 
 export const A = styled.a``;
@@ -45,3 +45,20 @@ export const threeBlocks = css`
 export const fourBlocks = css`
   width: 25%;
 `;
+
+const sizes = {
+  desktop: 992,
+  tablet: 768,
+  phone: 576,
+}
+
+// Iterate through the sizes and create a media template
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+
+  return acc;
+}, {});

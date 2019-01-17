@@ -24,33 +24,42 @@ const headerLinks = [
     href: "start-a-project"
   }
 ];
+ 
+class HeaderLink extends React.Component {
+  render () {
+    const { href, name, linkRef, active } = this.props;
+    return (
+      <Link href={href} passHref prefetch>
+        <Styled.HeaderA active={active} ref={linkRef}>{name}</Styled.HeaderA>
+      </Link>
+    );
+  }
+}
 
-const HeaderLink = ({ href, name }) => (
-  <Link href={href} passHref prefetch>
-    <Styled.HeaderA>{name}</Styled.HeaderA>
-  </Link>
-);
+export default class Header extends React.PureComponent {  
+  render () {
+    const {top, width, left, right, href} = this.props;
 
-export default () => (
-  <Styled.Nav>
-    <Styled.FlexContainer>
-      <div>
-        <Link href="/" passHref prefetch>
-          <Styled.LogoA>
-            <img src="/static/images/logo.png" />
-          </Styled.LogoA>
-        </Link>
-      </div>
+    return (
+      <Styled.Nav>
+        <Styled.FlexContainer>
+          <div>
+            <Link href="/" passHref prefetch>
+              <Styled.LogoA>
+                <img src="/static/images/logo.png" />
+              </Styled.LogoA>
+            </Link>
+          </div>
+    
+          <Styled.Flex>
+            {headerLinks.map((x, index) => {
+              return <HeaderLink href={`/${x.href}`} active={x.href === href} name={x.name} key={index} linkRef={ref => this.props.addRef(x.href, ref)} />;
+            })}
+          </Styled.Flex>
 
-      <Styled.Flex>
-        {headerLinks.map((x, index) => {
-          return <HeaderLink href={`/${x.href}`} name={x.name} key={index} />;
-        })}
-      </Styled.Flex>
-    </Styled.FlexContainer>
-  </Styled.Nav>
-);
-
-// export default () => (
-//   <div>xx</div>
-// )
+          <Styled.Underline {...{top, width, left, right}} />
+        </Styled.FlexContainer>
+      </Styled.Nav>
+    );
+  }
+}
