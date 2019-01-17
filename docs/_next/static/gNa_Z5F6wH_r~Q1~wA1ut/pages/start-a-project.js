@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{246:function(n,t,e){__NEXT_REGISTER_PAGE("/start-a-project",function(){return n.exports=e(247),{page:n.exports.default}})},247:function(n,t,e){"use strict";e.r(t);var r=e(0),o=e.n(r),u=e(10);t.default=function(){return o.a.createElement(u.c,null,"Work")}}},[[246,1,0]]]);
