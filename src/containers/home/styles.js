@@ -14,7 +14,6 @@ export const FlexContainer = styled.div`
 export const strategyBlock = styled.div`
   ${global.twoBlocks};
   ${global.flexRow}
-  
 `;
 
 export const pageWrapper = styled.div`
@@ -42,12 +41,12 @@ export const strategyBlockOne = styled.div`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-  grid-column-gap: 15%;
-  grid-row-gap: 10%;
+  padding-left: 15px;
 `;
 
 export const strategyBlockTwo = styled.div`
-  ${global.twoBlocks};
+  width: 40%;
+  padding-right: 10%;
 `;
 
 export const strategyInfoNum = styled.h3`
@@ -62,15 +61,15 @@ export const strategyInfoTitle = styled.h3`
 
 export const strategyTitle = styled.h2`
   color: #000;
-  font-size: 50px;
-  margin: 10px 0 15px;
+  font-size: 60px;
+  margin: -50px 0 39px;
 `;
 
 export const strategySubTitle = styled.h4`
   color: #1e1e1e;
-  font-size: 27px;
-  margin: 0 0 35px;
-  line-height: 30px;
+  font-size: 34px;
+  margin: 0 0 93px;
+  line-height: 35px;
   letter-spacing: 1px;
   font-weight: inherit;
 `;
@@ -106,11 +105,67 @@ export const strategyStatsNum = styled.h5`
 
 export const strategyStatsTitle = styled.h6`
   color: #1e1e1e;
-  font-size: 25px;
+  font-size: 34px;
   margin: 0;
   font-weight: inherit;
 `;
 
 export const ourWorkBtn = styled.button`
   ${global.mainButton}
+`;
+
+export const specializeRow = styled.div`
+  padding: 125px 6vw;
+`;
+
+export const homepageBlocksTitle = styled.h2`
+  font-size: 60px;
+  color: #000;
+  margin: 0 0 15px;
+`;
+
+export const specializeContent = styled.p`
+  font-size: 30px;
+  color: #000;
+  margin: 0 0 15px;
+`;
+
+export const specializeAreas = styled.div`
+  display: flex;
+  margin: 100px 0 100px;
+  justify-content: space-between;
+`;
+
+export const specializeAreasBlocks = styled.div`
+  border: 1px solid rgba(208, 192, 192, 0.5);
+  width: 412px;
+  box-shadow: 0px 3px 2px #e1e1e2;
+`;
+
+export const specializeAreasTitle = styled.h5`
+  font-size: 31px;
+  text-align: center;
+  margin: 78px 0 28px;
+`;
+
+export const specializeAreasContent = styled.p`
+  font-size: 24px;
+  margin: 0 50px 90px;
+`;
+
+export const specializeAreasImage = styled.img`
+  ${global.CenterImg};
+  padding-top: 87px;
+`;
+
+export const specializehelp = styled.p`
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 20px;
+`;
+
+export const specializeBtn = styled.button`
+  ${global.mainButton}
+  margin: 0 auto;
+  display: block;
 `;

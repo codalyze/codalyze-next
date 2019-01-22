@@ -46,6 +46,24 @@ export const fourBlocks = css`
   width: 25%;
 `;
 
+export const mainButton = css`
+  background: #5cca8f;
+  border: none;
+  color: #fff;
+  font-size: 38px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 439px;
+  height: 74px;
+`;
+
+export const CenterImg = css`
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+`;
+
 const sizes = {
   desktop: 992,
   tablet: 768,
