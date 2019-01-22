@@ -1,14 +1,15 @@
 import React from "react";
 import HomeBanner from "../../components/HomeBanner";
 import * as Styled from './styles';
-import Bg1 from '../services/images/Bg1';
+import HomeBannerSvg from '../../static/images/home-banner-bg';
 import { Title } from "../../utils/globalStyles";
 import Strategy from "../home/strategy";
+import SpecializeIn from "../home/specialize";
 
 const HomePage = () => (
   <Styled.pageWrapper>
      <Styled.bannerSvg>
-          <Bg1 width="100%" height="100%" viewBox="0 0 2010.541 1631.315"/>
+          <HomeBannerSvg width="100%" height="100%" viewBox="0 0 2010.541 1631.315"/>
         </Styled.bannerSvg>
     <HomeBanner
       title="We are"
@@ -19,6 +20,7 @@ const HomePage = () => (
       
     />
     <Strategy />
+    <SpecializeIn />
     {/* <Title>HomePage 1</Title> */}
   </Styled.pageWrapper>
 );

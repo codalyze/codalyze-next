@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const StrategyStats = [
   {
-    number: "8+",
-    title: "Employees"
+    number: "14",
+    title: "Team Players"
   },
   {
     number: "5+",
     title: "Awards"
   },
   {
-    number: "6+",
-    title: "Tools"
+    number: "76",
+    title: "Applications"
   },
   {
     number: "20+",
@@ -59,7 +59,7 @@ const Strategy = () => (
         <Styled.strategySubTitle>
           The proof is the pudding. While there isn't a way to eat our
           interfaces (yet), you can sample a large offering of non-perishable
-          case studies on our work page.
+          case studies.
         </Styled.strategySubTitle>
         <ServiceBtn href={"/work"}/>
       </Styled.strategyBlockTwo>
