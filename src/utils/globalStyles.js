@@ -46,6 +46,10 @@ export const fourBlocks = css`
   width: 25%;
 `;
 
+export const contentContainer = css`
+  padding: 0 6vw;
+`;
+
 export const mainButton = css`
   background: #5cca8f;
   border: none;
@@ -67,8 +71,8 @@ export const CenterImg = css`
 const sizes = {
   desktop: 992,
   tablet: 768,
-  phone: 576,
-}
+  phone: 576
+};
 
 // Iterate through the sizes and create a media template
 export const media = Object.keys(sizes).reduce((acc, label) => {

@@ -9,6 +9,7 @@ export const strategyRow = styled.div`
 export const FlexContainer = styled.div`
   ${global.flexRow}
   ${global.container}
+  ${global.contentContainer}
 `;
 
 export const strategyBlock = styled.div`
@@ -169,3 +170,10 @@ export const specializeBtn = styled.button`
   margin: 0 auto;
   display: block;
 `;
+
+export const testimonialRow = styled.div`
+  ${global.fullRow}
+  
+`;
+
+

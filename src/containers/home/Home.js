@@ -5,6 +5,7 @@ import HomeBannerSvg from '../../static/images/home-banner-bg';
 import { Title } from "../../utils/globalStyles";
 import Strategy from "../home/strategy";
 import SpecializeIn from "../home/specialize";
+import Testimonial from "../home/testimonials";
 
 const HomePage = () => (
   <Styled.pageWrapper>
@@ -21,6 +22,7 @@ const HomePage = () => (
     />
     <Strategy />
     <SpecializeIn />
+    <Testimonial />
     {/* <Title>HomePage 1</Title> */}
   </Styled.pageWrapper>
 );
