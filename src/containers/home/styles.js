@@ -3,12 +3,11 @@ import * as global from "../../utils/globalStyles";
 
 export const strategyRow = styled.div`
   ${global.fullRow}
-  display: flex;
+  ${global.flexRow}
+  ${global.container}
 `;
 
 export const FlexContainer = styled.div`
-  ${global.flexRow}
-  ${global.container}
   ${global.contentContainer}
 `;
 
@@ -116,7 +115,7 @@ export const ourWorkBtn = styled.button`
 `;
 
 export const specializeRow = styled.div`
-  padding: 125px 6vw;
+  ${global.container}
 `;
 
 export const homepageBlocksTitle = styled.h2`
@@ -172,8 +171,69 @@ export const specializeBtn = styled.button`
 `;
 
 export const testimonialRow = styled.div`
-  ${global.fullRow}
-  
+  ${global.fullRow};
+  padding: 180px 0 0;
 `;
 
+export const testimonialTitle = styled(homepageBlocksTitle)`
+  text-align: center;
+  margin: 0 0 53px;
+`;
 
+export const testimonialBlock = styled.div`
+  padding-bottom: 50px;
+  position: relative;
+  background: #fff;
+`;
+
+export const testimonialImage = styled.img`
+  margin: 0 auto;
+  display: block;
+  padding: 100px 0;
+`;
+
+export const testimonialHeading = styled.h5`
+  font-size: 40px;
+  text-align: center;
+  margin: 0 0 15px;
+`;
+
+export const testimonialSubHeading = styled.h6`
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 25px;
+`;
+
+export const testimonialParagraph = styled.p`
+  font-size: 18px;
+  padding: 0 15%;
+`;
+
+export const testimonialSvg = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  bottom: -8%;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+    opacity: 0.4;
+  }
+`;
+
+export const testimonialContentSvg = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -8%;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+    opacity: 0.72;
+  }
+`;

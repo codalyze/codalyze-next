@@ -38,7 +38,7 @@ const ServiceBtn = ({ href }) => (
 
 const Strategy = () => (
   <Styled.strategyRow>
-    <Styled.FlexContainer>
+   
       <Styled.strategyBlockOne>
         {StrategyStats.map((x, id) => {
           return (
@@ -63,7 +63,7 @@ const Strategy = () => (
         </Styled.strategySubTitle>
         <ServiceBtn href={"/work"}/>
       </Styled.strategyBlockTwo>
-    </Styled.FlexContainer>
+   
   </Styled.strategyRow>
 )
 
