@@ -59,6 +59,7 @@ export const devisonDiv = styled.div`
 flex-direction: row;
     justify-content: space-between;
     display: flex;
+    align-items: center;
     //position:relative;
 `
 
@@ -164,3 +165,34 @@ position: absolute;
     top: -350px;
     bottom: 0;
 `
+
+export const listUl = styled.ul`
+list-style: none;
+    padding-left: 22px;
+`;
+
+export const li =  styled.li`
+margin: 32px 0;
+    font-size: 24px;
+    position: relative;
+`;
+
+export const circleDiv = styled(commonDiv)`
+background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    left: -27px;
+    z-index: -1;
+    top: -12px;
+`;
+
+export const HitechMain = styled(commonDiv)`
+  position:relative;
+  height:2165px;  
+`;
+
+export const HitechBanner = styled(LoveBanner)`
+  
+`;

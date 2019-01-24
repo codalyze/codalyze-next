@@ -2,6 +2,18 @@ import React from "react";
 import * as Styled from './styles';
 import TeamMemberBg from "./images/teamMemberBg";
 import LoveStatUpsBg from "./images/loveStartups";
+import HitechBg from "./images/HiTechBg";
+
+
+export const HiTech = () => {
+    return(
+        <Styled.HitechMain>
+            <Styled.HitechBanner>
+                <HitechBg width="100%" height="100%" viewBox="0 0 2165.792 2143.35"/>
+            </Styled.HitechBanner>
+        </Styled.HitechMain>
+    )
+}
 
 const TeamMembers = [{
     id:1,
@@ -82,13 +94,23 @@ return(
                    
             <Styled.devisonDiv>
                      <Styled.leftDiv>
-                     <Styled.imageRight src="/static/images/about-us/Artboard-4.png" />
+                     <Styled.imageRight src="/static/images/about-us/Artboard-6.png" />
                      </Styled.leftDiv>
                      <Styled.rightDiv>
-                     <Styled.h2>Optimize Approach</Styled.h2>
-                        <Styled.para>
-                        We aid you in achieving a tight deadline and help you get to market fast. We design and develop web and mobile apps for growth-minded companies - both startups and big enterprises.
-                        </Styled.para>                                                  
+                     <Styled.h2>We Love Start-Ups</Styled.h2>
+                        
+                        <Styled.listUl>
+                            <Styled.li>
+                                <Styled.circleDiv></Styled.circleDiv>
+                                We share your passion for changing the world</Styled.li>
+                            <Styled.li>
+                            <Styled.circleDiv></Styled.circleDiv>
+                                We've helped ideas grow in the past and it feels beautiful</Styled.li>
+                            <Styled.li>
+                            <Styled.circleDiv></Styled.circleDiv>
+                                If you run a start-up and are looking for a tech partner, please say Hi!</Styled.li>
+                        </Styled.listUl>
+                                                                        
                      </Styled.rightDiv>
                  </Styled.devisonDiv>
               
@@ -144,6 +166,7 @@ const AboutSecond = () => {
                      </Styled.rightDiv>
                  </Styled.devisonDiv>
             </Styled.FlexContainer> */}
+            <HiTech/>
             <LoveStatUps/>
             <TeamMember/>
         </Styled.mainDiv>
