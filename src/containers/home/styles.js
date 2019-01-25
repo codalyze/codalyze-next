@@ -117,6 +117,7 @@ export const ourWorkBtn = styled.button`
 
 export const specializeRow = styled.div`
   ${global.container}
+  margin-top: 10%;
 `;
 
 export const homepageBlocksTitle = styled.h2`
@@ -241,6 +242,10 @@ export const testimonialContentSvg = styled.div`
   }
 `;
 
+export const testimonialSlide = styled.div`
+  
+`;
+
 export const reviewsRow = styled.div`
   ${global.fullRow};
 `;
@@ -293,12 +298,14 @@ export const reviewImage = styled.img``;
 
 export const techStackRow = styled.div`
   ${global.fullRow};
-  background: #f9f7f7;
+  position: relative;
 `;
 
 export const techStack = styled.div`
   ${global.fullRow};
   ${global.container}
+  position: absolute;
+  bottom: 0;
   padding: 75px 0;
 `;
 
@@ -328,15 +335,27 @@ export const techLogoBlock = styled.div`
     margin: 0 auto;
     text-align: center;
   };
-  &:nth-child(5) {
-    margin: 0 auto;
-    text-align: center;
-  };
+
   &:nth-child(3) {
     margin: 0 auto;
     text-align: right;
   };
+
+  &:nth-child(5) {
+    margin: 0 auto;
+    text-align: center;
+  };
+
   &:nth-child(6) {
     margin: 0 auto;
     text-align: right;
   }`;
+
+  export const techStackSvg = styled.div`
+  svg {
+    height: auto;
+  }
+  .a {
+    opacity: 0.33;
+  }
+`;
