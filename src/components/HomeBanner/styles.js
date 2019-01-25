@@ -7,7 +7,7 @@ export const Flex = styled.div`
 
 export const FlexContainer = styled.div`
   ${global.flexRow}
-  // ${global.container}
+  ${global.container}
   padding: 125px 6vw;
   align-items: center;
   justify-content: space-between;
@@ -16,13 +16,13 @@ export const FlexContainer = styled.div`
 `;
 
 export const mainTitle = styled.h2`
-  font-size: 75px;
-  margin-bottom: 15px;
+  font-size: 101px;
+  margin: 0;
 `;
 
 export const subTitle = styled.h4`
-  font-size: 25px;
-  margin: 0;
+  font-size: 31px;
+  margin: 15px 0 0;
 `;
 
 export const twoBlocks = styled.div`
