@@ -10,6 +10,7 @@ const OurService = ({ href }) => (
 
 const SpecializeIn = () => (
   <Styled.specializeRow>
+    <Styled.FlexContainer>
     <Styled.homepageBlocksTitle>We specialize in</Styled.homepageBlocksTitle>
     <Styled.specializeContent>
       We align the goals of your organisation to the needs of <br /> your
@@ -47,6 +48,7 @@ const SpecializeIn = () => (
       See how can we be of your help.
     </Styled.specializehelp>
     <OurService href={"/services"} />
+    </Styled.FlexContainer>
   </Styled.specializeRow>
 );
 
