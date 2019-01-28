@@ -1,6 +1,5 @@
 import styled, { css, createGlobalStyle } from "styled-components";
 
-
 createGlobalStyle`
 @font-face {
   font-family: Freight-Disp-Bold;
@@ -30,6 +29,12 @@ font-weight:300;
 font-size:24px;
 color:#242424;
 opacity: 0.6;
+`;
+
+export const fontRobotoMedium = css`
+font-family: 'Roboto', sans-serif;
+font-weight:400;
+color:#242424;
 `;
 
 export const Title2 = styled.h1`
