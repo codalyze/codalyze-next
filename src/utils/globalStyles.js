@@ -1,4 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css, createGlobalStyle } from "styled-components";
+
+
+createGlobalStyle`
+@font-face {
+  font-family: Freight-Disp-Bold;
+  src: url('../fonts/Freight-Disp-Bold.otf') format('opentype');
+}
+`;
 
 export const metrics = {
   containerWidth: 1800
@@ -7,6 +15,21 @@ export const metrics = {
 export const Title = styled.h1`
   color: red;
   font-size: 50px;
+`;
+
+export const fontFreightDispBold = css`
+font-family:Freight-Disp-Bold;
+font-weight:600;
+font-size:94px;
+color:#242424;
+`
+
+export const fontRobotoLight = css`
+font-family: 'Roboto', sans-serif;
+font-weight:300;
+font-size:24px;
+color:#242424;
+opacity: 0.6;
 `;
 
 export const Title2 = styled.h1`
