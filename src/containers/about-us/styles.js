@@ -138,11 +138,12 @@ margin-bottom:50px;
 export const TeamMemberImage = styled(imageRight)`
 `;
 export const TeamMemberName = styled(commonDiv)`
-    color: #242424;
-    font-size: 24px;    
+    ${global.fontRobotoMedium};
+        font-size: 24px;    
 `;
 
 export const TeamPosition = styled(commonDiv)`
+    ${global.fontRobotoLight};
     color: #909090;
     font-size: 20px;
     font-style: italic;     
@@ -173,8 +174,8 @@ list-style: none;
 `;
 
 export const li =  styled.li`
-margin: 32px 0;
-    font-size: 24px;
+${global.fontRobotoLight};
+margin: 32px 0;   
     position: relative;
 `;
 
