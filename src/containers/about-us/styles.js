@@ -12,7 +12,7 @@ export const bannerSvg = styled.div`
 position: absolute;
     left: 0;
     width: 100%;
-    top: 490px;
+    top: 410px;
     z-index: -1;
   svg {
     width: 100%;
@@ -32,11 +32,12 @@ position: relative;
 `;
 
 export const whoeWe = styled.h1`
-  font-size: 94px;
+  ${global.fontFreightDispBold};
   text-align: center;
 `;
 
 export const aboutText = styled.div`
+${global.fontRobotoLight};
 font-size: 34px;
     text-align: center;
     color: #242424;
@@ -45,14 +46,22 @@ export const secOneImg = styled.img`
 width:100%
 `;
 
-export const FirstSecImage = styled.div``;
+export const FirstSecImage = styled.div`
+margin-top: 8%;
+`;
 
 export const sectionFirst = styled.div`
-height:2508px
+height:2830px;
 `;
 
 export const sectionSecond = styled(sectionFirst)`
-height:auto
+height: 600px;
+position: relative;
+`;
+
+
+export const otherSections = styled(sectionFirst)`
+height:auto;
 `;
 
 export const devisonDiv = styled.div`
@@ -68,15 +77,17 @@ ${global.twoBlocks}
 `;
 export const rightDiv = styled.div`
 ${global.twoBlocks}   
+text-align: ${props => props.right ? "right" : ""};
 `;
 
-export const para = styled.p`
-font-size: 24px;
+export const para = styled.h6`
+${global.fontRobotoLight};
     text-align: left;
     margin:0;
 `;
 
 export const h2 = styled.h2`
+${global.fontFreightDispBold};
 font-size: 60px;
 margin: 30px 0;
 `;
@@ -151,20 +162,10 @@ export const ButtonWrapper = styled(commonDiv)`
   padding: 50px 0;
 `;
 
-export const LoveStartupsDiv = styled(commonDiv)`
-position: relative;
-min-height: 915px;
+export const LoveStartupsDiv = styled(mainDiv)`
+position:relative;
+margin-top:10%;
 `;
-
-
-
-export const LoveBanner = styled(TeamBg)`
-position: absolute;
-    width: 100%;
-    z-index: -1;
-    top: -350px;
-    bottom: 0;
-`
 
 export const listUl = styled.ul`
 list-style: none;
@@ -178,7 +179,7 @@ margin: 32px 0;
 `;
 
 export const circleDiv = styled(commonDiv)`
-background: #fff;
+background: #e0e0e0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -188,11 +189,35 @@ background: #fff;
     top: -12px;
 `;
 
-export const HitechMain = styled(commonDiv)`
-  position:relative;
-  height:2165px;  
+export const innerDiv = styled(commonDiv)`
+position: absolute;
+top:25%;
+width:100%;
 `;
 
-export const HitechBanner = styled(LoveBanner)`
-  
+export const HitechMain = styled(LoveStartupsDiv)`
+  position:relative;  
+  margin-top:0;
 `;
+
+export const HitechInner  = styled(innerDiv)`
+top: 35%;
+`;
+
+export const ProducTeamWrapper = styled(commonDiv)`
+height: 400px;
+    top: -230px;
+    position: relative;
+`;
+
+export const ProducTeamInner = styled(commonDiv)`
+// position: absolute;
+// bottom:0;
+`;
+
+export const circleImages = styled(commonDiv)`
+position: absolute;
+    bottom: -93px;
+    left: -90px;
+`;
+

@@ -7,11 +7,63 @@ import HitechBg from "./images/HiTechBg";
 
 export const HiTech = () => {
     return(
-        <Styled.HitechMain>
-            <Styled.HitechBanner>
-                <HitechBg width="100%" height="100%" viewBox="0 0 2165.792 2143.35"/>
-            </Styled.HitechBanner>
+        <Styled.HitechMain>            
+                <HitechBg width="100%" height="100%" viewBox="0 0 1920 2143.35"/>   
+                <Styled.HitechInner>            
+            <Styled.FlexContainer>                                  
+                   <Styled.devisonDiv>
+                            <Styled.leftDiv>
+                            <Styled.imageRight src="/static/images/about-us/Artboard-7.png" />
+                            </Styled.leftDiv>
+                            <Styled.rightDiv>
+                            <Styled.h2>High Tech, Low Risk</Styled.h2>                               
+                               <Styled.para>   
+                               Building custom software is risky and hard, but there’s a way to stack those odds in your favour. It’s all about the right people and process. We create hands-on partnerships with our clients and share a proven process we’ve honed over successful software projects.
+                                   </Styled.para>
+                            </Styled.rightDiv>
+                        </Styled.devisonDiv> 
+                        </Styled.FlexContainer>
+               </Styled.HitechInner> 
+                        {/* <Styled.ProducTeamWrapper> 
+                                <Styled.ProducTeamInner>
+                                    <Styled.FlexContainer>  
+                                        <Styled.devisonDiv>
+                                            <Styled.leftDiv>
+                                            <Styled.h2>Focused Product Teams</Styled.h2> 
+                                            <Styled.para>   
+                                            You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.
+                                                </Styled.para>                                                
+                                            </Styled.leftDiv>
+                                            <Styled.rightDiv right>
+                                            <Styled.imageRight src="/static/images/about-us/Artboard-5.png" />
+                                            </Styled.rightDiv>
+                                        </Styled.devisonDiv> 
+                                    </Styled.FlexContainer>
+                                </Styled.ProducTeamInner>
+                            </Styled.ProducTeamWrapper>    */}
         </Styled.HitechMain>
+    )
+}
+
+export const ProductTeams = () => {
+    return(
+        <Styled.ProducTeamWrapper> 
+            <Styled.ProducTeamInner>
+                                    <Styled.FlexContainer>  
+                                        <Styled.devisonDiv>
+                                            <Styled.leftDiv>
+                                            <Styled.h2>Focused Product Teams</Styled.h2> 
+                                            <Styled.para>   
+                                            You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.
+                                                </Styled.para>                                                
+                                            </Styled.leftDiv>
+                                            <Styled.rightDiv right>
+                                            <Styled.imageRight src="/static/images/about-us/Artboard-5.png" />
+                                            </Styled.rightDiv>
+                                        </Styled.devisonDiv> 
+                                    </Styled.FlexContainer>
+                                </Styled.ProducTeamInner>
+        </Styled.ProducTeamWrapper>
     )
 }
 
@@ -86,12 +138,10 @@ export const TeamMember = () => {
 
 export const LoveStatUps = () => {
 return(
-    <Styled.LoveStartupsDiv>        
-            <Styled.LoveBanner>
+    <Styled.LoveStartupsDiv> 
                 <LoveStatUpsBg width="100%" height="100%" viewBox="0 0 1920.997 1275.951"/>
-            </Styled.LoveBanner>             
-        <Styled.FlexContainer>  
-                   
+                <Styled.innerDiv>
+        <Styled.FlexContainer>                     
             <Styled.devisonDiv>
                      <Styled.leftDiv>
                      <Styled.imageRight src="/static/images/about-us/Artboard-6.png" />
@@ -109,12 +159,11 @@ return(
                             <Styled.li>
                             <Styled.circleDiv></Styled.circleDiv>
                                 If you run a start-up and are looking for a tech partner, please say Hi!</Styled.li>
-                        </Styled.listUl>
-                                                                        
+                        </Styled.listUl>                                                                        
                      </Styled.rightDiv>
-                 </Styled.devisonDiv>
-              
+                 </Styled.devisonDiv>             
         </Styled.FlexContainer>
+        </Styled.innerDiv>
     </Styled.LoveStartupsDiv>
 )
 }
@@ -150,7 +199,7 @@ const sections = [{
 ]
 
 
-const AboutSecond = () => {
+const AboutOtherSections = () => {
     return(
         <Styled.mainDiv>
             {/* <Styled.FlexContainer>
@@ -167,7 +216,8 @@ const AboutSecond = () => {
                  </Styled.devisonDiv>
             </Styled.FlexContainer> */}
             <HiTech/>
-            <LoveStatUps/>
+            <ProductTeams/>
+            <LoveStatUps/>            
             <TeamMember/>
         </Styled.mainDiv>
         
@@ -175,4 +225,4 @@ const AboutSecond = () => {
     
 }
 
-export default AboutSecond;
+export default AboutOtherSections;

@@ -16,13 +16,16 @@ export const FlexContainer = styled.div`
 `;
 
 export const mainTitle = styled.h2`
+${global.fontFreightDispBold};
   font-size: 75px;
   margin-bottom: 15px;
 `;
 
 export const subTitle = styled.h4`
-  font-size: 25px;
-  margin: 0;
+${global.fontRobotoLight};  
+font-size: 25px;
+margin: 0;
+opacity: inherit;
 `;
 
 export const twoBlocks = styled.div`
