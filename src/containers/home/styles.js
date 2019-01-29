@@ -248,6 +248,7 @@ export const testimonialSlide = styled.div`
 
 export const reviewsRow = styled.div`
   ${global.fullRow};
+  ${global.container}
 `;
 
 export const reviewsSection = styled.div`
