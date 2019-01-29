@@ -40,6 +40,7 @@ export default class Career extends Component {
           subTitle="Everyday, we work on problems no one has dared to solve before."
           banner="/static/images/career/careerBanner.png"
           titleBreak
+          rowReversed
         />
         <Styled.openingsRow>
           <Styled.CareerBg>
@@ -53,51 +54,18 @@ export default class Career extends Component {
             <Styled.FlexContainer>
               <Styled.title>Current openings</Styled.title>
               <Styled.openingsList>
-                <Styled.openingsBlock>
+                {openings.map((list, index) => (
+                  <Styled.openingsBlock key={index}>
                   <Styled.designationTitle>
-                    Web Development
+                    {list.designation}
                   </Styled.designationTitle>
                   <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
+                    {list.experience}
                   </Styled.experienceSubTitle>
                 </Styled.openingsBlock>
-                <Styled.openingsBlock>
-                  <Styled.designationTitle>UI design</Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
-                <Styled.openingsBlock>
-                  <Styled.designationTitle>
-                    App development
-                  </Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
-                <Styled.openingsBlock>
-                  <Styled.designationTitle>
-                    Web Development
-                  </Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
-                <Styled.openingsBlock>
-                  <Styled.designationTitle>UI design</Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
-                <Styled.openingsBlock>
-                  <Styled.designationTitle>
-                    App development
-                  </Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    2+ years of experience in UI Development
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
+                ))}
               </Styled.openingsList>
+              <Styled.viewMore>View More</Styled.viewMore>
             </Styled.FlexContainer>
           </Styled.openingSection>
         </Styled.openingsRow>
