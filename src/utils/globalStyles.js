@@ -17,24 +17,24 @@ export const Title = styled.h1`
 `;
 
 export const fontFreightDispBold = css`
-font-family:Freight-Disp-Bold;
-font-weight:600;
-font-size:94px;
-color:#242424;
-`
+  font-family: Freight-Disp-Bold;
+  font-weight: 600;
+  font-size: 94px;
+  color: #242424;
+`;
 
 export const fontRobotoLight = css`
-font-family: 'Roboto', sans-serif;
-font-weight:300;
-font-size:24px;
-color:#242424;
-opacity: 0.6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #242424;
+  opacity: 0.6;
 `;
 
 export const fontRobotoMedium = css`
-font-family: 'Roboto', sans-serif;
-font-weight:400;
-color:#242424;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #242424;
 `;
 
 export const Title2 = styled.h1`
@@ -60,6 +60,12 @@ export const container = css`
 
 export const fullRow = css`
   width: 100%;
+`;
+
+export const mainContainer = css`
+  max-width: ${metrics.containerWidth}px;
+  margin: 0 auto;
+  padding: 0 6vw;
 `;
 
 export const twoBlocks = css`
