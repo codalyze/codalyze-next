@@ -9,7 +9,7 @@ export const strategyRow = styled.div`
 `;
 
 export const FlexContainer = styled.div`
-  ${global.contentContainer}
+  ${global.mainContainer}
 `;
 
 export const strategyBlock = styled.div`
@@ -63,7 +63,7 @@ export const strategyInfoTitle = styled.h3`
 export const strategyTitle = styled.h2`
   ${global.fontFreightDispBold};
   color: #000;
-  font-size: 60px;
+  font-size: 50px;
   margin: -50px 0 39px;
 `;
 
@@ -120,7 +120,7 @@ export const ourWorkBtn = styled.button`
 `;
 
 export const specializeRow = styled.div`
-  ${global.container}
+  // ${global.container}
   margin-top: 10%;
 `;
 
@@ -259,7 +259,7 @@ export const testimonialSlide = styled.div``;
 
 export const reviewsRow = styled.div`
   ${global.fullRow};
-  ${global.container}
+  // ${global.container}
 `;
 
 export const reviewsSection = styled.div`
@@ -283,7 +283,7 @@ export const reviewsBlock = styled.div`
   &:nth-child(2) {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 `;
 
