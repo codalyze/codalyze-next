@@ -28,7 +28,6 @@ export const fontRobotoLight = css`
   font-weight: 300;
   font-size: 24px;
   color: #242424;
-  opacity: 0.6;
 `;
 
 export const fontRobotoMedium = css`
@@ -53,7 +52,7 @@ export const flexRow = css`
 `;
 
 export const container = css`
-  width: 100%;
+  // width: 100%;
   max-width: ${metrics.containerWidth}px;
   margin: 0 auto;
 `;

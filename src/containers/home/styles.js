@@ -61,14 +61,16 @@ export const strategyInfoTitle = styled.h3`
 `;
 
 export const strategyTitle = styled.h2`
+  ${global.fontFreightDispBold};
   color: #000;
   font-size: 60px;
   margin: -50px 0 39px;
 `;
 
 export const strategySubTitle = styled.h4`
+  ${global.fontRobotoLight};
   color: #1e1e1e;
-  font-size: 34px;
+  font-size: 24px;
   margin: 0 0 93px;
   line-height: 35px;
   letter-spacing: 1px;
@@ -97,16 +99,18 @@ export const strategyStats = styled.div`
 `;
 
 export const strategyStatsNum = styled.h5`
+  ${global.fontRobotoLight};
   color: #1e1e1e;
-  font-size: 70px;
+  font-size: 50px;
   margin-bottom: 10px;
   margin: 0;
   font-weight: inherit;
 `;
 
 export const strategyStatsTitle = styled.h6`
+  ${global.fontRobotoLight};
   color: #1e1e1e;
-  font-size: 34px;
+  font-size: 30px;
   margin: 0;
   font-weight: inherit;
 `;
@@ -121,13 +125,15 @@ export const specializeRow = styled.div`
 `;
 
 export const homepageBlocksTitle = styled.h2`
-  font-size: 60px;
+  ${global.fontFreightDispBold}
+  font-size: 50px;
   color: #000;
   margin: 0 0 15px;
 `;
 
 export const specializeContent = styled.p`
-  font-size: 34px;
+${global.fontRobotoLight}
+  font-size: 24px;
   color: #000;
   margin: 0 0 15px;
 `;
@@ -142,16 +148,19 @@ export const specializeAreasBlocks = styled.div`
   border: 1px solid rgba(208, 192, 192, 0.5);
   width: 412px;
   box-shadow: 0px 3px 2px #e1e1e2;
+  background: #fff;
 `;
 
 export const specializeAreasTitle = styled.h5`
-  font-size: 31px;
+${global.fontRobotoMedium}
+  font-size: 30px;
   text-align: center;
   margin: 78px 0 28px;
 `;
 
 export const specializeAreasContent = styled.p`
-  font-size: 24px;
+${global.fontRobotoLight}
+  font-size: 20px;
   margin: 0 50px 90px;
 `;
 
@@ -161,6 +170,7 @@ export const specializeAreasImage = styled.img`
 `;
 
 export const specializehelp = styled.p`
+${global.fontRobotoLight}
   font-size: 24px;
   text-align: center;
   margin: 0 0 20px;
@@ -197,19 +207,22 @@ export const testimonialImage = styled.img`
 `;
 
 export const testimonialHeading = styled.h5`
-  font-size: 40px;
+${global.fontFreightDispBold}
+  font-size: 30px;
   text-align: center;
   margin: 0 0 15px;
 `;
 
 export const testimonialSubHeading = styled.h6`
-  font-size: 30px;
+${global.fontRobotoMedium}
+  font-size: 24px;
   text-align: center;
   margin: 0 0 25px;
 `;
 
 export const testimonialParagraph = styled.p`
-  font-size: 18px;
+${global.fontRobotoLight}
+  font-size: 20px;
   padding: 0 15%;
 `;
 
@@ -242,9 +255,7 @@ export const testimonialContentSvg = styled.div`
   }
 `;
 
-export const testimonialSlide = styled.div`
-  
-`;
+export const testimonialSlide = styled.div``;
 
 export const reviewsRow = styled.div`
   ${global.fullRow};
@@ -257,8 +268,9 @@ export const reviewsSection = styled.div`
 `;
 
 export const reviewsSubTitle = styled.div`
+${global.fontRobotoLight}
   color: #242424;
-  font-size: 34px;
+  font-size: 24px;
   margin: 0 0 80px;
 `;
 
@@ -286,12 +298,14 @@ export const reviewSingle = styled.div`
 `;
 
 export const reviewImageTitle = styled.h6`
-  font-size: 34px;
+${global.fontRobotoMedium}
+  font-size: 30px;
   margin: 15px 18px;
 `;
 
 export const reviewImageContent = styled.p`
-  font-size: 24px;
+${global.fontRobotoLight}
+  font-size: 20px;
   margin: 0 15px 25px;
 `;
 
@@ -316,17 +330,15 @@ export const techStackTitle = styled(homepageBlocksTitle)`
 
 export const techStackSubTitle = styled(strategySubTitle)`
   text-align: center;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
 `;
 
 export const techLogoRow = styled.div`
   display: flex;
   flex-wrap: wrap;
- 
-
 `;
 
 export const techLogoBlock = styled.div`
@@ -335,24 +347,25 @@ export const techLogoBlock = styled.div`
   &:nth-child(2) {
     margin: 0 auto;
     text-align: center;
-  };
+  }
 
   &:nth-child(3) {
     margin: 0 auto;
     text-align: right;
-  };
+  }
 
   &:nth-child(5) {
     margin: 0 auto;
     text-align: center;
-  };
+  }
 
   &:nth-child(6) {
     margin: 0 auto;
     text-align: right;
-  }`;
+  }
+`;
 
-  export const techStackSvg = styled.div`
+export const techStackSvg = styled.div`
   svg {
     height: auto;
   }
