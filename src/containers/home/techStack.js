@@ -43,6 +43,7 @@ const TechStack = () => (
       </Styled.FlexContainer>
     </Styled.techStack>
   </Styled.techStackRow>
+  
 );
 
 export default TechStack;
