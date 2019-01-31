@@ -24,7 +24,7 @@ position: absolute;
 `;
 
 export const FlexContainer = styled.div`
- ${global.contentContainer}
+ ${global.mainContainer}
 `;
 
 export const pageWrapper = styled.div`
@@ -34,13 +34,15 @@ position: relative;
 export const whoeWe = styled.h1`
   ${global.fontFreightDispBold};
   text-align: center;
+  font-size:50px;
 `;
 
 export const aboutText = styled.div`
 ${global.fontRobotoLight};
-font-size: 34px;
+font-size: 24px;
     text-align: center;
     color: #242424;
+    line-height:1.5em;
 `;
 export const secOneImg = styled.img`
 width:100%
@@ -88,7 +90,7 @@ ${global.fontRobotoLight};
 
 export const h2 = styled.h2`
 ${global.fontFreightDispBold};
-font-size: 60px;
+font-size: 50px;
 margin: 30px 0;
 `;
 

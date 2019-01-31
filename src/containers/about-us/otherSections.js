@@ -168,53 +168,10 @@ return(
 )
 }
 
-const sections = [{
-    id:"Optimize Approach",
-    heading:"Optimize Approach",
-    smallText:"We aid you in achieving a tight deadline and help you get to market fast. We design and develop web and mobile apps for growth-minded companies - both startups and big enterprises.",
-    image:"/static/images/about-us/Artboard-4.png",
-    isReverse : false
-},
-{
-    id:"High Tech, Low Risk",
-    heading:"High Tech, Low Risk",
-    smallText:"Building custom software is risky and hard, but there’s a way to stack those odds in your favour. It’s all about the right people and process. We create hands-on partnerships with our clients and share a proven process we’ve honed over successful software projects.",
-    image:"/static/images/about-us/Artboard-7.png",
-    isReverse : true
-},
-{
-    id:"Focused Product Teams",
-    heading:"Focused Product Teams",
-    smallText:"You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.",
-    image:"/static/images/about-us/Artboard-5.png",
-    isReverse : false
-},
-{
-    id:"We Love Start-Ups",
-    heading:"Focused Product Teams",
-    smallText:"You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.",
-    image:"/static/images/about-us/Artboard-5.png",
-    isReverse : false
-}
-]
-
 
 const AboutOtherSections = () => {
     return(
-        <Styled.mainDiv>
-            {/* <Styled.FlexContainer>
-                 <Styled.devisonDiv>
-                     <Styled.leftDiv>
-                        <Styled.h2>Optimize Approach</Styled.h2>
-                        <Styled.para>
-                        We aid you in achieving a tight deadline and help you get to market fast. We design and develop web and mobile apps for growth-minded companies - both startups and big enterprises.
-                        </Styled.para>
-                     </Styled.leftDiv>
-                     <Styled.rightDiv>
-                         <Styled.imageRight src="/static/images/about-us/Artboard-4.png" />                         
-                     </Styled.rightDiv>
-                 </Styled.devisonDiv>
-            </Styled.FlexContainer> */}
+        <Styled.mainDiv>            
             <HiTech/>
             <ProductTeams/>
             <LoveStatUps/>            

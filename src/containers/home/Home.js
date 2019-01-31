@@ -15,7 +15,7 @@ const HomePage = () => (
       <HomeBannerSvg
         width="100%"
         height="100%"
-        viewBox="0 0 2010.541 1631.315"
+        viewBox="0 0 1920.997 1275.951"
       />
     </Styled.bannerSvg>
     <HomeBanner
