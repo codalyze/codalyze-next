@@ -31,12 +31,13 @@ export const imageBlocksRow = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  margin-bottom: 75px;
 `;
 
 export const singleImageBlocks = styled.div`
   width: 240px;
   text-align: center;
-  margin-right: 120px;
+  margin-right: 60px;
 `;
 
 export const blockImages = styled.img``;
@@ -58,16 +59,25 @@ export const paragraph = styled.p`
 export const budgetRow = styled(imageBlocksRow)`
   box-shadow: 0 3px 15px #e3e3e3;
   width: 805px;
-  margin-bottom: 50px;
+  margin-bottom: 85px;
   border-radius: 10px;
 `;
 
 export const singleBudgetBlocks = styled.div`
-  padding: 10px 35px;
+  padding: 19px 35px;
   border-right: 1px solid #d6e0ef;
+  // width: 15%;
+  // text-align: center;
 `;
 
 export const budgetAmount = styled.p`
   font-size: 24px;
-  color: #1C9868;
+  color: #1c9868;
+`;
+
+export const singleProjectBlocks = styled.div`
+  padding: 5px 39px;
+  border-right: 1px solid #d6e0ef;
+  width: 15%;
+  text-align: center;
 `;
