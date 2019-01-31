@@ -24,9 +24,9 @@ export default class Project extends React.Component {
           <Styled.title>How long will we be working on the project?</Styled.title>
           <Styled.budgetRow>
             {amount.map((money, index) => (
-              <Styled.singleBudgetBlocks key={index}>
+              <Styled.singleProjectBlocks key={index}>
                 <Styled.budgetAmount>{money.cost}</Styled.budgetAmount>
-              </Styled.singleBudgetBlocks>
+              </Styled.singleProjectBlocks>
             ))}
           </Styled.budgetRow>
         </Styled.container>
