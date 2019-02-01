@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
-import TestimonialBg from "../../static/images/testimonialBg";
-import TestimonialContentBg from "../../static/images/testimonialContentBg";
+import TestimonialBg from "./images/testimonialBg";
+import TestimonialContentBg from "./images/testimonialContentBg";
 
 const testimonialsList = [
   {
@@ -48,7 +48,7 @@ const Testimonial = () => (
                 viewBox="0 0 1207.318 479.09"
               />
             </Styled.testimonialContentSvg>
-            <Styled.testimonialImage src="../static/images/testimonial-placeholder.png" />
+            <Styled.testimonialImage src="../static/images/home/testimonial-placeholder.png" />
             <Styled.testimonialHeading>
               {testBlock.heading}
             </Styled.testimonialHeading>

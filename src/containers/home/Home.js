@@ -1,7 +1,7 @@
 import React from "react";
 import HomeBanner from "../../components/HomeBanner";
 import * as Styled from "./styles";
-import HomeBannerSvg from "../../static/images/home-banner-bg";
+import HomeBannerSvg from "./images/home-banner-bg";
 import { Title } from "../../utils/globalStyles";
 import Strategy from "../home/strategy";
 import SpecializeIn from "../home/specialize";

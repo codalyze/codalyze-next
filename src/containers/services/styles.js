@@ -8,6 +8,7 @@ import Responsive from './images/Responsive';
 import Reusable from './images/Reusable';
 import FastDevelopment from './images/FastDevelopment';
 import OverTheAir from './images/OverTheAir';
+import * as global from "../../utils/globalStyles";
 
 const rotateArrow = keyframes`
   0% {
@@ -220,10 +221,12 @@ export const WebDevImageContainer = styled.div`
 export const contentsFromRight = styled.div``;
 
 export const h2 = styled.h2`
+${global.fontFreightDispBold};
   font-size: 50px;
 `;
 
 export const h3 = styled.h3`
+${global.fontFreightDispBold};
   font-size: 30px;
   margin-top: 0;
 `;
@@ -232,8 +235,8 @@ export const h4 = styled.h4`
 `;
 
 export const p = styled.p`
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
+${global.fontRobotoLight};
+  font-size: 24px;  
   font-weight: 300;
   text-align: justify;
 `;

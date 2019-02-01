@@ -22,19 +22,19 @@ const Reviews = () => (
         <Styled.reviewsBlock>
             <Styled.reviewImageBlocks>
                 <Styled.reviewSingle>
-                    <Styled.reviewImage src="../static/images/betking.png" />
+                    <Styled.reviewImage src="../static/images/home/betking.png" />
                     <Styled.reviewImageTitle>BetKing</Styled.reviewImageTitle>
                     <Styled.reviewImageContent>Working with Naisheel and <br />Codalyze has been a great experience.</Styled.reviewImageContent>
                 </Styled.reviewSingle>
                 <Styled.reviewSingle>
-                    <Styled.reviewImage src="../static/images/fitcircle.png" />
+                    <Styled.reviewImage src="../static/images/home/fitcircle.png" />
                     <Styled.reviewImageTitle>FitCircle</Styled.reviewImageTitle>
                     <Styled.reviewImageContent>Working with Naisheel and <br />Codalyze has been a great experience.</Styled.reviewImageContent>
                 </Styled.reviewSingle>
             </Styled.reviewImageBlocks>
             <Styled.reviewImageBlocks>
             <Styled.reviewSingle>
-                    <Styled.reviewImage src="../static/images/khelomore.png" />
+                    <Styled.reviewImage src="../static/images/home/khelomore.png" />
                     <Styled.reviewImageTitle>KheloMore</Styled.reviewImageTitle>
                     <Styled.reviewImageContent>Working with Naisheel and <br />Codalyze has been a great experience.</Styled.reviewImageContent>
                 </Styled.reviewSingle>
