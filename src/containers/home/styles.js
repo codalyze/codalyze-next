@@ -371,3 +371,40 @@ export const techStackSvg = styled.div`
     opacity: 0.33;
   }
 `;
+
+
+export const Item = styled.div`
+  background: darkorange;
+  text-align: center;
+  padding: 50px;
+  color: white;
+`;
+
+export const CarouselContainer = styled.div`
+  display: flex;
+  margin: 0 0 20px 20px;
+  `;
+
+export const Wrapper = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
+
+export const CarouselSlot = styled.div`
+  flex: 1 0 100%;
+  flex-basis: 80%;
+  margin-right: 20px;
+  order: ${(props) => props.order};
+`;
+
+export const CarouselPageRow = styled.div`
+  
+`;
+
+export const CarouselRow = styled.div`
+  
+`;
+
+export const CarouselBtn = styled.button`
+  
+`;
