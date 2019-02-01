@@ -32,6 +32,12 @@ export const fontRobotoLight = css`
 
 export const fontRobotoMedium = css`
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #242424;
+`;
+
+export const fontRobotoRegular = css`
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #242424;
 `;
