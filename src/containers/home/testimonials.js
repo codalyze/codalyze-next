@@ -39,8 +39,8 @@ const Testimonial = () => (
     <Styled.FlexContainer>
       <Styled.testimonialTitle>What clients are saying</Styled.testimonialTitle>
       <Styled.testimonialSlide>
-        {testimonialsList.map(testBlock => (
-          <Styled.testimonialBlock>
+        {testimonialsList.map((testBlock, index) => (
+          <Styled.testimonialBlock key={index}>
             <Styled.testimonialContentSvg>
               <TestimonialContentBg
                 width="100%"

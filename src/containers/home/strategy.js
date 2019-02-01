@@ -42,7 +42,7 @@ const Strategy = () => (
       <Styled.strategyBlockOne>
         {StrategyStats.map((x, id) => {
           return (
-            <Styled.strategyStatsBlock>
+            <Styled.strategyStatsBlock key={id}>
               <Styled.strategyStats>
                 <Styled.strategyStatsNum>{x.number}</Styled.strategyStatsNum>
                 <Styled.strategyStatsTitle>{x.title}</Styled.strategyStatsTitle>

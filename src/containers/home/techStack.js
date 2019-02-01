@@ -33,7 +33,7 @@ const TechStack = () => (
         <Styled.techLogoRow>
           {techLogo.map((x, id) => {
             return (
-              <Styled.techLogoBlock>
+              <Styled.techLogoBlock key={id}>
                 <img src={x} />
               </Styled.techLogoBlock>
             );
