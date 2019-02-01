@@ -17,9 +17,9 @@ export const HiTech = () => {
                             </Styled.leftDiv>
                             <Styled.rightDiv>
                             <Styled.h2>High Tech, Low Risk</Styled.h2>                               
-                               <Styled.para>   
+                               <Styled.p>   
                                Building custom software is risky and hard, but there’s a way to stack those odds in your favour. It’s all about the right people and process. We create hands-on partnerships with our clients and share a proven process we’ve honed over successful software projects.
-                                   </Styled.para>
+                                   </Styled.p>
                             </Styled.rightDiv>
                         </Styled.devisonDiv> 
                         </Styled.FlexContainer>
@@ -30,9 +30,9 @@ export const HiTech = () => {
                                         <Styled.devisonDiv>
                                             <Styled.leftDiv>
                                             <Styled.h2>Focused Product Teams</Styled.h2> 
-                                            <Styled.para>   
+                                            <Styled.p>   
                                             You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.
-                                                </Styled.para>                                                
+                                                </Styled.p>                                                
                                             </Styled.leftDiv>
                                             <Styled.rightDiv right>
                                             <Styled.imageRight src="/static/images/about-us/Artboard-5.png" />
@@ -53,9 +53,9 @@ export const ProductTeams = () => {
                                         <Styled.devisonDiv>
                                             <Styled.leftDiv>
                                             <Styled.h2>Focused Product Teams</Styled.h2> 
-                                            <Styled.para>   
+                                            <Styled.p>   
                                             You’ll be working with a small, dedicated team built to fit the needs of your project. Enjoy deep focus and productive relationships. Partner with us and we'll make your code and team better.
-                                                </Styled.para>                                                
+                                                </Styled.p>                                                
                                             </Styled.leftDiv>
                                             <Styled.rightDiv right>
                                             <Styled.imageRight src="/static/images/about-us/Artboard-5.png" />

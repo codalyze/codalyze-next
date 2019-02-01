@@ -18,7 +18,7 @@ const SpecializeIn = () => (
     </Styled.specializeContent>
     <Styled.specializeAreas>
       <Styled.specializeAreasBlocks>
-        <Styled.specializeAreasImage src="../static/images/website.svg" />
+        <Styled.specializeAreasImage src="../static/images/home/website.svg" />
         <Styled.specializeAreasTitle>Website</Styled.specializeAreasTitle>
         <Styled.specializeAreasContent>
           We build modern web applications of all shapes and sizes using the
@@ -27,7 +27,7 @@ const SpecializeIn = () => (
       </Styled.specializeAreasBlocks>
 
       <Styled.specializeAreasBlocks>
-        <Styled.specializeAreasImage src="../static/images/backend.svg" />
+        <Styled.specializeAreasImage src="../static/images/home/backend.svg" />
         <Styled.specializeAreasTitle>Backend</Styled.specializeAreasTitle>
         <Styled.specializeAreasContent>
           We develop bulletproof APIs, sockets, and databases. 100% reliable,
@@ -36,7 +36,7 @@ const SpecializeIn = () => (
       </Styled.specializeAreasBlocks>
 
       <Styled.specializeAreasBlocks>
-        <Styled.specializeAreasImage src="../static/images/mobileapps.svg" />
+        <Styled.specializeAreasImage src="../static/images/home/mobileapps.svg" />
         <Styled.specializeAreasTitle>Mobile Apps</Styled.specializeAreasTitle>
         <Styled.specializeAreasContent>
           Our unique mobile app development process allows us to rapidly build

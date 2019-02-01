@@ -37,7 +37,7 @@ export const whoeWe = styled.h1`
   font-size:50px;
 `;
 
-export const aboutText = styled.div`
+export const aboutText = styled.p`
 ${global.fontRobotoLight};
 font-size: 24px;
     text-align: center;
@@ -82,7 +82,7 @@ ${global.twoBlocks}
 text-align: ${props => props.right ? "right" : ""};
 `;
 
-export const para = styled.h6`
+export const p = styled.p`
 ${global.fontRobotoLight};
     text-align: left;
     margin:0;
@@ -139,16 +139,18 @@ margin-bottom:50px;
 `;
 export const TeamMemberImage = styled(imageRight)`
 `;
-export const TeamMemberName = styled(commonDiv)`
+export const TeamMemberName = styled.h3`
     ${global.fontRobotoMedium};
-        font-size: 24px;    
+        font-size: 24px;  
+        margin: 0 0px 3px 0;
 `;
 
-export const TeamPosition = styled(commonDiv)`
+export const TeamPosition = styled.h4`
     ${global.fontRobotoLight};
     color: #909090;
     font-size: 20px;
-    font-style: italic;     
+    font-style: italic;   
+    margin: 0 0;   
 `;
 
 export const WrapperBlock = styled(commonDiv)`

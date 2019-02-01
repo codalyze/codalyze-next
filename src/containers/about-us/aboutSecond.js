@@ -12,9 +12,9 @@ const AboutSecond = () => {
         <Styled.devisonDiv>
             <Styled.leftDiv>
             <Styled.h2>Optimize Approach</Styled.h2> 
-            <Styled.para>   
+            <Styled.p>   
             We aid you in achieving a tight deadline and help you get to market fast. We design and develop web and mobile apps for growth-minded companies - both startups and big enterprises.
-                </Styled.para>                                                
+                </Styled.p>                                                
             </Styled.leftDiv>
             <Styled.rightDiv right>
             <Styled.imageRight src="/static/images/about-us/Artboard-4.png" />

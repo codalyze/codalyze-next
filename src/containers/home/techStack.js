@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
-import TechStackBg from "../../static/images/techStackBg";
+import TechStackBg from "./images/techStackBg";
 
 const OurServices = ({ href }) => (
   <Link href={href} passHref prefetch>
@@ -10,12 +10,12 @@ const OurServices = ({ href }) => (
 );
 
 const techLogo = [
-  "../static/images/react-js.svg",
-  "../static/images/elasticsearch.svg",
-  "../static/images/react-native.svg",
-  "../static/images/angularjs.svg",
-  "../static/images/nodejs.svg",
-  "../static/images/redis.svg"
+  "../static/images/home/react-js.svg",
+  "../static/images/home/elasticsearch.svg",
+  "../static/images/home/react-native.svg",
+  "../static/images/home/angularjs.svg",
+  "../static/images/home/nodejs.svg",
+  "../static/images/home/redis.svg"
 ];
 
 const TechStack = () => (
