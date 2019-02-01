@@ -312,15 +312,13 @@ ${global.fontRobotoLight}
 export const reviewImage = styled.img``;
 
 export const techStackRow = styled.div`
-  ${global.fullRow};
   position: relative;
 `;
 
 export const techStack = styled.div`
   ${global.fullRow};
-  ${global.container}
   position: absolute;
-  bottom: 0;
+  top: 20%;
   padding: 75px 0;
 `;
 
