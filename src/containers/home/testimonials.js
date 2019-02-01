@@ -2,6 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import TestimonialBg from "./images/testimonialBg";
 import TestimonialContentBg from "./images/testimonialContentBg";
+import CarouselSlide from "../home/carouselPage";
 
 const testimonialsList = [
   {
@@ -60,6 +61,7 @@ const Testimonial = () => (
             </Styled.testimonialParagraph>
           </Styled.testimonialBlock>
         ))}
+        {/* <CarouselSlide /> */}
       </Styled.testimonialSlide>
     </Styled.FlexContainer>
   </Styled.testimonialRow>
