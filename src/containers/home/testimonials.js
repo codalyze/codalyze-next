@@ -61,7 +61,7 @@ const Testimonial = () => (
             </Styled.testimonialParagraph>
           </Styled.testimonialBlock>
         ))}
-        {/* <CarouselSlide /> */}
+        <CarouselSlide />
       </Styled.testimonialSlide>
     </Styled.FlexContainer>
   </Styled.testimonialRow>

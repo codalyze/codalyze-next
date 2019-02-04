@@ -11,10 +11,10 @@ export default class CarouselPage extends Component {
         <Carousel
           title="Carousel"
         >
-          <Styled.Item>Item</Styled.Item>
-          <Styled.Item>Item</Styled.Item>
-          <Styled.Item>Item</Styled.Item>
-          <Styled.Item>Item</Styled.Item>
+          <Styled.Item>Item 1</Styled.Item>
+          <Styled.Item>Item 2</Styled.Item>
+          <Styled.Item>Item 3</Styled.Item>
+          <Styled.Item>Item 4</Styled.Item>
         </Carousel>
       </Styled.CarouselPageRow>
     );
