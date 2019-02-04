@@ -132,7 +132,7 @@ export const homepageBlocksTitle = styled.h2`
 `;
 
 export const specializeContent = styled.p`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   font-size: 24px;
   color: #000;
   margin: 0 0 15px;
@@ -152,14 +152,14 @@ export const specializeAreasBlocks = styled.div`
 `;
 
 export const specializeAreasTitle = styled.h5`
-${global.fontRobotoMedium}
+  ${global.fontRobotoMedium}
   font-size: 30px;
   text-align: center;
   margin: 78px 0 28px;
 `;
 
 export const specializeAreasContent = styled.p`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   font-size: 20px;
   margin: 0 50px 90px;
 `;
@@ -170,7 +170,7 @@ export const specializeAreasImage = styled.img`
 `;
 
 export const specializehelp = styled.p`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   font-size: 24px;
   text-align: center;
   margin: 0 0 20px;
@@ -207,21 +207,21 @@ export const testimonialImage = styled.img`
 `;
 
 export const testimonialHeading = styled.h5`
-${global.fontFreightDispBold}
+  ${global.fontFreightDispBold}
   font-size: 30px;
   text-align: center;
   margin: 0 0 15px;
 `;
 
 export const testimonialSubHeading = styled.h6`
-${global.fontRobotoMedium}
+  ${global.fontRobotoMedium}
   font-size: 24px;
   text-align: center;
   margin: 0 0 25px;
 `;
 
 export const testimonialParagraph = styled.p`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   font-size: 20px;
   padding: 0 15%;
 `;
@@ -268,7 +268,7 @@ export const reviewsSection = styled.div`
 `;
 
 export const reviewsSubTitle = styled.div`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   color: #242424;
   font-size: 24px;
   margin: 0 0 80px;
@@ -298,13 +298,13 @@ export const reviewSingle = styled.div`
 `;
 
 export const reviewImageTitle = styled.h6`
-${global.fontRobotoMedium}
+  ${global.fontRobotoMedium}
   font-size: 30px;
   margin: 15px 18px;
 `;
 
 export const reviewImageContent = styled.p`
-${global.fontRobotoLight}
+  ${global.fontRobotoLight}
   font-size: 20px;
   margin: 0 15px 25px;
 `;
@@ -372,7 +372,6 @@ export const techStackSvg = styled.div`
   }
 `;
 
-
 export const Item = styled.div`
   background: darkorange;
   text-align: center;
@@ -383,7 +382,13 @@ export const Item = styled.div`
 export const CarouselContainer = styled.div`
   display: flex;
   margin: 0 0 20px 20px;
-  `;
+  transition: ${props => (props.sliding ? "none" : "transform 1s ease")};
+  transform: ${props => {
+    console.log(props);
+    if (!props.sliding) return "translateX(calc(-80% - 20px))";
+    return "translateX(0%)";
+  }};
+`;
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -394,17 +399,21 @@ export const CarouselSlot = styled.div`
   flex: 1 0 100%;
   flex-basis: 80%;
   margin-right: 20px;
-  order: ${(props) => props.order};
+  order: ${props => props.order};
 `;
 
-export const CarouselPageRow = styled.div`
-  
-`;
+export const CarouselPageRow = styled.div``;
 
-export const CarouselRow = styled.div`
-  
-`;
+export const CarouselRow = styled.div``;
 
 export const CarouselBtn = styled.button`
-  
+  padding: 10px;
+  border-radius: 50%;
+  background: #0c81ed;
+  border-style: none;
+  margin-right: 5px;
+`;
+
+export const testimonialSlideBtn = styled.div`
+  text-align: center;
 `;

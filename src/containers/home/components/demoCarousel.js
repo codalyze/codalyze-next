@@ -6,10 +6,11 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      position: 0
+      position: 0,
+      sliding: false,
+      move: 0
     };
   }
-  
 
   getOrder(itemIndex) {
     const { position } = this.state;
@@ -21,15 +22,40 @@ class Carousel extends Component {
     return itemIndex - position;
   }
 
-  nextSlide = () => {
-      console.log("Hello");
-    const { position } = this.state
-    const { children } = this.props
-    const numItems = children.length || 1
+  nextSlide = slideNum => {
+    console.log("Hello", this.state.position);
+    const { position } = this.state;
+    const { children } = this.props;
+    const numItems = children.length || 1;
+    this.setState(
+      {
+        position: position === numItems - 1 ? 0 : position + 1
+      },
+      () => this.doSliding(this.state.position)
+    );
+  };
+
+  //   previousSlide = () => {
+  //     console.log("Hello", this.state.position);
+  //   const { position } = this.state
+  //   const { children } = this.props
+  //   const numItems = children.length || 1
+  //   this.setState({
+  //     position: position === numItems - 1 ? 0 : position - 1
+  //   }, () => this.doSliding(this.state.position))
+  // }
+
+  doSliding = position => {
     this.setState({
-      position: position === numItems - 1 ? 0 : position + 1
-    })
-  }
+      sliding: true,
+      position
+    });
+    setTimeout(() => {
+      this.setState({
+        sliding: false
+      });
+    }, 50);
+  };
 
   render() {
     const { title, children } = this.props;
@@ -37,12 +63,19 @@ class Carousel extends Component {
     return (
       <Styled.CarouselRow>
         <Styled.Wrapper>
-          <Styled.CarouselContainer>
+          <Styled.CarouselContainer sliding={this.state.sliding}>
             {children.map((child, index) => (
-              <Styled.CarouselSlot key={index} order={ this.getOrder(index) } >{child}</Styled.CarouselSlot>
+              <Styled.CarouselSlot key={index} order={this.getOrder(index)}>
+                {child}
+              </Styled.CarouselSlot>
             ))}
           </Styled.CarouselContainer>
-          <Styled.CarouselBtn onClick={ () => this.nextSlide() }>Next</Styled.CarouselBtn>
+          <Styled.testimonialSlideBtn>
+            <Styled.CarouselBtn onClick={() => this.nextSlide(0)} />
+            <Styled.CarouselBtn onClick={() => this.nextSlide(1)} />
+            <Styled.CarouselBtn onClick={() => this.nextSlide(2)} />
+            <Styled.CarouselBtn onClick={() => this.nextSlide(3)} />
+          </Styled.testimonialSlideBtn>
         </Styled.Wrapper>
       </Styled.CarouselRow>
     );
