@@ -185,7 +185,7 @@ export const specializeBtn = styled.button`
 export const testimonialRow = styled.div`
   ${global.fullRow};
   padding: 180px 0 0;
-  height: 1050px;
+  // height: 1050px;
   position: relative;
 `;
 
@@ -195,7 +195,7 @@ export const testimonialTitle = styled(homepageBlocksTitle)`
 `;
 
 export const testimonialBlock = styled.div`
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   position: relative;
   background: #fff;
 `;
@@ -224,6 +224,7 @@ export const testimonialParagraph = styled.p`
   ${global.fontRobotoLight}
   font-size: 20px;
   padding: 0 15%;
+  text-align: center;
 `;
 
 export const testimonialSvg = styled.div`
@@ -259,6 +260,7 @@ export const testimonialSlide = styled.div``;
 
 export const reviewsRow = styled.div`
   ${global.fullRow};
+  padding: 10vw 0 0;
   // ${global.container}
 `;
 
@@ -377,6 +379,7 @@ export const Item = styled.div`
   text-align: center;
   padding: 50px;
   color: white;
+  width: 100%;
 `;
 
 export const CarouselContainer = styled.div`
@@ -385,7 +388,7 @@ export const CarouselContainer = styled.div`
   transition: ${props => (props.sliding ? "none" : "transform 1s ease")};
   transform: ${props => {
     console.log(props);
-    if (!props.sliding) return "translateX(calc(-80% - 20px))";
+    if (!props.sliding) return "translateX(calc(-100% - 20px))";
     return "translateX(0%)";
   }};
 `;
@@ -397,7 +400,7 @@ export const Wrapper = styled.div`
 
 export const CarouselSlot = styled.div`
   flex: 1 0 100%;
-  flex-basis: 80%;
+  flex-basis: 100%;
   margin-right: 20px;
   order: ${props => props.order};
 `;
@@ -407,13 +410,15 @@ export const CarouselPageRow = styled.div``;
 export const CarouselRow = styled.div``;
 
 export const CarouselBtn = styled.button`
-  padding: 10px;
+  padding: 7px;
   border-radius: 50%;
   background: #0c81ed;
   border-style: none;
-  margin-right: 5px;
+  margin: 0 15px 0 0;
 `;
 
 export const testimonialSlideBtn = styled.div`
-  text-align: center;
+  position: absolute;
+  left: 48%;
+  bottom: 5%;
 `;

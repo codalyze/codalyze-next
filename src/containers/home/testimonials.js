@@ -12,20 +12,20 @@ const testimonialsList = [
     paragraph:
       "Naisheel knows his stuff, is both open to giving and receiving feedback, an collaborating on problems. Communicative and willing to both learn and use expertise. Awesome job!"
   },
-  // {
-  //   img: "",
-  //   heading: "Yianni C",
-  //   subHeading: "CTO, The Culture List",
-  //   paragraph:
-  //     "Best experience I've ever had on upwork. Naisheel is a gem. He is great with communication, does very solid work, and can meet the deadlines. Would DEFINITELY recommend."
-  // },
-  // {
-  //   img: "",
-  //   heading: "Melvyn Kim",
-  //   subHeading: "Founder, Plan XYZ",
-  //   paragraph:
-  //     "Great developers. Only ending this to proceed with more tasks. Looking forward to working with you again!"
-  // }
+  {
+    img: "",
+    heading: "Yianni C",
+    subHeading: "CTO, The Culture List",
+    paragraph:
+      "Best experience I've ever had on upwork. Naisheel is a gem. He is great with communication, does very solid work, and can meet the deadlines. Would DEFINITELY recommend."
+  },
+  {
+    img: "",
+    heading: "Melvyn Kim",
+    subHeading: "Founder, Plan XYZ",
+    paragraph:
+      "Great developers. Only ending this to proceed with more tasks. Looking forward to working with you again!"
+  }
 ];
 
 const Testimonial = () => (
@@ -40,7 +40,7 @@ const Testimonial = () => (
     <Styled.FlexContainer>
       <Styled.testimonialTitle>What clients are saying</Styled.testimonialTitle>
       <Styled.testimonialSlide>
-        {testimonialsList.map((testBlock, index) => (
+        {/* {testimonialsList.map((testBlock, index) => (
           <Styled.testimonialBlock key={index}>
             <Styled.testimonialContentSvg>
               <TestimonialContentBg
@@ -60,8 +60,8 @@ const Testimonial = () => (
               {testBlock.paragraph}
             </Styled.testimonialParagraph>
           </Styled.testimonialBlock>
-        ))}
-        <CarouselSlide />
+        ))} */}
+        <CarouselSlide testimonialsList={testimonialsList}/>
       </Styled.testimonialSlide>
     </Styled.FlexContainer>
   </Styled.testimonialRow>
