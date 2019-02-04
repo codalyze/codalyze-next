@@ -8,7 +8,7 @@ export const pageWrapper = styled.div`
 export const openingsRow = styled.div`
   ${global.fullRow}
   position: relative;
-   ${global.container}
+   
 `;
 
 export const FlexContainer = styled.div`
@@ -35,7 +35,7 @@ export const openingsList = styled.div`
   justify-content: space-between;
 `;
 
-export const openingsBlock = styled.div`
+export const openingsBlock = styled.button`
   
   margin-bottom: 30px;
   background: #ffffff;
@@ -45,6 +45,8 @@ export const openingsBlock = styled.div`
   margin-right: 10px;
   padding: 58px 20px;
   min-height: 95px;
+  text-align:left;
+  border:0;
 `;
 
 export const designationTitle = styled.h5`

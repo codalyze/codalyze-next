@@ -144,3 +144,18 @@ export const ButtonWrapper = styled.button`
 ${global.mainButton};
 margin-top:20px;
 `;
+
+export const cubeWrapper = styled.div`
+position: absolute;
+right: 0;
+top: 6%;
+z-index: -1;
+svg{
+  width:100%;
+  height: auto;
+}
+`;
+
+export const bannerSvg = styled.div`
+z-index:-2;
+`;
