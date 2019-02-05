@@ -8,6 +8,7 @@ import SpecializeIn from "../home/specialize";
 import Testimonial from "../home/testimonials";
 import Reviews from "../home/reviews";
 import TechStack from "../home/techStack";
+import Footer from "../../components/footer";
 
 const HomePage = () => (
   <Styled.pageWrapper>
@@ -30,6 +31,7 @@ const HomePage = () => (
     <Testimonial />
     <Reviews />
     <TechStack />
+    <Footer />
   </Styled.pageWrapper>
 );
 
