@@ -8,6 +8,7 @@ import Project from "./project";
 import StartAProjectBg from "./images/startAProject";
 import ContactForm from "./contactForm";
 import CubeBg from "./images/cubeBg";
+import Footer from "../../components/footer";
 
 
 export default class StartAProject extends React.Component {
@@ -34,6 +35,7 @@ export default class StartAProject extends React.Component {
             <Budget />
             <Project />
             <ContactForm/>
+            <Footer />
             </Styled.commonDiv>  
             </Styled.Wrapper>          
           </Styled.containerFluid>
