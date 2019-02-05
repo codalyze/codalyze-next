@@ -60,7 +60,8 @@ export const blockShadow = styled.button`
   min-height: 174px;
   display: flex;
   justify-content: space-evenly;
-  border:0
+  border:0;
+  background-color: #fff;
 `;
 
 export const paragraph = styled.p`
@@ -77,6 +78,7 @@ export const budgetRow = styled(imageBlocksRow)`
 
 
 export const singleBudgetBlocks = styled.button`
+  background-color: #fff;
   padding: 19px 33px; 
   border-right: 1px solid #d6e0ef;
   border-top: 0;
@@ -104,6 +106,7 @@ export const singleProjectBlocks = styled.button`
   text-align: center;
   border-top: 0;
   border-bottom: 0;
+  background-color: #fff;
   :nth-last-child(1){
     border-right:0
   }

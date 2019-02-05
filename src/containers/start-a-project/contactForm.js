@@ -7,7 +7,7 @@ export default class ContactForm extends Component {
             <Styled.containerFluid>
         <Styled.container>          
                 <Styled.formHead>
-                We'd love to help you with your project. Let us know a few more details and we will take it from here.
+                We'd love to help you with your project. Let us know a few <br /> more details and we will take it from here.
                 </Styled.formHead>
                 <Styled.inputDiv>
                 <Styled.Input type="text" name="name" placeholder="Your Name"/>
