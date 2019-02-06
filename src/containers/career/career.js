@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import * as Styled from "./styles";
 import HomeBanner from "../../components/HomeBanner";
 import CareerBgSvg from "../../static/images/career/careerBg";
+import Footer from "../../components/footer";
 
 const openings = [
   {
@@ -69,6 +70,7 @@ export default class Career extends Component {
             </Styled.FlexContainer>
           </Styled.openingSection>
         </Styled.openingsRow>
+        <Footer />  
       </Styled.pageWrapper>
     );
   }

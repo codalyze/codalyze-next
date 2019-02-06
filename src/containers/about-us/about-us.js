@@ -5,6 +5,8 @@ import SectionFirstBg from "./images/SectionFirstBg";
 import AboutSections from "./aboutSections";
 import AboutOtherSections from "./otherSections";
 import AboutSecond from "./aboutSecond";
+import Footer from "../../components/footer";
+
 
 export default class AboutUs extends Component{
     render(){
@@ -26,6 +28,7 @@ export default class AboutUs extends Component{
                 <Styled.otherSections>
                     <AboutOtherSections/>
                 </Styled.otherSections>
+                <Footer />
             </Styled.pageWrapper>
         );
     }
