@@ -4,6 +4,7 @@ import * as Styled from './styles';
 import Bg1 from './images/Bg1';
 import Bg2 from './images/Bg2';
 import Sections from './Sections';
+import Footer from '../../components/footer';
 
 export default class Services extends React.Component {
 
@@ -22,6 +23,7 @@ export default class Services extends React.Component {
         <Styled.bottomSvg>
           <Bg2 width="100%" height="100%" viewBox="0 0 1597.776 1603.587"/>
         </Styled.bottomSvg>
+        <Footer />
       </Styled.pageWrapper>
     )
   }
