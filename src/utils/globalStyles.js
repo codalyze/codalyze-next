@@ -42,6 +42,11 @@ export const fontRobotoRegular = css`
   color: #242424;
 `;
 
+export const fontRobotoBold = css`
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+`;
+
 export const Title2 = styled.h1`
   color: black;
   font-size: 50px;
