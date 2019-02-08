@@ -127,13 +127,13 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 34%;
+  width: 46%;
   background: transparent;
   min-height: 30px;
   ::placeholder {
     ${global.fontRobotoLight};
-    color: #dadada;
-    font-size: 34px;
+    color: #929292;
+    font-size: 24px;
   }
 `;
 

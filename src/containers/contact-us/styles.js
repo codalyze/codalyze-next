@@ -43,7 +43,7 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 34%;
+  width: 46%;
   background: transparent;
   min-height: 30px;
   ::placeholder {
@@ -76,6 +76,7 @@ export const blocks = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-left: 16%;
   }
 `;
 
@@ -87,9 +88,8 @@ export const locationBlock = styled.div`
 
 export const h6 = styled.h6`
   ${global.fontRobotoLight}
-  font-size: 28px;
+  font-size: 24px;
   margin: 0;
-  width: 60%;
 `;
 
 export const h5 = styled.h5`
