@@ -32,6 +32,11 @@ export default class jobApplication extends React.Component {
         <Styled.inputDiv>
           <Styled.Input type="text" name="LinkedIn profile" placeholder="LinkedIn profile" />
         </Styled.inputDiv>
+        <Styled.h1>Upload your resume</Styled.h1>
+        <Styled.resume>
+          <Styled.uploadBtn>Choose File</Styled.uploadBtn>
+          <Styled.p>No files chosen</Styled.p>
+        </Styled.resume>
         <Styled.button>SUBMIT</Styled.button>
       </Styled.formRow>
     );

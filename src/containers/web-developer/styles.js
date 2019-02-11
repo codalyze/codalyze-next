@@ -25,7 +25,7 @@ export const listingContent = styled.div`
 `;
 
 export const descriptionBlock = styled.div`
-&:nth-child(1) {
+  &:nth-child(1) {
     width: 40%;
   }
   &:nth-child(2) {
@@ -47,12 +47,10 @@ export const p = styled.p`
 `;
 
 export const JobDescriptionRow = styled.div`
-  margin: 50px 0;
+  margin: 50px 0 150px;
 `;
 
-export const formRow = styled.div`
-  
-`;
+export const formRow = styled.div``;
 
 export const Input = styled.input`
   border-bottom: 1px solid #242424;
@@ -80,5 +78,25 @@ export const inputDiv = styled.div`
 
 export const button = styled.button`
   ${global.mainButton}
-  margin-top: 20px;
+  margin: 20px 0 75px;
+`;
+
+export const h1 = styled.h1`
+  ${global.fontRobotoMedium}
+  font-size: 34px;
+`;
+
+export const resume = styled.div`
+  display: flex;
+  margin-bottom: 50px;
+`;
+
+export const uploadBtn = styled.button`
+  font-size: 15px;
+  color: #fff;
+  background: #1c9868;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 15px;
+  margin-right: 15px;
 `;
