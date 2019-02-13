@@ -2,6 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import About from "./about";
 import ListChallenges from "./listChallenges";
+import ViewCaseStudy from "./viewCaseStudy";
 
 export default class BetKing extends React.Component {
     render() {
@@ -14,6 +15,7 @@ export default class BetKing extends React.Component {
                 <About />
                 <Styled.h1>Challenges</Styled.h1>
                 <ListChallenges />
+                <ViewCaseStudy />
             </Styled.containerFluid>
         )
     }

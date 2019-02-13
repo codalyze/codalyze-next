@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as global from "../../utils/globalStyles";
 import { globalAgent } from "https";
+// import {} from "../../static/images/betking";
 
 export const containerFluid = styled.div`
   ${global.fullRow};
@@ -90,12 +91,58 @@ export const titleSection = styled.div`
 
 export const contentSection = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  background: #f8f9ff;
+  padding-bottom: 30px;
 `;
 
 export const screenshot = styled.img`
+  width: 100%;
+  margin-top: -6%;
+`;
+
+export const content = styled.div`
+  position: relative;
+  left: 14%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+`;
+
+export const imageBlock = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const caseRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const caseBlock = styled.div`
+  position: relative;
+`;
+
+export const caseStudyImage = styled.img`
+  width: 100%;
   height: auto;
+`;
+
+export const caseBtn = styled.button`
+  font-size: 1em;
+  color: #fff;
   position: absolute;
-  right: 0;
-  top: -67%;
-  width: 50%;
+  right: 22%;
+  top: 45%;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  box-shadow: none;
+  text-transform: uppercase;
+  padding: 11px 54px;
 `;
