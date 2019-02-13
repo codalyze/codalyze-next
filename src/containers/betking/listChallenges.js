@@ -17,8 +17,16 @@ const ListChallenges = () => (
         </Styled.p>
       </Styled.titleSection>
     </Styled.numberRow>
+
     <Styled.contentSection>
+    <Styled.imageBlock> 
         <Styled.screenshot src="/static/images/betking/bk-security.png" />
+      </Styled.imageBlock>
+    <Styled.content>
+          <Styled.h5>Strategy</Styled.h5>
+          <Styled.p>Prevention against hack: Backend was designed keeping into mind smallest of loopholes which could cause a security breach. Special care was taken to prevent common errors on any apis: sql injection, xss attacks, csrf protection. Every entry into the backend is validated. The site is also made resistant to denial of service attacks.</Styled.p>
+        </Styled.content>
+      
     </Styled.contentSection>
   </Styled.containerFluid>
 );
