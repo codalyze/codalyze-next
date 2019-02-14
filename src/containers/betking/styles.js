@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import * as global from "../../utils/globalStyles";
 import { globalAgent } from "https";
-// import {} from "../../static/images/betking";
 
 export const containerFluid = styled.div`
   ${global.fullRow};
@@ -63,13 +62,21 @@ export const banner = styled.img`
   height: auto;
 `;
 
+export const aboutBg = styled.img`
+  width: 67%;
+  padding: 24% 0;
+  right: 0;
+  background: #f8f9ff;
+  position: absolute;
+  z-index: -1;
+`;
+
 export const aboutBetking = styled.div`
-  margin: 160px 0 120px;
+  padding: 160px 0 120px;
   width: 60%;
 `;
 
 export const weDid = styled.div`
-  margin: 120px 0 40px;
   width: 65%;
   position: relative;
   left: 25%;
@@ -89,10 +96,13 @@ export const titleSection = styled.div`
   left: 25%;
 `;
 
-export const contentSection = styled.div`
+export const contentSection = styled.div.attrs(({ sectionIndex }) => ({
+  sectionIndex
+}))`
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: ${props =>
+    props.sectionIndex % 2 === 0 ? "row-reverse" : "inherit"};
   background: #f8f9ff;
   padding-bottom: 30px;
 `;
@@ -122,10 +132,26 @@ export const imageBlock = styled.div`
 export const caseRow = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 175px 0 0;
 `;
 
-export const caseBlock = styled.div`
+export const caseSection = styled.div`
+  text-align: center;
+  margin-bottom: 35px;
+`;
+
+export const caseBlock = styled.div.attrs(({ imgPath }) => ({
+  imgPath
+}))`
   position: relative;
+  background-image: url(${props => props.imgPath});
+  width: 100%;
+  background-repeat: no-repeat;
+  width: 364px;
+  height: 292px;
+  margin-bottom: 35px;
+  text-align: center;
 `;
 
 export const caseStudyImage = styled.img`
@@ -134,10 +160,9 @@ export const caseStudyImage = styled.img`
 `;
 
 export const caseBtn = styled.button`
+  position: relative;
   font-size: 1em;
   color: #fff;
-  position: absolute;
-  right: 22%;
   top: 45%;
   background: transparent;
   border-radius: 50px;
@@ -145,4 +170,5 @@ export const caseBtn = styled.button`
   box-shadow: none;
   text-transform: uppercase;
   padding: 11px 54px;
+  cursor: pointer;
 `;

@@ -4,6 +4,7 @@ import * as Styled from "./styles";
 const About = () => (
     <Styled.containerFluid>
         <Styled.container>
+            <Styled.aboutBg />
             <Styled.aboutBetking>
                 <Styled.h4>About BetKing</Styled.h4>
                 <Styled.h6>BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016, BetKing was the biggest crowdfunded Bitcoin gambling site on the market. It was relaunched in 2017 after raising around $6.5 million during its ICO with more games and sports betting in its product roadmap.</Styled.h6>
