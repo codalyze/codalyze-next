@@ -3,6 +3,7 @@ import * as Styled from "./styles";
 import About from "./about";
 import ListChallenges from "./listChallenges";
 import ViewCaseStudy from "./viewCaseStudy";
+import Footer from "../../components/footer";
 
 export default class BetKing extends React.Component {
     render() {
@@ -16,6 +17,7 @@ export default class BetKing extends React.Component {
                 <Styled.h1>Challenges</Styled.h1>
                 <ListChallenges />
                 <ViewCaseStudy />
+                <Footer />
             </Styled.containerFluid>
         )
     }
