@@ -1,9 +1,6 @@
 import React from "react";
 import * as Styled from "./styles";
 
-<image img={"/static/images/betking/Radframe.png"} />;
-const imgPath = "/static/images/betking/Radframe.png";
-
 const study = [
   {
     src: "/static/images/betking/Radframe.png",
@@ -30,8 +27,8 @@ const ViewCaseStudy = () => (
     <Styled.container>
       <Styled.caseRow>
         {study.map((cases, index) => (
-          <Styled.caseSection>
-            <Styled.caseBlock key={index} imgPath={cases.src}>
+          <Styled.caseSection key={index}>
+            <Styled.caseBlock imgPath={cases.src}>
               <Styled.caseBtn>{cases.button}</Styled.caseBtn>
             </Styled.caseBlock>
             <Styled.h5>{cases.title}</Styled.h5>
