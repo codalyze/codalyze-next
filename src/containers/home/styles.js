@@ -267,6 +267,8 @@ export const reviewsRow = styled.div`
 export const reviewsSection = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export const reviewsSubTitle = styled.div`
@@ -278,10 +280,13 @@ export const reviewsSubTitle = styled.div`
 
 export const reviewsProject = styled.button`
   ${global.mainButton}
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin: 0 0 25px;
+  }
 `;
 
 export const reviewsBlock = styled.div`
-  ${global.twoBlocks};
+ 
   &:nth-child(2) {
     display: flex;
     align-items: center;
@@ -295,7 +300,7 @@ export const reviewSingle = styled.div`
   width: 326px;
   border: 1px solid #e3e3e3;
   border-radius: 25px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 30px;
   box-shadow: 0px 1px #e3e3e3;
 `;
 
