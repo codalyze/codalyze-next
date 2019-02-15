@@ -120,7 +120,6 @@ export const ourWorkBtn = styled.button`
 `;
 
 export const specializeRow = styled.div`
-  // ${global.container}
   margin-top: 10%;
 `;
 
@@ -185,7 +184,6 @@ export const specializeBtn = styled.button`
 export const testimonialRow = styled.div`
   ${global.fullRow};
   padding: 180px 0 0;
-  // height: 1050px;
   position: relative;
 `;
 
@@ -261,7 +259,6 @@ export const testimonialSlide = styled.div``;
 export const reviewsRow = styled.div`
   ${global.fullRow};
   padding: 10vw 0 0;
-  // ${global.container}
 `;
 
 export const reviewsSection = styled.div`
@@ -286,7 +283,6 @@ export const reviewsProject = styled.button`
 `;
 
 export const reviewsBlock = styled.div`
- 
   &:nth-child(2) {
     display: flex;
     align-items: center;
@@ -318,15 +314,13 @@ export const reviewImageContent = styled.p`
 
 export const reviewImage = styled.img``;
 
-export const techStackRow = styled.div`
-  position: relative;
-`;
-
-export const techStack = styled.div`
-  ${global.fullRow};
-  position: absolute;
-  top: 20%;
-  padding: 75px 0;
+export const techStackRow = styled.div.attrs(({ techBg }) => ({
+  techBg
+}))`
+  width: 100%;
+  background-image: url(${props => props.techBg});
+  padding: 24% 0 7%;
+  background-position: top;
 `;
 
 export const techStackTitle = styled(homepageBlocksTitle)`
@@ -335,7 +329,6 @@ export const techStackTitle = styled(homepageBlocksTitle)`
 
 export const techStackSubTitle = styled(strategySubTitle)`
   text-align: center;
-  width: 40%;
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -370,29 +363,11 @@ export const techLogoBlock = styled.div`
   }
 `;
 
-export const techStackSvg = styled.div`
-  svg {
-    height: auto;
-  }
-  .a {
-    opacity: 0.33;
-  }
-`;
-
-export const Item = styled.div`
-  background: darkorange;
-  text-align: center;
-  padding: 50px;
-  color: white;
-  width: 100%;
-`;
-
 export const CarouselContainer = styled.div`
   display: flex;
   margin: 0 0 20px 20px;
   transition: ${props => (props.sliding ? "none" : "transform 1s ease")};
   transform: ${props => {
-    console.log(props);
     if (!props.sliding) return "translateX(calc(-100% - 20px))";
     return "translateX(0%)";
   }};
