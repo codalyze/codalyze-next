@@ -11,7 +11,7 @@ export default class CarouselPage extends Component {
         <Carousel
           title="Carousel"
         >
-          {this.props.testimonialsList.map((testBlock, index) => (
+          {this.props.testimonialsList.map((block, index) => (
           <Styled.testimonialBlock key={index}>
             <Styled.testimonialContentSvg>
               <TestimonialContentBg
@@ -22,13 +22,13 @@ export default class CarouselPage extends Component {
             </Styled.testimonialContentSvg>
             <Styled.testimonialImage src="../static/images/home/testimonial-placeholder.png" />
             <Styled.testimonialHeading>
-              {testBlock.heading}
+              {block.heading}
             </Styled.testimonialHeading>
             <Styled.testimonialSubHeading>
-              {testBlock.subHeading}
+              {block.subHeading}
             </Styled.testimonialSubHeading>
             <Styled.testimonialParagraph>
-              {testBlock.paragraph}
+              {block.paragraph}
             </Styled.testimonialParagraph>
           </Styled.testimonialBlock>))}
         </Carousel>
