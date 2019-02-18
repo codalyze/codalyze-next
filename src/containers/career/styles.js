@@ -6,19 +6,21 @@ export const pageWrapper = styled.div`
 `;
 
 export const openingsRow = styled.div`
-  ${global.fullRow}
+  // ${global.fullRow}
   position: relative;
    
 `;
 
 export const FlexContainer = styled.div`
-  ${global.contentContainer}
+  // ${global.contentContainer}
  
 `;
 
 export const openingSection = styled.div`
-  position: absolute;
-  top: 24%;
+  // position: absolute;
+  // top: 24%;
+  ${global.mainContainer}
+  margin-top: 8%;
 `;
 
 export const title = styled.h4`
@@ -66,6 +68,9 @@ export const CareerBg = styled.div`
   left: 0;
   width: 100%;
   z-index: -1;
+  position: absolute;
+  bottom: 0;
+  top: -275px;
   svg {
     width: 100%;
     height: auto;
@@ -79,5 +84,6 @@ export const viewMore = styled.button`
   ${global.mainButton}
   display: block;
   margin: 0 auto;
-  margin-top: 106px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 `;
