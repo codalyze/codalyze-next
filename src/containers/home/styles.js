@@ -3,9 +3,10 @@ import * as global from "../../utils/globalStyles";
 import { globalAgent } from "https";
 
 export const strategyRow = styled.div`
-  ${global.fullRow}
-  ${global.flexRow}
-  ${global.container}
+  ${global.mainContainer}
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const FlexContainer = styled.div`
@@ -37,17 +38,26 @@ export const bannerSvg = styled.div`
 `;
 
 export const strategyBlockOne = styled.div`
-  width: 40%;
+  width: 33%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
   align-items: center;
   justify-items: center;
-  padding-left: 15px;
+  margin-left: -15px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const strategyBlockTwo = styled.div`
-  width: 40%;
-  padding-right: 10%;
+  width: 50%;
+  padding-left: 17%;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: inherit;
+    padding-left: 0;
+    margin-top: 10%;
+  }
 `;
 
 export const strategyInfoNum = styled.h3`
@@ -71,7 +81,7 @@ export const strategySubTitle = styled.h4`
   ${global.fontRobotoLight};
   color: #1e1e1e;
   font-size: 24px;
-  margin: 0 0 93px;
+  margin: 0 0 50px;
   line-height: 35px;
   letter-spacing: 1px;
   font-weight: inherit;
@@ -87,11 +97,10 @@ export const Button = styled.button`
 `;
 
 export const strategyStatsBlock = styled.div`
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 21%;
+  margin-bottom: 40%;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    margin-bottom: 15%;
+  }
 `;
 
 export const strategyStats = styled.div`
@@ -109,10 +118,10 @@ export const strategyStatsNum = styled.h5`
 
 export const strategyStatsTitle = styled.h6`
   ${global.fontRobotoLight};
-  color: #1e1e1e;
-  font-size: 30px;
+  color: #111111;
+  font-size: 25px;
   margin: 0;
-  font-weight: inherit;
+  // font-weight: inherit;
 `;
 
 export const ourWorkBtn = styled.button`
