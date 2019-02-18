@@ -48,7 +48,7 @@ export default class Career extends Component {
             <CareerBgSvg
               width="100%"
               height="100%"
-              viewBox="0 0 1920.998 1200"
+              viewBox="0 0 1920.998 1600"
             />
           </Styled.CareerBg>
           <Styled.openingSection>
