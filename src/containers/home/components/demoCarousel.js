@@ -23,7 +23,6 @@ class Carousel extends Component {
   }
 
   nextSlide = slideNum => {
-    console.log("Hello", this.state.position);
     const { position } = this.state;
     const { children } = this.props;
     const numItems = children.length || 1;
@@ -34,16 +33,6 @@ class Carousel extends Component {
       () => this.doSliding(this.state.position)
     );
   };
-
-  //   previousSlide = () => {
-  //     console.log("Hello", this.state.position);
-  //   const { position } = this.state
-  //   const { children } = this.props
-  //   const numItems = children.length || 1
-  //   this.setState({
-  //     position: position === numItems - 1 ? 0 : position - 1
-  //   }, () => this.doSliding(this.state.position))
-  // }
 
   doSliding = position => {
     this.setState({

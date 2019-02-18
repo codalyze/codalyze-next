@@ -40,27 +40,6 @@ const Testimonial = () => (
     <Styled.FlexContainer>
       <Styled.testimonialTitle>What clients are saying</Styled.testimonialTitle>
       <Styled.testimonialSlide>
-        {/* {testimonialsList.map((testBlock, index) => (
-          <Styled.testimonialBlock key={index}>
-            <Styled.testimonialContentSvg>
-              <TestimonialContentBg
-                width="100%"
-                height="100%"
-                viewBox="0 0 1207.318 479.09"
-              />
-            </Styled.testimonialContentSvg>
-            <Styled.testimonialImage src="../static/images/home/testimonial-placeholder.png" />
-            <Styled.testimonialHeading>
-              {testBlock.heading}
-            </Styled.testimonialHeading>
-            <Styled.testimonialSubHeading>
-              {testBlock.subHeading}
-            </Styled.testimonialSubHeading>
-            <Styled.testimonialParagraph>
-              {testBlock.paragraph}
-            </Styled.testimonialParagraph>
-          </Styled.testimonialBlock>
-        ))} */}
         <CarouselSlide testimonialsList={testimonialsList}/>
       </Styled.testimonialSlide>
     </Styled.FlexContainer>
