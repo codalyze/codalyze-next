@@ -37,6 +37,9 @@ export const h3 = styled.h3`
   ${global.fontRobotoLight}
   font-size: 34px;
   margin: 0 0;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 23px;
+  }
 `;
 
 export const p = styled.p`
@@ -44,6 +47,9 @@ export const p = styled.p`
   font-size: 24px;
   margin: 0 0;
   line-height: 30px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+  }
 `;
 
 export const JobDescriptionRow = styled.div`
@@ -59,7 +65,7 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 46%;
+  width: 100%;
   background: transparent;
   min-height: 30px;
   ::placeholder {
