@@ -46,7 +46,7 @@ export const imageBlocksRow = styled.div`
 export const singleImageBlocks = styled.div`
   width: 240px;
   text-align: center;
-  margin-right: 60px;
+  margin: 0 60px 15px 0;
 `;
 
 export const blockImages = styled.img``;
@@ -73,6 +73,9 @@ export const budgetRow = styled(imageBlocksRow)`
   margin-bottom: 85px;
   border-radius: 10px;
   background: #fff;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 700px;
+  }
 `;
 
 export const singleBudgetBlocks = styled.button`
@@ -95,6 +98,9 @@ export const singleBudgetBlocks = styled.button`
 export const budgetAmount = styled.p`
   font-size: 24px;
   color: #1c9868;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 18px;
+  }
 `;
 
 export const singleProjectBlocks = styled.button`
@@ -112,6 +118,9 @@ export const singleProjectBlocks = styled.button`
   :first-child {
     border-left: 0;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 165px;
+  } 
 `;
 
 export const formHead = styled.p`
@@ -135,6 +144,9 @@ export const Input = styled.input`
     color: #929292;
     font-size: 24px;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 75%;
+  } 
 `;
 
 export const inputDiv = styled.div`
