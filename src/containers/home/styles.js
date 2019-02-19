@@ -205,6 +205,7 @@ export const testimonialBlock = styled.div`
   padding-bottom: 100px;
   position: relative;
   background: #fff;
+  z-index: -2;
 `;
 
 export const testimonialImage = styled.img`
@@ -252,8 +253,11 @@ export const testimonialSvg = styled.div`
 export const testimonialContentSvg = styled.div`
   position: absolute;
   left: 0;
-  width: 100%;
-  bottom: -8%;
+  width: 90%;
+  right: 0;
+  z-index: -1;
+  margin: 0 auto;
+  top: 5%;
   svg {
     width: 100%;
     height: auto;
