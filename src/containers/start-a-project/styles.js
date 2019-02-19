@@ -8,19 +8,19 @@ export const pageWrapper = styled.div`
 
 export const Wrapper = styled(pageWrapper)``;
 
-export const commonDiv = styled.div`
-  position: absolute;
-  top: 0;
-  margin: 0 auto;
-  width: 100%;
-`;
-
 export const containerFluid = styled.div`
   ${global.fullRow};
 `;
 
 export const container = styled.div`
   ${global.mainContainer};
+`;
+
+export const commonDiv = styled.div`
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
 `;
 
 export const title = styled.h4`
@@ -64,7 +64,9 @@ export const blockShadow = styled.button`
 `;
 
 export const paragraph = styled.p`
+  ${global.fontRobotoLight}
   font-size: 15px;
+  margin: 0;
 `;
 
 export const budgetRow = styled(imageBlocksRow)`
@@ -84,12 +86,9 @@ export const singleBudgetBlocks = styled.button`
   border-right: 1px solid #d6e0ef;
   border-top: 0;
   border-bottom: 0;
-  // width: 15%;
-  // text-align: center;
   :nth-last-child(1) {
     border-right: 0;
   }
-
   :first-child {
     border-left: 0;
   }
@@ -114,13 +113,12 @@ export const singleProjectBlocks = styled.button`
   :nth-last-child(1) {
     border-right: 0;
   }
-
   :first-child {
     border-left: 0;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 165px;
-  } 
+  }
 `;
 
 export const formHead = styled.p`
@@ -146,7 +144,7 @@ export const Input = styled.input`
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 75%;
-  } 
+  }
 `;
 
 export const inputDiv = styled.div`
