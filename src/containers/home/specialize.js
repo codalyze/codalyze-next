@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
+import SpecializeStarBg from "./images/specializeStar";
 
 const special = [
   {
@@ -31,6 +32,20 @@ const OurService = ({ href }) => (
 
 const SpecializeIn = () => (
   <Styled.specializeRow>
+    <Styled.specializeStarBg>
+          <SpecializeStarBg
+            width="100%"
+            height="100%"
+            viewBox="0 0 421.867 456.583"
+          />
+        </Styled.specializeStarBg>
+        <Styled.specializeStarBgTwo>
+        <SpecializeStarBg
+            width="100%"
+            height="100%"
+            viewBox="0 0 421.867 456.583"
+          />
+        </Styled.specializeStarBgTwo>
     <Styled.FlexContainer>
       <Styled.homepageBlocksTitle>We specialize in</Styled.homepageBlocksTitle>
       <Styled.specializeContent>
@@ -38,6 +53,7 @@ const SpecializeIn = () => (
         customers - creating exceptional brand experiences.
       </Styled.specializeContent>
       <Styled.specializeAreas>
+        
         {special.map((i, index) => (
           <Styled.specializeAreasBlocks key={index}>
             <Styled.specializeAreasImage src={i.img} />

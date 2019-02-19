@@ -129,6 +129,7 @@ export const ourWorkBtn = styled.button`
 `;
 
 export const specializeRow = styled.div`
+  position: relative;
   margin-top: 10%;
 `;
 
@@ -188,6 +189,34 @@ export const specializeBtn = styled.button`
   ${global.mainButton}
   margin: 0 auto;
   display: block;
+`;
+
+export const specializeStarBg = styled.div`
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+  left: 6px;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+    opacity: 0.4;
+  }
+`;
+
+export const specializeStarBgTwo = styled.div`
+  position: absolute;
+  top: 36px;
+  z-index: -1;
+  right: 0px;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+    opacity: 0.4;
+  }
 `;
 
 export const testimonialRow = styled.div`
