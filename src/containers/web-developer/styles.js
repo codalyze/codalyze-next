@@ -65,7 +65,7 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 100%;
+  width: 46%;
   background: transparent;
   min-height: 30px;
   ::placeholder {
@@ -75,6 +75,9 @@ export const Input = styled.input`
   }
   &:focus {
     outline-color: transparent;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
