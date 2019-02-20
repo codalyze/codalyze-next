@@ -101,6 +101,7 @@ export const viewMore = styled.button`
 export const paginationWrap = styled.div`
 display:flex;
 flex-direction:row;
+justify-content: center;
 `;
 
 export const paginationFirst = styled.div`
@@ -119,10 +120,23 @@ export const paginationUl = styled.ul`
 export const paginationLi = styled.li`
     padding: 10px 15px;
     list-style: none;
-    background: #000;
-    border-right: 1px solid #fff;
+    background: #1C9868;
+    // border-right: 1px solid #fff;
     text-align: center;
     color: #fff;
+    cursor: pointer;
+    &:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background: #fff;
+      color: #000;
+    }
+    &:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background: #fff;
+      color: #000;
+    }
 `;
 
 export const rightImage = styled.div`
