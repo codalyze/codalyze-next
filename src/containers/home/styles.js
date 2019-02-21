@@ -44,7 +44,7 @@ export const strategyBlockOne = styled.div`
   grid-column-gap: 50px;
   align-items: center;
   justify-items: center;
-  margin-left: -15px;
+  margin-left: -10px;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 100%;
   }
