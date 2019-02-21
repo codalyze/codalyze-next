@@ -1,16 +1,16 @@
 import React from "react";
-import HomeBanner from "../../components/HomeBanner";
+import HomeBanner from "../../../components/HomeBanner";
 import * as Styled from "./styles";
 import HomeBannerSvg from "./images/home-banner-bg";
-import { Title } from "../../utils/globalStyles";
+// import { Title } from "../../../utils/globalStyles";
 import Strategy from "../home/strategy";
 import SpecializeIn from "../home/specialize";
 import Testimonial from "../home/testimonials";
 import Reviews from "../home/reviews";
 import TechStack from "../home/techStack";
-import Footer from "../../components/footer";
+import Footer from "../../../components/footer";
 
-const HomePage = () => (
+const HomePage = ({ mq }) => (
   <Styled.pageWrapper>
     <Styled.bannerSvg>
       <HomeBannerSvg
