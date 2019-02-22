@@ -3,11 +3,11 @@ import HomeBanner from "../../../components/HomeBanner";
 import * as Styled from "./styles";
 import HomeBannerSvg from "./images/home-banner-bg";
 // import { Title } from "../../../utils/globalStyles";
-import Strategy from "../home/strategy";
-import SpecializeIn from "../home/specialize";
-import Testimonial from "../home/testimonials";
-import Reviews from "../home/reviews";
-import TechStack from "../home/techStack";
+import Strategy from "../desktop/strategy";
+import SpecializeIn from "../desktop/specialize";
+import Testimonial from "../desktop/testimonials";
+import Reviews from "../desktop/reviews";
+import TechStack from "../desktop/techStack";
 import Footer from "../../../components/footer";
 
 const HomePage = ({ mq }) => (
