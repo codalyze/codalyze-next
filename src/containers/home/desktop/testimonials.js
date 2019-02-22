@@ -2,7 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import TestimonialBg from "./images/testimonialBg";
 import TestimonialContentBg from "./images/testimonialContentBg";
-import CarouselSlide from "../home/carouselPage";
+import CarouselSlide from "../desktop/carouselPage";
 
 const testimonialsList = [
   {

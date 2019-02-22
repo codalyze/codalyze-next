@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from "./home/Home";
-import HomeMobile from "./homeMobile/Home";
+import Home from "./desktop/Home";
+import HomeMobile from "./mobile/Home";
 import PageWrapper from "../../utils/PageWrapper";
 
 const Page = ({ mq }) => (
