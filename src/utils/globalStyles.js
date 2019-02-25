@@ -118,6 +118,11 @@ export const CenterImg = css`
   display: block;
 `;
 
+export const mobileTitle = css`
+  ${fontFreightDispBold}
+  font-size: 101px;
+`;
+
 const sizes = {
   desktop: 992,
   tablet: 768,

@@ -5,24 +5,25 @@ export const commonDiv = styled.div``;
 
 export const mobileBanner = styled.div`
   position: relative;
-  padding: 200px 15px;
+  padding: 200px 35px;
 `;
 
 export const bannerImg = styled.img`
   ${global.CenterImg};
-  width: 100%;
+  width: 80%;
+  padding-bottom: 100px;
 `;
 
 export const mainTitle = styled.h2`
   ${global.fontFreightDispBold};
-  font-size: 40px;
+  font-size: 101px;
   margin: 0 0 15px;
+  line-height: 1;
 `;
 
 export const subTitle = styled.h4`
-  ${global.fontRobotoLight};
-  width: 40%;
-  font-size: 30px;
-  margin: 15px 0 0;
+  ${global.fontRobotoRegular};
+  font-size: 34px;
+  margin: 25px 0 0;
   opacity: inherit;
 `;
