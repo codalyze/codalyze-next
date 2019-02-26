@@ -4,6 +4,7 @@ import MobileBanner from "../../../components/HomeBannerMobile";
 import HomeBannerMobileSvg from "./images/homeBannerBg";
 import Strategy from "../mobile/strategy";
 import SpecializeInMobile from "./specialize";
+import TestimonialsMobile from "./testimonials";
 
 
 const HomeMobile = () => (
@@ -24,6 +25,7 @@ const HomeMobile = () => (
     />
     <Strategy />
     <SpecializeInMobile />
+    <TestimonialsMobile />
   </Styled.pageWrapper>
 );
 
