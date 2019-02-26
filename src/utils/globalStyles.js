@@ -52,7 +52,6 @@ export const fontRobotoThin = css`
   font-weight: 100;
 `;
 
-
 export const Title2 = styled.h1`
   color: black;
   font-size: 50px;
@@ -120,7 +119,27 @@ export const CenterImg = css`
 
 export const mobileTitle = css`
   ${fontFreightDispBold}
-  font-size: 101px;
+  font-size: 35px;
+  margin: 0 0 0;
+  line-height: 1;
+`;
+
+export const mobileparagraph = css`
+  ${fontRobotoLight}
+  font-size: 15px;
+  margin: 0 0 0;
+`;
+
+export const mobileButton = css`
+  background: #5cca8f;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 214px;
+  height: 36px;
 `;
 
 const sizes = {

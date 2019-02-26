@@ -1,11 +1,13 @@
 import React from "react";
 import * as Styled from "./styles";
 import MobileBanner from "../../../components/HomeBannerMobile";
-import Strategy from "../mobile/strategy";
 import HomeBannerMobileSvg from "./images/homeBannerBg";
+import Strategy from "../mobile/strategy";
+import SpecializeInMobile from "./specialize";
+
 
 const HomeMobile = () => (
-  <Styled.commonDiv>
+  <Styled.pageWrapper>
     <Styled.HomeMobileBgSvg>
       <HomeBannerMobileSvg
         width="100%"
@@ -21,7 +23,8 @@ const HomeMobile = () => (
       titleBreak
     />
     <Strategy />
-  </Styled.commonDiv>
+    <SpecializeInMobile />
+  </Styled.pageWrapper>
 );
 
 export default HomeMobile;

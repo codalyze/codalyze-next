@@ -1,13 +1,24 @@
 import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
 
-export const commonDiv = styled.div``;
+export const pageWrapper = styled.div``;
+
+export const title = styled.h1`
+  ${global.mobileTitle}
+  color: #000;
+  margin: 0 0 15px;
+`;
+
+export const p = styled.p`
+  ${global.mobileparagraph}
+  color: #000;
+`;
 
 export const HomeMobileBgSvg = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  top: 37%;
+  top: 41%;
   z-index: -1;
   svg {
     width: 100%;
@@ -30,10 +41,8 @@ export const strategyBlockOne = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 50px;
-  align-items: center;
-  justify-items: center;
   margin-left: -10px;
-
+  padding: 25px 0;
 `;
 
 export const strategyBlockTwo = styled.div``;
@@ -41,12 +50,6 @@ export const strategyBlockTwo = styled.div``;
 export const strategyInfoNum = styled.h3`
   color: #fff;
   font-size: 25px;
-`;
-
-export const strategyTitle = styled.h2`
-  ${global.mobileTitle}
-  color: #000;
-  margin: 0 0 15px;
 `;
 
 export const strategySubTitle = styled.h4`
@@ -59,7 +62,6 @@ export const strategySubTitle = styled.h4`
   font-weight: inherit;
 `;
 
-
 export const strategyStatsBlock = styled.div`
   margin-bottom: 25%;
 `;
@@ -70,22 +72,18 @@ export const strategyStats = styled.div`
 
 export const strategyStatsNum = styled.h5`
   ${global.fontRobotoLight};
-  color: #1e1e1e;
-  font-size: 50px;
-  margin-bottom: 10px;
-  margin: 0;
-  font-weight: inherit;
+  color: #111111;
+  font-size: 28px;
+  margin: 0 0 0px;
 `;
 
 export const strategyStatsTitle = styled.h6`
-  ${global.fontRobotoLight};
-  color: #111111;
-  font-size: 25px;
-  margin: 0;
+  ${global.mobileparagraph};
+
 `;
 
-export const ourWorkBtn = styled.button`
-  ${global.mainButton}
+export const greenBtn = styled.button`
+  ${global.mobileButton}
   margin: 0 auto;
 `;
 

@@ -32,40 +32,37 @@ const StrategyStats = [
 
 const ServiceBtn = ({ href }) => (
   <Link href={href} passHref prefetch>
-    <Styled.ourWorkBtn>our work</Styled.ourWorkBtn>
+    <Styled.greenBtn>our work</Styled.greenBtn>
   </Link>
 );
 
 const Strategy = () => (
   <Styled.strategyRow>
     <Styled.strategyBlockTwo>
-        <Styled.strategyTitle>
-          Strategy led solutions for fast moving companies.
-        </Styled.strategyTitle>
-        <Styled.strategySubTitle>
-          The proof is the pudding. While there isn't a way to eat our
-          interfaces (yet), you can sample a large offering of non-perishable
-          case studies.
-        </Styled.strategySubTitle>
-        
-      </Styled.strategyBlockTwo>
+      <Styled.title>
+        Strategy led solutions for fast moving companies.
+      </Styled.title>
+      <Styled.p>
+        The proof is the pudding. While there isn't a way to eat our interfaces
+        (yet), you can sample a large offering of non-perishable case studies.
+      </Styled.p>
+    </Styled.strategyBlockTwo>
 
-      <Styled.strategyBlockOne>
-        {StrategyStats.map((x, id) => {
-          return (
-            <Styled.strategyStatsBlock key={id}>
-              <Styled.strategyStats>
-                <Styled.strategyStatsNum>{x.number}</Styled.strategyStatsNum>
-                <Styled.strategyStatsTitle>{x.title}</Styled.strategyStatsTitle>
-              </Styled.strategyStats>
-            </Styled.strategyStatsBlock>
-          );
-        })}
-      </Styled.strategyBlockOne>
+    <Styled.strategyBlockOne>
+      {StrategyStats.map((x, id) => {
+        return (
+          <Styled.strategyStatsBlock key={id}>
+            <Styled.strategyStats>
+              <Styled.strategyStatsNum>{x.number}</Styled.strategyStatsNum>
+              <Styled.strategyStatsTitle>{x.title}</Styled.strategyStatsTitle>
+            </Styled.strategyStats>
+          </Styled.strategyStatsBlock>
+        );
+      })}
+    </Styled.strategyBlockOne>
 
-      <ServiceBtn href={"/work"}/>
-   
+    <ServiceBtn href={"/work"} />
   </Styled.strategyRow>
-)
+);
 
 export default Strategy;
