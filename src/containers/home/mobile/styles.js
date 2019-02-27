@@ -20,6 +20,10 @@ export const greenBtn = styled.button`
   display: block;
 `;
 
+export const contentPadding = styled.div`
+  padding: 0 35px;
+`;
+
 export const HomeMobileBgSvg = styled.div`
   position: absolute;
   left: 0;
@@ -33,12 +37,6 @@ export const HomeMobileBgSvg = styled.div`
   .a {
     opacity: 0.4;
   }
-`;
-
-export const strategyRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 35px;
 `;
 
 export const strategyBlockOne = styled.div`
@@ -126,12 +124,10 @@ export const testimonialMobileRow = styled.div`
 `;
 
 export const testimonialListMob = styled(splRow)`
-padding: 0px 0 60px 0px;
+  padding: 0px 0 60px 0px;
 `;
 
-export const testimonialBlockMob = styled(splAreasBlocks)`
-  
-`;
+export const testimonialBlockMob = styled(splAreasBlocks)``;
 
 export const testimonialImageMob = styled.img`
   ${global.CenterImg};
@@ -149,4 +145,47 @@ export const testimonialInfoMob = styled.h6`
   font-size: 15px;
   margin: 0 0 15px;
   text-align: center;
+`;
+
+export const reviewsListMob = styled(splRow)``;
+
+export const reviewsBlockMob = styled.div`
+  margin: 30px 25px 0 0;
+`;
+
+export const reviewsTitleMob = styled.h3`
+  ${global.fontRobotoMedium}
+  font-size: 20px;
+  margin: 0 0 10px;
+`;
+
+export const reviewsBlockImgMob = styled.img``;
+
+export const reviewsBlockContentMob = styled.div`
+  border: 1px solid #e3e3e3;
+  padding: 25px 15px 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0px 2px 0 #e3e3e3;
+  margin: -5px 0 0;
+`;
+
+export const techStackTitleSection = styled.div`
+  margin: 86px 0 0;
+`;
+
+export const techStackRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 40px;
+`;
+
+export const techStackBlock = styled.div`
+  ${global.twoBlocks}
+`;
+
+export const techStackLogo = styled.img`
+  width: 58px;
+  height: 68px;
 `;
