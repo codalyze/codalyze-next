@@ -37,7 +37,7 @@ const ServiceBtn = ({ href }) => (
 );
 
 const Strategy = () => (
-  <Styled.strategyRow>
+  <Styled.contentPadding>
     <Styled.strategyBlockTwo>
       <Styled.title>
         Strategy led solutions for fast moving companies.
@@ -62,7 +62,7 @@ const Strategy = () => (
     </Styled.strategyBlockOne>
 
     <ServiceBtn href={"/work"} />
-  </Styled.strategyRow>
+  </Styled.contentPadding>
 );
 
 export default Strategy;

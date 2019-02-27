@@ -5,7 +5,8 @@ import HomeBannerMobileSvg from "./images/homeBannerBg";
 import Strategy from "../mobile/strategy";
 import SpecializeInMobile from "./specialize";
 import TestimonialsMobile from "./testimonials";
-
+import ReviewsMobile from "./reviews";
+import TechStackMobile from "./techStack";
 
 const HomeMobile = () => (
   <Styled.pageWrapper>
@@ -26,6 +27,8 @@ const HomeMobile = () => (
     <Strategy />
     <SpecializeInMobile />
     <TestimonialsMobile />
+    <ReviewsMobile />
+    <TechStackMobile />
   </Styled.pageWrapper>
 );
 
