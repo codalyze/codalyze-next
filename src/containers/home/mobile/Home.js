@@ -7,6 +7,7 @@ import SpecializeInMobile from "./specialize";
 import TestimonialsMobile from "./testimonials";
 import ReviewsMobile from "./reviews";
 import TechStackMobile from "./techStack";
+import FooterMobile from "../../../components/footer-mobile/index"
 
 const HomeMobile = () => (
   <Styled.pageWrapper>
@@ -29,6 +30,7 @@ const HomeMobile = () => (
     <TestimonialsMobile />
     <ReviewsMobile />
     <TechStackMobile />
+    <FooterMobile />
   </Styled.pageWrapper>
 );
 
