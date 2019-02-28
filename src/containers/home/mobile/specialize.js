@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
+import SpecializeMobileBg from "./images/specializeMobileBg";
 
 const mobSpecialize = [
   {
@@ -31,23 +32,31 @@ const OurService = ({ href }) => (
 
 const SpecializeInMobile = () => (
   <Styled.pageWrapper>
-    <Styled.splTitleSection>
-      <Styled.title>We specialize in</Styled.title>
-      <Styled.p>
-        We align the goals of your organization to the needs of your customers—
-        creating exceptional brand experiences.
-      </Styled.p>
-    </Styled.splTitleSection>
-    <Styled.splRow>
-      {mobSpecialize.map((i, index) => (
-        <Styled.splAreasBlocks key={index}>
-          <Styled.splAreasImage src={i.img} />
-          <Styled.splAreasTitle>{i.title}</Styled.splAreasTitle>
-          <Styled.p>{i.content}</Styled.p>
-        </Styled.splAreasBlocks>
-      ))}
-
-    </Styled.splRow>
+    <Styled.specializeContainer>
+      <Styled.specializeContentBg>
+        <SpecializeMobileBg
+          width="100%"
+          height="100%"
+          viewBox="0 0 496.475 418.966"
+        />
+      </Styled.specializeContentBg>
+      <Styled.splTitleSection>
+        <Styled.title>We specialize in</Styled.title>
+        <Styled.p>
+          We align the goals of your organization to the needs of your
+          customers— creating exceptional brand experiences.
+        </Styled.p>
+      </Styled.splTitleSection>
+      <Styled.splRow>
+        {mobSpecialize.map((i, index) => (
+          <Styled.splAreasBlocks key={index}>
+            <Styled.splAreasImage src={i.img} />
+            <Styled.splAreasTitle>{i.title}</Styled.splAreasTitle>
+            <Styled.p>{i.content}</Styled.p>
+          </Styled.splAreasBlocks>
+        ))}
+      </Styled.splRow>
+    </Styled.specializeContainer>
     <OurService href={"/services"} />
   </Styled.pageWrapper>
 );
