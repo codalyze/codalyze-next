@@ -2,24 +2,12 @@ import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
 import { globalAgent } from "https";
 
-export const strategyRow = styled.div`
-  ${global.mainContainer}
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+export const pageWrapper = styled.div`
+  position: relative;
 `;
 
 export const FlexContainer = styled.div`
   ${global.mainContainer}
-`;
-
-export const strategyBlock = styled.div`
-  ${global.twoBlocks};
-  ${global.flexRow}
-`;
-
-export const pageWrapper = styled.div`
-  position: relative;
 `;
 
 export const bannerSvg = styled.div`
@@ -35,6 +23,18 @@ export const bannerSvg = styled.div`
   .a {
     opacity: 0.4;
   }
+`;
+
+export const strategyBlock = styled.div`
+  ${global.twoBlocks};
+  ${global.flexRow}
+`;
+
+export const strategyRow = styled.div`
+  ${global.mainContainer}
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const strategyBlockOne = styled.div`

@@ -170,22 +170,21 @@ export const reviewsBlockContentMob = styled.div`
   margin: -5px 0 0;
 `;
 
-export const techStackTitleSection = styled.div`
-  margin: 86px 0 0;
+export const techStackContainer = styled.div`
+  padding: 86px 35px;
 `;
 
 export const techStackRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  align-items: center;
   padding-top: 40px;
 `;
 
 export const techStackBlock = styled.div`
   ${global.twoBlocks}
+  padding-bottom: 50px;
 `;
 
-export const techStackLogo = styled.img`
-  width: 58px;
-  height: 68px;
-`;
+export const techStackLogo = styled.img``;
