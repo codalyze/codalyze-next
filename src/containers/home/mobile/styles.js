@@ -84,15 +84,35 @@ export const strategyStatsTitle = styled.h6`
   ${global.mobileparagraph};
 `;
 
+export const specializeContainer = styled.div`
+  position: relative;
+`;
+
 export const splTitleSection = styled.div`
   padding: 85px 35px 20px;
 `;
 
 export const splRow = styled.div`
+position: relative;
   display: flex;
   flex-direction: row;
   overflow: auto;
   padding: 0px 0 60px 35px;
+`;
+
+export const specializeContentBg = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 47%;
+  z-index: -1;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+  
+  }
 `;
 
 export const splAreasBlocks = styled.div`
