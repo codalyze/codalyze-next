@@ -93,7 +93,7 @@ export const splTitleSection = styled.div`
 `;
 
 export const splRow = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -111,7 +111,6 @@ export const specializeContentBg = styled.div`
     height: auto;
   }
   .a {
-  
   }
 `;
 
@@ -191,7 +190,22 @@ export const reviewsBlockContentMob = styled.div`
 `;
 
 export const techStackContainer = styled.div`
+  position: relative;
   padding: 86px 35px;
+`;
+
+export const techMobileBgBlock = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+  }
 `;
 
 export const techStackRow = styled.div`

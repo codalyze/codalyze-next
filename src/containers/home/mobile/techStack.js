@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
+import TechStackBg from "../desktop/images/techStackBg";
 
 const OurServices = ({ href }) => (
   <Link href={href} passHref prefetch>
@@ -20,6 +21,13 @@ const techLogoMob = [
 const TechStackMobile = () => (
   <Styled.pageWrapper>
     <Styled.techStackContainer>
+      <Styled.techMobileBgBlock>
+        <TechStackBg 
+          width="100%"
+          height="100%"
+          viewBox="400 0 1050.371 1400.229"
+        />
+      </Styled.techMobileBgBlock>
       <Styled.title>Our Tech Stack</Styled.title>
       <Styled.p>
         we’ve had a hand in training many of today’s web developers, and always
