@@ -28,7 +28,7 @@ export const HomeMobileBgSvg = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  top: 41%;
+  top: 280px;
   z-index: -1;
   svg {
     width: 100%;
