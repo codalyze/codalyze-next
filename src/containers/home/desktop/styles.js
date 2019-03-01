@@ -429,7 +429,9 @@ export const CarouselSlot = styled.div`
 
 export const CarouselPageRow = styled.div``;
 
-export const CarouselRow = styled.div``;
+export const CarouselRow = styled.div`
+  background: #fff;
+`;
 
 export const CarouselBtn = styled.button`
   padding: 7px;
@@ -441,6 +443,6 @@ export const CarouselBtn = styled.button`
 
 export const testimonialSlideBtn = styled.div`
   position: absolute;
-  left: 48%;
+  left: 47%;
   bottom: 5%;
 `;

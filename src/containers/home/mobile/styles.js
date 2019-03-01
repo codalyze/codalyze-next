@@ -100,6 +100,21 @@ export const splRow = styled.div`
   padding: 0px 0 60px 35px;
 `;
 
+export const specializeStarContainerBg = styled.div`
+  position: absolute;
+  right: 5px;
+  top: 100px;
+  width: 145px;
+  height: 142px;
+  z-index: -2;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+  }
+`;
+
 export const specializeContentBg = styled.div`
   position: absolute;
   left: 0;
@@ -143,7 +158,7 @@ export const testimonialMobileRow = styled.div`
   padding: 86px 0 87px 35px;
 `;
 
-export const mobileStarContainerBg = styled.div`
+export const clientStarContainerBg = styled.div`
   position: absolute;
   left: 10px;
   bottom: 15px;
@@ -166,9 +181,11 @@ export const testimonialBlockMob = styled(splAreasBlocks)``;
 
 export const testimonialImageMob = styled.img`
   ${global.CenterImg};
-  width: 63px;
-  height: 63px;
-  padding: 31px 0 51px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 23px;
+  margin-bottom: 10px;
 `;
 
 export const testimonialTitleMob = styled(splAreasTitle)`
