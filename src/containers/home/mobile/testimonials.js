@@ -1,5 +1,6 @@
 import React from "react";
 import * as Styled from "./styles";
+import MobileStarBg from "../desktop/images/specializeStar";
 
 const testimonialsList = [
   {
@@ -28,6 +29,13 @@ const testimonialsList = [
 const TestimonialMobile = () => (
   <Styled.pageWrapper>
     <Styled.testimonialMobileRow>
+      <Styled.mobileStarContainerBg>
+        <MobileStarBg
+          width="100%"
+          height="100%"
+          viewBox="0 0 421.867 456.583"
+        />
+      </Styled.mobileStarContainerBg>
       <Styled.title>What clients are saying</Styled.title>
       <Styled.testimonialListMob>
         {testimonialsList.map((i, index) => (

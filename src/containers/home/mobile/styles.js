@@ -139,11 +139,27 @@ export const splAreasTitle = styled.h6`
 `;
 
 export const testimonialMobileRow = styled.div`
-  padding: 86px 0 15px 35px;
+  position: relative;
+  padding: 86px 0 87px 35px;
+`;
+
+export const mobileStarContainerBg = styled.div`
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  width: 145px;
+  height: 142px;
+  z-index: -1;
+  svg {
+    width: 100%;
+    height: auto;
+  }
+  .a {
+  }
 `;
 
 export const testimonialListMob = styled(splRow)`
-  padding: 0px 0 60px 0px;
+  padding: 0 0 0 0;
 `;
 
 export const testimonialBlockMob = styled(splAreasBlocks)``;
