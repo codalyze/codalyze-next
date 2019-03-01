@@ -2,6 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
 import SpecializeMobileBg from "./images/specializeMobileBg";
+import MobileStarBg from "../desktop/images/specializeStar";
 
 const mobSpecialize = [
   {
@@ -33,6 +34,13 @@ const OurService = ({ href }) => (
 const SpecializeInMobile = () => (
   <Styled.pageWrapper>
     <Styled.specializeContainer>
+      <Styled.specializeStarContainerBg>
+        <MobileStarBg 
+          width="100%"
+          height="100%"
+          viewBox="0 0 421.867 456.583"
+        />
+      </Styled.specializeStarContainerBg>
       <Styled.specializeContentBg>
         <SpecializeMobileBg
           width="100%"

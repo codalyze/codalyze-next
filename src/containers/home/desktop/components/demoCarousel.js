@@ -63,6 +63,8 @@ class Carousel extends Component {
             <Styled.CarouselBtn onClick={() => this.nextSlide(0)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(1)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(2)} />
+            <Styled.CarouselBtn onClick={() => this.nextSlide(3)} />
+            <Styled.CarouselBtn onClick={() => this.nextSlide(4)} />
           </Styled.testimonialSlideBtn>
         </Styled.Wrapper>
       </Styled.CarouselRow>
