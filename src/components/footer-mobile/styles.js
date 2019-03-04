@@ -10,6 +10,20 @@ export const footerTitle = styled.h1`
   margin: 0 0 15px;
 `;
 
+export const ul = styled.ul`
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+`;
+
+export const li = styled.li`
+  ${global.fontRobotoLight}
+  font-size: 15px;
+  color: #fff;
+  margin: 0 0 18px;
+`;
+
 export const footerParagraph = styled.p`
   ${global.fontRobotoLight}
   font-size: 15px;
