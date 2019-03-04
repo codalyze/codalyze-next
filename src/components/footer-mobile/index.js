@@ -57,7 +57,9 @@ class FooterLinkComponent extends React.Component {
     const { href, name, linkRef, active } = this.props;
     return (
       <Link href={href} passHref prefetch>
-        <Styled.footerParagraph ref={linkRef}>{name}</Styled.footerParagraph>
+        <Styled.ul>
+          <Styled.li ref={linkRef}>{name}</Styled.li>
+        </Styled.ul>
       </Link>
     );
   }

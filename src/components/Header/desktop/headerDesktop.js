@@ -39,7 +39,7 @@ class HeaderLink extends React.Component {
 export default class HeaderDesktop extends React.PureComponent {  
   render () {
     const {top, width, left, right, href} = this.props;
-    console.log({top, width, left, right, href});
+    console.log(this.props);
     return (
       <Styled.Nav>
         <Styled.FlexContainer>

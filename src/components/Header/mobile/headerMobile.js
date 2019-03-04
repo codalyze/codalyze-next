@@ -1,69 +1,116 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
+import MobileMenuStar from "./images/specializeStar";
 
-// const headerLinks = [
-//   {
-//     name: "Work",
-//     href: "work"
-//   },
-//   {
-//     name: "Services",
-//     href: "services"
-//   },
-//   {
-//     name: "About",
-//     href: "about-us"
-//   },
-//   {
-//     name: "Career",
-//     href: "career"
-//   },
-//   {
-//     name: "Start a project",
-//     href: "start-a-project"
-//   }
-// ];
- 
-// class HeaderLink extends React.Component {
-//   render () {
-//     const { href, name, linkRef, active } = this.props;
-//     return (
-//       <Link href={href} passHref prefetch>
-//         <Styled.HeaderA active={active} ref={linkRef}>{name}</Styled.HeaderA>
-//       </Link>
-//     );
-//   }
-// }
+const HeaderLinkList = [
+  {
+    name: "Work",
+    href: "work"
+  },
+  {
+    name: "Services",
+    href: "services"
+  },
+  {
+    name: "About",
+    href: "about-us"
+  },
+  {
+    name: "Career",
+    href: "career"
+  },
+  {
+    name: "Start a project",
+    href: "start-a-project"
+  }
+];
 
-export default class HeaderMobile extends React.PureComponent {  
-  render () {
-    // const {top, width, left, right, href} = this.props;
+const ToggleMenu = ({ href, addRef, toggleMenuState }) => {
+  return (
+    <Styled.mobileToggleMenu>
+      <Styled.mobileNav>
+        <Link href="/" passHref prefetch>
+          <Styled.mobileHeaderImg src="/static/images/codalyzeMobileLogo.svg" />
+        </Link>
+        <Styled.menuToggleBtn onClick={toggleMenuState}>
+          <Styled.mobileHeaderImg src="/static/images/mobileIcon.svg" />
+        </Styled.menuToggleBtn>
+      </Styled.mobileNav>
+      <Styled.mobileMenuItems>
+        {HeaderLinkList.map((x, index) => {
+          return (
+            <HeaderLinkMobile
+              href={`/${x.href}`}
+              active={x.href === href}
+              name={x.name}
+              key={index}
+              linkRef={ref => addRef(x.href, ref)}
+              toggleMenuState={toggleMenuState}
+            />
+          );
+        })}
+        <Styled.mobileMenuStarBg>
+          <MobileMenuStar
+          width="100%"
+          height="100%"
+          viewBox="0 0 421.867 456.583"
+          />
+        </Styled.mobileMenuStarBg>
+      </Styled.mobileMenuItems>
+    </Styled.mobileToggleMenu>
+  );
+};
 
+class HeaderLinkMobile extends React.Component {
+  render() {
+    const { href, name, linkRef, active, toggleMenuState } = this.props;
     return (
-    //   <Styled.Nav>
-    //     <Styled.FlexContainer>
-    //       <div>
-    //         <Link href="/" passHref prefetch>
-    //           <Styled.LogoA>
-    //             <img src="/static/images/logo.png" />
-    //           </Styled.LogoA>
-    //         </Link>
-    //       </div>
-    
-    //       <Styled.Flex>
-    //         {headerLinks.map((x, index) => {
-    //           return <HeaderLink href={`/${x.href}`} active={x.href === href} name={x.name} key={index} linkRef={ref => this.props.addRef(x.href, ref)} />;
-    //         })}
-    //       </Styled.Flex>
+      <Link href={href} passHref prefetch>
+        <Styled.ul>
+          <Styled.li onClick={toggleMenuState} ref={linkRef}>
+            {name}
+          </Styled.li>
+        </Styled.ul>
+      </Link>
+    );
+  }
+}
 
-    //       <Styled.Underline {...{top, width, left, right}} />
-    //     </Styled.FlexContainer>
-    //   </Styled.Nav>
-    <Styled.mobileNav>
-        <Styled.mobileLogo src="/static/images/codalyzeMobileLogo.svg" />
-        <Styled.mobileMenu src="/static/images/mobileIcon.svg" />
-    </Styled.mobileNav>
+export default class HeaderMobile extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggleMenuState = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
+  render() {
+    const { href, addRef } = this.props;
+    return (
+      <Styled.mobileContainer>
+        <Styled.mobileNav>
+          <Link href="/" passHref prefetch>
+            <Styled.mobileHeaderImg src="/static/images/codalyzeMobileLogo.svg" />
+          </Link>
+          <Styled.menuToggleBtn onClick={this.toggleMenuState}>
+            <Styled.mobileHeaderImg src="/static/images/mobileIcon.svg" />
+          </Styled.menuToggleBtn>
+          {this.state.isOpen ? (
+            <ToggleMenu
+              toggleMenuState={this.toggleMenuState}
+              href={href}
+              addRef={addRef}
+            />
+          ) : null}
+        </Styled.mobileNav>
+      </Styled.mobileContainer>
     );
   }
 }
