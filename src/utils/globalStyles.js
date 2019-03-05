@@ -131,6 +131,7 @@ export const mobileparagraph = css`
 `;
 
 export const mobileButton = css`
+  ${fontRobotoRegular}
   background: #5cca8f;
   border: none;
   color: #fff;
