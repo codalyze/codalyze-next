@@ -1,10 +1,6 @@
 import React from 'react';
-import { Title2 } from '../utils/globalStyles';
+import Work from "../containers/work"
 
-const WorkPage = () => (
-  <Title2>
-    Work
-  </Title2>
-);
+export default Work;
 
-export default WorkPage;
+
