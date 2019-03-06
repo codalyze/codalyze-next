@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import {media} from "../../utils/globalStyles";
+import {media} from "../../../utils/globalStyles";
 import WebDev from './images/WebDev';
 import BackendDev from './images/BackendDev';
 import MobileAppDev from './images/MobileAppDev';
@@ -8,7 +8,7 @@ import Responsive from './images/Responsive';
 import Reusable from './images/Reusable';
 import FastDevelopment from './images/FastDevelopment';
 import OverTheAir from './images/OverTheAir';
-import * as global from "../../utils/globalStyles";
+import * as global from "../../../utils/globalStyles";
 
 const rotateArrow = keyframes`
   0% {
