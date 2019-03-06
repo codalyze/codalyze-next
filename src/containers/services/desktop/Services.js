@@ -1,10 +1,11 @@
 import React from 'react';
-import HomeBanner from "../../components/HomeBanner";
+// import HomeBanner from "../../components/HomeBanner";
+import HomeBanner from "../../../components/HomeBanner";
 import * as Styled from './styles';
 import Bg1 from './images/Bg1';
 import Bg2 from './images/Bg2';
 import Sections from './Sections';
-import Footer from '../../components/footer';
+import Footer from '../../../components/footer';
 
 export default class Services extends React.Component {
 
