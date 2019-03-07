@@ -16,7 +16,6 @@ export const workMobileBgContainer = styled.div`
 export const title = styled.h1`
   ${global.mobileTitle}
   padding: 0 35px 10px;
-//   margin: 0 0 10px;
 `;
 
 export const p = styled.p`

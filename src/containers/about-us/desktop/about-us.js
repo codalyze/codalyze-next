@@ -1,14 +1,14 @@
 import React, {Component} from "react";
 import * as Styled from './styles';
-import HomeBanner from "../../components/HomeBanner";
+import HomeBanner from "../../../components/HomeBanner";
 import SectionFirstBg from "./images/SectionFirstBg";
 import AboutSections from "./aboutSections";
 import AboutOtherSections from "./otherSections";
 import AboutSecond from "./aboutSecond";
-import Footer from "../../components/footer";
+import Footer from "../../../components/footer";
 
 
-export default class AboutUs extends Component{
+export default class AboutUsDesktop extends Component{
     render(){
         return(
             <Styled.pageWrapper>

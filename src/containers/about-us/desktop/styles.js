@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
-import { media } from "../../utils/globalStyles";
-import * as global from "../../utils/globalStyles";
+import { media } from "../../../utils/globalStyles";
+import * as global from "../../../utils/globalStyles";
 
 export const mainDiv = styled.div`
   ${global.fullRow}
