@@ -20,5 +20,5 @@ export const mainTitle = styled.h2`
 
 export const subTitle = styled.h4`
   ${global.mobileparagraph};
-  margin: 25px 0 0;
+  margin: 25px 80px 0 0;
 `;
