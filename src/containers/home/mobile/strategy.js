@@ -2,33 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 
 import Link from "next/link";
-
-const StrategyStats = [
-  {
-    number: "14",
-    title: "Team Players"
-  },
-  {
-    number: "5+",
-    title: "Awards"
-  },
-  {
-    number: "76",
-    title: "Applications"
-  },
-  {
-    number: "20+",
-    title: "Clients"
-  },
-  {
-    number: "30+",
-    title: "Projects"
-  },
-  {
-    number: "2500+",
-    title: "Hours of coding"
-  }
-];
+import {StrategyStats} from '../commons/data';
 
 const ServiceBtn = ({ href }) => (
   <Link href={href} passHref prefetch>

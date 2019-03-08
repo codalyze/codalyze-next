@@ -19,11 +19,9 @@ const HomeMobile = () => (
       />
     </Styled.HomeMobileBgSvg>
     <MobileBanner
-      title="We are"
-      secondryTitle="everything IT"
+      title="We are everything IT"
       subTitle="We Help You Ship Ambitious Projects While Avoiding The Risks"
       banner="/static/images/mobile/homeBannerMobile.png"
-      titleBreak
     />
     <Strategy />
     <SpecializeInMobile />

@@ -5,8 +5,9 @@ export const Flex = styled.div`
   ${global.flexRow}
 `;
 
-export const FlexContainer = styled.div.attrs(({ rowReversed }) => ({
-  rowReversed
+export const FlexContainer = styled.div.attrs(({ rowReversed, isHomePage }) => ({
+  rowReversed,
+  isHomePage
 }))`
   ${global.flexRow}
   ${global.container}
@@ -14,19 +15,51 @@ export const FlexContainer = styled.div.attrs(({ rowReversed }) => ({
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding-bottom: ${props => (props.isHomePage ? '10px' : '125px')};
   flex-direction: ${props => (props.rowReversed ? "row-reverse" : "row")};
   z-index: 1;
 `;
 
+export const pageTitle = styled.h1`
+  margin: 0;
+`;
+
+export const part1 = styled.span`
+  font-size: 64px;
+  color: #499f9a;
+  @media (max-width: 1440px) {
+    font-size: 48px;
+  }
+`;
+
+export const part2 = styled.span`
+  font-size: 84px;
+  display: block;
+  margin: 10px 0;
+  color: #4b9e99;
+  white-space: nowrap;
+  @media (max-width: 1440px) {
+    font-size: 64px;
+  }
+`;
+
+export const part3 = styled.span`
+  font-size: 32px;
+  color: #76686a;
+  @media (max-width: 1440px) {
+    font-size: 28px;
+  }
+`;
+
 export const mainTitle = styled.h2`
   ${global.fontFreightDispBold};
-  font-size: 101px;
+  font-size: 84px;
   margin: 0;
 `;
 
 export const subTitle = styled.h4`
   ${global.fontRobotoLight};
-  font-size: 31px;
+  font-size: 24px;
   margin: 15px 0 0;
   opacity: inherit;
 `;

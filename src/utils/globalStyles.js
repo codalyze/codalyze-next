@@ -17,7 +17,6 @@ export const Title = styled.h1`
 `;
 
 export const fontFreightDispBold = css`
-  font-family: Freight-Disp-Bold;
   font-weight: 600;
   font-size: 94px;
   color: #242424;

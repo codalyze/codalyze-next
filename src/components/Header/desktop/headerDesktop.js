@@ -1,20 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
+import SvgCodalyzeLogo from '../SvgCodalyzeLogo';
 
 const headerLinks = [
-  {
-    name: "Work",
-    href: "work"
-  },
+  // {
+  //   name: "Work",
+  //   href: "work"
+  // },
   {
     name: "Services",
     href: "services"
   },
-  {
-    name: "About",
-    href: "about-us"
-  },
+  // {
+  //   name: "About",
+  //   href: "about-us"
+  // },
   {
     name: "Career",
     href: "career"
@@ -38,15 +39,14 @@ class HeaderLink extends React.Component {
 
 export default class HeaderDesktop extends React.PureComponent {  
   render () {
-    const {top, width, left, right, href} = this.props;
-    console.log(this.props);
+    const {top, markerWidth: width, left, right, href} = this.props;
     return (
       <Styled.Nav>
         <Styled.FlexContainer>
           <div>
             <Link href="/" passHref prefetch>
               <Styled.LogoA>
-                <img src="/static/images/logo.png" />
+                <SvgCodalyzeLogo width="200px" height="54px" />
               </Styled.LogoA>
             </Link>
           </div>

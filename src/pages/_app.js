@@ -14,7 +14,7 @@ export default class MyApp extends App {
 
     this.state = {
       top: 10,
-      width: 2,
+      markerWidth: 2,
       left: 0,
       right: '-10px',
       href: ''
@@ -45,11 +45,11 @@ export default class MyApp extends App {
   calculatePosition (url) {
     if (url === '/') {
       if (typeof window === 'undefined' || !this.linkRefs.get('work')) {
-        return {left: 'unset', right: '-10px', top: 35.769229888916016, width: 20, href: ''};
+        return {left: 'unset', right: '-10px', top: 35.769229888916016, markerWidth: 20, href: ''};
       } else {
         const ref = this.linkRefs.get('work');
         const {top} = ref.getBoundingClientRect();
-        return {top, width: 5, left: window.innerWidth - 50, href: 'index', right: 'unset'};
+        return {top, markerWidth: 5, left: window.innerWidth - 50, href: 'index', right: 'unset'};
       }
     }
     const href = url.split('/')[1];
@@ -57,15 +57,15 @@ export default class MyApp extends App {
 
     if (!ref) return;
 
-    const {top, width, left} = ref.getBoundingClientRect();
+    const {top, width: markerWidth, left} = ref.getBoundingClientRect();
     
-    return {top, width, left, href, right: 'unset'};
+    return {top, markerWidth, left, href, right: 'unset'};
   }
 
   handleRouteChangeStart = (r) => {
     const newPosition = this.calculatePosition(r);
     if (!newPosition || newPosition.href === this.state.href) return;
-    this.setState({...newPosition, width: 10, left: newPosition.left + newPosition.width / 2 - 5});
+    this.setState({...newPosition, markerWidth: 10, left: newPosition.left + newPosition.markerWidth / 2 - 5});
 
     setTimeout(() => {
       this.setState(newPosition);
@@ -87,7 +87,7 @@ export default class MyApp extends App {
   }
  
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
     return (
       <Container>
         <Header {...this.state} addRef={this.addRef} />

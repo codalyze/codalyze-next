@@ -33,12 +33,13 @@ export const strategyBlock = styled.div`
 export const strategyRow = styled.div`
   ${global.mainContainer}
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin-top: 32px;
 `;
 
 export const strategyBlockOne = styled.div`
-  width: 33%;
+  width: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 50px;
@@ -51,8 +52,8 @@ export const strategyBlockOne = styled.div`
 `;
 
 export const strategyBlockTwo = styled.div`
-  width: 50%;
-  padding-left: 17%;
+  width: 45%;
+  padding-left: 5%;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: inherit;
     padding-left: 0;
@@ -73,8 +74,8 @@ export const strategyInfoTitle = styled.h3`
 export const strategyTitle = styled.h2`
   ${global.fontFreightDispBold};
   color: #000;
-  font-size: 50px;
-  margin: -50px 0 39px;
+  font-size: 48px;
+  margin: 0 0 39px;
 `;
 
 export const strategySubTitle = styled.h4`
@@ -97,7 +98,7 @@ export const Button = styled.button`
 `;
 
 export const strategyStatsBlock = styled.div`
-  margin-bottom: 40%;
+  margin-bottom: 20%;
   @media (min-width: 768px) and (max-width: 1024px) {
     margin-bottom: 15%;
   }
@@ -110,16 +111,17 @@ export const strategyStats = styled.div`
 export const strategyStatsNum = styled.h5`
   ${global.fontRobotoLight};
   color: #1e1e1e;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 10px;
   margin: 0;
   font-weight: inherit;
+  white-space: nowrap;
 `;
 
 export const strategyStatsTitle = styled.h6`
   ${global.fontRobotoLight};
   color: #111111;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0;
   // font-weight: inherit;
 `;
@@ -445,4 +447,18 @@ export const testimonialSlideBtn = styled.div`
   position: absolute;
   left: 47%;
   bottom: 5%;
+`;
+
+export const technologies = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 80px 6vw 125px;
+`;
+
+export const technologyItem = styled.div`
+  
 `;

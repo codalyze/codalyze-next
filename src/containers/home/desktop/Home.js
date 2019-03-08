@@ -10,6 +10,14 @@ import Reviews from "../desktop/reviews";
 import TechStack from "../desktop/techStack";
 import Footer from "../../../components/footer";
 
+import Flutter from '../commons/Flutter';
+import NodeJs from '../commons/NodeJs';
+import ReactJs from '../commons/ReactJs';
+import ReactNative from '../commons/ReactNative';
+import VueJs from '../commons/VueJs';
+
+const technologies = [Flutter, NodeJs, ReactJs, ReactNative, VueJs];
+
 const HomePage = ({ mq }) => (
   <Styled.pageWrapper>
     <Styled.bannerSvg>
@@ -20,12 +28,17 @@ const HomePage = ({ mq }) => (
       />
     </Styled.bannerSvg>
     <HomeBanner
-      title="We are"
-      secondryTitle="everything IT"
-      subTitle="We Help You Ship Ambitious Projects"
       banner="/static/images/home-banner.png"
       titleBreak
+      isHomePage
     />
+    <Styled.technologies>
+      {technologies.map((Technology, idx) => (
+        <Styled.technologyItem key={idx}>
+          <Technology />
+        </Styled.technologyItem>
+      ))}
+    </Styled.technologies>
     <Strategy />
     <SpecializeIn />
     <Testimonial />

@@ -2,33 +2,8 @@ import React from "react";
 import * as Styled from "./styles";
 
 import Link from "next/link";
+import {StrategyStats} from '../commons/data';
 
-const StrategyStats = [
-  {
-    number: "14",
-    title: "Team Players"
-  },
-  {
-    number: "5+",
-    title: "Awards"
-  },
-  {
-    number: "76",
-    title: "Applications"
-  },
-  {
-    number: "20+",
-    title: "Clients"
-  },
-  {
-    number: "30+",
-    title: "Projects"
-  },
-  {
-    number: "2500+",
-    title: "Hours of coding"
-  }
-];
 
 const ServiceBtn = ({ href }) => (
   <Link href={href} passHref prefetch>
@@ -61,7 +36,7 @@ const Strategy = () => (
           interfaces (yet), you can sample a large offering of non-perishable
           case studies.
         </Styled.strategySubTitle>
-        <ServiceBtn href={"/work"}/>
+        {/* <ServiceBtn href={"/work"}/> */}
       </Styled.strategyBlockTwo>
    
   </Styled.strategyRow>
