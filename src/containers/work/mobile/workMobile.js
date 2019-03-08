@@ -4,6 +4,10 @@ import Banner from "../../../components/HomeBannerMobile";
 import WorkBannerBg from "./images/workBannerBg";
 import FooterMobile from "../../../components/footer-mobile";
 import Link from "next/link";
+import LeftBg from "./images/workBgLeft";
+import RightBg from "./images/workBgRight";
+import BottomBg from "./images/workBottomBg";
+import Star from "./images/star";
 
 const Content = ({ pageTitle, content, image, button, href }) => (
   <Fragment>
@@ -33,6 +37,9 @@ const WorkMobile = () => (
       titleBreak
     />
     <Styled.betKingWork>
+      <Styled.betkingStarBgContainer>
+        <Star width="100%" height="100%" viewBox="0 0 158.595 154.538" />
+      </Styled.betkingStarBgContainer>
       <Content
         pageTitle="BetKing"
         content="BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016."
@@ -41,7 +48,10 @@ const WorkMobile = () => (
         href="/#"
       />
     </Styled.betKingWork>
-    <Styled.khelomoreWork>
+    <Styled.pageWrapper>
+      <Styled.leftBgContainer>
+        <LeftBg width="100%" height="100%" viewBox="120 0 357.314 560.106" />
+      </Styled.leftBgContainer>
       <Content
         pageTitle="KheloMore"
         content="BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016."
@@ -49,8 +59,14 @@ const WorkMobile = () => (
         button="VIEW CASE STUDY"
         href="/#"
       />
-    </Styled.khelomoreWork>
-    <Styled.fitcircleWork>
+      <Styled.kheloBgStarContainer>
+        <Star width="100%" height="100%" viewBox="0 0 158.595 154.538" />
+      </Styled.kheloBgStarContainer>
+    </Styled.pageWrapper>
+    <Styled.pageWrapper>
+      <Styled.rightBgContainer>
+        <RightBg width="100%" height="100%" viewBox="120 0 357.314 560.106" />
+      </Styled.rightBgContainer>
       <Content
         pageTitle="Fitcircle"
         content="BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016."
@@ -58,8 +74,14 @@ const WorkMobile = () => (
         button="VIEW CASE STUDY"
         href="/#"
       />
-    </Styled.fitcircleWork>
-    <Styled.radframeWork>
+      <Styled.fircircleStarBgContainer>
+        <Star width="100%" height="100%" viewBox="0 0 158.595 154.538" />
+      </Styled.fircircleStarBgContainer>
+    </Styled.pageWrapper>
+    <Styled.pageWrapper>
+      <Styled.leftBgContainer>
+        <LeftBg width="100%" height="100%" viewBox="120 0 357.314 560.106" />
+      </Styled.leftBgContainer>
       <Content
         pageTitle="Radframe"
         content="BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016."
@@ -67,7 +89,10 @@ const WorkMobile = () => (
         button="VIEW CASE STUDY"
         href="/#"
       />
-    </Styled.radframeWork>
+      <Styled.bottomBgContainer>
+        <BottomBg width="100%" height="100%" viewBox="0 0 332.557 370.838" />
+      </Styled.bottomBgContainer>
+    </Styled.pageWrapper>
     <FooterMobile />
   </Fragment>
 );
