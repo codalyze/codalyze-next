@@ -1,7 +1,10 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
-import SpecializeStarBg from "./images/specializeStar";
+import LazyLoad from 'react-lazyload';
+import dynamic from 'next/dynamic'
+
+const SpecializeStarBg = dynamic(() => import("./images/specializeStar"));
 
 const special = [
   {
@@ -33,19 +36,19 @@ const OurService = ({ href }) => (
 const SpecializeIn = () => (
   <Styled.specializeRow>
     <Styled.specializeStarBg>
-          <SpecializeStarBg
-            width="100%"
-            height="100%"
-            viewBox="0 0 421.867 456.583"
-          />
-        </Styled.specializeStarBg>
-        <Styled.specializeStarBgTwo>
-        <SpecializeStarBg
-            width="100%"
-            height="100%"
-            viewBox="0 0 421.867 456.583"
-          />
-        </Styled.specializeStarBgTwo>
+      <SpecializeStarBg
+        width="100%"
+        height="100%"
+        viewBox="0 0 421.867 456.583"
+      />
+    </Styled.specializeStarBg>
+    <Styled.specializeStarBgTwo>
+    <SpecializeStarBg
+        width="100%"
+        height="100%"
+        viewBox="0 0 421.867 456.583"
+      />
+    </Styled.specializeStarBgTwo>
     <Styled.FlexContainer>
       <Styled.homepageBlocksTitle>We specialize in</Styled.homepageBlocksTitle>
       <Styled.specializeContent>
@@ -56,7 +59,7 @@ const SpecializeIn = () => (
         
         {special.map((i, index) => (
           <Styled.specializeAreasBlocks key={index}>
-            <Styled.specializeAreasImage src={i.img} />
+            <LazyLoad height={150} once offset={100}><Styled.specializeAreasImage src={i.img} /></LazyLoad>
             <Styled.specializeAreasTitle>{i.title}</Styled.specializeAreasTitle>
             <Styled.specializeAreasContent>
               {i.content}

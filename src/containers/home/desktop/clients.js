@@ -1,6 +1,7 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
+import LazyLoad from 'react-lazyload';
 
 const techStackRowBg = "../../static/images/home/techstackBackground.png";
 
@@ -31,7 +32,9 @@ const Clients = () => (
         {clientLogos.map((x, id) => {
           return (
             <Styled.techLogoBlock key={id}>
-              <img src={x} width="200" />
+              <LazyLoad height={78} once offset={100}>
+                <img src={x} width="200" />
+              </LazyLoad>
             </Styled.techLogoBlock>
           );
         })}

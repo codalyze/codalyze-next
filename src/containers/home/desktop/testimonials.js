@@ -2,6 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import TestimonialBg from "./images/testimonialBg";
 import TestimonialContentBg from "./images/testimonialContentBg";
+import LazyLoad from 'react-lazyload';
 
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
@@ -67,7 +68,9 @@ const Testimonial = () => (
                   viewBox="0 0 1207.318 479.09"
                 />
               </Styled.testimonialContentSvg>
-              <Styled.testimonialImage src={t.img || "../static/images/home/testimonial-placeholder.png"} alt={t.heading}/>
+              <LazyLoad offset={100} once height={350}>
+                <Styled.testimonialImage src={t.img || "../static/images/home/testimonial-placeholder.png"} alt={t.heading}/>
+              </LazyLoad>
               <Styled.testimonialHeading>{t.heading}</Styled.testimonialHeading>
               <Styled.testimonialSubHeading>{t.subHeading}</Styled.testimonialSubHeading>
               <Styled.testimonialParagraph>{t.paragraph}</Styled.testimonialParagraph>

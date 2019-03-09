@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
-import { globalAgent } from "https";
 
 export const pageWrapper = styled.div`
   position: relative;
@@ -183,6 +182,7 @@ export const specializeAreasContent = styled.p`
 export const specializeAreasImage = styled.img`
   ${global.CenterImg};
   padding-top: 48px;
+  height: 150px;
 `;
 
 export const specializehelp = styled.p`
