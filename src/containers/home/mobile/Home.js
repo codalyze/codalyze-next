@@ -9,6 +9,14 @@ import ReviewsMobile from "./reviews";
 import TechStackMobile from "./techStack";
 import FooterMobile from "../../../components/footer-mobile/index"
 
+import Home1 from '../commons/Home1';
+
+import dynamic from 'next/dynamic'
+
+const Home2 = dynamic(() => import('../commons/Home2'));
+
+import LazySvgLoader from '../../../components/LazySvgLoader';
+
 const HomeMobile = () => (
   <Styled.pageWrapper>
     <Styled.HomeMobileBgSvg>
@@ -19,9 +27,8 @@ const HomeMobile = () => (
       />
     </Styled.HomeMobileBgSvg>
     <MobileBanner
-      title="We are everything IT"
-      subTitle="We Help You Ship Ambitious Projects While Avoiding The Risks"
-      banner="/static/images/mobile/homeBannerMobile.png"
+      BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
+      isHomePage
     />
     <Strategy />
     <SpecializeInMobile />

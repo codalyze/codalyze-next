@@ -5,8 +5,6 @@ const SvgHome1 = props => (
     id="Home_1_svg__Layer_1"
     data-name="Layer 1"
     viewBox="0 0 669.76 544.88"
-    width="669.76"
-    height="544.88"
     {...props}
   >
     <defs>
