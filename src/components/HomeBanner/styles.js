@@ -18,6 +18,13 @@ export const FlexContainer = styled.div.attrs(({ rowReversed, isHomePage }) => (
   padding-bottom: ${props => (props.isHomePage ? '10px' : '125px')};
   flex-direction: ${props => (props.rowReversed ? "row-reverse" : "row")};
   z-index: 1;
+  @media (max-width: 992px) {
+    padding: 40px 6vw;
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
 `;
 
 export const pageTitle = styled.h1`
@@ -55,6 +62,9 @@ export const mainTitle = styled.h2`
   ${global.fontFreightDispBold};
   font-size: 84px;
   margin: 0;
+  @media (max-width: 992px) {
+    font-size: 40px;
+  }
 `;
 
 export const subTitle = styled.h4`
