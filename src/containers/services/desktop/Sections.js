@@ -65,39 +65,10 @@ const sections = [{
   }]
 }];
 
-const stickyImage = (image, isRightAligned) => function ({style, distanceFromBottom}) {
-  const defaultStyle = { left: 'unset', top: '20vh', right: 10, textAlign: 'right'};
-
-  if (isRightAligned) {
-    defaultStyle.right = 'unset';
-    defaultStyle.left = 10;
-    defaultStyle.textAlign = 'left';
-  }
-
-  let computedStyle = {...style, ...defaultStyle};
-
-  if (distanceFromBottom < 60) {
-    computedStyle = {
-      ...defaultStyle,
-      position: 'absolute',
-      bottom: 0,
-      top: 'unset'
-    };
-  }
-
-  const Image = Styled[image];
-
-  return (
-    <Styled.stickyDiv style={computedStyle}>
-      <Image width="400" height="400" viewBox="0 0 586 586"/>
-    </Styled.stickyDiv>
-  );
-};
-
 export default () => (
   <React.Fragment>
     {sections.map(section => (
-      <Styled.section key={section.id} id={section.id}>          
+      <Styled.section key={section.id} id={section.id}>
           <Styled.contentsFromLeft isRightAligned={section.isRightAligned}>
             <Styled.WebDevImageContainer isRightAligned={section.isRightAligned}>
               <section.stickyImage width="400" height="400" viewBox="0 0 586 586"/>

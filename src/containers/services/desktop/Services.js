@@ -1,5 +1,4 @@
 import React from 'react';
-// import HomeBanner from "../../components/HomeBanner";
 import HomeBanner from "../../../components/HomeBanner";
 import * as Styled from './styles';
 import Bg1 from './images/Bg1';
@@ -16,7 +15,7 @@ export default class Services extends React.Component {
           <Bg1 width="100%" height="100%" viewBox="0 0 2010.541 1631.315"/>
         </Styled.bannerSvg>
         <HomeBanner
-          title="Codalyze Services"
+          title="Our Services"
           subTitle="We offer services in following verticals"
           banner="/static/images/services/banner.png"
         />

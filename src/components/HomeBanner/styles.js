@@ -19,7 +19,7 @@ export const FlexContainer = styled.div.attrs(({ rowReversed, isHomePage }) => (
   flex-direction: ${props => (props.rowReversed ? "row-reverse" : "row")};
   z-index: 1;
   @media (max-width: 992px) {
-    padding: 40px 6vw;
+    padding: 15px 6vw;
     flex-direction: column;
     img {
       width: 100%;
