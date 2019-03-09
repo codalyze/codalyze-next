@@ -247,7 +247,9 @@ export const testimonialBlock = styled.div`
 export const testimonialImage = styled.img`
   margin: 0 auto;
   display: block;
-  padding: 100px 0;
+  padding: 100px 0 50px;
+  width: 200px;
+  border-radius: 50%;
 `;
 
 export const testimonialHeading = styled.h5`
@@ -291,7 +293,7 @@ export const testimonialContentSvg = styled.div`
   left: 0;
   width: 90%;
   right: 0;
-  z-index: -1;
+  z-index: 1;
   margin: 0 auto;
   top: 5%;
   svg {
@@ -303,18 +305,29 @@ export const testimonialContentSvg = styled.div`
   }
 `;
 
-export const testimonialSlide = styled.div``;
+export const testimonialSlide = styled.div`
+  .aws-sld__content {
+    background: white;
+  }
+`;
 
 export const reviewsRow = styled.div`
   ${global.fullRow};
-  padding: 10vw 0 0;
+  padding: 250px 0 0;
 `;
 
 export const reviewsSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+`;
+
+export const reviewsTitle = styled(homepageBlocksTitle)`
+  font-size: 36px;
+  @media (max-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const reviewsSubTitle = styled.div`
@@ -322,6 +335,9 @@ export const reviewsSubTitle = styled.div`
   color: #242424;
   font-size: 24px;
   margin: 0 0 80px;
+  @media (max-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 export const reviewsProject = styled.button`
@@ -339,7 +355,11 @@ export const reviewsBlock = styled.div`
   }
 `;
 
-export const reviewImageBlocks = styled.div``;
+export const reviewImageBlocks = styled.div`
+  @media (max-width: 1280px) {
+    display: ${props => props.hideOnSmallScreen ? 'none' : 'block'};
+  }
+`;
 
 export const reviewSingle = styled.div`
   width: 326px;
@@ -347,21 +367,33 @@ export const reviewSingle = styled.div`
   border-radius: 25px;
   margin: 0 0 30px 30px;
   box-shadow: 0px 1px #e3e3e3;
+  @media (min-width: 1280px) {
+    display: ${props => props.showOnSmallScreen ? 'none' : 'block'};
+  }
 `;
 
 export const reviewImageTitle = styled.h6`
   ${global.fontRobotoMedium}
   font-size: 30px;
   margin: 15px 18px;
+  @media (max-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 export const reviewImageContent = styled.p`
   ${global.fontRobotoLight}
   font-size: 20px;
   margin: 0 15px 25px;
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
 `;
 
-export const reviewImage = styled.img``;
+export const reviewImage = styled.img`
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+`;
 
 export const techStackRow = styled.div.attrs(({ techBg }) => ({
   techBg

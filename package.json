@@ -27,11 +27,13 @@
   },
   "homepage": "https://github.com/codalyze/codalyze-next#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "next": "^7.0.2",
     "next-page-transitions": "^1.0.0-alpha.4",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
+    "react-awesome-slider": "^0.5.2",
     "react-dom": "^16.6.3",
     "react-lazyload": "^2.3.0",
     "react-reveal": "^1.2.2",

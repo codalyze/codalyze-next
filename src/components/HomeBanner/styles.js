@@ -26,7 +26,7 @@ export const pageTitle = styled.h1`
 
 export const part1 = styled.span`
   font-size: 64px;
-  color: #499f9a;
+  color: #76686a;
   @media (max-width: 1440px) {
     font-size: 48px;
   }
@@ -36,7 +36,7 @@ export const part2 = styled.span`
   font-size: 84px;
   display: block;
   margin: 10px 0;
-  color: #fb9972;
+  color: #ef543d;
   white-space: nowrap;
   @media (max-width: 1440px) {
     font-size: 64px;

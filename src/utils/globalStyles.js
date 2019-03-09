@@ -102,12 +102,11 @@ export const mainButton = css`
   background: #5cca8f;
   border: none;
   color: #fff;
-  font-size: 38px;
+  font-size: 24px;
   border-radius: 10px;
   text-transform: uppercase;
   cursor: pointer;
-  width: 439px;
-  height: 74px;
+  padding: 12px 18px;
 `;
 
 export const CenterImg = css`

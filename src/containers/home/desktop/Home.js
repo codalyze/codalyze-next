@@ -7,7 +7,7 @@ import Strategy from "../desktop/strategy";
 import SpecializeIn from "../desktop/specialize";
 import Testimonial from "../desktop/testimonials";
 import Reviews from "../desktop/reviews";
-import TechStack from "../desktop/techStack";
+import Clients from "./clients";
 import Footer from "../../../components/footer";
 
 import Flutter from '../commons/Flutter';
@@ -43,7 +43,7 @@ const HomePage = ({ mq }) => (
     <SpecializeIn />
     <Testimonial />
     <Reviews />
-    <TechStack />
+    <Clients />
     <Footer />
   </Styled.pageWrapper>
 );

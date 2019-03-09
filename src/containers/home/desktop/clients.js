@@ -19,16 +19,16 @@ const techLogo = [
   "../static/images/home/redis.svg"
 ];
 
-const TechStack = () => (
+const Clients = () => (
   <Styled.techStackRow techBg={techStackRowBg}>
     <Styled.FlexContainer>
-      <Styled.techStackTitle>Our Tech Stack</Styled.techStackTitle>
-      <Styled.techStackSubTitle>
+      <Styled.techStackTitle>Our clients</Styled.techStackTitle>
+      {/* <Styled.techStackSubTitle>
         we’ve had a hand in training many of today’s web
         <br /> developers, and always seek to push the bar of
         <br /> quality higher.
-      </Styled.techStackSubTitle>
-      <Styled.techLogoRow>
+      </Styled.techStackSubTitle> */}
+      {/* <Styled.techLogoRow>
         {techLogo.map((x, id) => {
           return (
             <Styled.techLogoBlock key={id}>
@@ -36,10 +36,10 @@ const TechStack = () => (
             </Styled.techLogoBlock>
           );
         })}
-      </Styled.techLogoRow>
-      <OurServices href={"/services"} />
+      </Styled.techLogoRow> */}
+      {/* <OurServices href={"/services"} /> */}
     </Styled.FlexContainer>
   </Styled.techStackRow>
 );
 
-export default TechStack;
+export default Clients;
