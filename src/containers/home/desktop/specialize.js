@@ -6,13 +6,13 @@ import SpecializeStarBg from "./images/specializeStar";
 const special = [
   {
     img: "../static/images/home/website.svg",
-    title: "Website",
+    title: "Web Development",
     content:
       "We build modern web applications of all shapes and sizes using the latest technologies."
   },
   {
     img: "../static/images/home/backend.svg",
-    title: "Backend",
+    title: "Backend Architecture and Development",
     content:
       "We develop bulletproof APIs, sockets, and databases. 100% reliable, scalable, and high- performing."
   },
@@ -26,7 +26,7 @@ const special = [
 
 const OurService = ({ href }) => (
   <Link href={href} passHref prefetch>
-    <Styled.specializeBtn>our service</Styled.specializeBtn>
+    <Styled.specializeBtn>Our Services</Styled.specializeBtn>
   </Link>
 );
 

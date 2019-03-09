@@ -11,7 +11,7 @@ const HomeBannerSvg = props => (
         y2="1.221"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0" stopColor="#d0ddee" stopOpacity="0.4" />
+        <stop offset="0" stopColor="#499f9a" stopOpacity="0.2" />
         <stop offset="1" stopColor="#f9e9e3" stopOpacity="0.451" />
       </linearGradient>
     </defs>

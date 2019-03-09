@@ -10,6 +10,17 @@ class Carousel extends Component {
       sliding: false,
       move: 0
     };
+    this.timer = null;
+  }
+
+  componentDidMount () {
+    this.timer = setInterval(() => {
+      this.nextSlide();
+    }, 4000);
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.timer);
   }
 
   getOrder(itemIndex) {
@@ -59,13 +70,13 @@ class Carousel extends Component {
               </Styled.CarouselSlot>
             ))}
           </Styled.CarouselContainer>
-          <Styled.testimonialSlideBtn>
+          {/* <Styled.testimonialSlideBtn>
             <Styled.CarouselBtn onClick={() => this.nextSlide(0)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(1)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(2)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(3)} />
             <Styled.CarouselBtn onClick={() => this.nextSlide(4)} />
-          </Styled.testimonialSlideBtn>
+          </Styled.testimonialSlideBtn> */}
         </Styled.Wrapper>
       </Styled.CarouselRow>
     );

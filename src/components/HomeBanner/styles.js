@@ -36,7 +36,7 @@ export const part2 = styled.span`
   font-size: 84px;
   display: block;
   margin: 10px 0;
-  color: #4b9e99;
+  color: #fb9972;
   white-space: nowrap;
   @media (max-width: 1440px) {
     font-size: 64px;

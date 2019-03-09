@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
 import SvgCodalyzeLogo from '../SvgCodalyzeLogo';
+import Router from 'next/router';
 
 const headerLinks = [
   // {
@@ -12,10 +13,10 @@ const headerLinks = [
     name: "Services",
     href: "services"
   },
-  // {
-  //   name: "About",
-  //   href: "about-us"
-  // },
+  {
+    name: "About",
+    href: "about-us"
+  },
   {
     name: "Career",
     href: "career"
@@ -37,11 +38,70 @@ class HeaderLink extends React.Component {
   }
 }
 
-export default class HeaderDesktop extends React.PureComponent {  
+export default class HeaderDesktop extends React.PureComponent {
+  constructor () {
+    super();
+    this.state = {
+      headerTop: 0
+    };
+    this.navRef = null;
+    this.lastScrollTop = 0;
+    this.didScroll = false;
+    this.timer = null;
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.onScroll);
+    Router.events.on('routeChangeStart', this.handleRouteChangeStart);
+    this.timer = window.setInterval(() => {
+      if (this.didScroll) {
+        this.hasScrolled();
+        this.didScroll = false;
+      }
+    }, 200);
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.onScroll);
+    Router.events.off('routeChangeStart', this.handleRouteChangeStart);
+  }
+
+  onScroll = (e) => {
+    this.didScroll = true;
+    console.log(this.navRef.getBoundingClientRect().height);
+  }
+
+  hasScrolled = () => {
+    const st = window.pageYOffset;
+    const navBarHeight = this.navRef.getBoundingClientRect().height;
+
+    if (Math.abs(this.lastScrollTop - st) <= 10) {
+      return;
+    }
+
+    if (st > this.lastScrollTop && st > navBarHeight) {
+      this.setState({headerTop: -1 * navBarHeight});
+    } else {
+      const body = document.body;
+      const html = document.documentElement;
+      const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
+      if (st + window.innerHeight < documentHeight) {
+        this.setState({headerTop: 0});
+      }
+    }
+
+    this.lastScrollTop = st;
+  }
+
+  handleRouteChangeStart = () => {
+    this.setState({headerTop: 0});
+  }
+
   render () {
     const {top, markerWidth: width, left, right, href} = this.props;
     return (
-      <Styled.Nav>
+      <Styled.Nav headerTop={this.state.headerTop} ref={ref => this.navRef = ref}>
         <Styled.FlexContainer>
           <div>
             <Link href="/" passHref prefetch>

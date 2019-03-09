@@ -17,7 +17,8 @@ export default class MyApp extends App {
       markerWidth: 2,
       left: 0,
       right: '-10px',
-      href: ''
+      href: '',
+      className: ''
     };
 
     const newPosition = this.calculatePosition(props.router.pathname);
@@ -32,6 +33,7 @@ export default class MyApp extends App {
   componentDidMount () {
     Router.events.on('routeChangeStart', this.handleRouteChangeStart);
     this.handleRouteChangeStart(this.pathname);
+    this.setState({className: 'app-body'});
   }
 
   componentWillUnmount () {
@@ -94,7 +96,7 @@ export default class MyApp extends App {
         <PageTransition timeout={500} classNames="page-transition">
           <React.Fragment key={this.props.router.route}>
             <Transition />
-            <div className="app-body">
+            <div className={this.state.className}>
               <Component {...pageProps} />
             </div>
           </React.Fragment>

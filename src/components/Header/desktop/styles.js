@@ -18,11 +18,14 @@ export const LogoA = styled(global.A)`
 export const Nav = styled.nav`
   padding: 20px 6vw 5px;
   position: fixed;
-  top: 0;
+  height: 84px;
+  top: ${props => `${props.headerTop}px`};
   left: 0;
-  width: calc(100% - 12vw);
+  width: 100%;
+  box-sizing: border-box;
   z-index: 21;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: top 500ms ease;
 `;
 
 export const Flex = styled.div`

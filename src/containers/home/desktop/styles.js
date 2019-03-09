@@ -74,7 +74,7 @@ export const strategyInfoTitle = styled.h3`
 export const strategyTitle = styled.h2`
   ${global.fontFreightDispBold};
   color: #000;
-  font-size: 48px;
+  font-size: 36px;
   margin: 0 0 39px;
 `;
 
@@ -111,7 +111,7 @@ export const strategyStats = styled.div`
 export const strategyStatsNum = styled.h5`
   ${global.fontRobotoLight};
   color: #1e1e1e;
-  font-size: 40px;
+  font-size: 36px;
   margin-bottom: 10px;
   margin: 0;
   font-weight: inherit;
@@ -151,8 +151,9 @@ export const specializeContent = styled.p`
 
 export const specializeAreas = styled.div`
   display: flex;
-  margin: 100px 0 100px;
+  margin: 48px auto 48px;
   justify-content: space-between;
+  max-width: 1440px;
 `;
 
 export const specializeAreasBlocks = styled.div`
@@ -164,20 +165,24 @@ export const specializeAreasBlocks = styled.div`
 
 export const specializeAreasTitle = styled.h5`
   ${global.fontRobotoMedium}
-  font-size: 30px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 78px 0 28px;
+  margin: 48px 0 28px;
+  height: 72px;
 `;
 
 export const specializeAreasContent = styled.p`
   ${global.fontRobotoLight}
-  font-size: 20px;
-  margin: 0 50px 90px;
+  font-size: 16px;
+  margin: 0 30px 48px;
 `;
 
 export const specializeAreasImage = styled.img`
   ${global.CenterImg};
-  padding-top: 87px;
+  padding-top: 48px;
 `;
 
 export const specializehelp = styled.p`
@@ -453,7 +458,7 @@ export const technologies = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1800px;
   margin: 0 auto;
   padding: 80px 6vw 125px;

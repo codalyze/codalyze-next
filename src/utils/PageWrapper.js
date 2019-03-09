@@ -21,8 +21,8 @@ const PageWrapper = Component => {
 
     setMq = () => {
       this.setState({
-        width: window.outerWidth,
-        mq: window.outerWidth < 992 ? "mobile" : "desktop"
+        width: window.innerWidth,
+        mq: window.innerWidth < 992 ? "mobile" : "desktop"
       });
     };
 
