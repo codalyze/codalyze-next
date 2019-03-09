@@ -25,14 +25,14 @@ const HomePageText = () => (
   </Styled.twoBlocks>
 );
 
-export default ({title, subTitle, banner, titleBreak, secondryTitle, rowReversed, isHomePage}) => (
+export default ({title, subTitle, banner, BannerSvg, titleBreak, secondryTitle, rowReversed, isHomePage}) => (
   <Styled.FlexContainer rowReversed={rowReversed} isHomePage={isHomePage}>
     {isHomePage
     ? <HomePageText />
     : <HomeText title={title} subTitle={subTitle} titleBreak={titleBreak} secondryTitle={secondryTitle} />
     }
     <Styled.twoBlocks rowReversed={rowReversed}>
-      <Styled.bannerImage src={banner} />
+      {BannerSvg ? <BannerSvg /> : <Styled.bannerImage src={banner} />}
     </Styled.twoBlocks>
   </Styled.FlexContainer>
 );

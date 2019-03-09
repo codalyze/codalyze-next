@@ -15,8 +15,16 @@ import NodeJs from '../commons/NodeJs';
 import ReactJs from '../commons/ReactJs';
 import ReactNative from '../commons/ReactNative';
 import VueJs from '../commons/VueJs';
+import Home1 from '../commons/Home1';
+
+import dynamic from 'next/dynamic'
+
+const Home2 = dynamic(() => import('../commons/Home2'));
+
+import LazySvgLoader from '../../../components/LazySvgLoader';
 
 const technologies = [Flutter, NodeJs, ReactJs, ReactNative, VueJs];
+
 
 const HomePage = ({ mq }) => (
   <Styled.pageWrapper>
@@ -29,6 +37,7 @@ const HomePage = ({ mq }) => (
     </Styled.bannerSvg>
     <HomeBanner
       banner="/static/images/home-banner.png"
+      BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
       titleBreak
       isHomePage
     />
