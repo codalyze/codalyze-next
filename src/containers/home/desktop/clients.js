@@ -10,13 +10,12 @@ const OurServices = ({ href }) => (
   </Link>
 );
 
-const techLogo = [
-  "../static/images/home/react-js.svg",
-  "../static/images/home/elasticsearch.svg",
-  "../static/images/home/react-native.svg",
-  "../static/images/home/angularjs.svg",
-  "../static/images/home/nodejs.svg",
-  "../static/images/home/redis.svg"
+const clientLogos = [
+  "../static/images/home/clients/betking.svg",
+  "../static/images/home/clients/fitcircle.svg",
+  "../static/images/home/clients/hotstar.svg",
+  "../static/images/home/clients/khelomore.svg",
+  "../static/images/home/clients/radframe.svg"
 ];
 
 const Clients = () => (
@@ -28,16 +27,16 @@ const Clients = () => (
         <br /> developers, and always seek to push the bar of
         <br /> quality higher.
       </Styled.techStackSubTitle> */}
-      {/* <Styled.techLogoRow>
-        {techLogo.map((x, id) => {
+      <Styled.techLogoRow>
+        {clientLogos.map((x, id) => {
           return (
             <Styled.techLogoBlock key={id}>
-              <img src={x} />
+              <img src={x} width="200" />
             </Styled.techLogoBlock>
           );
         })}
-      </Styled.techLogoRow> */}
-      {/* <OurServices href={"/services"} /> */}
+      </Styled.techLogoRow>
+      <OurServices href={"/start-a-project"} />
     </Styled.FlexContainer>
   </Styled.techStackRow>
 );

@@ -400,12 +400,14 @@ export const techStackRow = styled.div.attrs(({ techBg }) => ({
 }))`
   width: 100%;
   background-image: url(${props => props.techBg});
-  padding: 24% 0 7%;
+  padding: 100px 0 100px;
   background-position: top;
+  background-size: cover;
 `;
 
 export const techStackTitle = styled(homepageBlocksTitle)`
   text-align: center;
+  font-size: 32px;
 `;
 
 export const techStackSubTitle = styled(strategySubTitle)`
@@ -418,30 +420,16 @@ export const techStackSubTitle = styled(strategySubTitle)`
 export const techLogoRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 `;
 
 export const techLogoBlock = styled.div`
-  ${global.threeBlocks}
-  padding-bottom: 100px;
-  &:nth-child(2) {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  &:nth-child(3) {
-    margin: 0 auto;
-    text-align: right;
-  }
-
-  &:nth-child(5) {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  &:nth-child(6) {
-    margin: 0 auto;
-    text-align: right;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px;
 `;
 
 export const CarouselContainer = styled.div`
@@ -497,5 +485,9 @@ export const technologies = styled.div`
 `;
 
 export const technologyItem = styled.div`
-  
+  @media (max-width: 1280px) {
+    svg {
+      width: 160px;
+    }
+  }
 `;
