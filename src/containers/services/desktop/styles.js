@@ -153,6 +153,9 @@ export const bottomSvg = styled.div`
 
 export const section = styled.section`
   margin: 80px auto 150px;
+  ${media.desktop`
+    margin: 10px auto;
+  `}
 `;
 
 export const contentsFromLeft = styled.div`
@@ -181,11 +184,22 @@ export const contentsFromLeft = styled.div`
       padding-right: 200px;
     }
   `};
-
-  ${media.tablet`
-    padding-right: 6vw;
+  ${media.desktop`
     width: 100%;
+    padding: 10px 6vw;
+    h2, p {
+      padding-right: unset;
+      padding-left: unset;
+    }
+    left: unset;
+    li {
+      padding-left: unset;
+        p {
+          padding-left: unset;
+        }
+    }
   `}
+
 `;
 
 // export const StickyContainerDiv = styled(StickyContainer)`
@@ -205,6 +219,10 @@ export const StyledContentImage = css`
 `;
 
 export const WebDevImage = styled(WebDev)`
+  ${media.desktop`
+    width: 300px;
+    height: 300px;
+  `}
 `;
 
 export const MobileAppDevImage = styled(MobileAppDev)``;
@@ -216,6 +234,9 @@ export const WebDevImageContainer = styled.div`
   position: absolute;
   top: 100px;
   ${props => props.isRightAligned ? 'left: -200px' : 'right: -200px'};
+  ${media.desktop`
+    display: none;
+  `}
 `
 
 export const contentsFromRight = styled.div``;
@@ -223,12 +244,21 @@ export const contentsFromRight = styled.div``;
 export const h2 = styled.h2`
 ${global.fontFreightDispBold};
   font-size: 50px;
+  ${media.desktop`
+    font-size: 30px;
+    padding-right: unset;
+    margin: 15px 0;
+  `}
+
 `;
 
 export const h3 = styled.h3`
 ${global.fontFreightDispBold};
   font-size: 30px;
   margin-top: 0;
+  ${media.desktop`
+    font-size: 24px;
+  `}
 `;
 
 export const h4 = styled.h4`
@@ -236,9 +266,13 @@ export const h4 = styled.h4`
 
 export const p = styled.p`
 ${global.fontRobotoLight};
-  font-size: 24px;  
+  font-size: 24px;
   font-weight: 300;
   text-align: justify;
+  ${media.desktop`
+    padding-right: unset;
+    font-size: 16px;
+  `}
 `;
 export const ul = styled.ul`
   list-style-type: none;
@@ -248,17 +282,16 @@ export const ul = styled.ul`
 
 export const li = styled.li`
   margin: 60px 2vw;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
-  ${media.tablet`
-    flex-flow: column nowrap;
-    align-items: flex-start;
+  ${media.desktop`
+    margin: 30px 2vw;
   `}
 `;
 
@@ -271,6 +304,12 @@ export const liImage = styled.div`
     width: 8vw;
     min-width: 150px;
   }
+  ${media.desktop`
+    width: unset;
+    svg {
+      min-width: 80px;
+    }
+  `}
 `;
 
 export const liContent = styled.div`
