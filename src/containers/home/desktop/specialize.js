@@ -2,9 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
 import LazyLoad from 'react-lazyload';
-import dynamic from 'next/dynamic'
-
-const SpecializeStarBg = dynamic(() => import("./images/specializeStar"));
+import SpecializeStarBg from "./images/specializeStar";
 
 const special = [
   {
@@ -23,7 +21,7 @@ const special = [
     img: "../static/images/home/mobileapps.svg",
     title: "Mobile Apps",
     content:
-      "Our unique mobile app development process allows us to rapidly build cross-platform apps at a fraction of the cost."
+      "Our unique mobile app development process allows us to rapidy build cross-platform apps at a fraction of the cost."
   }
 ];
 
@@ -43,7 +41,7 @@ const SpecializeIn = () => (
       />
     </Styled.specializeStarBg>
     <Styled.specializeStarBgTwo>
-    <SpecializeStarBg
+      <SpecializeStarBg
         width="100%"
         height="100%"
         viewBox="0 0 421.867 456.583"

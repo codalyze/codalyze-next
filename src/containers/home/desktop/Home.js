@@ -19,42 +19,44 @@ import Home1 from '../commons/Home1';
 
 import dynamic from 'next/dynamic'
 
-const Home2 = dynamic(() => import('../commons/Home2'));
+const Home2 = dynamic(() => import('../commons/Home2'), {loading: () => null});
 
 import LazySvgLoader from '../../../components/LazySvgLoader';
 
 const technologies = [Flutter, NodeJs, ReactJs, ReactNative, VueJs];
 
+export default class HomePage extends React.PureComponent {
+  render () {
+    return (
+      <Styled.pageWrapper>
+        <Styled.bannerSvg>
+          <HomeBannerSvg
+            width="100%"
+            height="100%"
+            viewBox="0 0 1920.997 1275.951"
+          />
+        </Styled.bannerSvg>
+        <HomeBanner
+          banner="/static/images/home-banner.png"
+          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
+          titleBreak
+          isHomePage
+        />
+        <Styled.technologies>
+          {technologies.map((Technology, idx) => (
+            <Styled.technologyItem key={idx}>
+              <Technology />
+            </Styled.technologyItem>
+          ))}
+        </Styled.technologies>
+        <Strategy />
+        <SpecializeIn />
+        <Testimonial />
+        <Reviews />
+        <Clients />
+        <Footer />
+      </Styled.pageWrapper>
+    );
+  }
+}
 
-const HomePage = ({ mq }) => (
-  <Styled.pageWrapper>
-    <Styled.bannerSvg>
-      <HomeBannerSvg
-        width="100%"
-        height="100%"
-        viewBox="0 0 1920.997 1275.951"
-      />
-    </Styled.bannerSvg>
-    <HomeBanner
-      banner="/static/images/home-banner.png"
-      BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
-      titleBreak
-      isHomePage
-    />
-    <Styled.technologies>
-      {technologies.map((Technology, idx) => (
-        <Styled.technologyItem key={idx}>
-          <Technology />
-        </Styled.technologyItem>
-      ))}
-    </Styled.technologies>
-    <Strategy />
-    <SpecializeIn />
-    <Testimonial />
-    <Reviews />
-    <Clients />
-    <Footer />
-  </Styled.pageWrapper>
-);
-
-export default HomePage;

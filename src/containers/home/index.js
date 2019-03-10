@@ -3,8 +3,10 @@ import Home from "./desktop/Home";
 import HomeMobile from "./mobile/Home";
 import PageWrapper from "../../utils/PageWrapper";
 
-const Page = ({ mq }) => (
-    mq === 'desktop' ? <Home /> : <HomeMobile />
-);
+class Page extends React.PureComponent {
+    render () {
+        return this.props.mq === 'desktop' ? <Home /> : <HomeMobile />
+    }
+}
 
 export default PageWrapper(Page);

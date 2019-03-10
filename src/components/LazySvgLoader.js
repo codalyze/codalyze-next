@@ -4,10 +4,12 @@ import styled from "styled-components";
 const SvgWrapper = styled.div`
   position: relative;
   height: ${props => props.height}px;
+  transition: all 500ms ease;
   svg {
     position: absolute;
     right: 0;
     top: 0;
+    transition: all 500ms ease;
   }
 `;
 
@@ -16,14 +18,14 @@ export default class LazySvgLoader extends React.Component {
     super();
     this.state = {
       loaded: false,
-      width: 0
+      width: 500
     };
   }
 
   componentDidMount () {
     this.setState({loaded: true});
-    this.onResize();
     window.addEventListener('resize', this.onResize);
+    this.onResize();
   }
 
   componentWillUnmount () {
@@ -46,7 +48,7 @@ export default class LazySvgLoader extends React.Component {
     const {FirstImage, LazyImage} = this.props;
     return (
       <SvgWrapper height={this.state.width}>
-        <FirstImage width={`${this.state.width}px`} />
+        <FirstImage style={{width: `${this.state.width}px`}} />
         {this.state.loaded && <LazyImage width={`${this.state.width}px`} />}
       </SvgWrapper>
     );
