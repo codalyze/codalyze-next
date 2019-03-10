@@ -12,7 +12,7 @@ const StartProject = ({ href }) => (
 const KMReview = ({showOnSmallScreen}) => (
     <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
         <LazyLoad height={214} once offset={100}>
-            <Styled.reviewImage src="../static/images/home/khelomore.png" />
+            <Styled.reviewImage src="/static/images/home/khelomore.png" />
         </LazyLoad>
         <Styled.reviewImageTitle>KheloMore</Styled.reviewImageTitle>
         <Styled.reviewImageContent>
@@ -36,7 +36,7 @@ const Reviews = () => (
             <Styled.reviewImageBlocks>
                 <Styled.reviewSingle>
                     <LazyLoad height={214} once offset={100}>
-                        <Styled.reviewImage src="../static/images/home/betking.png" />
+                        <Styled.reviewImage src="/static/images/home/betking.png" />
                     </LazyLoad>
                     <Styled.reviewImageTitle>BetKing</Styled.reviewImageTitle>
                     <Styled.reviewImageContent>
@@ -45,7 +45,7 @@ const Reviews = () => (
                 </Styled.reviewSingle>
                 <Styled.reviewSingle>
                     <LazyLoad height={214} once offset={100}>
-                        <Styled.reviewImage src="../static/images/home/lcs.jpg" width="324" />
+                        <Styled.reviewImage src="/static/images/home/lcs.jpg" width="324" />
                     </LazyLoad>
                     <Styled.reviewImageTitle>Barnes and Noble LoudCloud</Styled.reviewImageTitle>
                     <Styled.reviewImageContent>

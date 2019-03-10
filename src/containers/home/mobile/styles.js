@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
 
-export const pageWrapper = styled.div``;
+export const pageWrapper = styled.div`
+  position: relative;
+`;
 
 export const title = styled.h1`
   ${global.mobileTitle}
   color: #000;
   margin: 0 0 15px;
+  font-size: 24px;
 `;
 
 export const p = styled.p`
@@ -30,10 +33,10 @@ export const HomeMobileBgSvg = styled.div`
   width: 100%;
   top: 280px;
   z-index: -1;
-  // svg {
-  //   width: 100%;
-  //   height: auto;
-  // }
+  svg {
+    width: 100%;
+    height: auto;
+  }
   .a {
     opacity: 0.4;
   }
@@ -76,12 +79,14 @@ export const strategyStats = styled.div`
 export const strategyStatsNum = styled.h5`
   ${global.fontRobotoLight};
   color: #111111;
-  font-size: 28px;
+  font-size: 18px;
   margin: 0 0 0px;
+  white-space: nowrap;
 `;
 
 export const strategyStatsTitle = styled.h6`
   ${global.mobileparagraph};
+  white-space: nowrap;
 `;
 
 export const specializeContainer = styled.div`
@@ -97,7 +102,14 @@ export const splRow = styled.div`
   display: flex;
   flex-direction: row;
   overflow: auto;
-  padding: 0px 0 60px 35px;
+  padding: 0px 35px 60px 35px;
+  width: calc(100vw - 70px);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 `;
 
 export const specializeStarContainerBg = styled.div`
@@ -141,8 +153,8 @@ export const splAreasBlocks = styled.div`
 export const splAreasImage = styled.img`
   ${global.CenterImg};
   width: 110px;
-  height: 80px;
-  padding: 31px 0 51px;
+  width: 120px;
+  padding: 31px 0 20px;
 `;
 
 export const splAreasTitle = styled.h6`
@@ -151,6 +163,10 @@ export const splAreasTitle = styled.h6`
   font-size: 20px;
   text-align: center;
   margin: 0 0 10px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const testimonialMobileRow = styled.div`
@@ -177,7 +193,8 @@ export const testimonialListMob = styled(splRow)`
   padding: 0 0 0 0;
 `;
 
-export const testimonialBlockMob = styled(splAreasBlocks)``;
+export const testimonialBlockMob = styled(splAreasBlocks)`
+`;
 
 export const testimonialImageMob = styled.img`
   ${global.CenterImg};
@@ -211,7 +228,10 @@ export const reviewsTitleMob = styled.h3`
   margin: 0 0 10px;
 `;
 
-export const reviewsBlockImgMob = styled.img``;
+export const reviewsBlockImgMob = styled.img`
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+`;
 
 export const reviewsBlockContentMob = styled.div`
   border: 1px solid #e3e3e3;

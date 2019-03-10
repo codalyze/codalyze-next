@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
+import LazyLoad from 'react-lazyload';
 
 const footerPages = [
   {
@@ -67,7 +68,6 @@ class FooterLinkComponent extends React.Component {
 
 export default class FooterMobile extends React.PureComponent {
   render() {
-    const { top, width, left, right, href } = this.props;
     return (
       <Styled.footerRowMob>
         <Styled.footerBlockOne>
@@ -88,7 +88,9 @@ export default class FooterMobile extends React.PureComponent {
             {SocialMediaLinks.map((media, index) => (
               <Styled.footerSocialMedia key={index}>
                 <Styled.footerImgAligned>
-                  <Styled.footerSocialImg src={media.src} />
+                  <LazyLoad height={17} offset={100} once>
+                    <Styled.footerSocialImg src={media.src} />
+                  </LazyLoad>
                 </Styled.footerImgAligned>
 
                 <Styled.footerSocialPage href={media.href}>

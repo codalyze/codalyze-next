@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
+import LazyLoad from 'react-lazyload';
 
 const footerLinks = [
   {
@@ -71,10 +72,12 @@ export default class Footer extends React.PureComponent {
               </Styled.h4>
               <Styled.h3>Connect with us</Styled.h3>
               <Styled.socialImages>
-                <Styled.img src="/static/images/footer/fb.png" />
-                <Styled.img src="/static/images/footer/instagram.png" />
-                <Styled.img src="/static/images/footer/linkedin.png" />
-                <Styled.img src="/static/images/footer/twitter.png" />
+                <LazyLoad height={64} offset={100} once>
+                  <Styled.img src="/static/images/footer/fb.png" />
+                  <Styled.img src="/static/images/footer/instagram.png" />
+                  <Styled.img src="/static/images/footer/linkedin.png" />
+                  <Styled.img src="/static/images/footer/twitter.png" />
+                </LazyLoad>
               </Styled.socialImages>
               <Styled.contactUs href="mailto: mail@codalyze.com">
                 mail@codalyze.com

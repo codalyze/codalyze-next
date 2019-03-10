@@ -3,31 +3,12 @@ import * as Styled from "./styles";
 import Link from "next/link";
 import SpecializeMobileBg from "./images/specializeMobileBg";
 import MobileStarBg from "../desktop/images/specializeStar";
-
-const mobSpecialize = [
-  {
-    img: "../static/images/mobile/home/website.svg",
-    title: "Website",
-    content:
-      "We build modern web applications of all shapes and sizes using the latest technologies."
-  },
-  {
-    img: "../static/images/mobile/home/backend.svg",
-    title: "Backend",
-    content:
-      "We develop bulletproof APIs, sockets, and databases. 100% reliable, scalable, and high- performing."
-  },
-  {
-    img: "../static/images/mobile/home/mobileapps.svg",
-    title: "Mobile Apps",
-    content:
-      "Our unique mobile app development process allows us to rapidly build cross-platform apps at a fraction of the cost."
-  }
-];
+import {specialize} from '../commons/data';
+import LazyLoad from 'react-lazyload';
 
 const OurService = ({ href }) => (
   <Link href={href} passHref prefetch>
-    <Styled.greenBtn>our service</Styled.greenBtn>
+    <Styled.greenBtn>Our Services</Styled.greenBtn>
   </Link>
 );
 
@@ -56,9 +37,11 @@ const SpecializeInMobile = () => (
         </Styled.p>
       </Styled.splTitleSection>
       <Styled.splRow>
-        {mobSpecialize.map((i, index) => (
+        {specialize.map((i, index) => (
           <Styled.splAreasBlocks key={index}>
-            <Styled.splAreasImage src={i.img} />
+            <LazyLoad height={138.65} offset={100} once>
+              <Styled.splAreasImage src={i.img} />
+            </LazyLoad>
             <Styled.splAreasTitle>{i.title}</Styled.splAreasTitle>
             <Styled.p>{i.content}</Styled.p>
           </Styled.splAreasBlocks>

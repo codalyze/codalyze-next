@@ -1,22 +1,23 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
+import LazyLoad from 'react-lazyload';
 
 const reviewList = [
   {
-    img: "../static/images/mobile/home/betkingMobile.png",
+    img: "/static/images/home/betking.png",
     title: "BetKing",
-    paragraph: "Working with Naisheel and Codalyze has been a great experience."
+    paragraph: "BetKing is one of the most trusted online crypto casino and exchange (raised $6.5 million in ICO)"
   },
   {
-    img: "../static/images/mobile/home/fitCircleMobile.png",
+    img: "/static/images/home/lcs.jpg",
+    title: "Barnes and Noble LoudCloud",
+    paragraph: "LoudCloud builds software that improves learning. Acquired by Barnes and Noble in 2016."
+  },
+  {
+    img: "/static/images/home/khelomore.png",
     title: "KheloMore",
-    paragraph: "Working with Naisheel and Codalyze has been a great experience."
-  },
-  {
-    img: "../static/images/mobile/home/khelomoreMobile.png",
-    title: "Fitcircle",
-    paragraph: "Working with Naisheel and Codalyze has been a great experience."
+    paragraph: "Founded by former Indian cricketer, athelete and Sports Managing Head for Nike, Jatin Paranjape, KheloMore is a digital platform bringing together young atheletes and coaches / academies online for an exceptional performance off-line."
   }
 ];
 
@@ -30,7 +31,7 @@ const ReviewsMobile = () => (
   <Styled.pageWrapper>
     <Styled.contentPadding>
       <Styled.title>
-        Explore how our engagements become success stories
+        We have worked with some amazing founders and startups
       </Styled.title>
       <Styled.p>
         Enjoy deep focus and productive relationships. Partner with us and we'll
@@ -40,7 +41,9 @@ const ReviewsMobile = () => (
     <Styled.reviewsListMob>
       {reviewList.map((value, index) => (
         <Styled.reviewsBlockMob key={index}>
-          <Styled.reviewsBlockImgMob src={value.img} />
+          <LazyLoad height={141} offset={100} once>
+            <Styled.reviewsBlockImgMob width="214px" src={value.img} />
+          </LazyLoad>
           <Styled.reviewsBlockContentMob>
             <Styled.reviewsTitleMob>{value.title}</Styled.reviewsTitleMob>
             <Styled.p>

@@ -2,6 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
 import LazyLoad from 'react-lazyload';
+import {clientLogos} from '../commons/data';
 
 const techStackRowBg = "../../static/images/home/techstackBackground.png";
 
@@ -10,14 +11,6 @@ const OurServices = ({ href }) => (
     <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
   </Link>
 );
-
-const clientLogos = [
-  "../static/images/home/clients/betking.svg",
-  "../static/images/home/clients/fitcircle.svg",
-  "../static/images/home/clients/hotstar.svg",
-  "../static/images/home/clients/khelomore.svg",
-  "../static/images/home/clients/radframe.svg"
-];
 
 const Clients = () => (
   <Styled.techStackRow techBg={techStackRowBg}>

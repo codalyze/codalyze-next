@@ -4,6 +4,7 @@ import * as global from "../../../utils/globalStyles";
 export const mobileContainer = styled.div`
   position: relative;
   z-index: 21;
+  height: 78px;
 `;
 
 export const mobileNav = styled.div`

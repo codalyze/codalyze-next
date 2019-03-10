@@ -34,7 +34,7 @@ export const part1 = styled.span`
 `;
 
 export const part2 = styled.span`
-  font-size: 32px;
+  font-size: 28px;
   display: block;
   margin: 10px 0;
   color: #ef543d;

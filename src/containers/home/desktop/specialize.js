@@ -3,27 +3,7 @@ import * as Styled from "./styles";
 import Link from "next/link";
 import LazyLoad from 'react-lazyload';
 import SpecializeStarBg from "./images/specializeStar";
-
-const special = [
-  {
-    img: "../static/images/home/website.svg",
-    title: "Web Development",
-    content:
-      "We build modern web applications of all shapes and sizes using the latest technologies."
-  },
-  {
-    img: "../static/images/home/backend.svg",
-    title: "Backend Architecture and Development",
-    content:
-      "We develop bulletproof APIs, sockets, and databases. 100% reliable, scalable, and high- performing."
-  },
-  {
-    img: "../static/images/home/mobileapps.svg",
-    title: "Mobile Apps",
-    content:
-      "Our unique mobile app development process allows us to rapidy build cross-platform apps at a fraction of the cost."
-  }
-];
+import {specialize} from '../commons/data';
 
 const OurService = ({ href }) => (
   <Link href={href} passHref prefetch>
@@ -55,7 +35,7 @@ const SpecializeIn = () => (
       </Styled.specializeContent>
       <Styled.specializeAreas>
         
-        {special.map((i, index) => (
+        {specialize.map((i, index) => (
           <Styled.specializeAreasBlocks key={index}>
             <LazyLoad height={150} once offset={100}><Styled.specializeAreasImage src={i.img} /></LazyLoad>
             <Styled.specializeAreasTitle>{i.title}</Styled.specializeAreasTitle>
