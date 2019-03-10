@@ -11,8 +11,7 @@ import Footer from "../../../components/footer";
 export default class AboutUsDesktop extends Component{
     render(){
         return(
-            <Styled.pageWrapper>
-                <Styled.sectionFirst>
+            <Styled.PageWrapper>
                     <Styled.bannerSvg>
                         <SectionFirstBg width="100%" height="100%" viewBox="700 0 2175.141 2959.327" preserveAspectRatio="none" />
                     </Styled.bannerSvg>
@@ -21,15 +20,10 @@ export default class AboutUsDesktop extends Component{
                         subTitle="We aid you in achieving a tight deadline and"
                         banner="/static/images/about-us/about1.svg"/>
                     <AboutSections />
-                </Styled.sectionFirst>
-                <Styled.sectionSecond>
                     <AboutSecond/>
-                </Styled.sectionSecond>
-                <Styled.otherSections>
                     <AboutOtherSections/>
-                </Styled.otherSections>
                 <Footer />
-            </Styled.pageWrapper>
+            </Styled.PageWrapper>
         );
     }
 }
