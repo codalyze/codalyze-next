@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from "styled-components";
-import { media } from "../../../utils/globalStyles";
 import * as global from "../../../utils/globalStyles";
 
 export const mainDiv = styled.div`
@@ -53,7 +52,6 @@ export const FirstSecImage = styled.div`
 `;
 
 export const sectionFirst = styled.div`
-  height: 2830px;
   @media (min-width: 768px) and (max-width: 1024px) {
     height: inherit;
     margin-top: 20%;
@@ -61,12 +59,9 @@ export const sectionFirst = styled.div`
 `;
 
 export const sectionSecond = styled(sectionFirst)`
-  height: 600px;
-  position: relative;
 `;
 
 export const otherSections = styled(sectionFirst)`
-  height: auto;
 `;
 
 export const devisonDiv = styled.div`
@@ -84,7 +79,7 @@ export const leftDiv = styled.div`
   ${global.twoBlocks}
 `;
 export const rightDiv = styled.div`
-${global.twoBlocks}   
+${global.twoBlocks}
 text-align: ${props => (props.right ? "right" : "")};
 `;
 

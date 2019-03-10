@@ -4,6 +4,9 @@ import TeamMemberBg from "./images/teamMemberBg";
 import LoveStatUpsBg from "./images/loveStartups";
 import HitechBg from "./images/HiTechBg";
 
+import {teamMembers, socialIcons} from "../commons/team-social";
+import {SocialWrapper} from "../commons/styles";
+
 export const HiTech = () => {
   return (
     <Styled.HitechMain>
@@ -56,45 +59,6 @@ export const ProductTeams = () => {
   );
 };
 
-const TeamMembers = [
-  {
-    id: 1,
-    image: "/static/images/about-us/Team/1.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  },
-  {
-    id: 2,
-    image: "/static/images/about-us/Team/2.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  },
-  {
-    id: 3,
-    image: "/static/images/about-us/Team/3.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  },
-  {
-    id: 4,
-    image: "/static/images/about-us/Team/4.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  },
-  {
-    id: 5,
-    image: "/static/images/about-us/Team/5.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  },
-  {
-    id: 6,
-    image: "/static/images/about-us/Team/6.png",
-    name: "Naisheel verdhan",
-    position: "Ceo & Founder"
-  }
-];
-
 export const TeamMember = () => {
   return (
     <Styled.TeamMain>
@@ -107,12 +71,19 @@ export const TeamMember = () => {
           it all possible
         </Styled.h2>
         <Styled.TeamPhotowrapper>
-          {TeamMembers.map(member => (
+          {teamMembers.map(member => (
             <Styled.Photo key={member.id}>
               <Styled.WrapperBlock>
                 <Styled.TeamMemberImage src={member.image} />
                 <Styled.TeamMemberName>{member.name}</Styled.TeamMemberName>
                 <Styled.TeamPosition>{member.position}</Styled.TeamPosition>
+                <SocialWrapper>
+                  {member.socialButtons.map(social =>
+                    <a href={social.url} target="_blank" key={social.type}>
+                      <img src={socialIcons[social.type]} height="24" height="24" />
+                    </a>
+                    )}
+                </SocialWrapper>
               </Styled.WrapperBlock>
             </Styled.Photo>
           ))}

@@ -13,9 +13,9 @@ export default class AboutUsDesktop extends Component{
         return(
             <Styled.pageWrapper>
                 <Styled.sectionFirst>
-                <Styled.bannerSvg>
-                    <SectionFirstBg width="100%" height="100%" viewBox="700 0 2175.141 2959.327" preserveAspectRatio="none" />
-                </Styled.bannerSvg>
+                    <Styled.bannerSvg>
+                        <SectionFirstBg width="100%" height="100%" viewBox="700 0 2175.141 2959.327" preserveAspectRatio="none" />
+                    </Styled.bannerSvg>
                     <HomeBanner
                         title="Meet the team behind it"
                         subTitle="We aid you in achieving a tight deadline and"
