@@ -5,7 +5,7 @@ import BannerBg from './images/aboutUsBannerBg';
 const WhoWeAre = () => (
     <Styled.whoweareContainer>
         <Styled.aboutBannerMobile>
-            <BannerBg 
+            <BannerBg
                 width="100%"
                 height="100%"
                 viewBox="450 0 370.637 1136.469"
@@ -13,7 +13,10 @@ const WhoWeAre = () => (
         </Styled.aboutBannerMobile>
         <Styled.whoweare>
             <Styled.whoweareTitle>Who we are</Styled.whoweareTitle>
-            <Styled.whoweareContent>Codalyze is a tight-knit family of curious and creative storytellers based in sunny Santa Monica. We are open, collaborative, and use our collective experience, design and technical expertise to create meaningful and compelling content for all mediums. We embrace new challenges with an open heart, a hunger to learn, and a passion for solving problems as a team.</Styled.whoweareContent>
+            <Styled.whoweareContent>
+                Based out of Powai, Mumbai, Codalyze is a diverse community of people committed to using modern JavaScript and software development best practices to build beautiful web & mobile applications for our clients.
+                We are dedicated to helping startups and enterprises move to the modern web.
+            </Styled.whoweareContent>
         </Styled.whoweare>
         <Styled.whoweareBanner src="/static/images/mobile/about/whoweareMobile.png" />
     </Styled.whoweareContainer>
