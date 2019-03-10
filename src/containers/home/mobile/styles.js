@@ -30,10 +30,10 @@ export const HomeMobileBgSvg = styled.div`
   width: 100%;
   top: 280px;
   z-index: -1;
-  svg {
-    width: 100%;
-    height: auto;
-  }
+  // svg {
+  //   width: 100%;
+  //   height: auto;
+  // }
   .a {
     opacity: 0.4;
   }

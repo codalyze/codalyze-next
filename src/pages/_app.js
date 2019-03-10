@@ -1,10 +1,11 @@
 import App, { Container } from 'next/app';
 import React from 'react';
-import Router, { withRouter } from 'next/router';
+import Router from 'next/router';
 import { PageTransition } from 'next-page-transitions';
 import Header from "../components/Header";
 import Transition from '../components/Transition';
 import '../styles/transitions.scss';
+import UAParser from 'ua-parser-js';
  
 export default class MyApp extends App {
   constructor (props) {
@@ -44,6 +45,10 @@ export default class MyApp extends App {
     this.handleRouteChangeStart(this.pathname);
   }
 
+  componentDidCatch (x) {
+    console.log(x);
+  }
+
   calculatePosition (url) {
     if (url === '/') {
       if (typeof window === 'undefined' || !this.linkRefs.get('work')) {
@@ -78,21 +83,30 @@ export default class MyApp extends App {
     this.linkRefs.set(href, ref);
   }
 
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
  
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
+
+    let mq = 'mobile';
+    if (ctx.req.headers['user-agent']) {
+      const parsedUa = new UAParser(ctx.req.headers['user-agent']);
+      if (parsedUa && parsedUa.getDevice() && parsedUa.getDevice().type !== 'mobile' && parsedUa.getDevice().type !== 'tablet') {
+        mq = 'desktop';
+      }
+    }
+    pageProps.mq = mq;
  
-    return { pageProps }
+    return { pageProps };
   }
  
   render() {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Header {...this.state} addRef={this.addRef} />
+        <Header {...this.state} addRef={this.addRef} {...pageProps} />
         <PageTransition timeout={500} classNames="page-transition">
           <React.Fragment key={this.props.router.route}>
             <Transition />

@@ -2,11 +2,11 @@ import React from "react";
 
 const PageWrapper = Component => {
   class PageWrapperClass extends React.Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
         width: "1600",
-        mq: "desktop"
+        mq: props.mq || "desktop"
       };
     }
 

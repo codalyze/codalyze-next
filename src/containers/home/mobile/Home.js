@@ -17,26 +17,28 @@ const Home2 = dynamic(() => import('../commons/Home2'));
 
 import LazySvgLoader from '../../../components/LazySvgLoader';
 
-const HomeMobile = () => (
-  <Styled.pageWrapper>
-    <Styled.HomeMobileBgSvg>
-      <HomeBannerMobileSvg
-        width="100%"
-        height="100%"
-        viewBox="0 0 448.437 344.879"
-      />
-    </Styled.HomeMobileBgSvg>
-    <MobileBanner
-      BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
-      isHomePage
-    />
-    <Strategy />
-    <SpecializeInMobile />
-    <TestimonialsMobile />
-    <ReviewsMobile />
-    <TechStackMobile />
-    <FooterMobile />
-  </Styled.pageWrapper>
-);
-
-export default HomeMobile;
+export default class HomeMobile extends React.PureComponent {
+  render () {
+    return (
+      <Styled.pageWrapper>
+        <Styled.HomeMobileBgSvg>
+          <HomeBannerMobileSvg
+            width="100%"
+            height="100%"
+            viewBox="0 0 448.437 344.879"
+          />
+        </Styled.HomeMobileBgSvg>
+        <MobileBanner
+          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
+          isHomePage
+        />
+        <Strategy />
+        <SpecializeInMobile />
+        <TestimonialsMobile />
+        <ReviewsMobile />
+        <TechStackMobile />
+        <FooterMobile />
+      </Styled.pageWrapper>
+    );
+  }
+}
