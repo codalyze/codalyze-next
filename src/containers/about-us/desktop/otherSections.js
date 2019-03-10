@@ -1,17 +1,13 @@
 import React from "react";
 import * as Styled from "./styles";
 import TeamMemberBg from "./images/teamMemberBg";
-import LoveStatUpsBg from "./images/loveStartups";
-import HitechBg from "./images/HiTechBg";
 
 import {teamMembers, socialIcons} from "../commons/team-social";
 import {SocialWrapper} from "../commons/styles";
 
 export const HiTech = () => {
   return (
-    <Styled.HitechMain>
-      <HitechBg width="100%" height="100%" viewBox="0 0 1920 2143.35" />
-      <Styled.HitechInner>
+    <Styled.SectionWrapper>
         <Styled.FlexContainer>
           <Styled.devisonDiv>
             <Styled.leftDiv>
@@ -29,14 +25,13 @@ export const HiTech = () => {
             </Styled.rightDiv>
           </Styled.devisonDiv>
         </Styled.FlexContainer>
-      </Styled.HitechInner>
-    </Styled.HitechMain>
+    </Styled.SectionWrapper>
   );
 };
 
 export const ProductTeams = () => {
   return (
-    <Styled.ProducTeamWrapper>
+    <Styled.SectionWrapper>
       <Styled.ProducTeamInner>
         <Styled.FlexContainer>
           <Styled.devisonDiv>
@@ -55,13 +50,13 @@ export const ProductTeams = () => {
           </Styled.devisonDiv>
         </Styled.FlexContainer>
       </Styled.ProducTeamInner>
-    </Styled.ProducTeamWrapper>
+    </Styled.SectionWrapper>
   );
 };
 
 export const TeamMember = () => {
   return (
-    <Styled.TeamMain>
+    <Styled.TeamWrapper>
       <Styled.TeamBg>
         <TeamMemberBg width="100%" height="100%" viewBox="0 0 1920.998 700" />
       </Styled.TeamBg>
@@ -92,58 +87,49 @@ export const TeamMember = () => {
           <Styled.Button>START A PROJECT</Styled.Button>
         </Styled.ButtonWrapper>
       </Styled.FlexContainer>
-    </Styled.TeamMain>
+    </Styled.TeamWrapper>
   );
 };
 
 export const LoveStatUps = () => {
   return (
-    <Styled.LoveStartupsDiv>
-      <LoveStatUpsBg
-        width="100%"
-        height="100%"
-        viewBox="0 0 1920.997 1275.951"
-      />
-      <Styled.innerDiv>
-        <Styled.FlexContainer>
-          <Styled.devisonDiv>
-            <Styled.leftDiv>
-              <Styled.imageRight src="/static/images/about-us/Artboard-6.png" />
-            </Styled.leftDiv>
-            <Styled.rightDiv>
-              <Styled.h2>We Love Start-Ups</Styled.h2>
+    <Styled.FlexContainer>
+      <Styled.devisonDiv>
+        <Styled.leftDiv>
+          <Styled.imageRight src="/static/images/about-us/Artboard-6.png" />
+        </Styled.leftDiv>
+        <Styled.rightDiv>
+          <Styled.h2>We Love Start-Ups</Styled.h2>
 
-              <Styled.listUl>
-                <Styled.li>
-                  <Styled.circleDiv />
-                  We share your passion for changing the world
-                </Styled.li>
-                <Styled.li>
-                  <Styled.circleDiv />
-                  We've helped ideas grow in the past and it feels beautiful
-                </Styled.li>
-                <Styled.li>
-                  <Styled.circleDiv />
-                  If you run a start-up and are looking for a tech partner,
-                  please say Hi!
-                </Styled.li>
-              </Styled.listUl>
-            </Styled.rightDiv>
-          </Styled.devisonDiv>
-        </Styled.FlexContainer>
-      </Styled.innerDiv>
-    </Styled.LoveStartupsDiv>
+          <Styled.listUl>
+            <Styled.li>
+              <Styled.circleDiv />
+              We share your passion for changing the world
+            </Styled.li>
+            <Styled.li>
+              <Styled.circleDiv />
+              We've helped ideas grow in the past and it feels beautiful
+            </Styled.li>
+            <Styled.li>
+              <Styled.circleDiv />
+              If you run a start-up and are looking for a tech partner,
+              please say Hi!
+            </Styled.li>
+          </Styled.listUl>
+        </Styled.rightDiv>
+      </Styled.devisonDiv>
+    </Styled.FlexContainer>
   );
 };
 
 const AboutOtherSections = () => {
   return (
-    <Styled.mainDiv>
+    <>
       <HiTech />
       <ProductTeams />
       <LoveStatUps />
       <TeamMember />
-    </Styled.mainDiv>
+    </>
   );
 };
 

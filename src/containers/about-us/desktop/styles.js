@@ -1,11 +1,9 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
 
-export const mainDiv = styled.div`
-  ${global.fullRow}
+export const PageWrapper = styled.div`
+  position: relative;
 `;
-
-export const commonDiv = styled.div``;
 
 export const bannerSvg = styled.div`
   position: absolute;
@@ -15,7 +13,6 @@ export const bannerSvg = styled.div`
   z-index: -1;
   svg {
     width: 100%;
-    height: auto;
   }
   .a {
     opacity: 0.4;
@@ -24,10 +21,6 @@ export const bannerSvg = styled.div`
 
 export const FlexContainer = styled.div`
   ${global.mainContainer}
-`;
-
-export const pageWrapper = styled.div`
-  position: relative;
 `;
 
 export const whoeWe = styled.h1`
@@ -51,25 +44,11 @@ export const FirstSecImage = styled.div`
   margin-top: 8%;
 `;
 
-export const sectionFirst = styled.div`
-  @media (min-width: 768px) and (max-width: 1024px) {
-    height: inherit;
-    margin-top: 20%;
-  }
-`;
-
-export const sectionSecond = styled(sectionFirst)`
-`;
-
-export const otherSections = styled(sectionFirst)`
-`;
-
 export const devisonDiv = styled.div`
   flex-direction: row;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  //position:relative;
   @media (min-width: 768px) and (max-width: 1024px) {
     align-items: end;
   }
@@ -121,16 +100,11 @@ export const TeamBg = styled.div`
   }
 `;
 
-export const TeamMain = styled(mainDiv)`
-  //position:relative;
-  margin-top: 10%;
-`;
-
 export const TeamPhotowrapper = styled(devisonDiv)`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
-export const Photo = styled(commonDiv)`
+export const Photo = styled('div')`
   width: 33.3%;
   margin-bottom: 50px;
   &:nth-child(2) {
@@ -168,7 +142,7 @@ export const TeamPosition = styled.h4`
   margin: 0 0;
 `;
 
-export const WrapperBlock = styled(commonDiv)`
+export const WrapperBlock = styled('div')`
   width: 331px;
   text-align: left;
 `;
@@ -177,14 +151,9 @@ export const Button = styled.button`
   ${global.mainButton}
 `;
 
-export const ButtonWrapper = styled(commonDiv)`
+export const ButtonWrapper = styled('div')`
   text-align: center;
   padding: 50px 0;
-`;
-
-export const LoveStartupsDiv = styled(mainDiv)`
-  position: relative;
-  margin-top: 10%;
 `;
 
 export const listUl = styled.ul`
@@ -201,7 +170,7 @@ export const li = styled.li`
   }
 `;
 
-export const circleDiv = styled(commonDiv)`
+export const circleDiv = styled('div')`
   background: #e0e0e0;
   width: 50px;
   height: 50px;
@@ -215,31 +184,7 @@ export const circleDiv = styled(commonDiv)`
   }
 `;
 
-export const innerDiv = styled(commonDiv)`
-  position: absolute;
-  top: 25%;
-  width: 100%;
-`;
-
-export const HitechMain = styled(LoveStartupsDiv)`
-  position: relative;
-  margin-top: 0;
-`;
-
-export const HitechInner = styled(innerDiv)`
-  top: 35%;
-  @media (min-width: 768px) and (max-width: 1024px) {
-    top: 25%;
-  }
-`;
-
-export const ProducTeamWrapper = styled(commonDiv)`
-  height: 400px;
-  top: -230px;
-  position: relative;
-`;
-
-export const ProducTeamInner = styled(commonDiv)`
+export const ProducTeamInner = styled('div')`
   // position: absolute;
   // bottom:0;
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -247,9 +192,17 @@ export const ProducTeamInner = styled(commonDiv)`
   }
 `;
 
-export const circleImages = styled(commonDiv)`
+export const circleImages = styled('div')`
   position: absolute;
-  bottom: -93px;
-  left: -90px;
   z-index: -1;
+  width: 100%;
+`;
+
+export const SectionWrapper = styled('div')`
+  margin: 100px 0;
+`;
+
+export const TeamWrapper = styled('div')`
+  margin-top: 100px;
+  position: relative;
 `;
