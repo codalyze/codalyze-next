@@ -17,6 +17,9 @@ body {
   .app-body {
     opacity: 0;
   }
+  @media (max-width: 992px) {
+    top: 89px;
+  }
 }
 .page-transition-enter-active {
   .app-body {

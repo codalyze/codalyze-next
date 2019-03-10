@@ -5,10 +5,8 @@ const SvgCodalyzeLogo = props => (
     id="codalyze_logo_svg__Layer_1"
     x={0}
     y={0}
-    viewBox="0 0 120.2 30"
+    viewBox="0 0 125.2 30"
     xmlSpace="preserve"
-    width="1em"
-    height="1em"
     {...props}
   >
     <style>
@@ -35,13 +33,7 @@ const SvgCodalyzeLogo = props => (
       transform="translate(30.897 20)"
       className="codalyze_logo_svg__st2 codalyze_logo_svg__st3 codalyze_logo_svg__st4"
     >
-      {"Codalyze"}
-    </text>
-    <text
-      transform="translate(87 20)"
-      className="codalyze_logo_svg__st2 codalyze_logo_svg__st3 codalyze_logo_svg__st4"
-    >
-      {"Tech"}
+      {"Codalyze Tech"}
     </text>
   </svg>
 );

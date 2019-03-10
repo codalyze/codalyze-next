@@ -5,7 +5,7 @@ export const commonDiv = styled.div``;
 
 export const mobileBanner = styled.div`
   position: relative;
-  padding: 40px 35px 70px;
+  padding: 88px 35px 70px;
 `;
 
 export const bannerImg = styled.img`

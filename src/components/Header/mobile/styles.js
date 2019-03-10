@@ -1,24 +1,29 @@
 import styled from "styled-components";
 import * as global from "../../../utils/globalStyles";
 
-export const mobileContainer = styled.div``;
+export const mobileContainer = styled.div`
+  position: relative;
+  z-index: 21;
+`;
 
 export const mobileNav = styled.div`
-  padding: 21px 35px 0;
+  padding: 21px 30px 0 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const mobileHeaderImg = styled.img``;
 
 export const mobileMenuItems = styled.div`
   position: relative;
-  padding: 98px 0 0;
+  padding: 64px 0 0;
 `;
 
 export const menuToggleBtn = styled.button`
   background: transparent;
   border: none;
+  padding: 0;
 `;
 
 export const mobileToggleMenu = styled.div`

@@ -13,7 +13,7 @@ import Home1 from '../commons/Home1';
 
 import dynamic from 'next/dynamic'
 
-const Home2 = dynamic(() => import('../commons/Home2'));
+const Home2 = dynamic(() => import('../commons/Home2'), {loading: () => null});
 
 import LazySvgLoader from '../../../components/LazySvgLoader';
 
@@ -29,7 +29,7 @@ export default class HomeMobile extends React.PureComponent {
           />
         </Styled.HomeMobileBgSvg>
         <MobileBanner
-          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
+          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} isMobile />}
           isHomePage
         />
         <Strategy />

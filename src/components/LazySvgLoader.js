@@ -14,11 +14,11 @@ const SvgWrapper = styled.div`
 `;
 
 export default class LazySvgLoader extends React.Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       loaded: false,
-      width: 500
+      width: props.isMobile ? 100 : 500
     };
   }
 

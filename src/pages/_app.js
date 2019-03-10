@@ -91,7 +91,7 @@ export default class MyApp extends App {
     }
 
     let mq = 'mobile';
-    if (ctx.req.headers['user-agent']) {
+    if (ctx.req && ctx.req.headers['user-agent']) {
       const parsedUa = new UAParser(ctx.req.headers['user-agent']);
       if (parsedUa && parsedUa.getDevice() && parsedUa.getDevice().type !== 'mobile' && parsedUa.getDevice().type !== 'tablet') {
         mq = 'desktop';
