@@ -178,7 +178,7 @@ const Work = props => (
         <Styled.bannerContents>
           <Banner
             banner="/static/images/mobile/work/workMobileBanner.png"
-            title="Puzzels solved"
+            title="Puzzles solved"
             secondryTitle="into success."
             subTitle="Our clients and ventures. Ideas we have helped to grow"
             titleBreak
