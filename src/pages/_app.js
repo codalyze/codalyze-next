@@ -4,9 +4,9 @@ import Router from 'next/router';
 import { PageTransition } from 'next-page-transitions';
 import Header from "../components/Header";
 import Transition from '../components/Transition';
-import '../styles/transitions.scss';
 import UAParser from 'ua-parser-js';
- 
+import loadWebFonts from '../utils/loadWebFonts';
+
 export default class MyApp extends App {
   constructor (props) {
     super(props);
@@ -35,6 +35,7 @@ export default class MyApp extends App {
     Router.events.on('routeChangeStart', this.handleRouteChangeStart);
     this.handleRouteChangeStart(this.pathname);
     this.setState({className: 'app-body'});
+    loadWebFonts();
   }
 
   componentWillUnmount () {

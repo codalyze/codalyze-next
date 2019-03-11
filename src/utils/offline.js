@@ -1,6 +1,7 @@
 if (
   typeof window !== 'undefined' &&
-  'serviceWorker' in navigator
+  'serviceWorker' in navigator &&
+  window.location.hostname !== 'localhost'
 ) {
      navigator.serviceWorker
      .register('/sw.js')

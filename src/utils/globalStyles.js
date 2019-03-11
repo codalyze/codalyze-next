@@ -4,6 +4,7 @@ createGlobalStyle`
 @font-face {
   font-family: Freight-Disp-Bold;
   src: url('../fonts/Freight-Disp-Bold.otf') format('opentype');
+  font-display: swap;
 }
 `;
 
@@ -27,28 +28,33 @@ export const fontRobotoLight = css`
   font-weight: 300;
   font-size: 24px;
   color: #242424;
+  font-display: swap;
 `;
 
 export const fontRobotoMedium = css`
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #242424;
+  font-display: swap;
 `;
 
 export const fontRobotoRegular = css`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #242424;
+  font-display: swap;
 `;
 
 export const fontRobotoBold = css`
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  font-display: swap;
 `;
 
 export const fontRobotoThin = css`
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  font-display: swap;
 `;
 
 export const Title2 = styled.h1`
