@@ -13,7 +13,7 @@ const ProjectData = [
   {
     pageTitle: "BetKing",
     content:
-      "BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016.",
+      "BetKing is one of the most trusted online crypto casino and exchange (raised $6.5 million in ICO)",
     image: "/static/images/mobile/work/betKingMobile.png",
     button: "VIEW CASE STUDY",
     href: "/#"
@@ -21,7 +21,7 @@ const ProjectData = [
   {
     pageTitle: "Fitcircle",
     content:
-      "BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016.",
+      "App for fitness: chat bot and e-commerce",
     image: "/static/images/mobile/work/fitcircleMobile.png",
     button: "VIEW CASE STUDY",
     href: "/#"
@@ -29,7 +29,7 @@ const ProjectData = [
   {
     pageTitle: "KheloMore",
     content:
-      "BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016.",
+      "Founded by former Indian cricketer, athelete and Sports Managing Head for Nike, Jatin Paranjape, KheloMore is a digital platform bringing together young atheletes and coaches / academies online for an exceptional performance off-line.",
     image: "/static/images/mobile/work/khelomoreMobile.png",
     button: "VIEW CASE STUDY",
     href: "/#"
@@ -37,7 +37,7 @@ const ProjectData = [
   {
     pageTitle: "Radframe",
     content:
-      "BetKing is an online crypto gambling casino offering sports betting, live dealer games and other provably fair casino games like dice and roulette. From September 2014 to December 2016.",
+      "RadFrame assembles easy-to-apply roadmaps of world-leading innovation practices, tailored to each project’s unique needs. It provides a repeatable and proven approach to swiftly navigate the uncertainty of innovation and deliver and track results across a portfolio of activities",
     image: "/static/images/mobile/work/radframe.png",
     button: "VIEW CASE STUDY",
     href: "/#"
@@ -178,9 +178,9 @@ const Work = props => (
         <Styled.bannerContents>
           <Banner
             banner="/static/images/mobile/work/workMobileBanner.png"
-            title="Problems we"
-            secondryTitle="solved"
-            subTitle="Our clients and ventures."
+            title="Puzzels solved"
+            secondryTitle="into success."
+            subTitle="Our clients and ventures. Ideas we have helped to grow"
             titleBreak
             {...props}
           />
