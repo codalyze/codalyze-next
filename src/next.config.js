@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
 const path = require('path');
@@ -13,7 +14,7 @@ module.exports = withCSS(withSass({
       return entry;
     });
 
-    if(!dev){
+    if(!dev) {
       config.plugins.push(new SWPrecacheWebpackPlugin({
         cacheId: 'codalyze-web',
         filepath: path.resolve('./static/sw.js'),
@@ -31,12 +32,7 @@ module.exports = withCSS(withSass({
         }]
       }));
 
-      config.plugins = config.plugins.filter(
-        (plugin) => (plugin.constructor.name !== 'UglifyJsPlugin')
-      );
-      config.plugins.push(
-        new webpack.optimize.UglifyJsPlugin()
-      );
+      console.log(config.optimization);
     };
 
     return config;
