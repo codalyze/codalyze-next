@@ -5,10 +5,10 @@ import SvgCodalyzeLogo from '../SvgCodalyzeLogo';
 import Router from 'next/router';
 
 const headerLinks = [
-  // {
-  //   name: "Work",
-  //   href: "work"
-  // },
+  {
+    name: "Work",
+    href: "work"
+  },
   {
     name: "Services",
     href: "services"
@@ -68,7 +68,6 @@ export default class HeaderDesktop extends React.PureComponent {
 
   onScroll = (e) => {
     this.didScroll = true;
-    console.log(this.navRef.getBoundingClientRect().height);
   }
 
   hasScrolled = () => {

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
 import LazyLoad from 'react-lazyload';
+import FooterMobile from "../footer-mobile";
 
 const footerLinks = [
   {
@@ -45,8 +46,8 @@ class FooterLink extends React.Component {
 
 export default class Footer extends React.PureComponent {
   render() {
-    const { top, width, left, right, href } = this.props;
-    return (
+    const { top, width, left, right, href, mq } = this.props;
+    return mq === "desktop" ? (
       <Styled.containerFluid>
         <Styled.container>
           <Styled.footerRow>
@@ -90,6 +91,6 @@ export default class Footer extends React.PureComponent {
           </Styled.footerRow>
         </Styled.container>
       </Styled.containerFluid>
-    );
+    ) : <FooterMobile {...this.props} />;
   }
 }

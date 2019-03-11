@@ -1,7 +1,7 @@
 import React from "react";
 
 const Star = props => (
-<svg width="158.595" height="154.538" {...props}>
+<svg width="158.595" height="154.538" viewBox="0 0 158.595 154.538" {...props}>
 <defs>
     </defs>
     <g transform="translate(0)">

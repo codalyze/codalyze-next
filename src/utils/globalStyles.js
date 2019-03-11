@@ -122,13 +122,52 @@ export const mobileTitle = css`
   line-height: 1;
 `;
 
+export const title = css`
+  ${fontFreightDispBold}
+  font-size: 35px;
+  margin: 0 0 0;
+  line-height: 1;
+`;
+
+export const titleDesktop = css`
+  ${fontFreightDispBold}
+  font-size: 60px;
+  margin: 0 0 0;
+  line-height: 1;
+`;
+
 export const mobileparagraph = css`
   ${fontRobotoLight}
   font-size: 15px;
   margin: 0 0 0;
 `;
 
+export const paragraph = css`
+  ${fontRobotoLight}
+  font-size: 15px;
+  margin: 0 0 0;
+`;
+
+export const paragraphDesktop = css`
+  ${fontRobotoLight}
+  font-size: 34px;
+  margin: 0 0 0;
+`;
+
 export const mobileButton = css`
+  ${fontRobotoRegular}
+  background: #5cca8f;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 214px;
+  height: 36px;
+`;
+
+export const button = css`
   ${fontRobotoRegular}
   background: #5cca8f;
   border: none;
