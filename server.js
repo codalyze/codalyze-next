@@ -11,13 +11,8 @@ const compression = require('compression');
 app.prepare().then(_ => {
   const app = express();
   app.use(compression());
-  app.use((req, res) => {
-    if (req.url === '/sw.js') {
-      app.serveStatic(req, res, path.resolve('./src/static/sw.js'));
-    } else {
-      handle(req, res);
-    }
-  });
+  app.use('/sw.js', express.static(path.join(__dirname, 'src/static/sw.js')));
+  app.use(handle);
   createServer(app).listen(PORT, err => {
     if (err) throw err
     console.log(`> App running on port ${PORT}`);
