@@ -171,7 +171,7 @@ export const splAreasTitle = styled.h6`
 
 export const testimonialMobileRow = styled.div`
   position: relative;
-  padding: 86px 0 87px 35px;
+  padding: 86px 0 87px 0px;
 `;
 
 export const clientStarContainerBg = styled.div`
@@ -189,8 +189,12 @@ export const clientStarContainerBg = styled.div`
   }
 `;
 
+export const testimonialTitle = styled(title)`
+  padding: 0 35px;
+`;
+
 export const testimonialListMob = styled(splRow)`
-  padding: 0 0 0 0;
+  padding: 0 35px;
 `;
 
 export const testimonialBlockMob = styled(splAreasBlocks)`

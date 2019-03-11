@@ -14,7 +14,7 @@ const TestimonialMobile = () => (
           viewBox="0 0 421.867 456.583"
         />
       </Styled.clientStarContainerBg>
-      <Styled.title>What clients are saying</Styled.title>
+      <Styled.testimonialTitle>What clients are saying</Styled.testimonialTitle>
       <Styled.testimonialListMob>
         {testimonialsList.map((i, index) => (
           <Styled.testimonialBlockMob key={index}>
