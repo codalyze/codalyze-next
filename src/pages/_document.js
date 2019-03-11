@@ -11,10 +11,11 @@ export default class MyDocument extends Document {
 
   render () {
     return (
-      <html>
+      <html lang="en">
         <Head>
           {this.props.styleTags}
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" data-reactid="4"></meta>
+          <link rel="manifest" href="/static/manifest.json" />
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet"></link>
 

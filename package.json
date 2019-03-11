@@ -5,10 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd src && next",
+    "dev": "node server",
     "build": "cd src && next build",
-    "start": "cd src && next start",
-    "export": "cd src && npm run build && next export"
+    "start": "NODE_ENV=production node server"
   },
   "repository": {
     "type": "git",
@@ -43,6 +42,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "@svgr/cli": "^4.1.0",
-    "babel-plugin-styled-components": "^1.9.4"
+    "babel-plugin-styled-components": "^1.9.4",
+    "sw-precache-webpack-plugin": "^0.11.5"
   }
 }
