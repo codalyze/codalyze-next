@@ -11,6 +11,10 @@ const compression = require('compression');
 app.prepare().then(_ => {
   const app = express();
   app.use(compression());
+  app.post('/send-request', (req, res) => {
+    console.log(req.body);
+    res.end();
+  });
   app.use('/sw.js', express.static(path.join(__dirname, 'src/static/sw.js')));
   app.use(handle);
   createServer(app).listen(PORT, err => {
