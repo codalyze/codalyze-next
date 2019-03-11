@@ -1,7 +1,8 @@
 const loadWebFonts = () => {
   window.WebFontConfig = {
-    google: {
-      families: ['Roboto:300,400,700', 'Karla']
+    custom: {
+      families: ['Roboto:300,400,700', 'Karla'],
+      urls: ['/static/fonts.css']
     }
  };
 
