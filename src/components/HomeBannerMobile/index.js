@@ -26,17 +26,21 @@ const HomeBannerMobile = (
       : <Styled.bannerImg src={banner} />
       }
       {isHomePage ?
-      <HomeText /> :
-      (
-        <React.Fragment>
-          <Styled.mainTitle>{title}</Styled.mainTitle>
-          {titleBreak ? <Styled.mainTitle>{secondryTitle}</Styled.mainTitle> : null}
-          <Styled.subTitle>{subTitle}</Styled.subTitle>
-        </React.Fragment>
-      )
-      }
+      <HomeText /> : (
+        <Styled.pageTitle>
+          <Styled.part1>{title}</Styled.part1>
+          {titleBreak && <Styled.part2>{secondryTitle}</Styled.part2>}
+          <Styled.part3>{subTitle}</Styled.part3>
+        </Styled.pageTitle>
+      )}
     </Styled.mobileBanner>
   </Styled.commonDiv>
 );
 
 export default HomeBannerMobile;
+
+{/* <React.Fragment>
+<Styled.mainTitle>{title}</Styled.mainTitle>
+{titleBreak ? <Styled.mainTitle>{secondryTitle}</Styled.mainTitle> : null}
+<Styled.subTitle>{subTitle}</Styled.subTitle>
+</React.Fragment> */}

@@ -1,14 +1,4 @@
-import React from "react";
-import WorkDesktop from "./desktop/work";
-import WorkMobile from "./mobile/workMobile";
 import PageWrapper from "../../utils/PageWrapper";
-
-const Work = props => {
-  return props.mq === "desktop" ? (
-    <WorkDesktop {...props} />
-  ) : (
-    <WorkMobile {...props} />
-  );
-};
+import Work from "./Work";
 
 export default PageWrapper(Work);
