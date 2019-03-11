@@ -158,7 +158,7 @@ const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
                 zIndex: -1
               }}
             >
-              <Star width="15vw" height="auto" />
+              <Star width="15vw"/>
             </div>
           )}
         </Styled.projectDesktopContainer>
@@ -187,7 +187,7 @@ const Work = props => (
         </Styled.bannerContents>
       </Styled.bannerContainer>
       {ProjectData.map((project, index) => (
-        <Styled.pageSection index={index} mq={props.mq}>
+        <Styled.pageSection index={index} mq={props.mq} key={project.pageTitle}>
           <Project>
             <Content
               pageTitle={project.pageTitle}
