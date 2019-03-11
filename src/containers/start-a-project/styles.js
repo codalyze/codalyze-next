@@ -61,6 +61,10 @@ export const blockShadow = styled.button`
   justify-content: space-evenly;
   border: 0;
   background-color: #fff;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const paragraph = styled.p`
@@ -69,9 +73,20 @@ export const paragraph = styled.p`
   margin: 0;
 `;
 
+export const termRow = styled(imageBlocksRow)`
+  box-shadow: 0 3px 15px #e3e3e3;
+  width: 60%;
+  margin-bottom: 85px;
+  border-radius: 10px;
+  background: #fff;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 700px;
+  }
+`;
+
 export const budgetRow = styled(imageBlocksRow)`
   box-shadow: 0 3px 15px #e3e3e3;
-  width: 805px;
+  width: 55%;
   margin-bottom: 85px;
   border-radius: 10px;
   background: #fff;
@@ -82,39 +97,72 @@ export const budgetRow = styled(imageBlocksRow)`
 
 export const singleBudgetBlocks = styled.button`
   background-color: #fff;
-  padding: 19px 33px;
+
   border-right: 1px solid #d6e0ef;
   border-top: 0;
   border-bottom: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100px;
+  cursor: pointer;
   :nth-last-child(1) {
     border-right: 0;
+    flex-grow: 2;
+    flex-basis: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
+
   :first-child {
     border-left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  &:focus {
+    outline: none;
   }
 `;
 
 export const budgetAmount = styled.p`
   font-size: 24px;
   color: #1c9868;
+  width: auto;
+  margin: 0 auto;
+  font-weight: 300;
+  padding: 5%;
   @media (min-width: 768px) and (max-width: 1024px) {
     font-size: 18px;
   }
 `;
 
 export const singleProjectBlocks = styled.button`
-  padding: 5px 39px;
   border-right: 1px solid #d6e0ef;
-  width: 199px;
+  cursor: pointer;
   text-align: center;
   border-top: 0;
   border-bottom: 0;
   background-color: #fff;
+  height: 100px;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0% 5%;
   :nth-last-child(1) {
     border-right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-grow: 2;
+    flex-basis: 0;
+   
   }
   :first-child {
     border-left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-width: 200px;
+    padding: 0;
+  }
+  &:focus {
+    outline: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 165px;
@@ -137,10 +185,14 @@ export const Input = styled.input`
   width: 46%;
   background: transparent;
   min-height: 30px;
+  padding: 10px;
   ::placeholder {
     ${global.fontRobotoLight};
     color: #929292;
     font-size: 24px;
+  }
+  &:focus {
+    outline: none;
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 75%;
@@ -155,6 +207,9 @@ export const ButtonWrapper = styled.button`
   ${global.mainButton};
   margin-top: 20px;
   margin-bottom: 70px;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const cubeWrapper = styled.div`

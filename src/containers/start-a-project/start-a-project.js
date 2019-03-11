@@ -10,7 +10,6 @@ import ContactForm from "./contactForm";
 import CubeBg from "./images/cubeBg";
 import Footer from "../../components/footer";
 
-
 export default class StartAProject extends React.Component {
   render() {
     return (
@@ -22,23 +21,28 @@ export default class StartAProject extends React.Component {
           titleBreak
         />
         <Styled.cubeWrapper>
-        <CubeBg width="100%" height="100%" viewBox="0 0 340.942 837.71"/>
+          <CubeBg width="100%" height="100%" viewBox="0 0 340.942 837.71" />
         </Styled.cubeWrapper>
-        <Styled.containerFluid>   
-          <Styled.Wrapper> 
+        <Styled.containerFluid>
+          <Styled.Wrapper>
             <Styled.bannerSvg>
-              <StartAProjectBg width="100%" height="100%" viewBox="450 0 2175.68 2359.44" preserveAspectRatio="none" />  
-              </Styled.bannerSvg>    
-          <Styled.commonDiv>
-          <Help />
-          <KindOfWebsite />
-            <Budget />
-            <Project />
-            <ContactForm/>
-            <Footer />
-            </Styled.commonDiv>  
-            </Styled.Wrapper>          
-          </Styled.containerFluid>
+              <StartAProjectBg
+                width="100%"
+                height="100%"
+                viewBox="450 0 2175.68 2359.44"
+                preserveAspectRatio="none"
+              />
+            </Styled.bannerSvg>
+            <Styled.commonDiv>
+              <Help />
+              <KindOfWebsite />
+              <Budget />
+              <Project />
+              <ContactForm />
+              <Footer />
+            </Styled.commonDiv>
+          </Styled.Wrapper>
+        </Styled.containerFluid>
       </Styled.pageWrapper>
     );
   }
