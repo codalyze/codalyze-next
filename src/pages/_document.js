@@ -14,6 +14,8 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           {this.props.styleTags}
+          <meta name="theme-color" content="#55a7a2" />
+          <link rel="icon" href="/static/favicon.ico" sizes="120x120" />
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" data-reactid="4"></meta>
           <link rel="manifest" href="/static/manifest.json" />
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"></link>
