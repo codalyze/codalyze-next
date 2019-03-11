@@ -12,7 +12,7 @@ export const workBgContainer = styled.div`
     padding-top: 50px;
     svg {
       width: 100vw;
-      height: auto;
+      height: 140vw;
     }
   }
   position: absolute;

@@ -2,7 +2,7 @@ import React from "react";
 
 const WorkBannerMobileBg = props => (
   <svg
-    // preserveAspectRatio="none"
+    preserveAspectRatio="none"
     width="674.125"
     height="484.329"
     viewBox="100 0 450 484.329"
