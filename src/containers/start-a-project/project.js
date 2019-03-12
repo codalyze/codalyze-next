@@ -22,13 +22,13 @@ export default class Project extends React.Component {
       <Styled.containerFluid>
         <Styled.container>
           <Styled.title>How long will we be working on the project?</Styled.title>
-          <Styled.termRow>
+          <Styled.budgetRow>
             {amount.map((money, index) => (
-              <Styled.singleProjectBlocks key={index}>
+              <Styled.singleBudgetBlocks key={index}>
                 <Styled.budgetAmount>{money.cost}</Styled.budgetAmount>
-              </Styled.singleProjectBlocks>
+              </Styled.singleBudgetBlocks>
             ))}
-          </Styled.termRow>
+          </Styled.budgetRow>
         </Styled.container>
       </Styled.containerFluid>
     );

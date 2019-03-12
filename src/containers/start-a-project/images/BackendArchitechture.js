@@ -1,7 +1,7 @@
 import React from "react";
 
 const SvgBackendArchitechture = props => (
-  <svg width="1em" height="1em" viewBox="0 0 94.172 94.172" {...props}>
+  <svg viewBox="0 0 94.172 94.172" {...props}>
     <defs>
       <style>
         {

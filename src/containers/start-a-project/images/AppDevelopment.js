@@ -1,7 +1,7 @@
 import React from "react";
 
 const SvgAppDevelopment = props => (
-  <svg width="1em" height="1em" viewBox="0 0 49.415 85.475" {...props}>
+  <svg viewBox="0 0 49.415 85.475" {...props}>
     <defs>
       <style>{".app-development_svg__a{fill:#1c9868}"}</style>
     </defs>

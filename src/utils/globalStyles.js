@@ -24,7 +24,7 @@ export const fontFreightDispBold = css`
 `;
 
 export const fontRobotoLight = css`
-  font-family: "Roboto", sans-serif;
+  font-family: "RobotoLight", sans-serif;
   font-weight: 300;
   font-size: 24px;
   color: #242424;
@@ -32,7 +32,7 @@ export const fontRobotoLight = css`
 `;
 
 export const fontRobotoMedium = css`
-  font-family: "Roboto", sans-serif;
+  font-family: "RobotoMedium", sans-serif;
   font-weight: 500;
   color: #242424;
   font-display: swap;
