@@ -23,6 +23,7 @@ const teamMobile = () => (
           viewBox="0 0 158.595 154.538"
         />
       </Styled.teamStarBgContainer>
+      <Styled.TeamHeader>The team that makes it all possible</Styled.TeamHeader>
       <Styled.teamRow>
         {teamMembers.map((member, index) => (
           <Styled.teamBlock key={index}>
