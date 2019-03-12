@@ -86,9 +86,15 @@ export const blockShadow = styled.button`
   display: flex;
   justify-content: space-evenly;
   border: 0;
-  background-color: #fff;
+  background-color: ${(props) => props.isSelected ? '#5cca8f' : 'white'};
   cursor: pointer;
   margin-bottom: 20px;
+  svg {
+    path {
+      fill: ${(props) => !props.isSelected ? '#5cca8f' : 'white'};
+      stroke: ${(props) => !props.isSelected ? '#5cca8f' : 'white'};
+    }
+  }
 
   &:hover {
     background: #5cca8f;
@@ -182,7 +188,7 @@ export const singleBudgetBlocks = styled.button`
   text-align: center;
   border-top: 0;
   border-bottom: 0;
-  background-color: #fff;
+  background-color: ${(props) => props.isSelected ? '#5cca8f' : 'white'};
   height: 8vw;
   flex-grow: 1;
   flex-basis: 0;
@@ -214,7 +220,7 @@ export const singleBudgetBlocks = styled.button`
 
 export const budgetAmount = styled.p`
   font-size: 24px;
-  color: #1c9868;
+  color: ${(props) => !props.isSelected ? '#1c9868' : 'white'};
   width: auto;
   margin: 0 auto;
   font-weight: 300;

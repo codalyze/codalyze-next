@@ -10,10 +10,70 @@ import ContactForm from "./contactForm";
 import CubeBg from "./images/cubeBg";
 import Footer from "../../components/footer";
 
+export const sectionTypes = {
+  help: "help-item",
+  kow: "kow",
+  duration: "duration",
+  budget: "budget"
+};
+
+export const sectionConfig = {
+  multi: [sectionTypes.help],
+  single: [sectionTypes.kow, sectionTypes.duration, sectionTypes.budget]
+};
+
 export default class StartAProject extends React.Component {
+  state = { data: {} };
+
+  onChangeText = e => {
+    const { data } = this.state;
+    const currentData = {
+      [e.target.name]: e.target.value
+    };
+    this.setState({ data: { ...data, ...currentData } });
+  };
+
+  onClickItem = item => {
+    let name = item.itemType,
+      value = item.field;
+    let sectionKeyValue;
+    const { data } = this.state;
+    if (data && data.hasOwnProperty(name)) {
+      let sectionValues = data[name];
+      // Differentiation for multi and single selection
+      if (sectionConfig["multi"].includes(name)) {
+        if (data[name].includes(value)) {
+          const index = sectionValues.indexOf(value);
+          sectionValues.splice(index, index + 1);
+        } else {
+          sectionValues.push(value);
+        }
+        sectionKeyValue = { [name]: sectionValues };
+      } else {
+        sectionKeyValue = { [name]: [value] };
+      }
+    } else {
+      sectionKeyValue = { [name]: [value] };
+    }
+    this.setState({ data: { ...data, ...sectionKeyValue } });
+  };
+
+  onClickSendRequest = () => {
+    const { data } = this.state || {};
+    let xmlhttp = new XMLHttpRequest(); // new HttpRequest instance
+    let theUrl = "/send-request";
+    xmlhttp.open("POST", theUrl);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify({ data }));
+  };
+
+  getSelectedItemsForType = type => {
+    return this.state.data && this.state.data[type]
+      ? this.state.data[type]
+      : [];
+  };
 
   render() {
-    console.log(this.props);
     return (
       <Styled.pageWrapper>
         <HomeBanner
@@ -40,8 +100,14 @@ export default class StartAProject extends React.Component {
               />
             </Styled.bannerSvg>
             <Styled.commonDiv>
-              <Help />
-              <KindOfWebsite />
+              <Help
+                onClickItem={this.onClickItem}
+                selectedItems={this.getSelectedItemsForType(sectionTypes.help)}
+              />
+              <KindOfWebsite
+                onClickItem={this.onClickItem}
+                selectedItems={this.getSelectedItemsForType(sectionTypes.kow)}
+              />
               {this.props.mq === "mobile" && (
                 <Styled.bannerSvgTrans>
                   <Styled.bannerSvg>
@@ -54,9 +120,22 @@ export default class StartAProject extends React.Component {
                   </Styled.bannerSvg>
                 </Styled.bannerSvgTrans>
               )}
-              <Budget />
-              <Project />
-              <ContactForm />
+              <Budget
+                onClickItem={this.onClickItem}
+                selectedItems={this.getSelectedItemsForType(
+                  sectionTypes.budget
+                )}
+              />
+              <Project
+                onClickItem={this.onClickItem}
+                selectedItems={this.getSelectedItemsForType(
+                  sectionTypes.duration
+                )}
+              />
+              <ContactForm
+                onChangeText={this.onChangeText}
+                onClickSendRequest={this.onClickSendRequest}
+              />
               <Footer />
             </Styled.commonDiv>
           </Styled.Wrapper>
