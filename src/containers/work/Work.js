@@ -8,39 +8,42 @@ import LeftBg from "./images/workBgLeft";
 import RightBg from "./images/workBgRight";
 import BottomBg from "./images/workBottomBg";
 import Star from "./images/star";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
+import {
+  Betking,
+  Khelomore,
+  Radframe,
+  Fitcircle
+} from "./content";
 
 const ProjectData = [
   {
     pageTitle: "BetKing",
-    content:
-      "BetKing is one of the most trusted online crypto casino and exchange (raised $6.5 million in ICO)",
     image: "/static/images/mobile/work/betKingMobile.png",
     button: "VIEW CASE STUDY",
-    href: "/#"
+    href: "/#",
+    content: Betking
   },
   {
     pageTitle: "Fitcircle",
-    content: "App for fitness: chat bot and e-commerce",
     image: "/static/images/mobile/work/fitcircleMobile.png",
     button: "VIEW CASE STUDY",
-    href: "/#"
+    href: "/#",
+    content: Fitcircle
   },
   {
     pageTitle: "KheloMore",
-    content:
-      "Founded by former Indian cricketer, athelete and Sports Managing Head for Nike, Jatin Paranjape, KheloMore is a digital platform bringing together young atheletes and coaches / academies online for an exceptional performance off-line.",
     image: "/static/images/mobile/work/khelomoreMobile.png",
     button: "VIEW CASE STUDY",
-    href: "/#"
+    href: "/#",
+    content: Khelomore
   },
   {
     pageTitle: "Radframe",
-    content:
-      "RadFrame assembles easy-to-apply roadmaps of world-leading innovation practices, tailored to each project’s unique needs. It provides a repeatable and proven approach to swiftly navigate the uncertainty of innovation and deliver and track results across a portfolio of activities",
     image: "/static/images/mobile/work/radframe.png",
     button: "VIEW CASE STUDY",
-    href: "/#"
+    href: "/#",
+    content: Radframe
   }
 ];
 
@@ -104,13 +107,14 @@ const getStarStyleByIndex = index => {
   }
 };
 
-const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
+const Content = ({ pageTitle, content: Content, image, button, href, mq, index }) =>
   mq !== "desktop" ? (
     <Fragment>
       <div style={{ position: "relative" }}>
         <ProjectBackground mq={mq} index={index} />
         <Styled.title mq={mq}>{pageTitle}</Styled.title>
-        <Styled.p mq={mq}>{content}</Styled.p>
+        <Content mq={mq} />
+        {/* <Styled.p mq={mq}>{content}</Styled.p> */}
       </div>
       <div style={{ position: "relative" }}>
         <div
@@ -148,7 +152,8 @@ const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
             }}
           >
             <Styled.title mq={mq}>{pageTitle}</Styled.title>
-            <Styled.p mq={mq}>{content}</Styled.p>
+            <Content mq={mq} />
+            {/* <Styled.p mq={mq}>{content}</Styled.p> */}
             <ProjectImageDesktop mq={mq} index={index} image={image} />
             {/* <Link href={href} passHref prefetch>
               <Styled.btn>{button}</Styled.btn>
@@ -211,10 +216,12 @@ const Work = props => (
           </Project>
         </Styled.pageSection>
       ))}
-      <div style={{
-        marginTop: 30,
-        position: "relative"
-      }}>
+      <div
+        style={{
+          marginTop: 30,
+          position: "relative"
+        }}
+      >
         <BottomBg
           width="100%"
           style={{
@@ -222,7 +229,14 @@ const Work = props => (
             zIndex: -1
           }}
         />
-        <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)" }}>
+        <div
+          style={{
+            position: "absolute",
+            bottom: 150,
+            left: "50%",
+            transform: "translateX(-50%)"
+          }}
+        >
           <Link href={"/start-a-project"} passHref prefetch>
             <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
           </Link>
