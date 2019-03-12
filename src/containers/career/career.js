@@ -1,8 +1,16 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as Styled from "./styles";
 import HomeBanner from "../../components/HomeBanner";
 import CareerBgSvg from "../../static/images/career/careerBg";
 import Footer from "../../components/footer";
+
+import Career1 from './images/Career1';
+
+import dynamic from 'next/dynamic'
+
+const Career2 = dynamic(() => import('./images/Career2'), {loading: () => null});
+
+import LazySvgLoader from '../../components/LazySvgLoader';
 
 const openings = [
   {
@@ -31,7 +39,7 @@ const openings = [
   }
 ];
 
-export default class Career extends Component {
+export default class Career extends PureComponent {
   render() {
     return (
       <Styled.pageWrapper>
@@ -42,6 +50,7 @@ export default class Career extends Component {
           banner="/static/images/career/careerBanner.png"
           titleBreak
           rowReversed
+          BannerSvg={() => <LazySvgLoader FirstImage={Career1} LazyImage={Career2} isMobile={props => props.mq === 'mobile'} rowReversed />}
         />
         <Styled.openingsRow>
           <Styled.CareerBg>

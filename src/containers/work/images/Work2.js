@@ -6,8 +6,6 @@ const SvgWork2 = props => (
     data-name="Layer 1"
     viewBox="0 0 807.73 519.65"
     {...props}
-    width="1em"
-    height="1em"
   >
     <defs>
       <style>

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { PureComponent, Fragment } from "react";
 import Fade from 'react-reveal/Fade';
 import * as Styled from "./styles";
 import Banner from "../../../components/HomeBannerMobile";
@@ -9,12 +9,21 @@ import Star from "./images/star";
 import HighTechBg from "./images/highTechBg";
 import LoveBg from "./images/loveBg";
 
-export default class AboutUsMobile extends Component {
+import About1 from '../commons/About1';
+
+import dynamic from 'next/dynamic'
+
+const About2 = dynamic(() => import('../commons/About2'), {loading: () => null});
+
+import LazySvgLoader from '../../../components/LazySvgLoader';
+
+
+export default class AboutUsMobile extends PureComponent {
   render() {
     return (
       <Fragment>
         <Banner
-          banner="/static/images/mobile/about/aboutUsMobileBanner.svg"
+          BannerSvg={() => <LazySvgLoader FirstImage={About1} LazyImage={About2} isMobile />}
           title="Meet the"
           secondryTitle="team behind it"
           subTitle="We aid you in achieving a tight deadline and help you get to market fast."

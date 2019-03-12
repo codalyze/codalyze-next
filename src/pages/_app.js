@@ -23,6 +23,7 @@ export default class MyApp extends App {
     };
 
     const newPosition = this.calculatePosition(props.router.pathname);
+    this.onResize = this.onResize.bind(this);
 
     if (newPosition) this.state = {...newPosition};
   }
@@ -33,6 +34,7 @@ export default class MyApp extends App {
 
   componentDidMount () {
     Router.events.on('routeChangeStart', this.handleRouteChangeStart);
+    window.addEventListener('resize', this.onResize);
     this.handleRouteChangeStart(this.pathname);
     this.setState({className: 'app-body'});
     loadWebFonts();
@@ -40,6 +42,7 @@ export default class MyApp extends App {
 
   componentWillUnmount () {
     Router.events.off('routeChangeStart', this.handleRouteChangeStart);
+    window.removeEventListener('resize', this.onResize);
   }
 
   componentDidUpdate () {
@@ -48,6 +51,11 @@ export default class MyApp extends App {
 
   componentDidCatch (x) {
     console.log(x);
+  }
+
+  onResize () {
+    const newPosition = this.calculatePosition(this.pathname);
+    this.setState(newPosition);
   }
 
   calculatePosition (url) {

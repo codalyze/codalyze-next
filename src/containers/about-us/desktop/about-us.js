@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {PureComponent} from "react";
 import Fade from 'react-reveal/Fade';
 import * as Styled from './styles';
 import HomeBanner from "../../../components/HomeBanner";
@@ -8,8 +8,16 @@ import AboutOtherSections from "./otherSections";
 import AboutSecond from "./aboutSecond";
 import Footer from "../../../components/footer";
 
+import About1 from '../commons/About1';
 
-export default class AboutUsDesktop extends Component{
+import dynamic from 'next/dynamic'
+
+const About2 = dynamic(() => import('../commons/About2'), {loading: () => null});
+
+import LazySvgLoader from '../../../components/LazySvgLoader';
+
+
+export default class AboutUsDesktop extends PureComponent {
     render(){
         return(
             <Styled.PageWrapper>
@@ -21,7 +29,7 @@ export default class AboutUsDesktop extends Component{
                         secondryTitle="Team behind it"
                         titleBreak={true}
                         subTitle="We aid you in achieving a tight deadline"
-                        banner="/static/images/about-us/about1.svg"/>
+                        BannerSvg={() => <LazySvgLoader FirstImage={About1} LazyImage={About2} />}/>
                     <Fade>
                         <AboutSections />
                         <AboutSecond/>

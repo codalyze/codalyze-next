@@ -4,7 +4,7 @@ import * as Styled from "../styles";
 const ContentBody = ({ mq }) => (
   <Fragment>
     <div
-      class="project-detail-item project-details__radframe isVisible"
+      className="project-detail-item project-details__radframe isVisible"
       data-project="Radframe"
     >
       {" "}

@@ -73,10 +73,16 @@ export default class Footer extends React.PureComponent {
               </Styled.h4>
               <Styled.h3>Connect with us</Styled.h3>
               <Styled.socialImages>
-                <LazyLoad height={64} offset={100} once>
+                <LazyLoad height={20} offset={100} once>
                   <Styled.img src="/static/images/footer/fb.png" />
+                </LazyLoad>
+                <LazyLoad height={20} offset={100} once>
                   <Styled.img src="/static/images/footer/instagram.png" />
+                </LazyLoad>
+                <LazyLoad height={20} offset={100} once>
                   <Styled.img src="/static/images/footer/linkedin.png" />
+                </LazyLoad>
+                <LazyLoad height={20} offset={100} once>
                   <Styled.img src="/static/images/footer/twitter.png" />
                 </LazyLoad>
               </Styled.socialImages>

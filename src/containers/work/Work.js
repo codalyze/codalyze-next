@@ -16,6 +16,14 @@ import {
   Fitcircle
 } from "./content";
 
+import Work1 from './images/Work1';
+
+import dynamic from 'next/dynamic'
+
+const Work2 = dynamic(() => import('./images/Work2'), {loading: () => null});
+
+import LazySvgLoader from '../../components/LazySvgLoader';
+
 const ProjectData = [
   {
     pageTitle: "BetKing",
@@ -183,68 +191,72 @@ const Project = ({ index, mq, children }) => (
   </Fade>
 );
 
-const Work = props => (
-  <Fragment>
-    <div style={{ position: "relative" }}>
-      <Styled.bannerContainer {...props}>
-        <Styled.workBgContainer>
-          <WorkBannerBg width="100%" mq={props.mq} />
-        </Styled.workBgContainer>
-        <Styled.bannerContents>
-          <Banner
-            banner="/static/images/mobile/work/workMobileBanner.png"
-            title="Puzzles solved"
-            secondryTitle="into success."
-            subTitle="Our clients and ventures. Ideas we have helped to grow"
-            titleBreak
-            {...props}
-          />
-        </Styled.bannerContents>
-      </Styled.bannerContainer>
-      {ProjectData.map((project, index) => (
-        <Styled.pageSection index={index} mq={props.mq} key={project.pageTitle}>
-          <Project>
-            <Content
-              pageTitle={project.pageTitle}
-              content={project.content}
-              image={project.image}
-              button={project.button}
-              href={project.href}
-              index={index}
-              mq={props.mq}
+export default class Work extends React.PureComponent {
+  render () {
+    const props = this.props;
+    return (
+      <Fragment>
+        <div style={{ position: "relative" }}>
+          <Styled.bannerContainer {...props}>
+            <Styled.workBgContainer>
+              <WorkBannerBg width="100%" mq={props.mq} />
+            </Styled.workBgContainer>
+            <Styled.bannerContents>
+              <Banner
+                BannerSvg={() => <LazySvgLoader FirstImage={Work1} LazyImage={Work2} isMobile={props.mq === 'mobile'} />}
+                title="Puzzles solved"
+                secondryTitle="into success."
+                subTitle="Our clients and ventures. Ideas we have helped to grow"
+                titleBreak
+                {...props}
+              />
+            </Styled.bannerContents>
+          </Styled.bannerContainer>
+          {ProjectData.map((project, index) => (
+            <Styled.pageSection index={index} mq={props.mq} key={project.pageTitle}>
+              <Project>
+                <Content
+                  pageTitle={project.pageTitle}
+                  content={project.content}
+                  image={project.image}
+                  button={project.button}
+                  href={project.href}
+                  index={index}
+                  mq={props.mq}
+                />
+              </Project>
+            </Styled.pageSection>
+          ))}
+          <div
+            style={{
+              marginTop: 30,
+              position: "relative"
+            }}
+          >
+            <BottomBg
+              width="100%"
+              style={{
+                bottom: props.mq === "desktop" ? 350 : 550,
+                zIndex: -1
+              }}
             />
-          </Project>
-        </Styled.pageSection>
-      ))}
-      <div
-        style={{
-          marginTop: 30,
-          position: "relative"
-        }}
-      >
-        <BottomBg
-          width="100%"
-          style={{
-            bottom: props.mq === "desktop" ? 350 : 550,
-            zIndex: -1
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: 150,
-            left: "50%",
-            transform: "translateX(-50%)"
-          }}
-        >
-          <Link href={"/start-a-project"} passHref prefetch>
-            <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
-          </Link>
+            <div
+              style={{
+                position: "absolute",
+                bottom: 150,
+                left: "50%",
+                transform: "translateX(-50%)"
+              }}
+            >
+              <Link href={"/start-a-project"} passHref prefetch>
+                <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
+              </Link>
+            </div>
+          </div>
+          <Footer mq={props.mq} />
         </div>
-      </div>
-      <Footer mq={props.mq} />
-    </div>
-  </Fragment>
-);
+      </Fragment>
+    )
+  }
+}
 
-export default Work;

@@ -7,7 +7,7 @@ const SvgWrapper = styled.div`
   transition: all 500ms ease;
   svg {
     position: absolute;
-    right: 0;
+    ${props => props.rowReversed ? 'left: 0;' : 'right: 0;'}
     top: 0;
     transition: all 500ms ease;
   }
@@ -47,7 +47,7 @@ export default class LazySvgLoader extends React.Component {
   render () {
     const {FirstImage, LazyImage} = this.props;
     return (
-      <SvgWrapper height={this.state.width}>
+      <SvgWrapper height={this.state.width} rowReversed={this.props.rowReversed} >
         <FirstImage style={{width: `${this.state.width}px`}} />
         {this.state.loaded && <LazyImage width={`${this.state.width}px`} />}
       </SvgWrapper>

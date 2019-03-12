@@ -27,13 +27,15 @@ export const title = styled.h1`
   ${props => props.mq === "desktop" ? global.titleDesktop : global.title}
   font-size: ${props => props.mq === "desktop" ? "50px;" : "24px;"}
   padding: 0 35px 10px;
+  margin-bottom: 20px;
 `;
 
 export const p = styled.p`
 ${props => props.mq === "desktop" ? global.paragraphDesktop : global.paragraph}
-  font-size: ${props => props.mq === "desktop" ? "24px;" : "15px;"}
+  font-size: ${props => props.mq === "desktop" ? "20px;" : "16px;"}
   margin: 0 35px 58px;
-  padding-right: 80px;
+  padding-right: ${props => props.mq === 'desktop' ? '80px' : '0px'};
+  text-align: justify;
 `;
 
 export const img = styled.img`
