@@ -16,8 +16,10 @@ export default class AboutUsDesktop extends Component{
                         <SectionFirstBg width="100%" height="100%" viewBox="700 0 2175.141 2959.327" preserveAspectRatio="none" />
                     </Styled.bannerSvg>
                     <HomeBanner
-                        title="Meet the team behind it"
-                        subTitle="We aid you in achieving a tight deadline and"
+                        title="Meet the"
+                        secondryTitle="Team behind it"
+                        titleBreak={true}
+                        subTitle="We aid you in achieving a tight deadline"
                         banner="/static/images/about-us/about1.svg"/>
                     <AboutSections />
                     <AboutSecond/>

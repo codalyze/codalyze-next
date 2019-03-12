@@ -11,7 +11,7 @@ export const HiTech = () => {
         <Styled.FlexContainer>
           <Styled.devisonDiv>
             <Styled.leftDiv>
-              <Styled.imageRight src="/static/images/about-us/Artboard-7.png" />
+              <img src="/static/images/about-us/Artboard-7.png" />
             </Styled.leftDiv>
             <Styled.rightDiv>
               <Styled.h2>High Tech, Low Risk</Styled.h2>
@@ -45,7 +45,7 @@ export const ProductTeams = () => {
               </Styled.p>
             </Styled.leftDiv>
             <Styled.rightDiv right>
-              <Styled.imageRight src="/static/images/about-us/Artboard-5.png" />
+              <img src="/static/images/about-us/Artboard-5.png" />
             </Styled.rightDiv>
           </Styled.devisonDiv>
         </Styled.FlexContainer>
@@ -96,7 +96,7 @@ export const LoveStatUps = () => {
     <Styled.FlexContainer>
       <Styled.devisonDiv>
         <Styled.leftDiv>
-          <Styled.imageRight src="/static/images/about-us/Artboard-6.png" />
+          <img src="/static/images/about-us/Artboard-6.png" />
         </Styled.leftDiv>
         <Styled.rightDiv>
           <Styled.h2>We Love Start-Ups</Styled.h2>

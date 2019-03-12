@@ -17,7 +17,7 @@ const AboutSecond = () => {
                 </Styled.p>
                 </Styled.leftDiv>
                 <Styled.rightDiv right>
-                <Styled.imageRight src="/static/images/about-us/Artboard-4.png" />
+                <img src="/static/images/about-us/Artboard-4.png" />
                 </Styled.rightDiv>
             </Styled.devisonDiv>
           </Styled.FlexContainer>

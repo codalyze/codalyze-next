@@ -14,13 +14,11 @@ export const title = styled.h1`
 export const p = styled.p`
   ${global.mobileparagraph}
   margin: 15px 35px 0;
-  padding-right: 80px;
 `;
 
 export const startContent = styled.p`
   ${global.mobileparagraph}
   margin: 15px 35px 0;
-  padding-right: 80px;
 `;
 
 export const img = styled.img`
@@ -102,7 +100,9 @@ export const teamBlock = styled.div`
   padding-bottom: 50px;
 `;
 
-export const teamMemberImg = styled.img``;
+export const teamMemberImg = styled.img`
+  width: 250px;
+`;
 
 export const teamTitle = styled.h5`
   ${global.fontRobotoMedium}
