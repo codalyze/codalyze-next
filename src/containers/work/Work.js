@@ -8,6 +8,7 @@ import LeftBg from "./images/workBgLeft";
 import RightBg from "./images/workBgRight";
 import BottomBg from "./images/workBottomBg";
 import Star from "./images/star";
+import Fade from 'react-reveal/Fade';
 
 const ProjectData = [
   {
@@ -20,8 +21,7 @@ const ProjectData = [
   },
   {
     pageTitle: "Fitcircle",
-    content:
-      "App for fitness: chat bot and e-commerce",
+    content: "App for fitness: chat bot and e-commerce",
     image: "/static/images/mobile/work/fitcircleMobile.png",
     button: "VIEW CASE STUDY",
     href: "/#"
@@ -140,7 +140,13 @@ const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
       <Fragment>
         <ProjectBackground mq={mq} index={index} />
         <Styled.projectDesktopContainer mq={mq} index={index}>
-          <div style={{ padding: "10vw" }}>
+          <div
+            style={{
+              padding: "10vw",
+              paddingLeft: index % 2 === 0 ? "10vw" : 150,
+              paddingRight: index % 2 === 1 ? "10vw" : 150
+            }}
+          >
             <Styled.title mq={mq}>{pageTitle}</Styled.title>
             <Styled.p mq={mq}>{content}</Styled.p>
             <ProjectImageDesktop mq={mq} index={index} image={image} />
@@ -158,7 +164,7 @@ const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
                 zIndex: -1
               }}
             >
-              <Star width="15vw"/>
+              <Star width="15vw" />
             </div>
           )}
         </Styled.projectDesktopContainer>
@@ -166,7 +172,11 @@ const Content = ({ pageTitle, content, image, button, href, mq, index }) =>
     </div>
   );
 
-const Project = ({ index, mq, children }) => <Fragment>{children}</Fragment>;
+const Project = ({ index, mq, children }) => (
+  <Fade key={index}>
+    <Fragment>{children}</Fragment>
+  </Fade>
+);
 
 const Work = props => (
   <Fragment>
@@ -201,14 +211,23 @@ const Work = props => (
           </Project>
         </Styled.pageSection>
       ))}
-      <BottomBg
-        width="100%"
-        style={{
-          position: "absolute",
-          bottom: props.mq === "desktop" ? 350 : 550,
-          zIndex: -1
-        }}
-      />
+      <div style={{
+        marginTop: 30,
+        position: "relative"
+      }}>
+        <BottomBg
+          width="100%"
+          style={{
+            bottom: props.mq === "desktop" ? 350 : 550,
+            zIndex: -1
+          }}
+        />
+        <div style={{ position: "absolute", bottom: 150, left: "50%", transform: "translateX(-50%)" }}>
+          <Link href={"/start-a-project"} passHref prefetch>
+            <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
+          </Link>
+        </div>
+      </div>
       <Footer mq={props.mq} />
     </div>
   </Fragment>

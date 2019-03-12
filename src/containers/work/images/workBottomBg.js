@@ -1,7 +1,7 @@
 import React from 'react';
 
 const workBottomBg = props => (
-<svg preserveAspectRatio="none" width="432.557" height="370.838" viewBox="0 0 432.557 370.838" {...props}>
+<svg preserveAspectRatio="none" width="432.557" height="370.838" viewBox="0 0 432.557 300" {...props}>
 <defs>
     
     <linearGradient id="a" x1="0.205" y1="0.399" x2="0.672" y2="0.837" gradientUnits="objectBoundingBox">
