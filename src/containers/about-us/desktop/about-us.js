@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Fade from 'react-reveal/Fade';
 import * as Styled from './styles';
 import HomeBanner from "../../../components/HomeBanner";
 import SectionFirstBg from "./images/SectionFirstBg";
@@ -21,8 +22,10 @@ export default class AboutUsDesktop extends Component{
                         titleBreak={true}
                         subTitle="We aid you in achieving a tight deadline"
                         banner="/static/images/about-us/about1.svg"/>
-                    <AboutSections />
-                    <AboutSecond/>
+                    <Fade>
+                        <AboutSections />
+                        <AboutSecond/>
+                    </Fade>
                     <AboutOtherSections/>
                 <Footer />
             </Styled.PageWrapper>
