@@ -192,3 +192,7 @@ export const loveBgContainer = styled.div`
   .a {
   }
 `;
+
+export const TeamHeader = styled.h1`
+  font-size: 35px;
+`;
