@@ -1,31 +1,51 @@
 import React from "react";
 import * as Styled from "./styles";
 
-const amount = [
+const term = [
   {
-    cost: "Less than a month"
+    displayName: "Less than a month",
+    itemType: "duration"
   },
   {
-    cost: "1-3 months"
+    displayName: "1-3 months",
+    itemType: "duration"
   },
   {
-    cost: "3-6 months"
+    displayName: "3-6 months",
+    itemType: "duration"
   },
   {
-    cost: "More than 6 months"
+    displayName: "More than 6 months",
+    itemType: "duration"
   }
 ];
 
 export default class Project extends React.Component {
   render() {
+    const { selectedItems } = this.props;
     return (
       <Styled.containerFluid>
         <Styled.container>
-          <Styled.title>How long will we be working on the project?</Styled.title>
+          <Styled.title>
+            How long will we be working on the project?
+          </Styled.title>
           <Styled.budgetRow>
-            {amount.map((money, index) => (
-              <Styled.singleBudgetBlocks key={index}>
-                <Styled.budgetAmount>{money.cost}</Styled.budgetAmount>
+            {term.map((item, index) => (
+              <Styled.singleBudgetBlocks
+                key={index}
+                onClick={() =>
+                  this.props.onClickItem({
+                    itemType: item.itemType,
+                    field: item.displayName
+                  })
+                }
+                isSelected={selectedItems.includes(item.displayName)}
+              >
+                <Styled.budgetAmount
+                  isSelected={selectedItems.includes(item.cost)}
+                >
+                  {item.displayName}
+                </Styled.budgetAmount>
               </Styled.singleBudgetBlocks>
             ))}
           </Styled.budgetRow>

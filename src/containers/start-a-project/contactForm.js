@@ -11,13 +11,19 @@ export default class ContactForm extends Component {
             more details and we will take it from here.
           </Styled.formHead>
           <Styled.inputDiv>
-            <Styled.Input type="text" name="name" placeholder="Your Name" />
+            <Styled.Input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              onChange={e => this.props.onChangeText(e)}
+            />
           </Styled.inputDiv>
           <Styled.inputDiv>
             <Styled.Input
               type="email"
               name="email"
               placeholder="Email address"
+              onChange={e => this.props.onChangeText(e)}
             />
           </Styled.inputDiv>
           <Styled.inputDiv>
@@ -26,9 +32,12 @@ export default class ContactForm extends Component {
               id="phone"
               name="phone"
               placeholder="And finally, your contact number"
+              onChange={e => this.props.onChangeText(e)}
             />
           </Styled.inputDiv>
-          <Styled.ButtonWrapper>SEND REQUEST</Styled.ButtonWrapper>
+          <Styled.ButtonWrapper onClick={() => this.props.onClickSendRequest()}>
+            SEND REQUEST
+          </Styled.ButtonWrapper>
         </Styled.container>
       </Styled.containerFluid>
     );

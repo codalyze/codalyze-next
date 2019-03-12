@@ -7,20 +7,24 @@ import Ecommerce from "./images/ECommerce";
 const helpIcons = [
   {
     image: Ecommerce,
-    subtitle: "E-commerce"
+    subtitle: "E-commerce",
+    itemType: "kow"
   },
   {
     image: B2b,
-    subtitle: "B2B"
+    subtitle: "B2B",
+    itemType: "kow"
   },
   {
     image: BankingServices,
-    subtitle: "Banking services"
+    subtitle: "Banking services",
+    itemType: "kow"
   }
 ];
 
 export default class KindOfWebsite extends React.Component {
   render() {
+    const { selectedItems } = this.props;
     return (
       <Styled.containerFluid>
         <Styled.container>
@@ -30,7 +34,15 @@ export default class KindOfWebsite extends React.Component {
           <Styled.imageBlocksRow>
             {helpIcons.map((Icon, index) => (
               <Styled.singleImageBlocks key={index}>
-                <Styled.blockShadow>
+                <Styled.blockShadow
+                  onClick={() =>
+                    this.props.onClickItem({
+                      itemType: Icon.itemType,
+                      field: Icon.subtitle
+                    })
+                  }
+                  isSelected={selectedItems.includes(Icon.subtitle)}
+                >
                   <Icon.image />
                 </Styled.blockShadow>
                 <Styled.subtitle>{Icon.subtitle}</Styled.subtitle>
