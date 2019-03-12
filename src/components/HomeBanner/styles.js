@@ -11,7 +11,8 @@ export const FlexContainer = styled.div.attrs(({ rowReversed, isHomePage }) => (
 }))`
   ${global.flexRow}
   ${global.container}
-  padding: 125px 6vw;
+  padding: 6vw;
+  height: 10%;
   align-items: center;
   justify-content: space-between;
   position: relative;

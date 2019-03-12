@@ -11,7 +11,9 @@ import CubeBg from "./images/cubeBg";
 import Footer from "../../components/footer";
 
 export default class StartAProject extends React.Component {
+
   render() {
+    console.log(this.props);
     return (
       <Styled.pageWrapper>
         <HomeBanner
@@ -21,7 +23,11 @@ export default class StartAProject extends React.Component {
           titleBreak
         />
         <Styled.cubeWrapper>
-          <CubeBg width="100%" height="100%" viewBox="0 0 340.942 837.71" />
+          <CubeBg
+            width={this.props.mq === "desktop" ? "100%" : "190px"}
+            height={this.props.mq === "desktop" ? "auto" : "190px"}
+            viewBox={"0 0 340.942 837.71"}
+          />
         </Styled.cubeWrapper>
         <Styled.containerFluid>
           <Styled.Wrapper>
@@ -36,6 +42,18 @@ export default class StartAProject extends React.Component {
             <Styled.commonDiv>
               <Help />
               <KindOfWebsite />
+              {this.props.mq === "mobile" && (
+                <Styled.bannerSvgTrans>
+                  <Styled.bannerSvg>
+                    <StartAProjectBg
+                      width="100%"
+                      height="100%"
+                      viewBox="450 0 2175.68 2359.44"
+                      preserveAspectRatio="none"
+                    />
+                  </Styled.bannerSvg>
+                </Styled.bannerSvgTrans>
+              )}
               <Budget />
               <Project />
               <ContactForm />

@@ -27,43 +27,118 @@ export const title = styled.h4`
   ${global.fontRobotoLight};
   font-size: 34px;
   margin: 0 0 22px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
 `;
 
-export const subtitle = styled.h5`
+export const subtitle = styled.div`
   ${global.fontRobotoLight};
   font-size: 24px;
-  margin: 15px 0;
+  line-height: 1.2;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
 `;
 
 export const imageBlocksRow = styled.div`
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  overflow: auto;
+  margin-bottom: 5vw;
   justify-content: flex-start;
-  margin-bottom: 75px;
+  align-items: flex-start;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 10vw;
+  }
 `;
 
 export const singleImageBlocks = styled.div`
-  width: 240px;
+  margin-right: 3vw;
   text-align: center;
-  margin: 0 60px 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
-export const blockImages = styled.img``;
+export const blockImages = styled.svg`
+  width: 50px;
+  height: 50px;
+`; //rm this
 
 export const blockShadow = styled.button`
   box-shadow: 0px 3px 10px #e3e3e3;
   border-radius: 10px;
-  width: 158px;
-  margin: 0 auto;
-  min-height: 174px;
+  width: 10vw;
+  height: 11vw;
   display: flex;
   justify-content: space-evenly;
   border: 0;
   background-color: #fff;
   cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover {
+    background: #5cca8f;
+    svg {
+      path {
+        fill: white;
+        stroke: white;
+      }
+    }
+    .backend-architechture_svg__a,
+    .backend-architechture_svg__b,
+    .webDevelopment_svg__a,
+    .e-commerce_svg__b,
+    .b2b_svg__b,
+    .banking-services_svg__b,
+    .not-sure_svg__b {
+      fill: white;
+    }
+  }
   &:focus {
     outline: none;
+  }
+  svg {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 19vw;
+    height: 21vw;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 768px) {
+    width: 19vw;
+    height: 21vw;
+    cursor: pointer;
+    margin-bottom: 10px;
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    svg {
+      width: 46px;
+      height: 46px;
+    }
   }
 `;
 
@@ -71,44 +146,58 @@ export const paragraph = styled.p`
   ${global.fontRobotoLight}
   font-size: 15px;
   margin: 0;
-`;
 
-export const termRow = styled(imageBlocksRow)`
-  box-shadow: 0 3px 15px #e3e3e3;
-  width: 60%;
-  margin-bottom: 85px;
-  border-radius: 10px;
-  background: #fff;
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 700px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+    margin-top: 3px;
   }
 `;
 
 export const budgetRow = styled(imageBlocksRow)`
   box-shadow: 0 3px 15px #e3e3e3;
-  width: 55%;
-  margin-bottom: 85px;
+  width: 60%;
   border-radius: 10px;
   background: #fff;
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 700px;
+  margin-bottom: 5vw;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+    margin-top: 3px;
   }
 `;
 
 export const singleBudgetBlocks = styled.button`
-  background-color: #fff;
-
   border-right: 1px solid #d6e0ef;
+  cursor: pointer;
+  text-align: center;
   border-top: 0;
   border-bottom: 0;
+  background-color: #fff;
+  height: 8vw;
   flex-grow: 1;
   flex-basis: 0;
-  height: 100px;
-  cursor: pointer;
+  @media (max-width: 780px) {
+    height: 15vw;
+  }
+
+  &:hover {
+    background: #5cca8f;
+    p {
+      color: white;
+    }
+  }
   :nth-last-child(1) {
     border-right: 0;
-    flex-grow: 2;
-    flex-basis: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -130,49 +219,25 @@ export const budgetAmount = styled.p`
   margin: 0 auto;
   font-weight: 300;
   padding: 5%;
-  @media (min-width: 768px) and (max-width: 1024px) {
+
+  @media (max-width: 1330px) {
     font-size: 18px;
   }
-`;
-
-export const singleProjectBlocks = styled.button`
-  border-right: 1px solid #d6e0ef;
-  cursor: pointer;
-  text-align: center;
-  border-top: 0;
-  border-bottom: 0;
-  background-color: #fff;
-  height: 100px;
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 0% 5%;
-  :nth-last-child(1) {
-    border-right: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    flex-grow: 2;
-    flex-basis: 0;
-   
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
-  :first-child {
-    border-left: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    min-width: 200px;
-    padding: 0;
-  }
-  &:focus {
-    outline: none;
-  }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 165px;
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
 
 export const formHead = styled.p`
   ${global.fontRobotoRegular};
-  font-size: 24px;
+  font-size: 20px;
   color: #242424;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 `;
 
 export const Input = styled.input`
@@ -182,20 +247,32 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 46%;
+  width: 50%;
   background: transparent;
-  min-height: 30px;
+  height: 5vw;
   padding: 10px;
   ::placeholder {
     ${global.fontRobotoLight};
-    color: #929292;
+    color: #dadada;
     font-size: 24px;
   }
   &:focus {
     outline: none;
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     width: 75%;
+    font-size: 18px;
+    ::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% - 5vw);
+    font-size: 16px;
+    ::placeholder {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -221,8 +298,24 @@ export const cubeWrapper = styled.div`
     width: 100%;
     height: auto;
   }
+  @media (max-width: 480px) {
+  }
+`;
+
+export const bannerSvgTrans = styled.div`
+  svg {
+    transform: rotate(180deg);
+  }
 `;
 
 export const bannerSvg = styled.div`
   z-index: -2;
+  width: 100%;
+  height: auto;
+  svg {
+    z-index: -2;
+    width: 100%;
+    height: auto;
+    position: absolute;
+  }
 `;
