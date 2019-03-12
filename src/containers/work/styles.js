@@ -25,11 +25,13 @@ export const workBgContainer = styled.div`
 
 export const title = styled.h1`
   ${props => props.mq === "desktop" ? global.titleDesktop : global.title}
+  font-size: ${props => props.mq === "desktop" ? "50px;" : "24px;"}
   padding: 0 35px 10px;
 `;
 
 export const p = styled.p`
 ${props => props.mq === "desktop" ? global.paragraphDesktop : global.paragraph}
+  font-size: ${props => props.mq === "desktop" ? "24px;" : "15px;"}
   margin: 0 35px 58px;
   padding-right: 80px;
 `;
@@ -63,8 +65,10 @@ export const bannerContents = styled.div`
 `;
 
 export const pageSection = styled.div`
-  height: ${props => props.mq !== "desktop" ? "80vh" : "100vh"}
+  margin-top: 100px;
 `;
+
+// height: ${props => props.mq !== "desktop" ? "80vh" : "70vh"}
 
 export const projectBackground = styled.div`
   .bg-image {
@@ -92,3 +96,9 @@ export const projectDesktopContainer = styled.div`
     '2px 2px 5px 0px rgba(0,0,0,0.2)' :
     '-2px 2px 5px 0px rgba(0,0,0,0.2)'}
 `; 
+
+export const specializeBtn = styled.button`
+  ${global.mainButton}
+  margin: 0 auto;
+  display: block;
+`;
