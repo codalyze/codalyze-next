@@ -3,7 +3,6 @@ import * as Styled from "./styles";
 
 const AboutComponent = ({
   headingOne,
-  headingTwo,
   content,
   contentTwo,
   contentThree,
@@ -14,7 +13,6 @@ const AboutComponent = ({
 }) => (
   <Fragment>
     <Styled.title>{headingOne}</Styled.title>
-    <Styled.title>{headingTwo}</Styled.title>
     {hide ? "" : <Styled.p>{content}</Styled.p>}
     {multiple ? (
       <Fragment>

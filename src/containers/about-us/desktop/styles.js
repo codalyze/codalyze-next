@@ -21,6 +21,7 @@ export const bannerSvg = styled.div`
 
 export const FlexContainer = styled.div`
   ${global.mainContainer}
+  padding: 80px 6vw;
 `;
 
 export const whoeWe = styled.h1`
@@ -56,9 +57,17 @@ export const devisonDiv = styled.div`
 
 export const leftDiv = styled.div`
   ${global.twoBlocks}
+  img {
+    width: 100%;
+  }
+  margin-right: 30px;
 `;
 export const rightDiv = styled.div`
 ${global.twoBlocks}
+img {
+  width: 100%;
+}
+margin-left: 30px;
 text-align: ${props => (props.right ? "right" : "")};
 `;
 
@@ -82,11 +91,6 @@ export const h2 = styled.h2`
   }
 `;
 
-export const imageRight = styled.img`
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 100%;
-  }
-`;
 
 export const TeamBg = styled.div`
   position: absolute;
@@ -127,7 +131,10 @@ export const Photo = styled('div')`
     width: inherit;
   }
 `;
-export const TeamMemberImage = styled(imageRight)``;
+export const TeamMemberImage = styled('img')`
+  width: 300px;
+`;
+
 export const TeamMemberName = styled.h3`
   ${global.fontRobotoMedium};
   font-size: 24px;
