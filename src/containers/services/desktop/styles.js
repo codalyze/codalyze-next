@@ -142,13 +142,11 @@ export const bottomSvg = styled.div`
   width: 100%;
   bottom: 300px;
   z-index: -1;
-  // svg {
-  //   width: 100%;
-  //   height: auto;
-  // }
-  // .a {
-  //   opacity: 0.4;
-  // }
+  ${media.desktop`
+    top: 670px;
+    right: -75px;
+    left: unset;
+  `}
 `;
 
 export const section = styled.section`
@@ -186,7 +184,9 @@ export const contentsFromLeft = styled.div`
   `};
   ${media.desktop`
     width: 100%;
-    padding: 10px 6vw;
+    box-shadow: unset;
+    background-color: transparent;
+    padding: 30px 6vw;
     h2, p {
       padding-right: unset;
       padding-left: unset;
@@ -313,6 +313,10 @@ export const liImage = styled.div`
 `;
 
 export const liContent = styled.div`
+margin-left: 30px;
+${media.desktop`
+  margin-left: unset;
+`}
 `;
 
 export const pageWrapper = styled.div`
