@@ -2,6 +2,8 @@ import App, { Container } from 'next/app';
 import React from 'react';
 import Router from 'next/router';
 import { PageTransition } from 'next-page-transitions';
+import Helmet from 'react-helmet';
+
 import Header from "../components/Header";
 import Transition from '../components/Transition';
 import UAParser from 'ua-parser-js';
@@ -74,7 +76,7 @@ export default class MyApp extends App {
     if (!ref) return;
 
     const {top, width: markerWidth, left} = ref.getBoundingClientRect();
-    
+
     return {top, markerWidth, left, href, right: 'unset'};
   }
 
@@ -94,7 +96,7 @@ export default class MyApp extends App {
 
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
- 
+
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
@@ -107,14 +109,21 @@ export default class MyApp extends App {
       }
     }
     pageProps.mq = mq;
- 
+
     return { pageProps };
   }
- 
+
   render() {
     const { Component, pageProps } = this.props;
     return (
       <Container>
+        <Helmet
+          title='Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS'
+          meta={[
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            { property: 'og:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' }
+          ]}
+        />
         <Header {...this.state} addRef={this.addRef} {...pageProps} />
         <PageTransition timeout={500} classNames="page-transition">
           <React.Fragment key={this.props.router.route}>
