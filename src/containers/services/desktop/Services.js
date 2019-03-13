@@ -10,7 +10,7 @@ import Service1 from './images/Service1';
 
 import dynamic from 'next/dynamic'
 
-const Service2 = dynamic(() => import('./images/Service2'), {loading: () => null});
+const Service2 = dynamic(() => import('./images/Services'), {loading: () => null});
 
 import LazySvgLoader from '../../../components/LazySvgLoader';
 

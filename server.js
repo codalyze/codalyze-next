@@ -23,6 +23,15 @@ app.prepare().then(_ => {
     mailSender.sendMail({to, html: htmlToCodalyze, subject: subjectToCodalyze});
     res.json('ok');
   });
+  app.get('/fb-share.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/static/images/fb-share.png'));
+  });
+  app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/static/sitemap.xml'));
+  });
+  app.get('/robots.txt', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/static/robots.txt'));
+  });
   app.get('/sitemap.xml', express.static(path.join(__dirname, 'src/static/sitemap.xml')));
   app.get('/robots.txt', express.static(path.join(__dirname, 'src/static/robots.txt')));
   app.use('/sw.js', express.static(path.join(__dirname, 'src/static/sw.js')));
