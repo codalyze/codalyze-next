@@ -265,7 +265,7 @@ export default class Work extends React.PureComponent {
               </Link>
             </div>
           </div>
-          <Footer mq={props.mq} />
+          <Footer />
         </div>
       </Fragment>
     )
