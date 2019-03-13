@@ -26,8 +26,7 @@ export default class Services extends React.PureComponent {
           titleBreak
           secondryTitle="Our Services."
           subTitle="We offer services in following verticals"
-          banner="/static/images/services/banner.png"
-          // BannerSvg={() => <LazySvgLoader FirstImage={Service1} LazyImage={Service2} isMobile={this.props.mq === 'mobile'}/>}
+          BannerSvg={() => <LazySvgLoader FirstImage={Service1} LazyImage={Service2} isMobile={this.props.mq === 'mobile'}/>}
         />
         <Sections />
         <Styled.bottomSvg>
