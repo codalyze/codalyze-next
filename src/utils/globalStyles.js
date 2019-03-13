@@ -113,6 +113,14 @@ export const mainButton = css`
   text-transform: uppercase;
   cursor: pointer;
   padding: 12px 18px;
+  &:hover {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  }
+  &:focus {
+    background: #40bc7a;
+    outline: none;
+    box-shadow: none;
+  }
 `;
 
 export const CenterImg = css`
