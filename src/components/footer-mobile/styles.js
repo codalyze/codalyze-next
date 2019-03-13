@@ -22,6 +22,7 @@ export const li = styled.li`
   font-size: 15px;
   color: #fff;
   margin: 0 0 18px;
+  cursor: pointer;
 `;
 
 export const footerParagraph = styled.p`

@@ -103,7 +103,7 @@ export const teamMembers = [
       position: "Cooks most authentic JS Biryani",
       socialButtons: [{
         type: "github",
-        url: "https://github.com/surabhi226005"
+        url: "https://github.com/hari-krushna"
       },{
         type: "linkedin",
         url: "https://www.linkedin.com/in/hari-krushna"
