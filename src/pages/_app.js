@@ -137,7 +137,7 @@ export default class MyApp extends App {
             { property: 'og:type', content: 'business.business' },
             { property: 'twitter:site', content: '@codalyze' },
             { property: 'twitter:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
-            { property: 'twitter:image', content: 'https://www.codalyze.com/fb-share.png' },
+            { property: 'twitter:image', content: 'https://www.codalyze.com/fb-share-2.png' },
             { property: 'twitter:image:alt', content: 'Codalyze Technologies' },
             { property: 'twitter:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' },
             { property: 'twitter:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
