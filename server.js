@@ -23,6 +23,8 @@ app.prepare().then(_ => {
     mailSender.sendMail({to, html: htmlToCodalyze, subject: subjectToCodalyze});
     res.json('ok');
   });
+  app.get('/sitemap.xml', express.static(path.join(__dirname, 'src/static/sitemap.xml')));
+  app.get('/robots.txt', express.static(path.join(__dirname, 'src/static/robots.txt')));
   app.use('/sw.js', express.static(path.join(__dirname, 'src/static/sw.js')));
   app.use(handle);
   createServer(app).listen(PORT, err => {

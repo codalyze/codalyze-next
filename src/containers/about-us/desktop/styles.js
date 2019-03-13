@@ -127,6 +127,14 @@ export const Photo = styled('div')`
     justify-content: flex-end;
     display: flex;
   }
+  &:nth-child(8) {
+    justify-content: center;
+    display: flex;
+  }
+  &:nth-child(9) {
+    justify-content: flex-end;
+    display: flex;
+  }
   @media (min-width: 768px) and (max-width: 1024px) {
     width: inherit;
   }
