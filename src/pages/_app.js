@@ -9,6 +9,7 @@ import Transition from '../components/Transition';
 import UAParser from 'ua-parser-js';
 import loadWebFonts from '../utils/loadWebFonts';
 import initFbMessenger from '../utils/initFbMessenger';
+import ReactGA from 'react-ga';
 
 export default class MyApp extends App {
   constructor (props) {
@@ -42,6 +43,8 @@ export default class MyApp extends App {
     this.setState({className: 'app-body'});
     loadWebFonts();
     initFbMessenger();
+    ReactGA.initialize('UA-82744542-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   componentWillUnmount () {
@@ -83,6 +86,7 @@ export default class MyApp extends App {
   }
 
   handleRouteChangeStart = (r) => {
+    ReactGA.pageview(r);
     const newPosition = this.calculatePosition(r);
     if (!newPosition || newPosition.href === this.state.href) return;
     this.setState({...newPosition, markerWidth: 10, left: newPosition.left + newPosition.markerWidth / 2 - 5});

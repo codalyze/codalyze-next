@@ -16,15 +16,15 @@ import LazySvgLoader from '../../components/LazySvgLoader';
 const openings = [
   {
     designation: "Frontend Developer",
-    experience: "2+ years of experience"
+    experience: "2+ years of experience in either ReactJS or VueJS. Expertise in Styled Components / CSS Modules is a plus."
   },
   {
-    designation: "Backend Developer",
-    experience: "2+ years of experience"
+    designation: "Senior NodeJS Developer",
+    experience: "2+ years of experience in NodeJS. Experience in MongoDB / Postgres desired. Must have experience in TypeScript."
   },
   {
-    designation: "React Native / Flutter",
-    experience: "2+ years of experience"
+    designation: "React Native / Flutter Developer",
+    experience: "1+ years of experience in React Native or Flutter. Relevant experience in Android / IOS Development"
   }
   // {
   //   designation: "Web Development",
@@ -76,6 +76,9 @@ export default class Career extends PureComponent {
                 </Styled.openingsBlock>
                 ))}
               </Styled.openingsList>
+              <Styled.sendYourResume>
+                Send your resumes to <a href="mailto:mail@codalyze.com" title="mail@codalyze.com">mail@codalyze.com</a>
+              </Styled.sendYourResume>
               {/* <Styled.viewMore>View More</Styled.viewMore> */}
             </Styled.FlexContainer>
           </Styled.openingSection>

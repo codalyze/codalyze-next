@@ -53,7 +53,7 @@ export const openingsBlock = styled.button`
 
 export const designationTitle = styled.h5`
 ${global.fontRobotoMedium};
-  font-size: 34px;
+  font-size: 24px;
   margin: 0 0 10px;
   @media (min-width: 768px) and (max-width: 1024px) {
     font-size: 28px;
@@ -62,9 +62,20 @@ ${global.fontRobotoMedium};
 
 export const experienceSubTitle = styled.h6`
 ${global.fontRobotoLight};
-  font-size: 20px;
+  font-size: 16px;
   margin: 0 0 0;
-  width: 65%;
+  width: 80%;
+`;
+
+export const sendYourResume = styled.p`
+${global.fontRobotoLight};
+font-size: 20px;
+margin: 20px auto 380px;
+text-align: center;
+a {
+  color: #4AC88D;
+  text-decoration: none;
+}
 `;
 
 export const CareerBg = styled.div`
