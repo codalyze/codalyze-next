@@ -24,7 +24,7 @@ app.prepare().then(_ => {
     res.json('ok');
   });
   app.get('/fb-share-2.png', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/static/images/fb-share.png'));
+    res.sendFile(path.join(__dirname, 'src/static/images/fb-share-2.png'));
   });
   app.get('/sitemap.xml', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/static/sitemap.xml'));
