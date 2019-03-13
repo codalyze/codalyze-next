@@ -6,11 +6,7 @@ import Bg2 from './images/Bg2';
 import Sections from './Sections';
 import Footer from '../../../components/footer';
 
-import Service1 from './images/Service1';
-
-import dynamic from 'next/dynamic'
-
-const Service2 = dynamic(() => import('./images/Services'), {loading: () => null});
+import Service1 from './images/Services';
 
 import LazySvgLoader from '../../../components/LazySvgLoader';
 
@@ -26,7 +22,7 @@ export default class Services extends React.PureComponent {
           titleBreak
           secondryTitle="Our Services."
           subTitle="We offer services in following verticals"
-          BannerSvg={() => <LazySvgLoader FirstImage={Service1} LazyImage={Service2} isMobile={this.props.mq === 'mobile'}/>}
+          BannerSvg={() => <LazySvgLoader FirstImage={Service1} isMobile={this.props.mq === 'mobile'}/>}
         />
         <Sections />
         <Styled.bottomSvg>

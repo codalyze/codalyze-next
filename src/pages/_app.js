@@ -86,7 +86,6 @@ export default class MyApp extends App {
   }
 
   handleRouteChangeStart = (r) => {
-    console.log(r);
     ReactGA.pageview(r);
     const newPosition = this.calculatePosition(r);
     if (!newPosition || newPosition.href === this.state.href) return;

@@ -49,7 +49,7 @@ export default class LazySvgLoader extends React.Component {
     return (
       <SvgWrapper height={this.state.width} rowReversed={this.props.rowReversed} >
         <FirstImage style={{width: `${this.state.width}px`}} />
-        {this.state.loaded && <LazyImage width={`${this.state.width}px`} />}
+        {this.state.loaded && LazyImage && <LazyImage width={`${this.state.width}px`} />}
       </SvgWrapper>
     );
   }

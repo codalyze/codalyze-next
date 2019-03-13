@@ -71,9 +71,7 @@ export default class FindOpportunities extends Component {
   }
 
   onClickFirst = () => {
-    console.log("First clicked");
     let openingsArray = [...this.openings];
-    console.log("opeming", openingsArray);
     const splArray = openingsArray.slice(this.state.first, 6);
     console.log("splArray", splArray);
     this.setState({ splicedArray: splArray });
