@@ -120,8 +120,17 @@ export default class MyApp extends App {
         <Helmet
           title='Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS'
           meta={[
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { property: 'og:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' }
+            { property: 'og:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' },
+            { property: 'description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
+            { property: 'og:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
+            { property: 'og:image', content: '/static/images/home-banner.png' },
+            { property: 'og:url', content: 'https://www.codalyze.com' },
+            { property: 'twitter:site', content: '@codalyze' },
+            { property: 'twitter:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
+            { property: 'twitter:image', content: '/static/images/home-banner.png' },
+            { property: 'twitter:image:alt', content: 'Codalyze Technologies' },
+            { property: 'twitter:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' },
+            { property: 'twitter:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
           ]}
         />
         <Header {...this.state} addRef={this.addRef} {...pageProps} />

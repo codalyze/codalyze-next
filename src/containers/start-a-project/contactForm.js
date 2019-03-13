@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import * as Styled from "./styles";
 
-export default class ContactForm extends Component {
+export default class ContactForm extends PureComponent {
   render() {
     return (
       <Styled.containerFluid>
@@ -15,6 +15,7 @@ export default class ContactForm extends Component {
               type="text"
               name="name"
               placeholder="Your Name"
+              value={this.props.data.name || ''}
               onChange={e => this.props.onChangeText(e)}
             />
           </Styled.inputDiv>
@@ -23,19 +24,34 @@ export default class ContactForm extends Component {
               type="email"
               name="email"
               placeholder="Email address"
+              value={this.props.data.email || ''}
               onChange={e => this.props.onChangeText(e)}
+              error={this.props.emailError}
             />
+            {this.props.emailError && <Styled.errorMessage>That's not a valid email :(</Styled.errorMessage>}
           </Styled.inputDiv>
           <Styled.inputDiv>
             <Styled.Input
               type="tel"
               id="phone"
               name="phone"
+              value={this.props.data.phone || ''}
               placeholder="And finally, your contact number"
               onChange={e => this.props.onChangeText(e)}
             />
           </Styled.inputDiv>
-          <Styled.ButtonWrapper onClick={() => this.props.onClickSendRequest()}>
+          <Styled.inputDiv>
+            <Styled.TextArea
+              rows="3"
+              type="text"
+              id="message"
+              name="message"
+              value={this.props.data.message || ''}
+              placeholder="Any other details?"
+              onChange={e => this.props.onChangeText(e)}
+            />
+          </Styled.inputDiv>
+          <Styled.ButtonWrapper disabled={this.props.emailError || !(this.props.data && this.props.data.email)} onClick={() => this.props.onClickSendRequest()}>
             SEND REQUEST
           </Styled.ButtonWrapper>
         </Styled.container>

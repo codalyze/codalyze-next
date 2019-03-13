@@ -17,7 +17,6 @@ export const container = styled.div`
 `;
 
 export const commonDiv = styled.div`
-  position: absolute;
   top: 0;
   margin: 0 auto;
   width: 100%;
@@ -79,16 +78,17 @@ export const blockImages = styled.svg`
 `; //rm this
 
 export const blockShadow = styled.button`
+  transition: all 100ms ease;
   box-shadow: 0px 3px 10px #e3e3e3;
   border-radius: 10px;
-  width: 10vw;
-  height: 11vw;
+  width: ${props => props.isSelected ? '9vw' : '10vw'};
+  height: ${props => props.isSelected ? '10vw' : '11vw'};
   display: flex;
   justify-content: space-evenly;
   border: 0;
   background-color: ${(props) => props.isSelected ? '#5cca8f' : 'white'};
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: ${props => props.isSelected ? 'calc(20px + 1vw)' : '20px'};
   svg {
     path {
       fill: ${(props) => !props.isSelected ? '#5cca8f' : 'white'};
@@ -188,7 +188,10 @@ export const singleBudgetBlocks = styled.button`
   text-align: center;
   border-top: 0;
   border-bottom: 0;
-  background-color: ${(props) => props.isSelected ? '#5cca8f' : 'white'};
+  background-color: ${(props) => props.isSelected ? '#5cca8f' : '#eee'};
+  p {
+    color: ${props => props.isSelected ? 'white' : '#888'};
+  }
   height: 8vw;
   flex-grow: 1;
   flex-basis: 0;
@@ -197,9 +200,9 @@ export const singleBudgetBlocks = styled.button`
   }
 
   &:hover {
-    background: #5cca8f;
+    background: #fff;
     p {
-      color: white;
+      color: #5cca8f;
     }
   }
   :nth-last-child(1) {
@@ -247,7 +250,7 @@ export const formHead = styled.p`
 `;
 
 export const Input = styled.input`
-  border-bottom: 1px solid #242424;
+  border-bottom: 1px solid ${props => props.error ? 'red' : '#242424'};
   ${global.fontRobotoLight};
   border-top: 0;
   border-right: 0;
@@ -255,7 +258,43 @@ export const Input = styled.input`
   padding: 15px 0px;
   width: 50%;
   background: transparent;
-  height: 5vw;
+  height: 32px;
+  padding: 10px;
+  ::placeholder {
+    ${global.fontRobotoLight};
+    color: #dadada;
+    font-size: 24px;
+  }
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: 1024px) {
+    width: 75%;
+    font-size: 18px;
+    ::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% - 5vw);
+    font-size: 16px;
+    ::placeholder {
+      font-size: 16px;
+    }
+  }
+`;
+
+export const TextArea = styled.textarea`
+  border-bottom: 1px solid ${props => props.error ? 'red' : '#242424'};
+  ${global.fontRobotoLight};
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  padding: 15px 0px;
+  width: 50%;
+  background: transparent;
+  height: 96px;
   padding: 10px;
   ::placeholder {
     ${global.fontRobotoLight};
@@ -293,19 +332,16 @@ export const ButtonWrapper = styled.button`
   &:focus {
     outline: none;
   }
+  &:disabled {
+    background-color: #888;
+  }
 `;
 
 export const cubeWrapper = styled.div`
   position: absolute;
-  right: 0;
-  top: 6%;
+  right: -236px;
+  top: 25%;
   z-index: -1;
-  svg {
-    width: 100%;
-    height: auto;
-  }
-  @media (max-width: 480px) {
-  }
 `;
 
 export const bannerSvgTrans = styled.div`
@@ -325,3 +361,37 @@ export const bannerSvg = styled.div`
     position: absolute;
   }
 `;
+
+export const errorMessage = styled.p`
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 0;
+  color: red;
+  text-align: right;
+  width: 50%;
+  @media (max-width: 1024px) {
+    width: 75%;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100% - 5vw);
+  }
+`;
+
+export const successDiv = styled.div`
+  width: calc(100% - 12vw);
+  padding: 30px;
+  background-color: #5cca8f;
+  margin: 10px 6vw 30px;
+  box-sizing: border-box;
+  position: relative;
+  span {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+`;
+

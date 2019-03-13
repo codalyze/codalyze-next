@@ -1,3 +1,6 @@
 import StartAProject from '../start-a-project/start-a-project';
+import PageWrapper from "../../utils/PageWrapper";
 
-export default StartAProject;
+const StartAProjectComponent = props => <StartAProject {...props} ></StartAProject>
+
+export default PageWrapper(StartAProjectComponent);

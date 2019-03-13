@@ -7,7 +7,7 @@ import Budget from "./budget";
 import Project from "./project";
 import StartAProjectBg from "./images/startAProject";
 import ContactForm from "./contactForm";
-import CubeBg from "./images/cubeBg";
+import CubeBg from "./images/CubeBg";
 import Footer from "../../components/footer";
 
 export const sectionTypes = {
@@ -22,15 +22,24 @@ export const sectionConfig = {
   single: [sectionTypes.kow, sectionTypes.duration, sectionTypes.budget]
 };
 
-export default class StartAProject extends React.Component {
-  state = { data: {} };
+export default class StartAProject extends React.PureComponent {
+  state = { data: {}, emailError: false, showSuccessMessage: false };
+
+  validateEmail = (email) => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
 
   onChangeText = e => {
     const { data } = this.state;
+    let emailError = this.state.emailError;
+    if (e.target.name === 'email') {
+      emailError = !this.validateEmail(e.target.value);
+    }
     const currentData = {
       [e.target.name]: e.target.value
     };
-    this.setState({ data: { ...data, ...currentData } });
+    this.setState({ data: { ...data, ...currentData }, emailError });
   };
 
   onClickItem = item => {
@@ -40,7 +49,7 @@ export default class StartAProject extends React.Component {
     const { data } = this.state;
     if (data && data.hasOwnProperty(name)) {
       let sectionValues = data[name];
-      // Differentiation for multi and single selection
+      // Differentiation for multi and single selection [d/dx(multi-selection) && d/dx(single-selection)]
       if (sectionConfig["multi"].includes(name)) {
         if (data[name].includes(value)) {
           const index = sectionValues.indexOf(value);
@@ -60,11 +69,26 @@ export default class StartAProject extends React.Component {
 
   onClickSendRequest = () => {
     const { data } = this.state || {};
-    let xmlhttp = new XMLHttpRequest(); // new HttpRequest instance
+    const xmlhttp = new XMLHttpRequest();
+    const self = this;
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+         self.onSubmitSuccess();
+      }
+    };
     let theUrl = "/send-request";
     xmlhttp.open("POST", theUrl);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send(JSON.stringify({ data }));
+  };
+
+  onSubmitSuccess = () => {
+    this.setState({data: {}, emailError: false, showSuccessMessage: true}, () => {
+      const elem = document.getElementById('success-message');
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
   };
 
   getSelectedItemsForType = type => {
@@ -77,16 +101,14 @@ export default class StartAProject extends React.Component {
     return (
       <Styled.pageWrapper>
         <HomeBanner
-          title="Let’s work"
-          secondryTitle="together"
+          title="Let’s work together"
           subTitle="Start a project, schedule a talk or just say hello!"
           titleBreak
         />
         <Styled.cubeWrapper>
           <CubeBg
-            width={this.props.mq === "desktop" ? "100%" : "190px"}
-            height={this.props.mq === "desktop" ? "auto" : "190px"}
-            viewBox={"0 0 340.942 837.71"}
+            width={this.props.mq === "desktop" ? "740px" : "450px"}
+            height={this.props.mq === "desktop" ? "837px" : "550px"}
           />
         </Styled.cubeWrapper>
         <Styled.containerFluid>
@@ -99,6 +121,10 @@ export default class StartAProject extends React.Component {
                 preserveAspectRatio="none"
               />
             </Styled.bannerSvg>
+            {this.state.showSuccessMessage && <Styled.successDiv id="success-message">
+              Thanks for your interest. We will get back to you within 24 hours.
+              <span onClick={() => {this.setState({showSuccessMessage: false})}}>x</span>
+            </Styled.successDiv>}
             <Styled.commonDiv>
               <Help
                 onClickItem={this.onClickItem}
@@ -135,6 +161,8 @@ export default class StartAProject extends React.Component {
               <ContactForm
                 onChangeText={this.onChangeText}
                 onClickSendRequest={this.onClickSendRequest}
+                emailError={this.state.emailError}
+                data={this.state.data}
               />
               <Footer />
             </Styled.commonDiv>

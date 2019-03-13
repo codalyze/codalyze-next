@@ -22,7 +22,6 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          {this.helmetHeadComponents}
           {this.props.styleTags}
           <style dangerouslySetInnerHTML={{ __html: transitionStyles }} />
           <meta name="theme-color" content="#55a7a2" />
