@@ -23,7 +23,7 @@ app.prepare().then(_ => {
     mailSender.sendMail({to, html: htmlToCodalyze, subject: subjectToCodalyze});
     res.json('ok');
   });
-  app.get('/fb-share.png', (req, res) => {
+  app.get('/fb-share-2.png', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/static/images/fb-share.png'));
   });
   app.get('/sitemap.xml', (req, res) => {
