@@ -7,9 +7,7 @@ export const workBgContainer = styled.div`
     height: 60vw;
   }
   @media (max-width: 992px) {
-    position: relative;
-    top: unset;
-    padding-top: 50px;
+
     svg {
       width: 100vw;
       height: 140vw;
@@ -53,24 +51,9 @@ export const bannerContainer = styled.div`
   position: relative;
 `;
 
-export const bannerContents = styled.div`
-  @media (max-width: 992px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-  @media (min-width: 993px) {
-    height: 80vh;
-  }
-`;
-
 export const pageSection = styled.div`
-  margin-top: 100px;
+  margin-top: ${props => props.index === 0 ? '0;' : '100px;'}
 `;
-
-// height: ${props => props.mq !== "desktop" ? "80vh" : "70vh"}
 
 export const projectBackground = styled.div`
   .bg-image {

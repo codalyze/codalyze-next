@@ -120,22 +120,26 @@ const Content = ({ pageTitle, content: Content, image, button, href, mq, index }
     <Fragment>
       <div style={{ position: "relative" }}>
         <ProjectBackground mq={mq} index={index} />
-        <Styled.title mq={mq}>{pageTitle}</Styled.title>
-        <Content mq={mq} />
+        <Fade>
+          <Styled.title mq={mq}>{pageTitle}</Styled.title>
+          <Content mq={mq} />
+        </Fade>
         {/* <Styled.p mq={mq}>{content}</Styled.p> */}
       </div>
-      <div style={{ position: "relative" }}>
-        <div
-          style={{
-            position: "absolute",
-            zIndex: -1,
-            ...getStarStyleByIndex(index)
-          }}
-        >
-          <Star width="30vw" />
+      <Fade>
+        <div style={{ position: "relative" }}>
+          <div
+            style={{
+              position: "absolute",
+              zIndex: -1,
+              ...getStarStyleByIndex(index)
+            }}
+          >
+            <Star width="30vw" />
+          </div>
+          <Styled.img src={image} />
         </div>
-        <Styled.img src={image} />
-      </div>
+      </Fade>
       {/* <Link href={href} passHref prefetch>
         <Styled.btn>{button}</Styled.btn>
       </Link> */}
@@ -151,44 +155,44 @@ const Content = ({ pageTitle, content: Content, image, button, href, mq, index }
     >
       <Fragment>
         <ProjectBackground mq={mq} index={index} />
-        <Styled.projectDesktopContainer mq={mq} index={index}>
-          <div
-            style={{
-              padding: "10vw",
-              paddingLeft: index % 2 === 0 ? "10vw" : 150,
-              paddingRight: index % 2 === 1 ? "10vw" : 150
-            }}
-          >
-            <Styled.title mq={mq}>{pageTitle}</Styled.title>
-            <Content mq={mq} />
-            {/* <Styled.p mq={mq}>{content}</Styled.p> */}
-            <ProjectImageDesktop mq={mq} index={index} image={image} />
-            {/* <Link href={href} passHref prefetch>
-              <Styled.btn>{button}</Styled.btn>
-            </Link> */}
-          </div>
-          {index !== 0 && (
+        <Fade>
+          <Styled.projectDesktopContainer mq={mq} index={index}>
             <div
               style={{
-                position: "absolute",
-                left: index % 2 === 0 ? 100 : "unset",
-                right: index % 2 === 1 ? 100 : "unset",
-                top: -200,
-                zIndex: -1
+                padding: "10vw",
+                paddingLeft: index % 2 === 0 ? "10vw" : 150,
+                paddingRight: index % 2 === 1 ? "10vw" : 150
               }}
             >
-              <Star width="15vw" />
+              <Styled.title mq={mq}>{pageTitle}</Styled.title>
+              <Content mq={mq} />
+              {/* <Styled.p mq={mq}>{content}</Styled.p> */}
+              <ProjectImageDesktop mq={mq} index={index} image={image} />
+              {/* <Link href={href} passHref prefetch>
+                <Styled.btn>{button}</Styled.btn>
+              </Link> */}
             </div>
-          )}
-        </Styled.projectDesktopContainer>
+            {index !== 0 && (
+              <div
+                style={{
+                  position: "absolute",
+                  left: index % 2 === 0 ? 100 : "unset",
+                  right: index % 2 === 1 ? 100 : "unset",
+                  top: -200,
+                  zIndex: -1
+                }}
+              >
+                <Star width="15vw" />
+              </div>
+            )}
+          </Styled.projectDesktopContainer>
+        </Fade>
       </Fragment>
     </div>
   );
 
 const Project = ({ index, mq, children }) => (
-  <Fade key={index}>
-    <Fragment>{children}</Fragment>
-  </Fade>
+  <Fragment>{children}</Fragment>
 );
 
 export default class Work extends React.PureComponent {
@@ -201,7 +205,6 @@ export default class Work extends React.PureComponent {
             <Styled.workBgContainer>
               <WorkBannerBg width="100%" mq={props.mq} />
             </Styled.workBgContainer>
-            <Styled.bannerContents>
               <Banner
                 BannerSvg={() => <LazySvgLoader FirstImage={Work1} LazyImage={Work2} isMobile={props.mq === 'mobile'} />}
                 title="Puzzles solved"
@@ -210,7 +213,6 @@ export default class Work extends React.PureComponent {
                 titleBreak
                 {...props}
               />
-            </Styled.bannerContents>
           </Styled.bannerContainer>
           {ProjectData.map((project, index) => (
             <Styled.pageSection index={index} mq={props.mq} key={project.pageTitle}>
