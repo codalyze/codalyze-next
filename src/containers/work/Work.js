@@ -13,7 +13,9 @@ import {
   Betking,
   Khelomore,
   Radframe,
-  Fitcircle
+  Fitcircle,
+  LoudCloud,
+  Bitsafe
 } from "./content";
 
 import Work1 from './images/Work1';
@@ -27,17 +29,24 @@ import LazySvgLoader from '../../components/LazySvgLoader';
 const ProjectData = [
   {
     pageTitle: "BetKing",
-    image: "/static/images/mobile/work/betKingMobile.png",
+    image: "/static/images/mobile/work/betKingMobile.jpg",
     button: "VIEW CASE STUDY",
     href: "/#",
     content: Betking
   },
   {
-    pageTitle: "Fitcircle",
-    image: "/static/images/mobile/work/fitcircleMobile.png",
+    pageTitle: "Bitsafe",
+    image: "/static/images/mobile/work/bitsafe.png",
     button: "VIEW CASE STUDY",
     href: "/#",
-    content: Fitcircle
+    content: Bitsafe
+  },
+  {
+    pageTitle: "LoudCloud",
+    image: "/static/images/mobile/work/loudcloud.jpg",
+    button: "VIEW CASE STUDY",
+    href: "/#",
+    content: LoudCloud
   },
   {
     pageTitle: "KheloMore",
@@ -74,7 +83,8 @@ const ProjectImageDesktop = ({ image, index }) => (
     style={{
       ...{
         position: "absolute",
-        top: "50%"
+        top: "50%",
+        width: 320
       },
       ...(index % 2 === 0
         ? {
