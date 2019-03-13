@@ -15,29 +15,29 @@ import LazySvgLoader from '../../components/LazySvgLoader';
 
 const openings = [
   {
-    designation: "Web Development",
-    experience: "2+ years of experience in UI Development"
+    designation: "Frontend Developer",
+    experience: "2+ years of experience"
   },
   {
-    designation: "UI design",
-    experience: "2+ years of experience in UI Development"
+    designation: "Backend Developer",
+    experience: "2+ years of experience"
   },
   {
-    designation: "App development",
-    experience: "2+ years of experience in UI Development"
-  },
-  {
-    designation: "Web Development",
-    experience: "2+ years of experience in UI Development"
-  },
-  {
-    designation: "UI design",
-    experience: "2+ years of experience in UI Development"
-  },
-  {
-    designation: "App development",
-    experience: "2+ years of experience in UI Development"
+    designation: "React Native / Flutter",
+    experience: "2+ years of experience"
   }
+  // {
+  //   designation: "Web Development",
+  //   experience: "2+ years of experience in UI Development"
+  // },
+  // {
+  //   designation: "UI design",
+  //   experience: "2+ years of experience in UI Development"
+  // },
+  // {
+  //   designation: "App development",
+  //   experience: "2+ years of experience in UI Development"
+  // }
 ];
 
 export default class Career extends PureComponent {
@@ -76,7 +76,7 @@ export default class Career extends PureComponent {
                 </Styled.openingsBlock>
                 ))}
               </Styled.openingsList>
-              <Styled.viewMore>View More</Styled.viewMore>
+              {/* <Styled.viewMore>View More</Styled.viewMore> */}
             </Styled.FlexContainer>
           </Styled.openingSection>
         </Styled.openingsRow>
