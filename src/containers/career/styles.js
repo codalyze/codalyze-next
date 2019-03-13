@@ -34,11 +34,11 @@ export const title = styled.h4`
 export const openingsList = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export const openingsBlock = styled.button`
-  
+  min-width: 300px;
   margin-bottom: 30px;
   background: #ffffff;
   box-shadow: 0px 3px 6px #e3e3e3;

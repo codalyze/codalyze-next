@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import * as Styled from "./styles";
-import HomeBanner from "../../components/HomeBanner";
+import HomeBanner from "../../components/Banner";
+// import HomeBanner from "../../components/HomeBanner";
 import CareerBgSvg from "../../static/images/career/careerBg";
 import Footer from "../../components/footer";
 

@@ -39,6 +39,7 @@ ${props => props.mq === "desktop" ? global.paragraphDesktop : global.paragraph}
 export const img = styled.img`
   ${global.CenterImg}
   margin-bottom: 67px;
+  max-width: 80vw;
 `;
 
 export const btn = styled.button`
@@ -83,7 +84,7 @@ export const projectDesktopContainer = styled.div`
 `; 
 
 export const specializeBtn = styled.button`
-  ${global.mainButton}
+  ${props => props.mq === "desktop" ? global.mainButton : global.mobileButton}
   margin: 0 auto;
   display: block;
 `;
