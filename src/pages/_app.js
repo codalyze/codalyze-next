@@ -1,6 +1,5 @@
 import App, { Container } from 'next/app';
 import React from 'react';
-import Router from 'next/router';
 import { PageTransition } from 'next-page-transitions';
 import Helmet from 'react-helmet';
 
@@ -28,6 +27,7 @@ export default class MyApp extends App {
 
     const newPosition = this.calculatePosition(props.router.pathname);
     this.onResize = this.onResize.bind(this);
+    this.lastPathName = props.router.pathname;
 
     if (newPosition) this.state = {...newPosition};
   }
@@ -37,23 +37,23 @@ export default class MyApp extends App {
   }
 
   componentDidMount () {
-    Router.events.on('routeChangeStart', this.handleRouteChangeStart);
+    ReactGA.initialize('UA-82744542-1');
     window.addEventListener('resize', this.onResize);
     this.handleRouteChangeStart(this.pathname);
     this.setState({className: 'app-body'});
     loadWebFonts();
     initFbMessenger();
-    ReactGA.initialize('UA-82744542-1');
-    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   componentWillUnmount () {
-    Router.events.off('routeChangeStart', this.handleRouteChangeStart);
     window.removeEventListener('resize', this.onResize);
   }
 
   componentDidUpdate () {
-    this.handleRouteChangeStart(this.pathname);
+    if (this.lastPathName !== this.pathname) {
+      this.lastPathName = this.pathname;
+      this.handleRouteChangeStart(this.pathname);
+    }
   }
 
   componentDidCatch (x) {
@@ -86,6 +86,7 @@ export default class MyApp extends App {
   }
 
   handleRouteChangeStart = (r) => {
+    console.log(r);
     ReactGA.pageview(r);
     const newPosition = this.calculatePosition(r);
     if (!newPosition || newPosition.href === this.state.href) return;
