@@ -129,7 +129,7 @@ export default class MyApp extends App {
             { property: 'og:title', content: 'Codalyze Tech | Web and Mobile Development | React / React Native / NodeJS' },
             { property: 'description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
             { property: 'og:description', content: 'We are a small team of awesome JavaScript developers. Get your web and mobile apps developed at Codalyze.' },
-            { property: 'og:image', content: 'https://www.codalyze.com/fb-share.png' },
+            { property: 'og:image', content: 'https://www.codalyze.com/fb-share-2.png' },
             { property: 'og:image:type', content: 'image/png' },
             { property: 'og:image:width', content: '1200' },
             { property: 'og:image:height', content: '630' },
