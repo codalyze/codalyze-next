@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
 
   get helmetHeadComponents () {
     return Object.keys(this.props.helmet)
-      .filter(el => el !== 'htmlAttributes' && el !== 'bodyAttributes')
+      .filter(el => el !== 'htmlAttributes' && el !== 'bodyAttributes' && el !== 'title')
       .map(el => this.props.helmet[el].toComponent())
   }
 
@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          {this.helmetHeadComponents}
           {this.props.styleTags}
           <style dangerouslySetInnerHTML={{ __html: transitionStyles }} />
           <meta name="theme-color" content="#55a7a2" />

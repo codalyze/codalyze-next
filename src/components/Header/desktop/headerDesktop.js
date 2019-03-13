@@ -72,6 +72,7 @@ export default class HeaderDesktop extends React.PureComponent {
 
   hasScrolled = () => {
     const st = window.pageYOffset;
+    if (!this.navRef) return;
     const navBarHeight = this.navRef.getBoundingClientRect().height;
 
     if (Math.abs(this.lastScrollTop - st) <= 10) {

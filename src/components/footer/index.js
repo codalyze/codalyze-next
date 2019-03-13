@@ -22,10 +22,6 @@ const footerLinks = [
     href: "career"
   },
   {
-    name: "Contact",
-    href: "#"
-  },
-  {
     name: "Start a project",
     href: "start-a-project"
   }

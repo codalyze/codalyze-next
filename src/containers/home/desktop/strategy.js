@@ -36,7 +36,7 @@ const Strategy = () => (
           interfaces (yet), you can sample a large offering of non-perishable
           case studies.
         </Styled.strategySubTitle>
-        {/* <ServiceBtn href={"/work"}/> */}
+        <ServiceBtn href={"/work"}/>
       </Styled.strategyBlockTwo>
    
   </Styled.strategyRow>

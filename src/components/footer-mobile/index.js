@@ -21,35 +21,31 @@ const footerPages = [
     href: "career"
   },
   {
-    name: "Contact",
-    href: "#"
-  },
-  {
     name: "Start a project",
     href: "start-a-project"
   }
 ];
 
 const SocialMediaLinks = [
-  {
-    name: "FaceBook",
-    src: "/static/images/footer/mobile/fbMobile.png",
-    href: "https://www.facebook.com"
-  },
-  {
-    name: "Instagram",
-    src: "/static/images/footer/mobile/instagramMobile.png",
-    href: "https://www.facebook.com"
-  },
+  // {
+  //   name: "FaceBook",
+  //   src: "/static/images/footer/mobile/fbMobile.png",
+  //   href: "https://www.facebook.com"
+  // },
+  // {
+  //   name: "Instagram",
+  //   src: "/static/images/footer/mobile/instagramMobile.png",
+  //   href: "https://www.facebook.com"
+  // },
   {
     name: "Twitter",
     src: "/static/images/footer/mobile/twitterMobile.png",
-    href: "https://www.facebook.com"
+    href: "https://twitter.com/codalyze"
   },
   {
     name: "LinkedIn",
     src: "/static/images/footer/mobile/linkedinMobile.png",
-    href: "https://www.facebook.com"
+    href: "https://in.linkedin.com/company/codalyze-tech"
   }
 ];
 
