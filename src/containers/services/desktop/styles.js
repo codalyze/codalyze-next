@@ -1,13 +1,13 @@
 import styled, { css, keyframes } from "styled-components";
-import {media} from "../../../utils/globalStyles";
-import WebDev from './images/WebDev';
-import BackendDev from './images/BackendDev';
-import MobileAppDev from './images/MobileAppDev';
-import Performance from './images/Performance';
-import Responsive from './images/Responsive';
-import Reusable from './images/Reusable';
-import FastDevelopment from './images/FastDevelopment';
-import OverTheAir from './images/OverTheAir';
+import { media } from "../../../utils/globalStyles";
+import WebDev from "./images/WebDev";
+import BackendDev from "./images/BackendDev";
+import MobileAppDev from "./images/MobileAppDev";
+import Performance from "./images/Performance";
+import Responsive from "./images/Responsive";
+import Reusable from "./images/Reusable";
+import FastDevelopment from "./images/FastDevelopment";
+import OverTheAir from "./images/OverTheAir";
 import * as global from "../../../utils/globalStyles";
 
 const rotateArrow = keyframes`
@@ -91,8 +91,7 @@ export const PerformanceImage = styled(Performance)`
   }
 `;
 
-export const ResponsiveImage = styled(Responsive)`
-`;
+export const ResponsiveImage = styled(Responsive)``;
 
 export const ReusableImage = styled(Reusable)`
   .reusable_svg__pie {
@@ -119,7 +118,6 @@ export const OverTheAirImage = styled(OverTheAir)`
     animation ${overTheAirAnimation} 8s ease-in-out infinite;
   }
 `;
-
 
 export const bannerSvg = styled.div`
   position: absolute;
@@ -163,7 +161,9 @@ export const contentsFromLeft = styled.div`
   width: 80%;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   font-weight: 300;
-  ${props => props.isRightAligned ? `
+  ${props =>
+    props.isRightAligned
+      ? `
     left: 20%;
     padding: 80px 6vw 80px 6vw;
     h2, p {
@@ -175,7 +175,8 @@ export const contentsFromLeft = styled.div`
         padding-left: unset;
       }
     }
-  ` : `
+  `
+      : `
     left: initial;
     padding: 80px 2vw 80px 6vw;
     h2, p {
@@ -199,7 +200,6 @@ export const contentsFromLeft = styled.div`
         }
     }
   `}
-
 `;
 
 // export const StickyContainerDiv = styled(StickyContainer)`
@@ -229,31 +229,29 @@ export const MobileAppDevImage = styled(MobileAppDev)``;
 
 export const BackendDevImage = styled(BackendDev)``;
 
-
 export const WebDevImageContainer = styled.div`
   position: absolute;
   top: 100px;
-  ${props => props.isRightAligned ? 'left: -200px' : 'right: -200px'};
+  ${props => (props.isRightAligned ? "left: -200px" : "right: -200px")};
   ${media.desktop`
     display: none;
   `}
-`
+`;
 
 export const contentsFromRight = styled.div``;
 
 export const h2 = styled.h2`
-${global.fontFreightDispBold};
+  ${global.fontFreightDispBold};
   font-size: 50px;
   ${media.desktop`
     font-size: 30px;
     padding-right: unset;
     margin: 15px 0;
   `}
-
 `;
 
 export const h3 = styled.h3`
-${global.fontFreightDispBold};
+  ${global.fontFreightDispBold};
   font-size: 30px;
   margin-top: 0;
   ${media.desktop`
@@ -261,11 +259,10 @@ ${global.fontFreightDispBold};
   `}
 `;
 
-export const h4 = styled.h4`
-`;
+export const h4 = styled.h4``;
 
 export const p = styled.p`
-${global.fontRobotoLight};
+  ${global.fontRobotoLight};
   font-size: 24px;
   font-weight: 300;
   text-align: justify;
@@ -313,12 +310,28 @@ export const liImage = styled.div`
 `;
 
 export const liContent = styled.div`
-margin-left: 30px;
-${media.desktop`
+  margin-left: 30px;
+  ${media.desktop`
   margin-left: unset;
 `}
 `;
 
 export const pageWrapper = styled.div`
   position: relative;
+`;
+
+export const Button = styled.button`
+  ${global.mainButton}
+`;
+
+export const ButtonWrapper = styled("div")`
+  text-align: center;
+  padding: 0 0 60px 0;
+  margin-top: -30px;
+`;
+
+export const specializeBtn = styled.button`
+  ${props => (props.mq === "desktop" ? global.mainButton : global.mobileButton)}
+  margin: 0 auto;
+  display: block;
 `;

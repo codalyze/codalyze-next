@@ -108,7 +108,7 @@ export const mainButton = css`
   background: #5cca8f;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 21px;
   border-radius: 10px;
   text-transform: uppercase;
   cursor: pointer;
