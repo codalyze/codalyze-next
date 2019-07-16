@@ -10,6 +10,8 @@ import ContactForm from "./contactForm";
 import CubeBg from "./images/CubeBg";
 import Footer from "../../components/footer";
 
+import Consultation from "./consult";
+
 export const sectionTypes = {
   help: "help-item",
   kow: "kow",
@@ -25,15 +27,15 @@ export const sectionConfig = {
 export default class StartAProject extends React.PureComponent {
   state = { data: {}, emailError: false, showSuccessMessage: false };
 
-  validateEmail = (email) => {
+  validateEmail = email => {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-  }
+  };
 
   onChangeText = e => {
     const { data } = this.state;
     let emailError = this.state.emailError;
-    if (e.target.name === 'email') {
+    if (e.target.name === "email") {
       emailError = !this.validateEmail(e.target.value);
     }
     const currentData = {
@@ -71,9 +73,9 @@ export default class StartAProject extends React.PureComponent {
     const { data } = this.state || {};
     const xmlhttp = new XMLHttpRequest();
     const self = this;
-    xmlhttp.onreadystatechange = function () {
+    xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-         self.onSubmitSuccess();
+        self.onSubmitSuccess();
       }
     };
     let theUrl = "/send-request";
@@ -83,12 +85,15 @@ export default class StartAProject extends React.PureComponent {
   };
 
   onSubmitSuccess = () => {
-    this.setState({data: {}, emailError: false, showSuccessMessage: true}, () => {
-      const elem = document.getElementById('success-message');
-      if (elem) {
-        elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    this.setState(
+      { data: {}, emailError: false, showSuccessMessage: true },
+      () => {
+        const elem = document.getElementById("success-message");
+        if (elem) {
+          elem.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
       }
-    });
+    );
   };
 
   getSelectedItemsForType = type => {
@@ -121,12 +126,22 @@ export default class StartAProject extends React.PureComponent {
                 preserveAspectRatio="none"
               />
             </Styled.bannerSvg>
-            {this.state.showSuccessMessage && <Styled.successDiv id="success-message">
-              Thanks for your interest. We will get back to you within 24 hours.
-              <span onClick={() => {this.setState({showSuccessMessage: false})}}>x</span>
-            </Styled.successDiv>}
+            {this.state.showSuccessMessage && (
+              <Styled.successDiv id="success-message">
+                Thanks for your interest. We will get back to you within 24
+                hours.
+                <span
+                  onClick={() => {
+                    this.setState({ showSuccessMessage: false });
+                  }}
+                >
+                  x
+                </span>
+              </Styled.successDiv>
+            )}
             <Styled.commonDiv>
-              <Help
+              <Consultation />
+              {/* <Help
                 onClickItem={this.onClickItem}
                 selectedItems={this.getSelectedItemsForType(sectionTypes.help)}
               />
@@ -157,7 +172,8 @@ export default class StartAProject extends React.PureComponent {
                 selectedItems={this.getSelectedItemsForType(
                   sectionTypes.duration
                 )}
-              />
+              /> */}
+
               <ContactForm
                 onChangeText={this.onChangeText}
                 onClickSendRequest={this.onClickSendRequest}
