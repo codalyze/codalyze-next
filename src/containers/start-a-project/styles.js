@@ -22,6 +22,12 @@ export const commonDiv = styled.div`
   width: 100%;
 `;
 
+export const centeredDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
 export const title = styled.h4`
   ${global.fontRobotoLight};
   font-size: 34px;
@@ -81,18 +87,18 @@ export const blockShadow = styled.button`
   transition: all 100ms ease;
   box-shadow: 0px 3px 10px #e3e3e3;
   border-radius: 10px;
-  width: ${props => props.isSelected ? '9vw' : '10vw'};
-  height: ${props => props.isSelected ? '10vw' : '11vw'};
+  width: ${props => (props.isSelected ? "9vw" : "10vw")};
+  height: ${props => (props.isSelected ? "10vw" : "11vw")};
   display: flex;
   justify-content: space-evenly;
   border: 0;
-  background-color: ${(props) => props.isSelected ? '#5cca8f' : 'white'};
+  background-color: ${props => (props.isSelected ? "#5cca8f" : "white")};
   cursor: pointer;
-  margin-bottom: ${props => props.isSelected ? 'calc(20px + 1vw)' : '20px'};
+  margin-bottom: ${props => (props.isSelected ? "calc(20px + 1vw)" : "20px")};
   svg {
     path {
-      fill: ${(props) => !props.isSelected ? '#5cca8f' : 'white'};
-      stroke: ${(props) => !props.isSelected ? '#5cca8f' : 'white'};
+      fill: ${props => (!props.isSelected ? "#5cca8f" : "white")};
+      stroke: ${props => (!props.isSelected ? "#5cca8f" : "white")};
     }
   }
 
@@ -188,9 +194,9 @@ export const singleBudgetBlocks = styled.button`
   text-align: center;
   border-top: 0;
   border-bottom: 0;
-  background-color: ${(props) => props.isSelected ? '#5cca8f' : '#eee'};
+  background-color: ${props => (props.isSelected ? "#5cca8f" : "#eee")};
   p {
-    color: ${props => props.isSelected ? 'white' : '#888'};
+    color: ${props => (props.isSelected ? "white" : "#888")};
   }
   height: 8vw;
   flex-grow: 1;
@@ -223,7 +229,7 @@ export const singleBudgetBlocks = styled.button`
 
 export const budgetAmount = styled.p`
   font-size: 24px;
-  color: ${(props) => !props.isSelected ? '#1c9868' : 'white'};
+  color: ${props => (!props.isSelected ? "#1c9868" : "white")};
   width: auto;
   margin: 0 auto;
   font-weight: 300;
@@ -250,7 +256,7 @@ export const formHead = styled.p`
 `;
 
 export const Input = styled.input`
-  border-bottom: 1px solid ${props => props.error ? 'red' : '#242424'};
+  border-bottom: 1px solid ${props => (props.error ? "red" : "#242424")};
   ${global.fontRobotoLight};
   border-top: 0;
   border-right: 0;
@@ -286,7 +292,7 @@ export const Input = styled.input`
 `;
 
 export const TextArea = styled.textarea`
-  border-bottom: 1px solid ${props => props.error ? 'red' : '#242424'};
+  border-bottom: 1px solid ${props => (props.error ? "red" : "#242424")};
   ${global.fontRobotoLight};
   border-top: 0;
   border-right: 0;
@@ -395,3 +401,8 @@ export const successDiv = styled.div`
   }
 `;
 
+export const conHead = styled.h1`
+  ${global.fontFreightDispBold};
+  text-align: center;
+  font-size: 50px;
+`;

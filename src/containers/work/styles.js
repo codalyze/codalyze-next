@@ -81,7 +81,7 @@ export const projectDesktopContainer = styled.div`
   box-shadow: ${props => props.index % 2 === 0 ?
     '2px 2px 5px 0px rgba(0,0,0,0.2)' :
     '-2px 2px 5px 0px rgba(0,0,0,0.2)'}
-`; 
+`;
 
 export const specializeBtn = styled.button`
   ${props => props.mq === "desktop" ? global.mainButton : global.mobileButton}
