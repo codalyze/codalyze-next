@@ -5,7 +5,6 @@ export const pageWrapper = styled.div`
   position: relative;
 `;
 
-
 export const title = styled.h1`
   ${global.mobileTitle}
   padding: 0 35px 0;
@@ -25,11 +24,12 @@ export const img = styled.img`
   ${global.CenterImg}
   margin-top: 58px;
   margin-bottom: 86px;
+  max-width: 80%;
 `;
 
 export const whoweareBanner = styled.img`
   ${global.CenterImg}
-    width: 100%
+  width: 100%
 `;
 
 export const btn = styled.button`
@@ -48,14 +48,14 @@ export const whoweare = styled.div`
 `;
 
 export const whoweareTitle = styled.h1`
-${global.mobileTitle}
-padding: 0 35px 10px;
-text-align: right;
+  ${global.mobileTitle}
+  padding: 0 35px 10px;
+  text-align: right;
 `;
 
 export const whoweareContent = styled.p`
-${global.mobileparagraph}
-padding: 0 35px 58px;
+  ${global.mobileparagraph}
+  padding: 0 35px 58px;
 `;
 
 export const aboutBannerMobile = styled.div`
