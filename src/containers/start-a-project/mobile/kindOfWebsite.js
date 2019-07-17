@@ -22,23 +22,16 @@ const helpIcons = [
   }
 ];
 
-export default class Consultation extends React.Component {
+export default class KindOfWebsite extends React.Component {
   render() {
     const { selectedItems } = this.props;
     return (
       <Styled.containerFluid>
         <Styled.container>
-          <Styled.conHead>Book a FREE 30 minute consultation</Styled.conHead>
-
-          <Styled.centeredDiv>
-            <img
-              src="/static/images/rubik-cube-banner.png"
-              alt="rubix cube image"
-            />
-          </Styled.centeredDiv>
-          {/* <img src="/static/images/about-us/Artboard-5.png" /> */}
-
-          {/* <Styled.imageBlocksRow>
+          <Styled.title>
+            What kind of website do you want to develop?
+          </Styled.title>
+          <Styled.imageBlocksRow>
             {helpIcons.map((Icon, index) => (
               <Styled.singleImageBlocks key={index}>
                 <Styled.blockShadow
@@ -56,7 +49,7 @@ export default class Consultation extends React.Component {
                 <Styled.paragraph>{Icon.paragraph}</Styled.paragraph>
               </Styled.singleImageBlocks>
             ))}
-          </Styled.imageBlocksRow> */}
+          </Styled.imageBlocksRow>
         </Styled.container>
       </Styled.containerFluid>
     );

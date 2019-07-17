@@ -1,16 +1,12 @@
 import React from "react";
-import HomeBanner from "../../components/HomeBanner";
+import HomeBanner from "../../../components/HomeBanner";
 import * as Styled from "./styles";
-import Help from "./help";
-import KindOfWebsite from "./kindOfWebsite";
-import Budget from "./budget";
-import Project from "./project";
 import StartAProjectBg from "./images/startAProject";
 import ContactForm from "./contactForm";
 import CubeBg from "./images/CubeBg";
-import Footer from "../../components/footer";
+import Footer from "../../../components/footer";
 
-import Consultation from "./consult";
+import ConsultationMob from "./consult";
 
 export const sectionTypes = {
   help: "help-item",
@@ -24,7 +20,7 @@ export const sectionConfig = {
   single: [sectionTypes.kow, sectionTypes.duration, sectionTypes.budget]
 };
 
-export default class StartAProject extends React.PureComponent {
+export default class StartAProjectContent extends React.PureComponent {
   state = { data: {}, emailError: false, showSuccessMessage: false };
 
   validateEmail = email => {
@@ -140,7 +136,7 @@ export default class StartAProject extends React.PureComponent {
               </Styled.successDiv>
             )}
             <Styled.commonDiv>
-              <Consultation />
+              <ConsultationMob />
               {/* <Help
                 onClickItem={this.onClickItem}
                 selectedItems={this.getSelectedItemsForType(sectionTypes.help)}
