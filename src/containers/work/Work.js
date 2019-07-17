@@ -18,13 +18,13 @@ import {
   Bitsafe
 } from "./content";
 
-import Work1 from './images/Work1';
+import Work1 from "./images/Work1";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Work2 = dynamic(() => import('./images/Work2'), {loading: () => null});
+const Work2 = dynamic(() => import("./images/Work2"), { loading: () => null });
 
-import LazySvgLoader from '../../components/LazySvgLoader';
+import LazySvgLoader from "../../components/LazySvgLoader";
 
 const ProjectData = [
   {
@@ -125,7 +125,15 @@ const getStarStyleByIndex = index => {
   }
 };
 
-const Content = ({ pageTitle, content: Content, image, button, href, mq, index }) =>
+const Content = ({
+  pageTitle,
+  content: Content,
+  image,
+  button,
+  href,
+  mq,
+  index
+}) =>
   mq !== "desktop" ? (
     <Fragment>
       <div style={{ position: "relative" }}>
@@ -150,9 +158,9 @@ const Content = ({ pageTitle, content: Content, image, button, href, mq, index }
           <Styled.img src={image} />
         </div>
       </Fade>
-      {/* <Link href={href} passHref prefetch>
+      <Link href={href} passHref prefetch>
         <Styled.btn>{button}</Styled.btn>
-      </Link> */}
+      </Link>
     </Fragment>
   ) : (
     <div
@@ -178,9 +186,9 @@ const Content = ({ pageTitle, content: Content, image, button, href, mq, index }
               <Content mq={mq} />
               {/* <Styled.p mq={mq}>{content}</Styled.p> */}
               <ProjectImageDesktop mq={mq} index={index} image={image} />
-              {/* <Link href={href} passHref prefetch>
+              <Link href={href} passHref prefetch>
                 <Styled.btn>{button}</Styled.btn>
-              </Link> */}
+              </Link>
             </div>
             {index !== 0 && (
               <div
@@ -201,12 +209,10 @@ const Content = ({ pageTitle, content: Content, image, button, href, mq, index }
     </div>
   );
 
-const Project = ({ index, mq, children }) => (
-  <Fragment>{children}</Fragment>
-);
+const Project = ({ index, mq, children }) => <Fragment>{children}</Fragment>;
 
 export default class Work extends React.PureComponent {
-  render () {
+  render() {
     const props = this.props;
     return (
       <Fragment>
@@ -215,17 +221,27 @@ export default class Work extends React.PureComponent {
             <Styled.workBgContainer>
               <WorkBannerBg width="100%" mq={props.mq} />
             </Styled.workBgContainer>
-              <Banner
-                BannerSvg={() => <LazySvgLoader FirstImage={Work1} LazyImage={Work2} isMobile={props.mq === 'mobile'} />}
-                title="Puzzles solved"
-                secondryTitle="into success."
-                subTitle="Our clients and ventures. Ideas we have helped to grow"
-                titleBreak
-                {...props}
-              />
+            <Banner
+              BannerSvg={() => (
+                <LazySvgLoader
+                  FirstImage={Work1}
+                  LazyImage={Work2}
+                  isMobile={props.mq === "mobile"}
+                />
+              )}
+              title="Puzzles solved"
+              secondryTitle="into success."
+              subTitle="Our clients and ventures. Ideas we have helped to grow"
+              titleBreak
+              {...props}
+            />
           </Styled.bannerContainer>
           {ProjectData.map((project, index) => (
-            <Styled.pageSection index={index} mq={props.mq} key={project.pageTitle}>
+            <Styled.pageSection
+              index={index}
+              mq={props.mq}
+              key={project.pageTitle}
+            >
               <Project>
                 <Content
                   pageTitle={project.pageTitle}
@@ -268,7 +284,6 @@ export default class Work extends React.PureComponent {
           <Footer />
         </div>
       </Fragment>
-    )
+    );
   }
 }
-

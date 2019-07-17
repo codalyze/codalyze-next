@@ -7,7 +7,6 @@ export const workBgContainer = styled.div`
     height: 60vw;
   }
   @media (max-width: 992px) {
-
     svg {
       width: 100vw;
       height: 140vw;
@@ -22,17 +21,18 @@ export const workBgContainer = styled.div`
 `;
 
 export const title = styled.h1`
-  ${props => props.mq === "desktop" ? global.titleDesktop : global.title}
-  font-size: ${props => props.mq === "desktop" ? "50px;" : "24px;"}
+  ${props => (props.mq === "desktop" ? global.titleDesktop : global.title)}
+  font-size: ${props => (props.mq === "desktop" ? "50px;" : "24px;")}
   padding: 0 35px 10px;
   margin-bottom: 20px;
 `;
 
 export const p = styled.p`
-${props => props.mq === "desktop" ? global.paragraphDesktop : global.paragraph}
-  font-size: ${props => props.mq === "desktop" ? "20px;" : "16px;"}
+${props =>
+  props.mq === "desktop" ? global.paragraphDesktop : global.paragraph}
+  font-size: ${props => (props.mq === "desktop" ? "20px;" : "16px;")}
   margin: 0 35px 58px;
-  padding-right: ${props => props.mq === 'desktop' ? '80px' : '0px'};
+  padding-right: ${props => (props.mq === "desktop" ? "80px" : "0px")};
   text-align: justify;
 `;
 
@@ -53,15 +53,15 @@ export const bannerContainer = styled.div`
 `;
 
 export const pageSection = styled.div`
-  margin-top: ${props => props.index === 0 ? '0;' : '100px;'}
+  margin-top: ${props => (props.index === 0 ? "0;" : "100px;")};
 `;
 
 export const projectBackground = styled.div`
   .bg-image {
     position: absolute;
     top: 0;
-    left: ${props => props.index % 2 === 1 ? '0' : 'unset'};
-    right: ${props => props.index % 2 === 0 ? '0' : 'unset'};
+    left: ${props => (props.index % 2 === 1 ? "0" : "unset")};
+    right: ${props => (props.index % 2 === 0 ? "0" : "unset")};
     z-index: -1;
     transform: translateY(-25%);
     width: 40vw;
@@ -78,13 +78,14 @@ export const projectDesktopContainer = styled.div`
   width: 67vw;
   background: white;
   position: relative;
-  box-shadow: ${props => props.index % 2 === 0 ?
-    '2px 2px 5px 0px rgba(0,0,0,0.2)' :
-    '-2px 2px 5px 0px rgba(0,0,0,0.2)'}
+  box-shadow: ${props =>
+    props.index % 2 === 0
+      ? "2px 2px 5px 0px rgba(0,0,0,0.2)"
+      : "-2px 2px 5px 0px rgba(0,0,0,0.2)"};
 `;
 
 export const specializeBtn = styled.button`
-  ${props => props.mq === "desktop" ? global.mainButton : global.mobileButton}
+  ${props => (props.mq === "desktop" ? global.mainButton : global.mobileButton)}
   margin: 0 auto;
   display: block;
 `;
