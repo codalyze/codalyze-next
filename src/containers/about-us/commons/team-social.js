@@ -2,8 +2,8 @@ export const teamMembers = [
     {
       id: 1,
       image: "/static/images/about-us/Team/nv.jpeg",
-      name: "Naisheel verdhan",
-      position: "Ceo & Founder",
+      name: "Naisheel Verdhan",
+      position: "CEO & Founder",
       socialButtons: [{
         type: "github",
         url: "https://github.com/nverdhan"
