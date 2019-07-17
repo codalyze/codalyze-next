@@ -123,6 +123,25 @@ export const mainButton = css`
   }
 `;
 
+export const linkButton = css`
+  background: skyblue;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 12px 18px;
+  &:hover {
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  }
+  &:focus {
+    background: #40bc7a;
+    outline: none;
+    box-shadow: none;
+  }
+`;
+
 export const CenterImg = css`
   text-align: center;
   margin: 0 auto;
