@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from "react";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import * as Styled from "./styles";
 import Banner from "../../../components/HomeBannerMobile";
 import AboutComponent from "./aboutComponent";
@@ -9,21 +9,24 @@ import Star from "./images/star";
 import HighTechBg from "./images/highTechBg";
 import LoveBg from "./images/loveBg";
 
-import About1 from '../commons/About1';
+import About1 from "../commons/About1";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const About2 = dynamic(() => import('../commons/About2'), {loading: () => null});
+const About2 = dynamic(() => import("../commons/About2"), {
+  loading: () => null
+});
 
-import LazySvgLoader from '../../../components/LazySvgLoader';
-
+import LazySvgLoader from "../../../components/LazySvgLoader";
 
 export default class AboutUsMobile extends PureComponent {
   render() {
     return (
       <Fragment>
         <Banner
-          BannerSvg={() => <LazySvgLoader FirstImage={About1} LazyImage={About2} isMobile />}
+          BannerSvg={() => (
+            <LazySvgLoader FirstImage={About1} LazyImage={About2} isMobile />
+          )}
           title="Meet the"
           secondryTitle="team behind it"
           subTitle="We aid you in achieving a tight deadline and help you get to market fast."
@@ -82,11 +85,13 @@ export default class AboutUsMobile extends PureComponent {
         </Fade>
         <Fade>
           <Styled.pageWrapper>
-              <Styled.loveBgContainer>
-                  <LoveBg
-                  width="100%" height="100%" viewBox="100 0 370.462 515.44"
-                  />
-              </Styled.loveBgContainer>
+            <Styled.loveBgContainer>
+              <LoveBg
+                width="100%"
+                height="100%"
+                viewBox="100 0 370.462 515.44"
+              />
+            </Styled.loveBgContainer>
             <AboutComponent
               headingOne="We Love Start-Ups"
               contentTwo="We share your passion for changing the world"

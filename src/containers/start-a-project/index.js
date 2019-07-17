@@ -1,6 +1,14 @@
-import StartAProject from '../start-a-project/start-a-project';
+import React from "react";
+import StartProjectDesktop from "./desktop/start-project-desktop";
+import StartProjectMobile from "./mobile/start-project-mobile";
 import PageWrapper from "../../utils/PageWrapper";
 
-const StartAProjectComponent = props => <StartAProject {...props} ></StartAProject>
+const StartAProject = props => {
+  return props.mq === "desktop" ? (
+    <StartProjectDesktop {...props} />
+  ) : (
+    <StartProjectMobile {...props} />
+  );
+};
 
-export default PageWrapper(StartAProjectComponent);
+export default PageWrapper(StartAProject);
