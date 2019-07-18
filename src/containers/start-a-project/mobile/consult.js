@@ -67,8 +67,7 @@ export default class ConsultationMob extends React.Component {
             <Styled.optBgContainer />
             <AboutComponent
               headingOne="Book a FREE 30 minute consultation"
-              content="Tell us more about your projects, we would love to help
-              out. More text here."
+              content="The first step to a great website or app is free with us."
               image="/static/images/rubik-cube-banner.png"
             />
           </Styled.pageWrapper>

@@ -28,8 +28,8 @@ export default class AboutUsMobile extends PureComponent {
             <LazySvgLoader FirstImage={About1} LazyImage={About2} isMobile />
           )}
           title="Meet the"
-          secondryTitle="team behind it"
-          subTitle="We aid you in achieving a tight deadline and help you get to market fast."
+          secondryTitle="team behind it."
+          subTitle="We help you achieve a tight deadline and get to market fast."
           titleBreak
         />
         <Fade>
@@ -50,7 +50,9 @@ export default class AboutUsMobile extends PureComponent {
             </Styled.optBgContainer>
             <AboutComponent
               headingOne="Optimize Approach"
-              content="We aid you in achieving a tight deadline and help you get to market fast. We design and develop web and mobile apps for growth-minded companies - both startups and big enterprises."
+              content="We make sure you hit those tight deadlines and make it to market
+              on time. All our web and mobile apps are developed with growth in
+              mind for both startups and big enterprises."
               image="/static/images/mobile/about/optimizeMobile.png"
             />
           </Styled.pageWrapper>

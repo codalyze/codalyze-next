@@ -48,6 +48,18 @@ export const btn = styled.button`
   display: block;
 `;
 
+export const workBtn = styled.button`
+  ${global.linkButton}
+  margin: 0 auto;
+  display: block;
+`;
+
+export const mobileBtn = styled.button`
+  ${global.mobileLinkButton}
+  margin: 0 auto;
+  display: block;
+`;
+
 export const bannerContainer = styled.div`
   position: relative;
 `;
@@ -85,7 +97,11 @@ export const projectDesktopContainer = styled.div`
 `;
 
 export const specializeBtn = styled.button`
-  ${props => (props.mq === "desktop" ? global.mainButton : global.mobileButton)}
+  ${props => (props.mq === "desktop" ? global.button : global.mobileButton)}
   margin: 0 auto;
   display: block;
+`;
+
+export const a = styled.a`
+  text-decoration: none;
 `;

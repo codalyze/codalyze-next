@@ -52,8 +52,11 @@ export default class Consultation extends React.Component {
                   <Styled.rightDiv>
                     <Styled.h2>Book a FREE 30 minute consultation</Styled.h2>
                     <Styled.p>
-                      Tell us more about your projects, we would love to help
-                      out. More text here.
+                      The first step to a great website or app is free with us.
+                      <br /> <br />
+                      Creating custom software excites us. Wether it's building
+                      a brand new website or optimising a current project to
+                      better fit your needs.
                     </Styled.p>
                   </Styled.rightDiv>
                 </Styled.devisonDiv>
