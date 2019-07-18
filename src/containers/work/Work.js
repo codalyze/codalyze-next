@@ -30,36 +30,36 @@ const ProjectData = [
   {
     pageTitle: "BetKing",
     image: "/static/images/mobile/work/betKingMobile.jpg",
-    button: "VIEW CASE STUDY",
-    href: "/#",
+    button: "TAKE A LOOK",
+    href: "https://betking.io/",
     content: Betking
   },
   {
     pageTitle: "Bitsafe",
     image: "/static/images/mobile/work/bitsafe.png",
-    button: "VIEW CASE STUDY",
+    button: "TAKE A LOOK",
     href: "/#",
     content: Bitsafe
   },
   {
     pageTitle: "LoudCloud",
     image: "/static/images/mobile/work/loudcloud.jpg",
-    button: "VIEW CASE STUDY",
-    href: "/#",
+    button: "TAKE A LOOK",
+    href: "https://www.bnedloudcloud.com/",
     content: LoudCloud
   },
   {
     pageTitle: "KheloMore",
     image: "/static/images/mobile/work/khelomoreMobile.png",
-    button: "VIEW CASE STUDY",
-    href: "/#",
+    button: "TAKE A LOOK",
+    href: "https://www.khelomore.com/",
     content: Khelomore
   },
   {
     pageTitle: "Radframe",
     image: "/static/images/mobile/work/radframe.png",
-    button: "VIEW CASE STUDY",
-    href: "/#",
+    button: "TAKE A LOOK",
+    href: "https://radframe.com/#!/",
     content: Radframe
   }
 ];
@@ -158,9 +158,11 @@ const Content = ({
           <Styled.img src={image} />
         </div>
       </Fade>
-      <Link href={href} passHref prefetch>
-        <Styled.btn>{button}</Styled.btn>
-      </Link>
+      {/* <Link href={href} passHref prefetch> */}
+      <Styled.a target="_blank" href={href}>
+        <Styled.mobileBtn>{button}</Styled.mobileBtn>
+      </Styled.a>
+      {/* </Link> */}
     </Fragment>
   ) : (
     <div
@@ -186,9 +188,12 @@ const Content = ({
               <Content mq={mq} />
               {/* <Styled.p mq={mq}>{content}</Styled.p> */}
               <ProjectImageDesktop mq={mq} index={index} image={image} />
-              <Link href={href} passHref prefetch>
-                <Styled.btn>{button}</Styled.btn>
-              </Link>
+
+              {/* <Link target="_blank" href={href} passHref prefetch> */}
+              <Styled.a target="_blank" href={href}>
+                <Styled.workBtn>{button}</Styled.workBtn>
+              </Styled.a>
+              {/* </Link> */}
             </div>
             {index !== 0 && (
               <div
@@ -230,8 +235,8 @@ export default class Work extends React.PureComponent {
                 />
               )}
               title="Puzzles solved"
-              secondryTitle="into success."
-              subTitle="Our clients and ventures. Ideas we have helped to grow"
+              secondryTitle="successfully."
+              subTitle="Clients we've grown with and ideas we've helped cultivate"
               titleBreak
               {...props}
             />

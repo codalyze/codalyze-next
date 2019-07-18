@@ -124,7 +124,7 @@ export const mainButton = css`
 `;
 
 export const linkButton = css`
-  background: skyblue;
+  background: #f0533b;
   border: none;
   color: #fff;
   font-size: 21px;
@@ -136,7 +136,7 @@ export const linkButton = css`
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.5);
   }
   &:focus {
-    background: #40bc7a;
+    background: #c23823;
     outline: none;
     box-shadow: none;
   }
@@ -190,6 +190,19 @@ export const paragraphDesktop = css`
 export const mobileButton = css`
   ${fontRobotoRegular}
   background: #5cca8f;
+  border: none;
+  color: #fff;
+  font-size: 21px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 214px;
+  height: 36px;
+`;
+
+export const mobileLinkButton = css`
+  ${fontRobotoRegular}
+  background: #F0533B;
   border: none;
   color: #fff;
   font-size: 21px;

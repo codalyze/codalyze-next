@@ -1,9 +1,9 @@
 import React from "react";
 import * as Styled from "./styles";
 import Link from "next/link";
-import LazyLoad from 'react-lazyload';
+import LazyLoad from "react-lazyload";
 import SpecializeStarBg from "./images/specializeStar";
-import {specialize} from '../commons/data';
+import { specialize } from "../commons/data";
 
 const OurService = ({ href }) => (
   <Link href={href} passHref prefetch>
@@ -31,13 +31,14 @@ const SpecializeIn = () => (
       <Styled.homepageBlocksTitle>We specialize in</Styled.homepageBlocksTitle>
       <Styled.specializeContent>
         We align the goals of your organisation to the needs of <br /> your
-        customers - creating exceptional brand experiences.
+        customers by creating exceptional brand experiences.
       </Styled.specializeContent>
       <Styled.specializeAreas>
-        
         {specialize.map((i, index) => (
           <Styled.specializeAreasBlocks key={index}>
-            <LazyLoad height={150} once offset={100}><Styled.specializeAreasImage src={i.img} /></LazyLoad>
+            <LazyLoad height={150} once offset={100}>
+              <Styled.specializeAreasImage src={i.img} />
+            </LazyLoad>
             <Styled.specializeAreasTitle>{i.title}</Styled.specializeAreasTitle>
             <Styled.specializeAreasContent>
               {i.content}
@@ -45,9 +46,7 @@ const SpecializeIn = () => (
           </Styled.specializeAreasBlocks>
         ))}
       </Styled.specializeAreas>
-      <Styled.specializehelp>
-        See how can we be of your help.
-      </Styled.specializehelp>
+      <Styled.specializehelp>See how we can help you.</Styled.specializehelp>
       <OurService href={"/services"} />
     </Styled.FlexContainer>
   </Styled.specializeRow>

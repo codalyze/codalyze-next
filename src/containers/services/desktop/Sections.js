@@ -38,7 +38,7 @@ const sections = [
       {
         heading: "Responsive",
         p:
-          "Regardless of screen size or connection speed we strive to serve all you customers",
+          "Regardless of screen size or connection speed we strive to serve all your customers",
         image: Styled.ResponsiveImage
       }
     ]
