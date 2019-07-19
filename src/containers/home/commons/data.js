@@ -89,5 +89,6 @@ export const clientLogos = [
   "/static/images/home/clients/fitcircle.svg",
   "/static/images/home/clients/hotstar.svg",
   "/static/images/home/clients/khelomore.svg",
-  "/static/images/home/clients/radframe.svg"
+  "/static/images/home/clients/radframe.svg",
+  "/static/images/home/clients/DSP1.svg"
 ];
