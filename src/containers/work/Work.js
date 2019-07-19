@@ -159,9 +159,12 @@ const Content = ({
         </div>
       </Fade>
       {/* <Link href={href} passHref prefetch> */}
-      <Styled.a target="_blank" href={href}>
-        <Styled.mobileBtn>{button}</Styled.mobileBtn>
-      </Styled.a>
+
+      {href !== "/#" && (
+        <Styled.a target="_blank" href={href}>
+          <Styled.mobileBtn>{button}</Styled.mobileBtn>
+        </Styled.a>
+      )}
       {/* </Link> */}
     </Fragment>
   ) : (
@@ -190,9 +193,15 @@ const Content = ({
               <ProjectImageDesktop mq={mq} index={index} image={image} />
 
               {/* <Link target="_blank" href={href} passHref prefetch> */}
-              <Styled.a target="_blank" href={href}>
+              {href !== "/#" && (
+                <Styled.a target="_blank" href={href}>
+                  <Styled.mobileBtn>{button}</Styled.mobileBtn>
+                </Styled.a>
+              )}
+
+              {/* <Styled.a target="_blank" href={href}>
                 <Styled.workBtn>{button}</Styled.workBtn>
-              </Styled.a>
+              </Styled.a> */}
               {/* </Link> */}
             </div>
             {index !== 0 && (
