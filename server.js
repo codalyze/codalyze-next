@@ -8,7 +8,7 @@ const handle = app.getRequestHandler();
 const PORT = process.env.PORT || 3000;
 const compression = require('compression');
 const PostMarkClient = require('./PostMarkClient');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 
 const mailSender = new PostMarkClient();
 
