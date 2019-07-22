@@ -357,7 +357,7 @@ export const reviewsBlock = styled.div`
 
 export const reviewImageBlocks = styled.div`
   @media (max-width: 1280px) {
-    display: ${props => props.hideOnSmallScreen ? 'none' : 'block'};
+    display: ${props => (props.hideOnSmallScreen ? "none" : "block")};
   }
 `;
 
@@ -368,7 +368,7 @@ export const reviewSingle = styled.div`
   margin: 0 0 30px 30px;
   box-shadow: 0px 1px #e3e3e3;
   @media (min-width: 1280px) {
-    display: ${props => props.showOnSmallScreen ? 'none' : 'block'};
+    display: ${props => (props.showOnSmallScreen ? "none" : "block")};
   }
 `;
 
@@ -490,4 +490,10 @@ export const technologyItem = styled.div`
       width: 160px;
     }
   }
+`;
+
+export const cookieLink = styled.a`
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
 `;

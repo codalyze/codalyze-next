@@ -7,18 +7,22 @@ import SpecializeInMobile from "./specialize";
 import TestimonialsMobile from "./testimonials";
 import ReviewsMobile from "./reviews";
 import TechStackMobile from "./techStack";
-import FooterMobile from "../../../components/footer-mobile/index"
+import FooterMobile from "../../../components/footer-mobile/index";
 
-import Home1 from '../commons/Home1';
+import Home1 from "../commons/Home1";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Home2 = dynamic(() => import('../commons/Home2'), {loading: () => null});
+import EUCookieConsent from "../../cookies/cookieConsent";
 
-import LazySvgLoader from '../../../components/LazySvgLoader';
+const Home2 = dynamic(() => import("../commons/Home2"), {
+  loading: () => null
+});
+
+import LazySvgLoader from "../../../components/LazySvgLoader";
 
 export default class HomeMobile extends React.PureComponent {
-  render () {
+  render() {
     return (
       <Styled.pageWrapper>
         <Styled.HomeMobileBgSvg>
@@ -29,7 +33,9 @@ export default class HomeMobile extends React.PureComponent {
           />
         </Styled.HomeMobileBgSvg>
         <MobileBanner
-          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} isMobile />}
+          BannerSvg={() => (
+            <LazySvgLoader FirstImage={Home1} LazyImage={Home2} isMobile />
+          )}
           isHomePage
         />
         <Strategy />
@@ -38,6 +44,7 @@ export default class HomeMobile extends React.PureComponent {
         <ReviewsMobile />
         <TechStackMobile />
         <FooterMobile />
+        <EUCookieConsent />
       </Styled.pageWrapper>
     );
   }

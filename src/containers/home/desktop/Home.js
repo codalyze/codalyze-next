@@ -10,23 +10,27 @@ import Reviews from "../desktop/reviews";
 import Clients from "./clients";
 import Footer from "../../../components/footer";
 
-import Flutter from '../commons/Flutter';
-import NodeJs from '../commons/NodeJs';
-import ReactJs from '../commons/ReactJs';
-import ReactNative from '../commons/ReactNative';
-import VueJs from '../commons/VueJs';
-import Home1 from '../commons/Home1';
+import Flutter from "../commons/Flutter";
+import NodeJs from "../commons/NodeJs";
+import ReactJs from "../commons/ReactJs";
+import ReactNative from "../commons/ReactNative";
+import VueJs from "../commons/VueJs";
+import Home1 from "../commons/Home1";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Home2 = dynamic(() => import('../commons/Home2'), {loading: () => null});
+import EUCookieConsent from "../../cookies/cookieConsent";
 
-import LazySvgLoader from '../../../components/LazySvgLoader';
+const Home2 = dynamic(() => import("../commons/Home2"), {
+  loading: () => null
+});
+
+import LazySvgLoader from "../../../components/LazySvgLoader";
 
 const technologies = [Flutter, NodeJs, ReactJs, ReactNative, VueJs];
 
 export default class HomePage extends React.PureComponent {
-  render () {
+  render() {
     return (
       <Styled.pageWrapper>
         <Styled.bannerSvg>
@@ -38,7 +42,9 @@ export default class HomePage extends React.PureComponent {
         </Styled.bannerSvg>
         <HomeBanner
           banner="/static/images/home-banner.png"
-          BannerSvg={() => <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />}
+          BannerSvg={() => (
+            <LazySvgLoader FirstImage={Home1} LazyImage={Home2} />
+          )}
           titleBreak
           isHomePage
         />
@@ -52,11 +58,15 @@ export default class HomePage extends React.PureComponent {
         <Strategy />
         <SpecializeIn />
         <Testimonial />
+        <h1>CLUTCH BANNER HERE</h1>
+
         <Reviews />
+
         <Clients />
         <Footer />
+
+        <EUCookieConsent />
       </Styled.pageWrapper>
     );
   }
 }
-

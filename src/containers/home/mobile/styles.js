@@ -105,7 +105,7 @@ export const splRow = styled.div`
   padding: 0px 35px 60px 35px;
   width: calc(100vw - 70px);
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
+  -ms-overflow-style: none; /* IE 10+ */
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
@@ -197,8 +197,7 @@ export const testimonialListMob = styled(splRow)`
   padding: 0 35px;
 `;
 
-export const testimonialBlockMob = styled(splAreasBlocks)`
-`;
+export const testimonialBlockMob = styled(splAreasBlocks)``;
 
 export const testimonialImageMob = styled.img`
   ${global.CenterImg};
@@ -277,5 +276,3 @@ export const techStackBlock = styled.div`
   ${global.twoBlocks}
   padding-bottom: 50px;
 `;
-
-export const techStackLogo = styled.img``;
