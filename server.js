@@ -23,6 +23,9 @@ app.prepare().then(_ => {
     mailSender.sendMail({to, html: htmlToCodalyze, subject: subjectToCodalyze});
     res.json('ok');
   });
+  app.get('/assets/img/gmail-signature.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/static/images/gmail-signature.png'));
+  });
   app.get('/fb-share-2.png', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/static/images/fb-share-2.png'));
   });
