@@ -2,7 +2,7 @@ import React from "react";
 import HomeBanner from "../../components/HomeBanner";
 import * as Styled from "./styles";
 import CubeBg from "./images/cubeBg";
-import StartAProjectBg from "../start-a-project/desktop/images/startAProject";
+import StartAProjectBg from "../start-a-project/desktop/images/startAProject"; 
 import ContactForm from "./form";
 import MapAddress from "./mapAddress";
 
