@@ -5,26 +5,33 @@ import HomeBanner from "../../components/Banner";
 import CareerBgSvg from "../../static/images/career/careerBg";
 import Footer from "../../components/footer";
 
-import Career1 from './images/Career1';
+import Career1 from "./images/Career1";
 
-import dynamic from 'next/dynamic'
+import dynamic from "next/dynamic";
 
-const Career2 = dynamic(() => import('./images/Career2'), {loading: () => null});
+const Career2 = dynamic(() => import("./images/Career2"), {
+  loading: () => null
+});
 
-import LazySvgLoader from '../../components/LazySvgLoader';
+import LazySvgLoader from "../../components/LazySvgLoader";
+
+import EUCookieConsent from "../cookies/cookieConsent";
 
 const openings = [
   {
     designation: "Frontend Developer",
-    experience: "2+ years of experience in either ReactJS or VueJS. Expertise in Styled Components / CSS Modules is a plus."
+    experience:
+      "2+ years of experience in either ReactJS or VueJS. Expertise in Styled Components / CSS Modules is a plus."
   },
   {
     designation: "Senior NodeJS Developer",
-    experience: "2+ years of experience in NodeJS. Experience in MongoDB / Postgres desired. Must have experience in TypeScript."
+    experience:
+      "2+ years of experience in NodeJS. Experience in MongoDB / Postgres desired. Must have experience in TypeScript."
   },
   {
     designation: "React Native / Flutter Developer",
-    experience: "1+ years of experience in React Native or Flutter. Relevant experience in Android / IOS Development"
+    experience:
+      "1+ years of experience in React Native or Flutter. Relevant experience in Android / IOS Development"
   }
   // {
   //   designation: "Web Development",
@@ -51,7 +58,14 @@ export default class Career extends PureComponent {
           banner="/static/images/career/careerBanner.png"
           titleBreak
           rowReversed
-          BannerSvg={() => <LazySvgLoader FirstImage={Career1} LazyImage={Career2} isMobile={props => props.mq === 'mobile'} rowReversed />}
+          BannerSvg={() => (
+            <LazySvgLoader
+              FirstImage={Career1}
+              LazyImage={Career2}
+              isMobile={props => props.mq === "mobile"}
+              rowReversed
+            />
+          )}
         />
         <Styled.openingsRow>
           <Styled.CareerBg>
@@ -67,23 +81,27 @@ export default class Career extends PureComponent {
               <Styled.openingsList>
                 {openings.map((list, index) => (
                   <Styled.openingsBlock key={index}>
-                  <Styled.designationTitle>
-                    {list.designation}
-                  </Styled.designationTitle>
-                  <Styled.experienceSubTitle>
-                    {list.experience}
-                  </Styled.experienceSubTitle>
-                </Styled.openingsBlock>
+                    <Styled.designationTitle>
+                      {list.designation}
+                    </Styled.designationTitle>
+                    <Styled.experienceSubTitle>
+                      {list.experience}
+                    </Styled.experienceSubTitle>
+                  </Styled.openingsBlock>
                 ))}
               </Styled.openingsList>
               <Styled.sendYourResume>
-                Send your resumes to <a href="mailto:mail@codalyze.com" title="mail@codalyze.com">mail@codalyze.com</a>
+                Send your resumes to{" "}
+                <a href="mailto:mail@codalyze.com" title="mail@codalyze.com">
+                  mail@codalyze.com
+                </a>
               </Styled.sendYourResume>
               {/* <Styled.viewMore>View More</Styled.viewMore> */}
             </Styled.FlexContainer>
           </Styled.openingSection>
         </Styled.openingsRow>
-        <Footer />  
+        <Footer />
+        <EUCookieConsent />
       </Styled.pageWrapper>
     );
   }

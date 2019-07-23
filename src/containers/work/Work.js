@@ -18,6 +18,7 @@ import {
   Bitsafe
 } from "./content";
 
+import EUCookieConsent from "../cookies/cookieConsent";
 import Work1 from "./images/Work1";
 
 import dynamic from "next/dynamic";
@@ -297,6 +298,7 @@ export default class Work extends React.PureComponent {
           </div>
           <Footer />
         </div>
+        <EUCookieConsent />
       </Fragment>
     );
   }

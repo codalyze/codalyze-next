@@ -10,6 +10,7 @@ import HighTechBg from "./images/highTechBg";
 import LoveBg from "./images/loveBg";
 
 import About1 from "../commons/About1";
+import EUCookieConsent from "../../cookies/cookieConsent";
 
 import dynamic from "next/dynamic";
 
@@ -109,6 +110,7 @@ export default class AboutUsMobile extends PureComponent {
           <TeamMobile />
         </Fade>
         <Footer />
+        <EUCookieConsent />
       </Fragment>
     );
   }

@@ -7,6 +7,7 @@ import CubeBg from "./images/CubeBg";
 import Footer from "../../../components/footer";
 
 import ConsultationMob from "./consult";
+import EUCookieConsent from "../../cookies/cookieConsent";
 
 export const sectionTypes = {
   help: "help-item",
@@ -177,6 +178,7 @@ export default class StartAProjectContent extends React.PureComponent {
                 data={this.state.data}
               />
               <Footer />
+              <EUCookieConsent />
             </Styled.commonDiv>
           </Styled.Wrapper>
         </Styled.containerFluid>

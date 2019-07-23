@@ -11,6 +11,7 @@ import Footer from "../../../components/footer";
 import About1 from "../commons/About1";
 
 import dynamic from "next/dynamic";
+import EUCookieConsent from "../../cookies/cookieConsent";
 
 const About2 = dynamic(() => import("../commons/About2"), {
   loading: () => null
@@ -45,6 +46,7 @@ export default class AboutUsDesktop extends PureComponent {
         </Fade>
         <AboutOtherSections />
         <Footer />
+        <EUCookieConsent />
       </Styled.PageWrapper>
     );
   }

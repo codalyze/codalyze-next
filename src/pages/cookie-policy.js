@@ -7,13 +7,11 @@ const Container = styled.div`
 
 export default () => (
   <Container>
-    <h1>THIS IS A SAMPLE AND WILL HAVE TO BE ALTERED </h1>
-    <h1>Privacy Policy for Codalyze</h1>
+    <h1>Cookie Policy</h1>
     <p>
-      At www.codalyze.com, accessible from www.codalyze.com, one of our main
-      priorities is the privacy of our visitors. This Privacy Policy document
-      contains types of information that is collected and recorded by
-      www.codalyze.com and how we use it.
+      At Codalyze one of our main priorities is the privacy of our visitors.
+      This Privacy Policy document contains types of information that is
+      collected and recorded by www.codalyze.com and how we use it.
     </p>
     <p>
       If you have additional questions or require more information about our
@@ -25,23 +23,11 @@ export default () => (
     <p>
       Codalyze legal basis for collecting and using the personal information
       described in this Privacy Policy depends on the Personal Information we
-      collect and the specific context in which we collect the information:
-    </p>
-    <ul>
-          <li>Codalyze needs to perform a contract with you</li>
-          <li>You have given Codalyze permission to do so</li>
-          
-      <li>
-        Processing your personal information is in Codalyze legitimate interests
-      </li>
-          <li>Codalyze needs to comply with the law</li>
-    </ul>
-      
-    <p>
-      Codalyze will retain your personal information only for as long as is
-      necessary for the purposes set out in this Privacy Policy. We will retain
-      and use your information to the extent necessary to comply with our legal
-      obligations, resolve disputes, and enforce our policies.
+      collect and the specific context in which we collect the information. We
+      will retain your personal information only for as long as is necessary for
+      the purposes set out in this Privacy Policy. We will retain and use your
+      information to the extent necessary to comply with our legal obligations,
+      resolve disputes, and enforce our policies.
     </p>
      
     <p>

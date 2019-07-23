@@ -276,3 +276,5 @@ export const techStackBlock = styled.div`
   ${global.twoBlocks}
   padding-bottom: 50px;
 `;
+
+export const techStackLogo = styled.img``;
