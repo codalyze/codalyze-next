@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "./styles";
+import * as Styled from "../styles";
 import B2b from "./images/B2b";
 import BankingServices from "./images/BankingServices";
 import Ecommerce from "./images/ECommerce";

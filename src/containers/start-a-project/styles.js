@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as global from "../../utils/globalStyles";
+
 import { globalAgent } from "https";
 
 export const pageWrapper = styled.div`
@@ -405,4 +406,73 @@ export const conHead = styled.h1`
   ${global.fontFreightDispBold};
   text-align: center;
   font-size: 50px;
+`;
+
+export const SectionWrapper = styled("div")`
+  margin: 100px 0;
+`;
+
+export const FlexContainer = styled.div`
+  ${global.mainContainer}
+  padding: 0 6vw;
+`;
+
+export const devisonDiv = styled.div`
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    align-items: end;
+  }
+`;
+
+export const leftDiv = styled.div`
+  ${global.twoBlocks}
+  img {
+    width: 100%;
+  }
+  margin-right: 30px;
+`;
+export const rightDiv = styled.div`
+  ${global.twoBlocks}
+  img {
+    width: 100%;
+  }
+  margin-left: 30px;
+  text-align: ${props => (props.right ? "right" : "")};
+`;
+
+export const p = styled.p`
+  ${global.fontRobotoLight};
+  text-align: left;
+  margin: 0;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+    margin: 0 15px;
+  }
+`;
+
+export const h2 = styled.h2`
+  ${global.fontFreightDispBold};
+  font-size: 50px;
+  margin: 30px 0;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 38px;
+    margin: 0 15px 15px;
+  }
+`;
+
+export const optBgContainer = styled.div`
+  position: absolute;
+  right: -70px;
+  top: -70px;
+  width: 158px;
+  z-index: -2;
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  .a {
+  }
 `;

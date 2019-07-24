@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import * as Styled from "./styles";
+import * as Styled from "../styles";
 
 export default class ContactForm extends PureComponent {
   render() {

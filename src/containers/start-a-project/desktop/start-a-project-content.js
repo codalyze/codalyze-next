@@ -1,16 +1,12 @@
 import React from "react";
 import HomeBanner from "../../../components/HomeBanner";
-import * as Styled from "./styles";
-import Help from "./help";
-import KindOfWebsite from "./kindOfWebsite";
-import Budget from "./budget";
-import Project from "./project";
+import * as Styled from "../styles";
 import StartAProjectBg from "./images/startAProject";
-import ContactForm from "./contactForm";
+import ContactForm from "../commons/contactForm";
 import CubeBg from "./images/CubeBg";
 import Footer from "../../../components/footer";
-
 import ConsultationDesk from "./consult";
+
 import EUCookieConsent from "../../cookies/cookieConsent";
 
 export const sectionTypes = {

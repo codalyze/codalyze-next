@@ -37,7 +37,7 @@ export default class EUCookieConsent extends React.PureComponent {
           {this.state.showCookieBar && (
             <CookieConsent
               location="bottom"
-              buttonText="Accept Cookies"
+              buttonText="Got it!"
               onAccept={() => {
                 this.setState({ showCookieBar: false });
               }}

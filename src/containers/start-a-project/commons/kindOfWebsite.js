@@ -1,8 +1,8 @@
 import React from "react";
-import * as Styled from "./styles";
-import B2b from "./images/B2b";
-import BankingServices from "./images/BankingServices";
-import Ecommerce from "./images/ECommerce";
+import * as Styled from "../desktop/styles";
+import B2b from "../desktop/images/B2b";
+import BankingServices from "../desktop/images/BankingServices";
+import Ecommerce from "../desktop/images/ECommerce";
 
 const helpIcons = [
   {

@@ -1,10 +1,10 @@
 import React from "react";
-import * as Styled from "./styles";
+import * as Styled from "../desktop/styles";
 
-import AppDevelopment from "./images/AppDevelopment";
-import NotSure from "./images/NotSure";
-import WebDevelopment from "./images/WebDevelopment";
-import BackendArchitechture from "./images/BackendArchitechture";
+import AppDevelopment from "../desktop/images/AppDevelopment";
+import NotSure from "../desktop/images/NotSure";
+import WebDevelopment from "../desktop/images/WebDevelopment";
+import BackendArchitechture from "../desktop/images/BackendArchitechture";
 
 const helpIcons = [
   {
