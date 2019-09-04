@@ -25,6 +25,10 @@ const HeaderLinkList = [
   {
     name: "Start a project",
     href: "start-a-project"
+  },
+  {
+    name: "Blogs",
+    href: "blogs"
   }
 ];
 
