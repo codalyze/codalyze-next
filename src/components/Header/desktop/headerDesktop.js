@@ -27,10 +27,10 @@ const headerLinks = [
   },
   {
     name: "Blogs",
-    href: "blogs"
+    href: "blogs-clutch-leader"
   }
 ];
- 
+
 class HeaderLink extends React.Component {
   render () {
     const { href, name, linkRef, active } = this.props;
@@ -88,7 +88,7 @@ export default class HeaderDesktop extends React.PureComponent {
     } else {
       const body = document.body;
       const html = document.documentElement;
-      const documentHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+      const documentHeight = Math.max( body.scrollHeight, body.offsetHeight,
         html.clientHeight, html.scrollHeight, html.offsetHeight );
       if (st + window.innerHeight < documentHeight) {
         this.setState({headerTop: 0});
@@ -114,7 +114,7 @@ export default class HeaderDesktop extends React.PureComponent {
               </Styled.LogoA>
             </Link>
           </div>
-    
+
           <Styled.Flex>
             {headerLinks.map((x, index) => {
               return <HeaderLink href={`/${x.href}`} active={x.href === href} name={x.name} key={index} linkRef={ref => this.props.addRef(x.href, ref)} />;

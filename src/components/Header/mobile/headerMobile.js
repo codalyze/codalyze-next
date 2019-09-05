@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
 import MobileMenuStar from "./images/specializeStar";
-import CodalyzeLogo from '../SvgCodalyzeLogo';
-import MenuToggle from './images/MenuToggle';
+import CodalyzeLogo from "../SvgCodalyzeLogo";
+import MenuToggle from "./images/MenuToggle";
 
 const HeaderLinkList = [
   {
@@ -28,7 +28,7 @@ const HeaderLinkList = [
   },
   {
     name: "Blogs",
-    href: "blogs"
+    href: "blogs-clutch-leader"
   }
 ];
 
@@ -40,7 +40,7 @@ const ToggleMenu = ({ href, addRef, toggleMenuState }) => {
           <CodalyzeLogo width="125px" />
         </Link>
         <Styled.menuToggleBtn onClick={toggleMenuState}>
-          <MenuToggle width="50px"/>
+          <MenuToggle width="50px" />
         </Styled.menuToggleBtn>
       </Styled.mobileNav>
       <Styled.mobileMenuItems>
@@ -58,9 +58,9 @@ const ToggleMenu = ({ href, addRef, toggleMenuState }) => {
         })}
         <Styled.mobileMenuStarBg>
           <MobileMenuStar
-          width="100%"
-          height="100%"
-          viewBox="0 0 421.867 456.583"
+            width="100%"
+            height="100%"
+            viewBox="0 0 421.867 456.583"
           />
         </Styled.mobileMenuStarBg>
       </Styled.mobileMenuItems>
@@ -103,10 +103,10 @@ export default class HeaderMobile extends React.PureComponent {
       <Styled.mobileContainer>
         <Styled.mobileNav>
           <Link href="/" passHref prefetch>
-            <CodalyzeLogo width="125px"/>
+            <CodalyzeLogo width="125px" />
           </Link>
           <Styled.menuToggleBtn onClick={this.toggleMenuState}>
-            <MenuToggle width="50px"/>
+            <MenuToggle width="50px" />
           </Styled.menuToggleBtn>
           {this.state.isOpen ? (
             <ToggleMenu
