@@ -11,7 +11,7 @@ const Blog = () => (
         <Styled.clutchImage src="/static/images/blogs/blog.png" />
       </Styled.blogContent>
       <Styled.aboutBg />
-      
+
       <Styled.p>
         Our team at Codalyze delivers tailored programming solutions to
         enterprises and start-ups that helps them establish a distinctive
@@ -27,13 +27,15 @@ const Blog = () => (
         deadline and help you get to market fast. We specialize in web and
         back-end development along with mobile app development. Our ability to
         identify problems and deliver
-        <span>&nbsp;
-          <a
+        <span>
+          &nbsp;
+          <Styled.a
             href="https://www.forbes.com/sites/kateharrison/2018/12/21/6-ways-to-improve-your-website-design-to-boost-sales/"
             target="_blank"
           >
             quality solutions
-          </a>&nbsp;
+          </Styled.a>
+          &nbsp;
         </span>
         has caught the eye of Clutch, a B2B ratings and reviews company based in
         the heart of Washington DC.
@@ -43,9 +45,15 @@ const Blog = () => (
         Clutch ranks a ton of businesses across a variety of sectors based on
         their market presence, technical capabilities, and client reviews and
         we’ve been featured as a leader among the top
-        <span>&nbsp;<a href="https://clutch.co/in/web-developers/mumbai" target="_blank">
+        <span>
+          &nbsp;
+          <Styled.a
+            href="https://clutch.co/in/web-developers/mumbai"
+            target="_blank"
+          >
             web developers in Mumbai
-          </a>&nbsp;</span>
+          </Styled.a>
+        </span>
         . This is exciting and nerve-wrecking at the same time as the bar for
         our performance has now been raised two notches owing to the feature!
       </Styled.p>
@@ -54,22 +62,25 @@ const Blog = () => (
         Manifest (provides business news and other metrics to aid businesses
         find partners) and Visual Objects (a platform for creative agencies to
         publish their portfolios). We are listed among the leading
-        <span>&nbsp;
-          <a
+        <span>
+          &nbsp;
+          <Styled.a
             href="https://themanifest.com/in/app-development/companies/mumbai"
             target="_blank"
           >
             mobile app developers in Mumbai
-          </a>&nbsp;
+          </Styled.a>
+          &nbsp;
         </span>
         on The Manifest and among the top
-        <span>&nbsp;
-          <a
+        <span>
+          &nbsp;
+          <Styled.a
             href="https://visualobjects.com/app-development/top-mobile-app-development-companies"
             target="_blank"
           >
             mobile app developers
-          </a>&nbsp;
+          </Styled.a>
         </span>
         , showcasing our profile and portfolio items on Visual Objects.
       </Styled.p>

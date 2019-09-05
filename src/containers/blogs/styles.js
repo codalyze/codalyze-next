@@ -16,7 +16,7 @@ export const blogContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60%;
+  width: 75%;
   margin-bottom: 20px;
 `;
 
@@ -47,6 +47,10 @@ export const h4 = styled.h4`
   font-size: 50px;
   text-align: center;
   padding: 72px 0 0;
+
+  @media (max-width: 640px) {
+    ${global.mobileTitle}
+  }
 `;
 
 export const h5 = styled.h5`
@@ -67,15 +71,19 @@ export const span = styled.span`
   margin: 0;
 `;
 
-export const a = styled.a`
-  color: black !important;
-`;
+// export const a = styled.a`
+//   color: black !important;
+// `;
 
 export const p = styled.p`
   ${global.fontRobotoLight}
   font-size: 20px;
   margin: 0 0 15px;
   line-height: 1.5;
+  @media (max-width: 640px) {
+    ${global.mobileparagraph};
+    padding-bottom: 14px;
+  }
 `;
 
 // export const banner = styled.img`
@@ -88,6 +96,11 @@ export const clutchImage = styled.img`
   height: auto;
   max-width: 320px;
   margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    width: 80%;
+    padding-top: 5%;
+  }
 `;
 export const block = styled.div`
   width: 100%;
@@ -95,7 +108,6 @@ export const block = styled.div`
   position: absolute;
   z-index: -1;
 `;
-
 
 export const aboutBg = styled.img`
   width: 67%;
@@ -209,4 +221,9 @@ export const caseBtn = styled.button`
   text-transform: uppercase;
   padding: 11px 54px;
   cursor: pointer;
+`;
+
+export const a = styled.a`
+  color: #4ac88d;
+  text-decoration: none;
 `;
