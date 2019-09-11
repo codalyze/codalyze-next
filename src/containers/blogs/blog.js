@@ -1,8 +1,6 @@
 import React from "react";
 import * as Styled from "./styles";
 
-// import LeftBg from "../images/workBgLeft";
-
 const Blog = () => (
   <Styled.containerFluid>
     <Styled.container>
