@@ -25,10 +25,10 @@ const footerLinks = [
     name: "Start a project",
     href: "start-a-project"
   },
-  {
-    name: "Contract Staffing",
-    href: "contract-staffing"
-  }
+  // {
+  //   name: "Contract Staffing",
+  //   href: "contract-staffing"
+  // }
 ];
 
 class FooterLink extends React.Component {
