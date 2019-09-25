@@ -55,6 +55,66 @@ export const blogContainer = styled.div`
   flex-direction: column;
   width: 75%;
   margin-bottom: 20px;
+  ${media.desktop`
+  width: 90%;
+  `}
+`;
+
+export const bannerContainer = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  position: relative;
+  padding: 6vw 0 0 0;
+  height: 10%;
+  ${media.desktop`
+  width: 100%;
+  `}
+`;
+
+export const bottomSvg = styled.div`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 350px;
+  z-index: -1;
+  ${media.desktop`
+    top: 15vw;
+    left: unset;
+  `}
+`;
+
+export const bannerText = styled.p`
+  position: absolute;
+  color: #242424;
+  font-size: 46px;
+  margin: 0;
+  ${media.desktop`
+    font-size: 16px;
+    font-weight: bold;
+  `}
+`;
+export const bannerMobileText = styled.span`
+  display: block;
+  color: #ef543d;
+  white-space: nowrap;
+  font-size: 20px;
+`;
+export const bannerMobileTextContainer = styled.div`
+  padding: 10% 0;
+`;
+
+export const blockquote = styled.blockquote`
+  font-size: 34px;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 5%;
+  text-align: center;
+
+  ${media.desktop`
+  font-size: 16px;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;`}
 `;
 
 export const bannerSvg = styled.div`
@@ -70,6 +130,8 @@ export const bannerSvg = styled.div`
   .a {
     opacity: 0.4;
   }
+  ${media.desktop`
+  top: 400px;`}
 `;
 
 export const textArea = styled.textarea`
@@ -84,7 +146,7 @@ export const technologies = styled.div`
   justify-content: center;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 80px 6vw 125px;
+  padding: 6vw 0 0 0;
 `;
 
 export const technologyItem = styled.div`
@@ -207,18 +269,36 @@ export const ul = styled.ul`
 `;
 
 export const li = styled.li`
-  margin: 60px 2vw;
+  margin: 60px 0;
   font-size: 16px;
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 10px 5% 0 2%;
   p {
     font-size: 16px;
   }
   ${media.desktop`
-    margin: 30px 2vw;
-  `}
+  width: 100%;
+  box-shadow: unset;
+  background-color: transparent;
+  padding: 30px 6vw;
+  h2, p {
+    padding-right: unset;
+    padding-left: unset;
+  }
+  left: unset;
+  li {
+    padding-left: unset;
+      p {
+        padding-left: unset;
+      }
+  }
+`}
 `;
 
 export const liImage = styled.div`

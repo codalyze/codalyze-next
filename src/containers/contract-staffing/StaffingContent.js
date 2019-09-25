@@ -13,6 +13,7 @@ import ReactNative from "../home/commons/ReactNative";
 import VueJs from "../home/commons/VueJs";
 import ContactForm from "../start-a-project/desktop/contactForm";
 import Clients from "../home/desktop/clients";
+import Bg2 from "./images/Bg2";
 
 const technologies = [NodeJs, ReactJs, ReactNative, VueJs];
 export default class StaffingContent extends React.PureComponent {
@@ -65,12 +66,54 @@ export default class StaffingContent extends React.PureComponent {
   render() {
     return (
       <Styled.pageWrapper>
-        <HomeBanner
-          banner="/static/images/rubik-cube-banner.png"
-          titleBreak
-          secondryTitle="Let us help you"
-          subTitle="The right people on your team can take your business to new heights"
-        />
+        <Styled.bannerContainer>
+          <img src="/static/images/selection.jpg" width="100%" />
+          {this.props.mq !== "mobile" && (
+            <Styled.bannerText
+              style={{
+                top: "15vw",
+                left: "5%"
+              }}
+            >
+              Your next star performer,
+            </Styled.bannerText>
+          )}
+
+          {this.props.mq !== "mobile" && (
+            <Styled.bannerText
+              style={{
+                top: "18.5vw",
+                left: "10%"
+              }}
+            >
+              handpicked by us
+            </Styled.bannerText>
+          )}
+        </Styled.bannerContainer>
+        {this.props.mq === "mobile" && (
+          <Styled.bottomSvg>
+            <Bg2 width="100%" height="100%" viewBox="0 0 1597.776 1603.587" />
+          </Styled.bottomSvg>
+        )}
+        {this.props.mq === "mobile" && (
+          <Styled.bannerMobileTextContainer>
+            <Styled.bannerMobileText
+              style={{
+                color: "#76686a",
+                "margin-left": "20%"
+              }}
+            >
+              Your next star performer,
+            </Styled.bannerMobileText>
+            <Styled.bannerMobileText
+              style={{
+                "margin-left": "40%"
+              }}
+            >
+              handpicked by us
+            </Styled.bannerMobileText>
+          </Styled.bannerMobileTextContainer>
+        )}
         <Styled.bannerSvg>
           <SectionFirstBg
             width="100%"
@@ -79,7 +122,12 @@ export default class StaffingContent extends React.PureComponent {
             preserveAspectRatio="none"
           />
         </Styled.bannerSvg>
+
         <Styled.blogContainer>
+          <Styled.blockquote>
+            "The right people on your team can take your business to new
+            heights"
+          </Styled.blockquote>
           <Styled.p>
             Whether you're a startup, a small-sized business or an enterprise-
             Codalyze can help you find your next Super Star!
