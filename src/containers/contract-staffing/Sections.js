@@ -42,8 +42,8 @@ export default () => (
     {sections.map(section => {
       return (
         <Styled.section key={section.id} id={section.id}>
-          <Styled.contentsFromLeft isRightAligned={section.isRightAligned}>
-            <Styled.WebDevImageContainer
+          <div className="abs">
+            {/* <Styled.WebDevImageContainer
               isRightAligned={section.isRightAligned}
             >
               <section.stickyImage
@@ -51,7 +51,7 @@ export default () => (
                 height="400"
                 viewBox="0 0 586 586"
               />
-            </Styled.WebDevImageContainer>
+            </Styled.WebDevImageContainer> */}
             <Styled.h2>{section.h2}</Styled.h2>
             <Styled.p>{section.p}</Styled.p>
             <Styled.ul>
@@ -71,7 +71,7 @@ export default () => (
                   </Fade>
                 ))}
             </Styled.ul>
-          </Styled.contentsFromLeft>
+          </div>
         </Styled.section>
       );
     })}

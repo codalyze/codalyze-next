@@ -34,6 +34,17 @@ export default class ContactForm extends PureComponent {
               </Styled.errorMessage>
             )}
           </Styled.inputDiv>
+          {this.props.contractStaffing && (
+            <Styled.inputDiv>
+              <Styled.Input
+                type="text"
+                name="organisation"
+                placeholder="Organisation"
+                value={this.props.data.organisation || ""}
+                onChange={e => this.props.onChangeText(e)}
+              />
+            </Styled.inputDiv>
+          )}
           <Styled.inputDiv>
             <Styled.Input
               type="tel"
@@ -55,18 +66,6 @@ export default class ContactForm extends PureComponent {
               onChange={e => this.props.onChangeText(e)}
             />
           </Styled.inputDiv>
-          <Styled.ButtonContainer>
-          <Styled.ButtonWrapper
-            disabled={
-              this.props.emailError ||
-              !(this.props.data && this.props.data.email)
-            }
-            onClick={() => this.props.onClickSendRequest()}
-          >
-            SEND REQUEST
-          </Styled.ButtonWrapper>
-
-          {this.props.contractStaffing && (
             <Styled.ButtonWrapper
               disabled={
                 this.props.emailError ||
@@ -74,10 +73,8 @@ export default class ContactForm extends PureComponent {
               }
               onClick={() => this.props.onClickSendRequest()}
             >
-              Schedule a call 
+              SEND REQUEST
             </Styled.ButtonWrapper>
-          )}
-          </Styled.ButtonContainer>
         </Styled.container>
       </Styled.containerFluid>
     );
