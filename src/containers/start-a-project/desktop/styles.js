@@ -28,6 +28,13 @@ export const centeredDiv = styled.div`
   width: 100%;
 `;
 
+export const ButtonContainer = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const title = styled.h4`
   ${global.fontRobotoLight};
   font-size: 34px;
