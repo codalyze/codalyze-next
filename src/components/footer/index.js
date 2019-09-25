@@ -24,6 +24,10 @@ const footerLinks = [
   {
     name: "Start a project",
     href: "start-a-project"
+  },
+  {
+    name: "Contract Staffing",
+    href: "contract-staffing"
   }
 ];
 

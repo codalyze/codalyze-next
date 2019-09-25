@@ -40,7 +40,6 @@ const sections = [
 export default () => (
   <React.Fragment>
     {sections.map(section => {
-      console.log(section, "sjksj");
       return (
         <Styled.section key={section.id} id={section.id}>
           <Styled.contentsFromLeft isRightAligned={section.isRightAligned}>

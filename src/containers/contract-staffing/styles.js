@@ -1,14 +1,17 @@
 import styled, { css, keyframes } from "styled-components";
 import { media } from "../../utils/globalStyles";
 import WebDev from "./images/WebDev";
-import BackendDev from "./images/BackendDev";
-import MobileAppDev from "./images/MobileAppDev";
 import Performance from "./images/Performance";
 import Responsive from "./images/Responsive";
 import Reusable from "./images/Reusable";
-import FastDevelopment from "./images/FastDevelopment";
-import OverTheAir from "./images/OverTheAir";
 import * as global from "../../utils/globalStyles";
+
+export const PerformanceImage = styled(Performance)`
+  .performance_svg__arrow {
+    animation: ${rotateArrow} 4s linear infinite;
+    transform-origin: 250px 317px;
+  }
+`;
 
 const rotateArrow = keyframes`
   0% {
@@ -36,61 +39,6 @@ const translatePie = keyframes`
   }
 `;
 
-const translateSquare11 = keyframes`
-  0% {
-    transform: rotate(0deg) translate(-15px, 14px);
-  }
-  50% {
-    transform: rotate(53.7deg) translate(0px, 0px);
-  }
-  100% {
-    transform: rotate(0deg) translate(-15px, 14px);
-  }
-`;
-
-const translateSquare23 = keyframes`
-  0% {
-    transform: rotate(0deg) translate(-15px, 12px);
-  }
-  50% {
-    transform: rotate(37.36deg) translate(0px, 0px);
-  }
-  100% {
-    transform: rotate(0deg) translate(-15px, 12px);
-  }
-`;
-
-const translateSquare13 = keyframes`
-  0% {
-    transform: rotate(0deg) translate(-48px, 41px);
-  }
-  50% {
-    transform: rotate(-6deg) translate(0px, 0px);
-  }
-  100% {
-    transform: rotate(0deg) translate(-48px, 41px);
-  }
-`;
-
-const overTheAirAnimation = keyframes`
-  0% {
-    transform: rotate(-3deg);
-  }
-  50% {
-    transform: rotate(3deg);
-  }
-  100% {
-    transform: rotate(-3deg);
-  }
-`;
-
-export const PerformanceImage = styled(Performance)`
-  .performance_svg__arrow {
-    animation: ${rotateArrow} 4s linear infinite;
-    transform-origin: 250px 317px;
-  }
-`;
-
 export const ResponsiveImage = styled(Responsive)``;
 
 export const ReusableImage = styled(Reusable)`
@@ -98,27 +46,6 @@ export const ReusableImage = styled(Reusable)`
     animation: ${translatePie} 5s ease-in-out infinite;
   }
 `;
-
-export const FastDevelopmentImage = styled(FastDevelopment)`
-  .square-11 {
-    animation: ${translateSquare11} 12s ease-in-out infinite;
-    transform-origin: 243.356px 137.449px;
-  }
-  .square-23 {
-    animation: ${translateSquare23} 12s ease-in-out infinite;
-    transform-origin: 350.443px 248.76px;
-  }
-  .square-13 {
-    animation: ${translateSquare13} 12s ease-in-out infinite;
-  }
-`;
-
-export const OverTheAirImage = styled(OverTheAir)`
-  .airplane {
-    animation ${overTheAirAnimation} 8s ease-in-out infinite;
-  }
-`;
-
 
 export const blogContainer = styled.div`
   margin: 0 auto;
@@ -146,8 +73,8 @@ export const bannerSvg = styled.div`
 `;
 
 export const textArea = styled.textarea`
-    height: 200px;
-    width: 100%;
+  height: 200px;
+  width: 100%;
 `;
 
 export const technologies = styled.div`
@@ -166,19 +93,6 @@ export const technologyItem = styled.div`
       width: 160px;
     }
   }
-`;
-
-export const bottomSvg = styled.div`
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: 300px;
-  z-index: -1;
-  ${media.desktop`
-    top: 670px;
-    right: -75px;
-    left: unset;
-  `}
 `;
 
 export const section = styled.section`
@@ -241,27 +155,12 @@ export const contentsFromLeft = styled.div`
 //   width: 100%;
 //   position: relative;
 // `;
-
-export const stickyDiv = styled.div`
-  position: absolute;
-  right: 10px;
-  height: 410px;
-`;
-
-export const StyledContentImage = css`
-  position: absolute;
-`;
-
 export const WebDevImage = styled(WebDev)`
   ${media.desktop`
     width: 300px;
     height: 300px;
   `}
 `;
-
-export const MobileAppDevImage = styled(MobileAppDev)``;
-
-export const BackendDevImage = styled(BackendDev)``;
 
 export const WebDevImageContainer = styled.div`
   position: absolute;
@@ -271,8 +170,6 @@ export const WebDevImageContainer = styled.div`
     display: none;
   `}
 `;
-
-export const contentsFromRight = styled.div``;
 
 export const h2 = styled.h2`
   ${global.fontFreightDispBold};
@@ -292,8 +189,6 @@ export const h3 = styled.h3`
     font-size: 24px;
   `}
 `;
-
-export const h4 = styled.h4``;
 
 export const p = styled.p`
   ${global.fontRobotoLight};
@@ -363,7 +258,6 @@ export const ButtonWrapper = styled("div")`
   padding: 0 0 60px 0;
   margin-top: -30px;
 `;
-
 
 export const specializeBtn = styled.button`
   ${props => (props.mq === "desktop" ? global.mainButton : global.mobileButton)}
