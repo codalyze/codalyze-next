@@ -24,10 +24,10 @@ const footerPages = [
     name: "Start a project",
     href: "start-a-project"
   },
-  {
-    name: "Contract Staffing",
-    href: "contract-staffing"
-  }
+  // {
+  //   name: "Contract Staffing",
+  //   href: "contract-staffing"
+  // }
 ];
 
 const SocialMediaLinks = [

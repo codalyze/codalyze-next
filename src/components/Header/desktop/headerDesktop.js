@@ -29,10 +29,10 @@ const headerLinks = [
     name: "Blogs",
     href: "blogs-clutch-leader"
   },
-  {
-    name: "Contract Staffing",
-    href: "contract-staffing"
-  }
+  // {
+  //   name: "Contract Staffing",
+  //   href: "contract-staffing"
+  // }
 ];
 
 class HeaderLink extends React.Component {

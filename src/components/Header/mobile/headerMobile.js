@@ -30,10 +30,10 @@ const HeaderLinkList = [
     name: "Blogs",
     href: "blogs-clutch-leader"
   },
-  {
-    name: "Contract Staffing",
-    href: "contract-staffing"
-  }
+  // {
+  //   name: "Contract Staffing",
+  //   href: "contract-staffing"
+  // }
 ];
 
 const ToggleMenu = ({ href, addRef, toggleMenuState }) => {
