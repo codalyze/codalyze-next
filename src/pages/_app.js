@@ -8,6 +8,7 @@ import Transition from '../components/Transition';
 import UAParser from 'ua-parser-js';
 import loadWebFonts from '../utils/loadWebFonts';
 import initFreshChat from '../utils/initFreshChat';
+import initLN from '../utils/initLN';
 import ReactGA from 'react-ga';
 
 export default class MyApp extends App {
@@ -43,6 +44,7 @@ export default class MyApp extends App {
     this.setState({className: 'app-body'});
     loadWebFonts();
     initFreshChat();
+    initLN();
 
     const options = {
       autoConfig: true, 	// set pixel's autoConfig
