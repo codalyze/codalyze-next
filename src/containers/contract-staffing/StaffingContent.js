@@ -167,7 +167,7 @@ export default class StaffingContent extends React.PureComponent {
             <Styled.successDiv id="success-message">
               Thanks for your interest. We will get back to you within 24
               hours.
-              <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=762091&conversionId=694435&fmt=gif" />
+              <img height="1" width="1" style={{display:'none'}} alt="" src="https://px.ads.linkedin.com/collect/?pid=762091&conversionId=694435&fmt=gif" />
               <span
                 onClick={() => {
                   this.setState({ showSuccessMessage: false });
