@@ -16,6 +16,9 @@ export const blogContainer = styled.div`
   flex-direction: column;
   width: 75%;
   margin-bottom: 20px;
+  @media (max-width: 992px) {
+    width: 96%;
+  }
 `;
 
 export const h4 = styled.h4`
@@ -42,6 +45,7 @@ export const p = styled.p`
   @media (max-width: 640px) {
     ${global.mobileparagraph};
     padding-bottom: 14px;
+    text-align: justify;
   }
 `;
 

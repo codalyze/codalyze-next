@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import Transition from '../components/Transition';
 import UAParser from 'ua-parser-js';
 import loadWebFonts from '../utils/loadWebFonts';
-import initFbMessenger from '../utils/initFbMessenger';
+import initFreshChat from '../utils/initFreshChat';
 import ReactGA from 'react-ga';
 
 export default class MyApp extends App {
@@ -42,7 +42,7 @@ export default class MyApp extends App {
     this.handleRouteChangeStart(this.pathname);
     this.setState({className: 'app-body'});
     loadWebFonts();
-    initFbMessenger();
+    initFreshChat();
   }
 
   componentWillUnmount () {

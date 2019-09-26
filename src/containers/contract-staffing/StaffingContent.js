@@ -1,10 +1,8 @@
 import React from "react";
-import Banner from "../../components/Banner";
 import * as Styled from "./styles";
 import SectionFirstBg from "./images/SectionFirstBg";
 import Sections from "./Sections";
 import Footer from "../../components/footer";
-import HomeBanner from "../../components/HomeBanner";
 
 // import Flutter from '../home/commons/Flutter';
 import NodeJs from "../home/commons/NodeJs";
@@ -38,6 +36,7 @@ export default class StaffingContent extends React.PureComponent {
 
   onClickSendRequest = () => {
     const { data } = this.state || {};
+    data.contractStaffing = true;
     const xmlhttp = new XMLHttpRequest();
     const self = this;
     xmlhttp.onreadystatechange = function() {
@@ -71,7 +70,7 @@ export default class StaffingContent extends React.PureComponent {
           {this.props.mq !== "mobile" && (
             <Styled.bannerText
               style={{
-                top: "15vw",
+                top: "11vw",
                 left: "5%"
               }}
             >
@@ -82,7 +81,7 @@ export default class StaffingContent extends React.PureComponent {
           {this.props.mq !== "mobile" && (
             <Styled.bannerText
               style={{
-                top: "18.5vw",
+                top: "15.5vw",
                 left: "10%"
               }}
             >
@@ -100,20 +99,28 @@ export default class StaffingContent extends React.PureComponent {
             <Styled.bannerMobileText
               style={{
                 color: "#76686a",
-                "margin-left": "20%"
+                "marginLeft": "20%"
               }}
             >
               Your next star performer,
             </Styled.bannerMobileText>
             <Styled.bannerMobileText
               style={{
-                "margin-left": "40%"
+                "marginLeft": "40%"
               }}
             >
               handpicked by us
             </Styled.bannerMobileText>
           </Styled.bannerMobileTextContainer>
         )}
+        <Styled.CTAWrapper
+          onClick={() => {
+            const elem = document.getElementById('contact-form');
+            elem.scrollIntoView({ behavior: "smooth", block: "center" });
+          }}
+        >
+          Get In Touch
+        </Styled.CTAWrapper>
         <Styled.bannerSvg>
           <SectionFirstBg
             width="100%"
@@ -152,7 +159,21 @@ export default class StaffingContent extends React.PureComponent {
             ))}
           </Styled.technologies>
           <Sections />
+          {this.state.showSuccessMessage && (
+            <Styled.successDiv id="success-message">
+              Thanks for your interest. We will get back to you within 24
+              hours.
+              <span
+                onClick={() => {
+                  this.setState({ showSuccessMessage: false });
+                }}
+              >
+                x
+              </span>
+            </Styled.successDiv>
+          )}
           <ContactForm
+            contactTitle="To know more about our offerings, send over your details and we'll take it from there"
             onChangeText={this.onChangeText}
             onClickSendRequest={this.onClickSendRequest}
             emailError={this.state.emailError}

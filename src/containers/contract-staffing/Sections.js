@@ -15,7 +15,7 @@ const sections = [
         heading: "Quick setup process",
         p1:
           "Avoid lengthy placement cycles, we strive to find your right employee in less than 15 days",
-        image: Styled.PerformanceImage
+          image: '/static/images/runner.png'
       },
       {
         heading: "Flexibility",
@@ -23,15 +23,19 @@ const sections = [
           "Option to terminate contract placement any time on a month’s notice",
         p2:
           "Option to exchange a non-performing candidate on a month’s notice at no extra costs",
-        image: Styled.ReusableImage
+        image: '/static/images/flexible.png'
       },
       {
         heading: "Reduce administrative responsibilities",
-        image: Styled.ResponsiveImage
+        p1: 'We handle administrative burden of recruiting, evaluating, screening, and interviewing employees by providing you with highly qualified candidates.',
+        p2: 'Post hire onboarding, payroll and employee benefits are taken care by us',
+        image: '/static/images/admin.png'
       },
       {
         heading: "Access to skilled resources nationwide",
-        image: Styled.ResponsiveImage
+        p1: 'For every Job Description you share, we scan through hundreds of fresh candidates in addition to candidates already in our pipeline',
+        p2: 'Our techical team finishes one round each of internal test and interviews before candidate profiles are shared',
+        image: '/static/images/skills.png'
       }
     ]
   }
@@ -60,7 +64,7 @@ export default () => (
                   <Fade key={Item.heading}>
                     <Styled.li>
                       <Styled.liImage>
-                        <Item.image />
+                        <img src={Item.image} width="100" />
                       </Styled.liImage>
                       <Styled.liContent>
                         <Styled.h3>{Item.heading}</Styled.h3>

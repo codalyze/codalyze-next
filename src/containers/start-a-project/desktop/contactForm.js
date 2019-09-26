@@ -4,11 +4,14 @@ import * as Styled from "./styles";
 export default class ContactForm extends PureComponent {
   render() {
     return (
-      <Styled.containerFluid>
+      <Styled.containerFluid id="contact-form">
         <Styled.container>
           <Styled.formHead>
-            We'd love hear all about your project. Send over your <br />
-            details and we will take it from there.
+            {this.props.contactTitle
+            ? this.props.contactTitle
+            : `We'd love hear all about your project. Send over your \n
+            details and we will take it from there.`
+            }
           </Styled.formHead>
           <Styled.inputDiv>
             <Styled.Input

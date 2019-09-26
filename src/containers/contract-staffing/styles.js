@@ -86,7 +86,7 @@ export const bottomSvg = styled.div`
 export const bannerText = styled.p`
   position: absolute;
   color: #242424;
-  font-size: 46px;
+  font-size: 36px;
   margin: 0;
   ${media.desktop`
     font-size: 16px;
@@ -268,8 +268,25 @@ export const ul = styled.ul`
   padding: 0;
 `;
 
+export const successDiv = styled.div`
+  width: calc(100% - 12vw);
+  padding: 30px;
+  background-color: #5cca8f;
+  margin: 10px 6vw 30px;
+  box-sizing: border-box;
+  position: relative;
+  span {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+`;
+
 export const li = styled.li`
-  margin: 60px 0;
+  margin: 30px 0;
   font-size: 16px;
   display: flex;
   flex-flow: row nowrap;
@@ -278,27 +295,36 @@ export const li = styled.li`
   background-color: white;
   box-sizing: border-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  padding: 10px 5% 0 2%;
+  padding: 10px 5% 10px 2%;
   p {
     font-size: 16px;
+    margin: 5px 0 15px;
+  }
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   ${media.desktop`
-  width: 100%;
-  box-shadow: unset;
-  background-color: transparent;
-  padding: 30px 6vw;
-  h2, p {
-    padding-right: unset;
-    padding-left: unset;
-  }
-  left: unset;
-  li {
-    padding-left: unset;
-      p {
-        padding-left: unset;
-      }
-  }
-`}
+    width: 100%;
+    box-shadow: unset;
+    background-color: transparent;
+    padding: 30px 6vw;
+    h3 {
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+    h2, p {
+      padding-right: unset;
+      padding-left: unset;
+    }
+    left: unset;
+    li {
+      padding-left: unset;
+        p {
+          padding-left: unset;
+        }
+    }
+  `}
 `;
 
 export const liImage = styled.div`
@@ -343,4 +369,16 @@ export const specializeBtn = styled.button`
   ${props => (props.mq === "desktop" ? global.mainButton : global.mobileButton)}
   margin: 0 auto;
   display: block;
+`;
+
+export const CTAWrapper = styled.button`
+  ${global.mainButton};
+  margin: 20px auto;
+  display:flex;
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: #888;
+  }
 `;
