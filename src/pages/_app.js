@@ -43,6 +43,14 @@ export default class MyApp extends App {
     this.setState({className: 'app-body'});
     loadWebFonts();
     initFreshChat();
+
+    const options = {
+      autoConfig: true, 	// set pixel's autoConfig
+      debug: true, 		// enable logs
+    };
+    const ReactPixel =  require('react-facebook-pixel').default;
+    ReactPixel.init('894109900975518', {}, options);
+    ReactPixel.pageView();
   }
 
   componentWillUnmount () {
@@ -53,6 +61,8 @@ export default class MyApp extends App {
     if (this.lastPathName !== this.pathname) {
       this.lastPathName = this.pathname;
       this.handleRouteChangeStart(this.pathname);
+      const ReactPixel =  require('react-facebook-pixel').default;
+      ReactPixel.pageView();
     }
   }
 

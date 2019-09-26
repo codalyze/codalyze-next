@@ -35,6 +35,8 @@ export default class StaffingContent extends React.PureComponent {
   };
 
   onClickSendRequest = () => {
+    const ReactPixel =  require('react-facebook-pixel').default;
+    ReactPixel.trackCustom('sendContractEnquiry');
     const { data } = this.state || {};
     data.contractStaffing = true;
     const xmlhttp = new XMLHttpRequest();
@@ -115,6 +117,8 @@ export default class StaffingContent extends React.PureComponent {
         )}
         <Styled.CTAWrapper
           onClick={() => {
+            const ReactPixel = require('react-facebook-pixel').default;
+            ReactPixel.trackCustom('scrollDownToContact');
             const elem = document.getElementById('contact-form');
             elem.scrollIntoView({ behavior: "smooth", block: "center" });
           }}
