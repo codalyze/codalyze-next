@@ -46,7 +46,7 @@ export default class MyApp extends App {
 
     const options = {
       autoConfig: true, 	// set pixel's autoConfig
-      debug: true, 		// enable logs
+      debug: false, 		// enable logs
     };
     const ReactPixel =  require('react-facebook-pixel').default;
     ReactPixel.init('894109900975518', {}, options);
