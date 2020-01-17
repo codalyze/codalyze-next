@@ -8,26 +8,28 @@ import MobTestimonials from ".././home/mobile/testimonials";
 import Footer from "../../components/footer";
 import MobileAppDev from "../services/desktop/images/MobileAppDev";
 import Fade from "react-reveal/Fade";
-import * as StyledImg from "../services/desktop/styles"
+import { PerformanceImage, FastDevelopmentImage, OverTheAirImage } from "../services/desktop/styles";
+import Reviews from "../home/desktop/reviews";
+import MobReviews from "../home/mobile/reviews";
 
 let appDev = [
       {
         heading: "Native Performance",
         p:
           "If anything takes longer than 100ms, the user will feel it. A compelling reason for using React Native instead of WebView-based tools is to achieve 60 frames per second and a native look and feel to your apps.",
-        image: StyledImg.PerformanceImage
+        image: PerformanceImage
       },
       {
         heading: "Fast development cycles",
         p:
           " It enables an entirely different style of development where you get really quick feedback because of low compile times.",
-        image: StyledImg.FastDevelopmentImage
+        image: FastDevelopmentImage
       },
       {
         heading: "Over the air updates",
         p:
           "React native makes it possible to push over the air updates without requiring users to update the app",
-        image: StyledImg.OverTheAirImage
+        image: OverTheAirImage
       }
     ];
 
@@ -122,7 +124,7 @@ class GoogleMobileAd extends React.PureComponent {
               <Fade key={Item.heading}>
                 <Styled.li>
                   <Styled.liImage>
-                    <img src={Item.image} width="100" />
+                    <Item.image/>
                   </Styled.liImage>
                   <Styled.liContent>
                     <Styled.h3>{Item.heading}</Styled.h3>
@@ -155,7 +157,8 @@ class GoogleMobileAd extends React.PureComponent {
         </Styled.technologies>
 
         <Styled.h2>Projects</Styled.h2>
-        {/* PROJECTS HERE */}
+
+        {this.props.mq === "desktop" ? <Reviews /> : <MobReviews />}
 
         {this.props.mq === "desktop" ? <Testimonials /> : <MobTestimonials />}
 

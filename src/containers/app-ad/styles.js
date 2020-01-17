@@ -172,3 +172,34 @@ export const ul = styled.ul`
   width: 100%;
   padding: 0;
 `;
+
+
+
+
+
+
+export const projectListContainer = styled.div`
+position: relative;
+display: flex;
+flex-direction: row;
+overflow: auto;
+
+width: calc(100vw - 70px);
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none;  /* IE 10+ */
+&::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+  padding: 0 35px;
+`;
+
+export const splAreasBlocks = styled.div`
+  width: 214px;
+  margin-right: 20px;
+  border: 1px solid rgba(208, 192, 192, 0.5);
+  box-shadow: 0px 3px 2px #e1e1e2;
+  background: #fff;
+  padding: 0px 15px 42px;
+`;
