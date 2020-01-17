@@ -8,30 +8,34 @@ import MobTestimonials from ".././home/mobile/testimonials";
 import Footer from "../../components/footer";
 import MobileAppDev from "../services/desktop/images/MobileAppDev";
 import Fade from "react-reveal/Fade";
-import { PerformanceImage, FastDevelopmentImage, OverTheAirImage } from "../services/desktop/styles";
+import {
+  PerformanceImage,
+  FastDevelopmentImage,
+  OverTheAirImage
+} from "../services/desktop/styles";
 import Reviews from "../home/desktop/reviews";
 import MobReviews from "../home/mobile/reviews";
 
 let appDev = [
-      {
-        heading: "Native Performance",
-        p:
-          "If anything takes longer than 100ms, the user will feel it. A compelling reason for using React Native instead of WebView-based tools is to achieve 60 frames per second and a native look and feel to your apps.",
-        image: PerformanceImage
-      },
-      {
-        heading: "Fast development cycles",
-        p:
-          " It enables an entirely different style of development where you get really quick feedback because of low compile times.",
-        image: FastDevelopmentImage
-      },
-      {
-        heading: "Over the air updates",
-        p:
-          "React native makes it possible to push over the air updates without requiring users to update the app",
-        image: OverTheAirImage
-      }
-    ];
+  {
+    heading: "Fast development cycles",
+    p:
+      " It enables an entirely different style of development where you get really quick feedback because of low compile times.",
+    image: FastDevelopmentImage
+  },
+  {
+    heading: "Native Performance",
+    p:
+      "If anything takes longer than 100ms, the user will feel it. A compelling reason for using React Native instead of WebView-based tools is to achieve 60 frames per second and a native look and feel to your apps.",
+    image: PerformanceImage
+  },
+  {
+    heading: "Over the air updates",
+    p:
+      "React native makes it possible to push over the air updates without requiring users to update the app",
+    image: OverTheAirImage
+  }
+];
 
 class GoogleMobileAd extends React.PureComponent {
   constructor(props) {
@@ -89,42 +93,49 @@ class GoogleMobileAd extends React.PureComponent {
   render() {
     return (
       <div>
-      <Styled.mainContainer>
-        <Styled.topContainer>
-          <Styled.topTextContainer>
-            <div>
-              <Styled.h2>We develop the best apps</Styled.h2>
-              <Styled.h3>They will blow your mind</Styled.h3>
+        <Styled.mainContainer>
+          <Styled.topContainer>
+            <Styled.topTextContainer>
+              <div>
+                <Styled.h2>Innovative Mobile App Development</Styled.h2>
+                <Styled.h3>Blazing Fast. Budget Friendly. Secure.</Styled.h3>
+                <Styled.p>
+                  {" "}
+                  Let our experienced team of developers help your application
+                  stand out from the crowd. Our unique approach and next
+                  generation development will let your brand do the talking.{" "}
+                </Styled.p>
+              </div>
+
+              <Styled.imgContainer>
+                <img src="/static/images/mobile-app-dev.png" width="100%" />
+                {/* <MobileAppDev /> */}
+              </Styled.imgContainer>
+            </Styled.topTextContainer>
+            <div style={{width: '200%'}}>
+              <ContactForm
+                contactTitle="We would love to hear more about your project. Book a FREE consultation now!"
+                onChangeText={this.onChangeText}
+                onClickSendRequest={this.onClickSendRequest}
+                emailError={this.state.emailError}
+                data={this.state.data}
+                contractStaffing={true}
+              />
             </div>
+          </Styled.topContainer>
 
-            <div>
-              <MobileAppDev />
-            </div>
-          </Styled.topTextContainer>
+          <Styled.h2>The Approach</Styled.h2>
+          <Styled.p>
+            Our unique mobile app development process allows us to rapidly build
+            cross-platform apps at a fraction of the cost using React Native.
+          </Styled.p>
 
-          <ContactForm
-            contactTitle="To know more about our offerings, send over your details and we'll take it from there"
-            onChangeText={this.onChangeText}
-            onClickSendRequest={this.onClickSendRequest}
-            emailError={this.state.emailError}
-            data={this.state.data}
-            contractStaffing={true}
-          />
-        </Styled.topContainer>
-
-        <Styled.h2>How it works</Styled.h2>
-        <Styled.p>
-          Our unique mobile app development process allows us to rapidly build
-          cross-platform apps at a fraction of the cost using React Native.
-        </Styled.p>
-
-        <Styled.ul>
-          {
-            appDev.map(Item => (
+          <Styled.ul>
+            {appDev.map(Item => (
               <Fade key={Item.heading}>
                 <Styled.li>
                   <Styled.liImage>
-                    <Item.image/>
+                    <Item.image />
                   </Styled.liImage>
                   <Styled.liContent>
                     <Styled.h3>{Item.heading}</Styled.h3>
@@ -133,37 +144,36 @@ class GoogleMobileAd extends React.PureComponent {
                 </Styled.li>
               </Fade>
             ))}
-        </Styled.ul>
+          </Styled.ul>
 
-        <Styled.h2> Our Clients</Styled.h2>
-        <Styled.techLogoRow>
-          {clientLogos.map((x, id) => {
-            return (
-              <Styled.techLogoBlock key={id}>
-                <LazyLoad height={78} once offset={100}>
-                  <img src={x} width="200" />
-                </LazyLoad>
-              </Styled.techLogoBlock>
-            );
-          })}
-        </Styled.techLogoRow>
-        <Styled.h2>Tech Stack</Styled.h2>
-        <Styled.technologies>
-          {technologies.map((Technology, idx) => (
-            <Styled.technologyItem key={idx}>
-              <Technology />
-            </Styled.technologyItem>
-          ))}
-        </Styled.technologies>
+          <Styled.h2> Our Clients</Styled.h2>
+          <Styled.techLogoRow>
+            {clientLogos.map((x, id) => {
+              return (
+                <Styled.techLogoBlock key={id}>
+                  <LazyLoad height={78} once offset={100}>
+                    <img src={x} width="200" />
+                  </LazyLoad>
+                </Styled.techLogoBlock>
+              );
+            })}
+          </Styled.techLogoRow>
+          <Styled.h2>Tech Stack</Styled.h2>
+          <Styled.technologies>
+            {technologies.map((Technology, idx) => (
+              <Styled.technologyItem key={idx}>
+                <Technology />
+              </Styled.technologyItem>
+            ))}
+          </Styled.technologies>
 
-        <Styled.h2>Projects</Styled.h2>
+          <Styled.h2>Projects</Styled.h2>
 
-        {this.props.mq === "desktop" ? <Reviews /> : <MobReviews />}
+            {this.props.mq === "desktop" ? <div style={{ marginTop: "-220px" }}><Reviews /> </div> : <MobReviews />}
 
-        {this.props.mq === "desktop" ? <Testimonials /> : <MobTestimonials />}
-
-      </Styled.mainContainer>
-      <Footer />
+          {this.props.mq === "desktop" ? <Testimonials /> : <MobTestimonials />}
+        </Styled.mainContainer>
+        <Footer />
       </div>
     );
   }

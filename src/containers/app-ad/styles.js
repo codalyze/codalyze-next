@@ -2,30 +2,28 @@ import styled from "styled-components";
 import * as global from "./../../utils/globalStyles";
 import { media } from "../../utils/globalStyles";
 
-
 export const mainContainer = styled.div`
-padding: 0 75px;
-${media.desktop`
+  padding: 0 10%;
+  ${media.desktop`
 padding: 0 30px;
 `}
-
-`
+`;
 
 export const topContainer = styled.div`
-display: flex;
-margin-top: 110px;
-flex-wrap: nowrap;
-${media.desktop`
+  display: flex;
+  margin-top: 110px;
+  flex-wrap: nowrap;
+  ${media.desktop`
 margin-top: 0;
 flex-wrap: wrap;
 `}
-`
+`;
 export const techLogoRow = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
 `;
 
 export const techLogoBlock = styled.div`
@@ -94,12 +92,10 @@ export const headerText = styled.p`
 `;
 
 export const topTextContainer = styled.div`
-display: flex;
-flex-direction: column;
-  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
-  width: 100%;
-`
+`;
 
 export const li = styled.li`
   margin: 30px 0;
@@ -173,24 +169,19 @@ export const ul = styled.ul`
   padding: 0;
 `;
 
-
-
-
-
-
 export const projectListContainer = styled.div`
-position: relative;
-display: flex;
-flex-direction: row;
-overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
 
-width: calc(100vw - 70px);
-scrollbar-width: none; /* Firefox */
--ms-overflow-style: none;  /* IE 10+ */
-&::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+  width: calc(100vw - 70px);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   padding: 0 35px;
 `;
@@ -202,4 +193,15 @@ export const splAreasBlocks = styled.div`
   box-shadow: 0px 3px 2px #e1e1e2;
   background: #fff;
   padding: 0px 15px 42px;
+`;
+
+export const imgContainer = styled.div`
+  width: 65%;
+  margin: 0 auto;
+  position: relative;
+  padding: 2vw 0 0 0;
+  height: 10%;
+  ${media.desktop`
+  width: 100%;
+  `}
 `;
