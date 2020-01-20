@@ -13,8 +13,7 @@ import {
   FastDevelopmentImage,
   OverTheAirImage
 } from "../services/desktop/styles";
-import Reviews from "../home/desktop/reviews";
-import MobReviews from "../home/mobile/reviews";
+import MobileProjects from './MobileProjects';
 
 let appDev = [
   {
@@ -94,13 +93,15 @@ class GoogleMobileAd extends React.PureComponent {
     return (
       <div>
         <Styled.mainContainer>
-          <Styled.topContainer>
+          <Styled.formContainer>
             <Styled.topTextContainer>
               <div>
                 <Styled.h2>Innovative Mobile App Development</Styled.h2>
-                <Styled.h3>Blazing Fast. Budget Friendly. Secure.</Styled.h3>
+                <Styled.h3>
+                  <Styled.orange>Blazing Fast.</Styled.orange> Budget Friendly.{" "}
+                  <Styled.orange>Secure.</Styled.orange>
+                </Styled.h3>
                 <Styled.p>
-                  {" "}
                   Let our experienced team of developers help your application
                   stand out from the crowd. Our unique approach and next
                   generation development will let your brand do the talking.{" "}
@@ -112,7 +113,7 @@ class GoogleMobileAd extends React.PureComponent {
                 {/* <MobileAppDev /> */}
               </Styled.imgContainer>
             </Styled.topTextContainer>
-            <div style={{width: '200%'}}>
+            <div style={{ width: "80%" }}>
               <ContactForm
                 contactTitle="We would love to hear more about your project. Book a FREE consultation now!"
                 onChangeText={this.onChangeText}
@@ -120,20 +121,22 @@ class GoogleMobileAd extends React.PureComponent {
                 emailError={this.state.emailError}
                 data={this.state.data}
                 contractStaffing={true}
+                fullWidth
               />
             </div>
-          </Styled.topContainer>
+          </Styled.formContainer>
 
-          <Styled.h2>The Approach</Styled.h2>
-          <Styled.p>
-            Our unique mobile app development process allows us to rapidly build
-            cross-platform apps at a fraction of the cost using React Native.
-          </Styled.p>
+          <Styled.outerContainer>
+            <Styled.h2>The Approach</Styled.h2>
+            <Styled.p>
+              Our unique mobile app development process allows us to rapidly
+              build cross-platform apps at a fraction of the cost using React
+              Native.
+            </Styled.p>
 
-          <Styled.ul>
-            {appDev.map(Item => (
-              <Fade key={Item.heading}>
-                <Styled.li>
+            <Styled.ul>
+              {appDev.map(Item => (
+                <Styled.li key={Item.heading}>
                   <Styled.liImage>
                     <Item.image />
                   </Styled.liImage>
@@ -142,36 +145,45 @@ class GoogleMobileAd extends React.PureComponent {
                     <Styled.p>{Item.p}</Styled.p>
                   </Styled.liContent>
                 </Styled.li>
-              </Fade>
-            ))}
-          </Styled.ul>
+              ))}
+            </Styled.ul>
+          </Styled.outerContainer>
 
-          <Styled.h2> Our Clients</Styled.h2>
-          <Styled.techLogoRow>
-            {clientLogos.map((x, id) => {
-              return (
-                <Styled.techLogoBlock key={id}>
-                  <LazyLoad height={78} once offset={100}>
-                    <img src={x} width="200" />
-                  </LazyLoad>
-                </Styled.techLogoBlock>
-              );
-            })}
-          </Styled.techLogoRow>
-          <Styled.h2>Tech Stack</Styled.h2>
-          <Styled.technologies>
-            {technologies.map((Technology, idx) => (
-              <Styled.technologyItem key={idx}>
-                <Technology />
-              </Styled.technologyItem>
-            ))}
-          </Styled.technologies>
+          <Styled.outerContainer>
+            <Styled.h2> Our Clients</Styled.h2>
+            <Styled.techLogoRow>
+              {clientLogos.map((x, id) => {
+                return (
+                  <Styled.techLogoBlock key={id}>
+                    <LazyLoad height={78} once offset={100}>
+                      <img src={x} width="200" />
+                    </LazyLoad>
+                  </Styled.techLogoBlock>
+                );
+              })}
+            </Styled.techLogoRow>
+            <Styled.h2>Tech Stack</Styled.h2>
+            <Styled.technologies>
+              {technologies.map((Technology, idx) => (
+                <Styled.technologyItem key={idx}>
+                  <Technology />
+                </Styled.technologyItem>
+              ))}
+            </Styled.technologies>
+          </Styled.outerContainer>
 
-          <Styled.h2>Projects</Styled.h2>
+          <Styled.outerContainer>
+            <Styled.h2>Projects</Styled.h2>
+                <MobileProjects {...this.props}/>
 
-            {this.props.mq === "desktop" ? <div style={{ marginTop: "-220px" }}><Reviews /> </div> : <MobReviews />}
-
-          {this.props.mq === "desktop" ? <Testimonials /> : <MobTestimonials />}
+            <div style={{ marginBottom: "100px" }}>
+              {this.props.mq === "desktop" ? (
+                <Testimonials />
+              ) : (
+                <MobTestimonials />
+              )}
+            </div>
+          </Styled.outerContainer>
         </Styled.mainContainer>
         <Footer />
       </div>

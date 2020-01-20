@@ -269,7 +269,8 @@ export const Input = styled.input`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 50%;
+
+  width: ${props => (props.fullWidth ? "100%" : "50%")};
   background: transparent;
   height: 32px;
   padding: 10px;
@@ -305,7 +306,8 @@ export const TextArea = styled.textarea`
   border-right: 0;
   border-left: 0;
   padding: 15px 0px;
-  width: 50%;
+
+  width: ${props => (props.fullWidth ? "100%" : "50%")};
   background: transparent;
   height: 96px;
   padding: 10px;
