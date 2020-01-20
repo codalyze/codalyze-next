@@ -2,22 +2,26 @@ import styled from "styled-components";
 import * as global from "./../../utils/globalStyles";
 import { media } from "../../utils/globalStyles";
 
-export const mainContainer = styled.div`
-  padding: 0 10%;
-  ${media.desktop`
-padding: 0 30px;
-`}
-`;
+export const mainContainer = styled.div``;
 
-export const topContainer = styled.div`
+export const formContainer = styled.div`
   display: flex;
   margin-top: 110px;
   flex-wrap: nowrap;
+  padding: 6vw;
   ${media.desktop`
 margin-top: 0;
 flex-wrap: wrap;
+padding: 0 35px;
 `}
 `;
+
+export const outerContainer = styled.div`
+  padding: 6vw;
+  ${media.desktop`
+padding: 0 35px;`}
+`;
+
 export const techLogoRow = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -70,6 +74,10 @@ export const h3 = styled.h3`
   `}
 `;
 
+export const orange = styled.span`
+  color: #ef543d;
+`;
+
 export const p = styled.p`
   ${global.fontRobotoLight};
   font-size: 24px;
@@ -97,17 +105,31 @@ export const topTextContainer = styled.div`
   margin-top: 20px;
 `;
 
+export const ul = styled.ul`
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  width: 70%;
+  padding: 0;
+
+  ${media.desktop`
+flex-direction: column;
+  `}
+`;
+
 export const li = styled.li`
   margin: 30px 0;
   font-size: 16px;
   display: flex;
   flex-flow: row nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   box-sizing: border-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   padding: 10px 5% 10px 2%;
+  width: 100%;
+  margin-left: 6%;
   p {
     font-size: 16px;
     margin: 5px 0 15px;
@@ -140,8 +162,6 @@ export const li = styled.li`
 `;
 
 export const liImage = styled.div`
-  width: 10vw;
-  margin-right: 4vw;
   flex-grow: 0;
   flex-shrink: 0;
   svg {
@@ -157,16 +177,9 @@ export const liImage = styled.div`
 `;
 
 export const liContent = styled.div`
-  margin-left: 30px;
   ${media.desktop`
   margin-left: unset;
 `}
-`;
-
-export const ul = styled.ul`
-  list-style-type: none;
-  width: 100%;
-  padding: 0;
 `;
 
 export const projectListContainer = styled.div`
@@ -205,3 +218,28 @@ export const imgContainer = styled.div`
   width: 100%;
   `}
 `;
+
+// export const projectContainer = styled.div`
+//   display: flex;
+//   flex-direction: row;
+// `;
+
+
+
+export const projectDetails = styled.div`
+  display: flex,
+  flex-direction: column;
+  padding-top: 12%;
+  margin: 30px;
+  width: 80%;
+`;
+
+export const title = styled(h3)``;
+export const description = styled(p)``;
+export const image = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 20%;
+
+;
+`

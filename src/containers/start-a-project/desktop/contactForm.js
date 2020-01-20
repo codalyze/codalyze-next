@@ -20,6 +20,7 @@ export default class ContactForm extends PureComponent {
               placeholder="Your Name"
               value={this.props.data.name || ""}
               onChange={e => this.props.onChangeText(e)}
+              fullWidth={this.props.fullWidth}
             />
           </Styled.inputDiv>
           <Styled.inputDiv>
@@ -30,6 +31,7 @@ export default class ContactForm extends PureComponent {
               value={this.props.data.email || ""}
               onChange={e => this.props.onChangeText(e)}
               error={this.props.emailError}
+              fullWidth={this.props.fullWidth}
             />
             {this.props.emailError && (
               <Styled.errorMessage>
@@ -45,6 +47,7 @@ export default class ContactForm extends PureComponent {
                 placeholder="Organisation"
                 value={this.props.data.organisation || ""}
                 onChange={e => this.props.onChangeText(e)}
+                fullWidth={this.props.fullWidth}
               />
             </Styled.inputDiv>
           )}
@@ -56,6 +59,7 @@ export default class ContactForm extends PureComponent {
               value={this.props.data.phone || ""}
               placeholder="And finally, your contact number"
               onChange={e => this.props.onChangeText(e)}
+              fullWidth={this.props.fullWidth}
             />
           </Styled.inputDiv>
           <Styled.inputDiv>
@@ -67,6 +71,7 @@ export default class ContactForm extends PureComponent {
               value={this.props.data.message || ""}
               placeholder="Any other details?"
               onChange={e => this.props.onChangeText(e)}
+              fullWidth={this.props.fullWidth}
             />
           </Styled.inputDiv>
             <Styled.ButtonWrapper
