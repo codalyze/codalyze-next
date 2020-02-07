@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const SvgWrapper = styled.div`
@@ -7,14 +7,14 @@ const SvgWrapper = styled.div`
   transition: all 500ms ease;
   svg {
     position: absolute;
-    ${props => props.rowReversed ? 'left: 0;' : 'right: 0;'}
+    ${props => (props.rowReversed ? "left: 0;" : "right: 0;")}
     top: 0;
     transition: all 500ms ease;
   }
 `;
 
 export default class LazySvgLoader extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       loaded: false,
@@ -22,14 +22,14 @@ export default class LazySvgLoader extends React.Component {
     };
   }
 
-  componentDidMount () {
-    this.setState({loaded: true});
-    window.addEventListener('resize', this.onResize);
+  componentDidMount() {
+    this.setState({ loaded: true });
+    window.addEventListener("resize", this.onResize);
     this.onResize();
   }
 
-  componentWillUnmount () {
-    window.removeEventListener('resize', this.onResize);
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize);
   }
 
   onResize = () => {
@@ -42,14 +42,19 @@ export default class LazySvgLoader extends React.Component {
         width: window.innerWidth / 3
       });
     }
-  }
+  };
 
-  render () {
-    const {FirstImage, LazyImage} = this.props;
+  render() {
+    const { FirstImage, LazyImage, customHeight } = this.props;
     return (
-      <SvgWrapper height={this.state.width} rowReversed={this.props.rowReversed} >
-        <FirstImage style={{width: `${this.state.width}px`}} />
-        {this.state.loaded && LazyImage && <LazyImage width={`${this.state.width}px`} />}
+      <SvgWrapper
+        height={customHeight ? customHeight : this.state.width}
+        rowReversed={this.props.rowReversed}
+      >
+        <FirstImage style={{ width: `${this.state.width}px` }} />
+        {this.state.loaded && LazyImage && (
+          <LazyImage width={`${this.state.width}px`} />
+        )}
       </SvgWrapper>
     );
   }
