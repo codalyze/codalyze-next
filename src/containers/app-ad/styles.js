@@ -12,14 +12,15 @@ export const FlexContainer = styled.div`
 
 export const formContainer = styled.div`
   display: flex;
-
   flex-wrap: nowrap;
-
   ${media.desktop`
 margin-top: 0;
 flex-wrap: wrap;
 padding: 0 35px;
 `}
+@media (max-width: 767px){
+  padding: 0;
+}
 `;
 
 export const reviewsSection = styled.div`
@@ -44,6 +45,9 @@ export const reviewSingle = styled.div`
   box-shadow: 0px 1px #e3e3e3;
   @media (min-width: 1280px) {
     display: ${props => (props.showOnSmallScreen ? "none" : "block")};
+  }
+  @media (max-width: 767px){
+    margin: 0 0 30px 0px;
   }
 `;
 
@@ -80,6 +84,9 @@ export const instaremImage = styled.div`
 export const reviewsRow = styled.div`
   ${global.fullRow};
   padding: 2vw;
+  @media (max-width: 767px){
+    padding: 0;
+  }
 `;
 
 export const homepageBlocksTitle = styled.h2`
@@ -194,6 +201,10 @@ export const text2 = styled.div`
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   margin-top: 2vw;
+  @media (max-width: 767px){
+    display: block;
+    padding: 0;
+}
 `;
 
 export const test = styled.div`
@@ -296,12 +307,18 @@ export const topTextContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 767px){
+    display:block;
+  }
 `;
 
 export const text1 = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: 767px){
+    width: 100%;
+  }
 `;
 
 export const ul = styled.ul`
@@ -414,6 +431,11 @@ export const imgContainer = styled.div`
   ${media.desktop`
   width: 100%;
   `}
+  @media (max-width:767px){
+    width: 80%;  
+    margin: 0 auto;
+    display: block;
+  }
 `;
 
 export const SvgWrapper = styled.div`

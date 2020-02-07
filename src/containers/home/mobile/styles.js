@@ -110,6 +110,9 @@ export const splRow = styled.div`
     width: 0;
     height: 0;
   }
+  @media (max-width:767px){
+    width: calc(100vw - 160px);
+  }
 `;
 
 export const specializeStarContainerBg = styled.div`
