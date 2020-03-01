@@ -10,18 +10,23 @@ const StartProject = ({ href }) => (
 );
 
 const KMReview = ({ showOnSmallScreen }) => (
-  <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
-    <LazyLoad height={214} once offset={100}>
-      <Styled.reviewImage src="/static/images/home/khelomore.png" />
-    </LazyLoad>
-    <Styled.reviewImageTitle>KheloMore</Styled.reviewImageTitle>
-    <Styled.reviewImageContent>
-      Founded by former Indian cricketer, athelete and Sports Managing Head for
-      Nike, Jatin Paranjape, KheloMore is a digital platform bringing together
-      young atheletes and coaches / academies online for an exceptional
-      performance off-line.
-    </Styled.reviewImageContent>
-  </Styled.reviewSingle>
+  <a
+    href="https://play.google.com/store/apps/details?id=com.khelomore.player"
+    style={{ textDecoration: "none" }}
+  >
+    <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
+      <LazyLoad height={214} once offset={100}>
+        <Styled.reviewImage src="/static/images/home/khelomore.png" />
+      </LazyLoad>
+      <Styled.reviewImageTitle>KheloMore</Styled.reviewImageTitle>
+      <Styled.reviewImageContent>
+        Founded by former Indian cricketer, athelete and Sports Managing Head
+        for Nike, Jatin Paranjape, KheloMore is a digital platform bringing
+        together young atheletes and coaches / academies online for an
+        exceptional performance off-line.
+      </Styled.reviewImageContent>
+    </Styled.reviewSingle>
+  </a>
 );
 
 const Reviews = () => (
@@ -41,18 +46,25 @@ const Reviews = () => (
           <Styled.reviewImageBlocks
             style={{ display: "flex", flexFlow: "wrap" }}
           >
-            <Styled.reviewSingle>
-              <LazyLoad height={214} once offset={100}>
-                <Styled.instaremImage>
-                  <Styled.reviewImage src="/static/images/app-ads/instarem.jpg" />
-                </Styled.instaremImage>
-              </LazyLoad>
-              <Styled.reviewImageTitle>InstaRem</Styled.reviewImageTitle>
-              <Styled.reviewImageContent>
-                Instarem is a money transfers app for customer onboarding which
-                supports 55+ countries.
-              </Styled.reviewImageContent>
-            </Styled.reviewSingle>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.instarem.mobileapp"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage src="/static/images/app-ads/instarem.jpg" />
+                  </Styled.instaremImage>
+                </LazyLoad>
+
+                <Styled.reviewImageTitle>InstaRem</Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  Instarem is a money transfers app for customer onboarding
+                  which supports 55+ countries.
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
+
             <Styled.reviewSingle>
               <LazyLoad height={214} once offset={100}>
                 <Styled.reviewImage src="/static/images/home/fitcircle.png" />
@@ -65,55 +77,148 @@ const Reviews = () => (
                 services at various locations across Mumbai.
               </Styled.reviewImageContent>
             </Styled.reviewSingle>
-            <Styled.reviewSingle>
-              <LazyLoad height={214} once offset={100}>
-                <Styled.instaremImage>
-                  <Styled.reviewImage
-                    src="/static/images/app-ads/hpca.jpg"
-                    width={324}
-                  />
-                </Styled.instaremImage>
-              </LazyLoad>
-              <Styled.reviewImageTitle>HPCA</Styled.reviewImageTitle>
-              <Styled.reviewImageContent>
-                HPCA App is your destination to follow all district and state
-                level cricket at Himachal Pradesh Cricket Association
-              </Styled.reviewImageContent>
-            </Styled.reviewSingle>
-
-            <Styled.reviewSingle>
-              <LazyLoad height={214} once offset={100}>
-                <Styled.instaremImage>
-                  <Styled.reviewImage
-                    src="/static/images/app-ads/mssa.png"
-                    width={324}
-                  />
-                </Styled.instaremImage>
-              </LazyLoad>
-              <Styled.reviewImageTitle>MSSA</Styled.reviewImageTitle>
-              <Styled.reviewImageContent>
-                MSSA App is your destination to follow all district and state
-                level cricket at Himachal Pradesh Cricket Association
-              </Styled.reviewImageContent>
-            </Styled.reviewSingle>
-
+            <a
+              href="https://play.google.com/store/apps/details?id=org.hpcricket.app"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/hpca.jpg"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>HPCA</Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  HPCA App is your destination to follow all district and state
+                  level cricket at Himachal Pradesh Cricket Association
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.khelomore.mssa"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/mssa.png"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>MSSA</Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  MSSA App is your destination to follow all district and state
+                  level cricket at Himachal Pradesh Cricket Association
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
             <KMReview />
-
-            <Styled.reviewSingle>
-              <LazyLoad height={214} once offset={100}>
-                <Styled.instaremImage>
-                  <Styled.reviewImage
-                    src="/static/images/app-ads/hpca.jpg"
-                    width={324}
-                  />
-                </Styled.instaremImage>
-              </LazyLoad>
-              <Styled.reviewImageTitle>BitSafe</Styled.reviewImageTitle>
-              <Styled.reviewImageContent>
-                BitSafe App is your destination to follow all district and state
-                level cricket at Himachal Pradesh Cricket Association
-              </Styled.reviewImageContent>
-            </Styled.reviewSingle>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.citymall.app"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/citymall.webp"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>CityMall</Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  Citymall content
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.tracingapp"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/beforeNurseryHindi.webp"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>
+                  Before Nursery Hindi
+                </Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  Before Nursery content
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
+            {/* <a
+              href="https://play.google.com/store/apps/details?id=com.beforenurserymarathi"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/citymall.webp"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>
+                  Before Nursery Marathi
+                </Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  Before Nursery content
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a> */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.game.sevencentre"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/cardgame.webp"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>
+                  Sevens Playing Cards Game
+                </Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                Sevens Playing Cards Game content
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.game.teendopaanch"
+              style={{ textDecoration: "none" }}
+            >
+              <Styled.reviewSingle>
+                <LazyLoad height={214} once offset={100}>
+                  <Styled.instaremImage>
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/325.webp"
+                      width={324}
+                    />
+                  </Styled.instaremImage>
+                </LazyLoad>
+                <Styled.reviewImageTitle>325 Bridge game</Styled.reviewImageTitle>
+                <Styled.reviewImageContent>
+                  Citymall content
+                </Styled.reviewImageContent>
+              </Styled.reviewSingle>
+            </a>
           </Styled.reviewImageBlocks>
         </Styled.reviewsBlock>
       </Styled.reviewsSection>

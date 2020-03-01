@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
-import LazyLoad from 'react-lazyload';
+import LazyLoad from "react-lazyload";
 
 const footerPages = [
   {
@@ -25,8 +25,8 @@ const footerPages = [
     href: "start-a-project"
   },
   {
-    name: "Google mob ad",
-    href: "google-mob-ad"
+    name: "App Development",
+    href: "app-development"
   }
   // {
   //   name: "Contract Staffing",

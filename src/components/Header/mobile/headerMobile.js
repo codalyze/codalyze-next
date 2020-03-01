@@ -33,6 +33,10 @@ const HeaderLinkList = [
   {
     name: "Contract Staffing",
     href: "contract-staffing"
+  },
+  {
+    name: "App Development",
+    href: "app-development"
   }
 ];
 

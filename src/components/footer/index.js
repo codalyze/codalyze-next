@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import * as Styled from "./styles";
-import LazyLoad from 'react-lazyload';
+import LazyLoad from "react-lazyload";
 import FooterMobile from "../footer-mobile";
 
 const footerLinks = [
@@ -26,9 +26,8 @@ const footerLinks = [
     href: "start-a-project"
   },
   {
-    name: "Google mob ad",
-    href: "google-mob-ad"
-
+    name: "App Development",
+    href: "app-development"
   }
   // {
   //   name: "Contract Staffing",
@@ -59,11 +58,7 @@ export default class Footer extends React.PureComponent {
             <Styled.footerPages>
               {footerLinks.map((x, index) => {
                 return (
-                  <FooterLink
-                    href={`/${x.href}`}
-                    name={x.name}
-                    key={index}
-                  />
+                  <FooterLink href={`/${x.href}`} name={x.name} key={index} />
                 );
               })}
             </Styled.footerPages>
@@ -102,6 +97,8 @@ export default class Footer extends React.PureComponent {
           </Styled.footerRow>
         </Styled.container>
       </Styled.containerFluid>
-    ) : <FooterMobile {...this.props} />;
+    ) : (
+      <FooterMobile {...this.props} />
+    );
   }
 }
