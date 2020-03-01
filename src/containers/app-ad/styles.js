@@ -60,6 +60,7 @@ export const reviewImageTitle = styled.h6`
   margin: 15px 18px;
   @media (max-width: 1440px) {
     font-size: 24px;
+    margin: 10px 12px;
   }
 `;
 
@@ -69,6 +70,7 @@ export const reviewImageContent = styled.p`
   margin: 0 15px 25px;
   @media (max-width: 1440px) {
     font-size: 16px;
+    margin: 10px 12px;
   }
 `;
 
