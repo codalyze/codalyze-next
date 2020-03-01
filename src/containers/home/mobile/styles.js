@@ -12,6 +12,13 @@ export const title = styled.h1`
   font-size: 24px;
 `;
 
+export const bigTitle = styled.h2`
+  font-size: 30px;
+  padding-right: unset;
+  margin: 15px 0;
+  text-align: center;
+`;
+
 export const p = styled.p`
   ${global.mobileparagraph}
   color: #000;
@@ -105,12 +112,12 @@ export const splRow = styled.div`
   padding: 0px 35px 60px 35px;
   width: calc(100vw - 70px);
   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* IE 10+ */
+  -ms-overflow-style: none; /* IE 10+ */
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
-  @media (max-width:767px){
+  @media (max-width: 767px) {
     width: calc(100vw - 160px);
   }
 `;
@@ -200,8 +207,7 @@ export const testimonialListMob = styled(splRow)`
   padding: 0 35px;
 `;
 
-export const testimonialBlockMob = styled(splAreasBlocks)`
-`;
+export const testimonialBlockMob = styled(splAreasBlocks)``;
 
 export const testimonialImageMob = styled.img`
   ${global.CenterImg};

@@ -8,7 +8,6 @@ import LazyLoad from "react-lazyload";
 import AwesomeSlider from "react-awesome-slider";
 
 const Testimonial = props => {
-  console.log(props, "jfhhfhf");
   return (
     <Styled.testimonialRow className="abc">
       {!props.hideSvg && (

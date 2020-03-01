@@ -114,9 +114,10 @@ class GoogleMobileAd extends React.PureComponent {
                   <Styled.orange>Secure.</Styled.orange>
                 </Styled.h3>
                 <Styled.p>
-                  Let our experienced team of developers help your application
-                  stand out from the crowd. Our unique approach and next
-                  generation development will let your brand do the talking.{" "}
+                  We are an experienced team of developers based out of Mumbai,
+                  let us help your application stand out from the crowd. Our
+                  unique approach and next generation development will let your
+                  brand do the talking.{" "}
                 </Styled.p>
               </Styled.text1>
               <Styled.text1>
@@ -184,7 +185,7 @@ class GoogleMobileAd extends React.PureComponent {
                 return (
                   <Styled.techLogoBlock key={id}>
                     <LazyLoad height={78} once offset={100}>
-                      <img src={x} width="200" />
+                      <img src={x} width={props.mq === "mobile" ? 100 : 200} />
                     </LazyLoad>
                   </Styled.techLogoBlock>
                 );
@@ -200,7 +201,7 @@ class GoogleMobileAd extends React.PureComponent {
             {this.props.mq === "desktop" ? (
               <Testimonials hideSvg={true} />
             ) : (
-              <MobTestimonials />
+              <MobTestimonials handleMargin={true} />
             )}
 
             <Styled.h2 style={{ textAlign: "center" }}>Tech Stack</Styled.h2>

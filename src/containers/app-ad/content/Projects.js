@@ -32,7 +32,7 @@ const Reviews = () => (
          
         </Styled.reviewsTitle> */}
         <Styled.reviewsSubTitle>
-          We have worked with some amazing founders and startups Deep focus and
+          We have worked with some amazing founders and startups. Deep focus and
           productive relationships is something we cherish. Partner with us and
           experience a difference.
         </Styled.reviewsSubTitle>
