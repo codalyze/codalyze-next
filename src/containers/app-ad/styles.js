@@ -64,6 +64,17 @@ export const reviewImageTitle = styled.h6`
   }
 `;
 
+export const appTech = styled.img`
+  width: 180px;
+  margin-right: 30px;
+  padding: 20px;
+  @media (max-width: 1440px) {
+    width: 120px;
+    padding: 20px 0;
+    margin-right: 15px;
+  }
+`;
+
 export const reviewImageContent = styled.p`
   ${global.fontRobotoLight}
   font-size: 20px;
@@ -140,13 +151,14 @@ export const outerContainer = styled.div`
   ${media.desktop`
 padding: 0 0;`}
 
-  .abc {
+margin-top: 6vw;
+  .testimonialRow {
+    padding: 0 0 !important;
     h2 {
       margin-bottom: 2vw !important;
     }
-    padding: 0;
-    .slider22 {
-      background: green;
+    
+    .slider-ad {
       max-width: 70%;
       margin: 0 auto;
 

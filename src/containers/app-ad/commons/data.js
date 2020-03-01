@@ -1,9 +1,8 @@
-import Flutter from '../../home/commons/Flutter';
-import NodeJs from '../../home/commons/NodeJs';
-import ReactJs from '../../home/commons/ReactJs';
-import ReactNative from '../../home/commons/ReactNative';
-import VueJs from '../../home/commons/VueJs';
-
+import Flutter from "../../home/commons/Flutter";
+import NodeJs from "../../home/commons/NodeJs";
+import ReactJs from "../../home/commons/ReactJs";
+import ReactNative from "../../home/commons/ReactNative";
+import VueJs from "../../home/commons/VueJs";
 
 export const StrategyStats = [
   {
@@ -91,11 +90,6 @@ export const testimonialsList = [
   }
 ];
 
-
-
-
-
-
 export const ProjectList = [
   {
     img: "/static/images/home/bryce.jpeg",
@@ -134,8 +128,6 @@ export const ProjectList = [
   }
 ];
 
-
-
 export const clientLogos = [
   "/static/images/home/clients/betking.svg",
   "/static/images/home/clients/fitcircle.svg",
@@ -145,5 +137,14 @@ export const clientLogos = [
   "/static/images/home/clients/DSP1.svg"
 ];
 
-
 export const technologies = [Flutter, NodeJs, ReactJs, ReactNative, VueJs];
+export const appTechnologies = [
+  "/static/images/app-ads/fastlane.svg",
+  "/static/images/app-ads/appcenterms-ar21.svg",
+  "/static/images/app-ads/bitriseio-ar21.svg",
+  "/static/images/app-ads/google_analytics-horizontal_old.svg",
+  "/static/images/app-ads/mixpanel-theme.svg",
+  "/static/images/app-ads/segment.svg",
+  "/static/images/app-ads/firebase.svg"
+  
+];
