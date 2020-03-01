@@ -9,7 +9,7 @@ import AwesomeSlider from "react-awesome-slider";
 
 const Testimonial = props => {
   return (
-    <Styled.testimonialRow className="abc">
+    <Styled.testimonialRow className="testimonialRow">
       {!props.hideSvg && (
         <Styled.testimonialSvg>
           <TestimonialBg
@@ -23,7 +23,7 @@ const Testimonial = props => {
         <Styled.testimonialTitle>
           What our clients are saying
         </Styled.testimonialTitle>
-        <Styled.testimonialSlide className="slider22">
+        <Styled.testimonialSlide className="slider-ad">
           <AwesomeSlider>
             {testimonialsList.map(t => (
               <Styled.testimonialBlock key={t.heading}>

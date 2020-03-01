@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "../../start-a-project/desktop/contactForm";
-import { clientLogos, technologies } from "../commons/data";
+import { clientLogos, technologies, appTechnologies } from "../commons/data";
 import LazyLoad from "react-lazyload";
 import * as Styled from "../styles";
 import Testimonials from "../../home/desktop/testimonials";
@@ -20,6 +20,8 @@ import MobileProjects from "../MobileProjects";
 import Work1 from "../../work/images/Work1";
 import Projects from "./Projects";
 // import Work2 from "../../work/images/Work2";
+
+let allTech = [...technologies, ...appTechnologies];
 const Work2 = dynamic(() => import("../../work/images/Work2"), {
   loading: () => null
 });
@@ -99,6 +101,7 @@ class GoogleMobileAd extends React.PureComponent {
 
   render() {
     const props = this.props;
+    console.log(allTech, "alalal");
     return (
       <div>
         <Styled.mainContainer>
@@ -203,24 +206,48 @@ class GoogleMobileAd extends React.PureComponent {
             ) : (
               <MobTestimonials handleMargin={true} />
             )}
-
+          </Styled.outerContainer>
+          <Styled.outerContainer>
             <Styled.h2 style={{ textAlign: "center" }}>Tech Stack</Styled.h2>
             <Styled.technologies>
-              {technologies.map((Technology, idx) => (
+              {allTech.map((Technology, idx) => (
                 <Styled.technologyItem key={idx}>
-                  <Technology />
+                  {typeof Technology === "function" ? (
+                    <Technology />
+                  ) : (
+                    <Styled.appTech
+                      src={Technology}
+                      style={{ width: techStackStyles(Technology, props) }}
+                    />
+                  )}
                 </Styled.technologyItem>
               ))}
             </Styled.technologies>
             {/* </div> */}
           </Styled.outerContainer>
-          <Styled.h2 style={{ textAlign: "center" }}>Our Projects</Styled.h2>
-          <Projects />
+          <Styled.outerContainer>
+            <Styled.h2 style={{ textAlign: "center" }}>Our Projects</Styled.h2>
+            <Projects />
+          </Styled.outerContainer>
         </Styled.mainContainer>
         <Footer />
       </div>
     );
   }
 }
+
+const techStackStyles = (item, props) => {
+  let widthVal = "";
+  if (item === "/static/images/app-ads/fastlane.svg") {
+    widthVal = "60px";
+  } else if (
+    item === "/static/images/app-ads/mixpanel-theme.svg" ||
+    item === "/static/images/app-ads/firebase.svg"
+  ) {
+    widthVal = props.mq === "desktop" ? " 120px" : "100px";
+  }
+
+  return widthVal;
+};
 
 export default GoogleMobileAd;
