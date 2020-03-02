@@ -44,7 +44,11 @@ const Reviews = () => (
 
         <Styled.reviewsBlock>
           <Styled.reviewImageBlocks
-            style={{ display: "flex", flexFlow: "wrap" }}
+            style={{
+              display: "flex",
+              flexFlow: "wrap",
+              justifyContent: "center"
+            }}
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.instarem.mobileapp"
