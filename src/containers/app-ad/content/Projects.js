@@ -34,7 +34,7 @@ const Reviews = () => (
     <Styled.FlexContainer>
       <Styled.reviewsSection>
         {/* <Styled.reviewsTitle>
-         
+
         </Styled.reviewsTitle> */}
         <Styled.reviewsSubTitle>
           We have worked with some amazing founders and startups. Deep focus and
@@ -133,7 +133,8 @@ const Reviews = () => (
                 </LazyLoad>
                 <Styled.reviewImageTitle>CityMall</Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  Citymall content
+                  Citymall is a WhatsApp based eCommerce startup which works on logistics optimization.
+                  It is now live across multiple Indian cities and has secured initial rounds of funding.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
@@ -151,10 +152,10 @@ const Reviews = () => (
                   </Styled.instaremImage>
                 </LazyLoad>
                 <Styled.reviewImageTitle>
-                  Before Nursery Hindi
+                  Before Nursery
                 </Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  Before Nursery content
+                  Before Nursery is an educational app for children. It helps kids familiarize themselves with numbers, alphabets, and simple words while playing games. It is available in multiple Indian languages including Hindi and Marathi.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
@@ -196,7 +197,8 @@ const Reviews = () => (
                   Sevens Playing Cards Game
                 </Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                Sevens Playing Cards Game content
+                  This is an online version of classic Sevens Card Game also known as Laying Out Sevens, Fan Tan, Crazy Sevens, Badam Satti, Parliament or Yuto.
+                  It is a four-player playing cards game where you win on emptying your hand before other players.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
@@ -215,7 +217,8 @@ const Reviews = () => (
                 </LazyLoad>
                 <Styled.reviewImageTitle>325 Bridge game</Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  Citymall content
+                  3 2 5 Bridge commonly known as Teen Do Paanch (Panch) or 3-2-5 Cards Game is one of the basic playing card games that are played at Indian homes.
+                  The app supports playing with friends, offline bot and with other online players.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
