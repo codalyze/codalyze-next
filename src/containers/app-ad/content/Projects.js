@@ -12,7 +12,7 @@ const StartProject = ({ href }) => (
 const KMReview = ({ showOnSmallScreen }) => (
   <a
     href="https://play.google.com/store/apps/details?id=com.khelomore.player"
-    style={{ textDecoration: "none" }}
+    style={{ textDecoration: "none", display: "flex" }}
   >
     <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
       <LazyLoad height={214} once offset={100}>
@@ -48,7 +48,7 @@ const Reviews = () => (
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.instarem.mobileapp"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -79,7 +79,7 @@ const Reviews = () => (
             </Styled.reviewSingle>
             <a
               href="https://play.google.com/store/apps/details?id=org.hpcricket.app"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -99,7 +99,7 @@ const Reviews = () => (
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.khelomore.mssa"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -120,7 +120,7 @@ const Reviews = () => (
             <KMReview />
             <a
               href="https://play.google.com/store/apps/details?id=com.citymall.app"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -133,14 +133,15 @@ const Reviews = () => (
                 </LazyLoad>
                 <Styled.reviewImageTitle>CityMall</Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  Citymall is a WhatsApp based eCommerce startup which works on logistics optimization.
-                  It is now live across multiple Indian cities and has secured initial rounds of funding.
+                  Citymall is a WhatsApp based eCommerce startup which works on
+                  logistics optimization. It is now live across multiple Indian
+                  cities and has secured initial rounds of funding.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.tracingapp"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -155,7 +156,10 @@ const Reviews = () => (
                   Before Nursery
                 </Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  Before Nursery is an educational app for children. It helps kids familiarize themselves with numbers, alphabets, and simple words while playing games. It is available in multiple Indian languages including Hindi and Marathi.
+                  Before Nursery is an educational app for children. It helps
+                  kids familiarize themselves with numbers, alphabets, and
+                  simple words while playing games. It is available in multiple
+                  Indian languages including Hindi and Marathi.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
@@ -182,7 +186,7 @@ const Reviews = () => (
             </a> */}
             <a
               href="https://play.google.com/store/apps/details?id=com.game.sevencentre"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -197,14 +201,16 @@ const Reviews = () => (
                   Sevens Playing Cards Game
                 </Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  This is an online version of classic Sevens Card Game also known as Laying Out Sevens, Fan Tan, Crazy Sevens, Badam Satti, Parliament or Yuto.
-                  It is a four-player playing cards game where you win on emptying your hand before other players.
+                  This is an online version of classic Sevens Card Game also
+                  known as Laying Out Sevens, Fan Tan, Crazy Sevens, Badam
+                  Satti, Parliament or Yuto. It is a four-player playing cards
+                  game where you win on emptying your hand before other players.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.game.teendopaanch"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
@@ -215,10 +221,14 @@ const Reviews = () => (
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
-                <Styled.reviewImageTitle>325 Bridge game</Styled.reviewImageTitle>
+                <Styled.reviewImageTitle>
+                  325 Bridge game
+                </Styled.reviewImageTitle>
                 <Styled.reviewImageContent>
-                  3 2 5 Bridge commonly known as Teen Do Paanch (Panch) or 3-2-5 Cards Game is one of the basic playing card games that are played at Indian homes.
-                  The app supports playing with friends, offline bot and with other online players.
+                  3 2 5 Bridge commonly known as Teen Do Paanch (Panch) or 3-2-5
+                  Cards Game is one of the basic playing card games that are
+                  played at Indian homes. The app supports playing with friends,
+                  offline bot and with other online players.
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>

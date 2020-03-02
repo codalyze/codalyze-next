@@ -101,7 +101,6 @@ class GoogleMobileAd extends React.PureComponent {
 
   render() {
     const props = this.props;
-    console.log(allTech, "alalal");
     return (
       <div>
         <Styled.mainContainer>
