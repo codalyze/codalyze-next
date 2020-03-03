@@ -16,7 +16,9 @@ const KMReview = ({ showOnSmallScreen }) => (
   >
     <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
       <LazyLoad height={214} once offset={100}>
-        <Styled.reviewImage src="/static/images/home/khelomore.png" />
+        <Styled.instaremImage>
+          <Styled.reviewImage src="/static/images/app-ads/khelomore.png" />
+        </Styled.instaremImage>
       </LazyLoad>
       <Styled.reviewImageTitle>KheloMore</Styled.reviewImageTitle>
       <Styled.reviewImageContent>
@@ -57,7 +59,10 @@ const Reviews = () => (
               <Styled.reviewSingle>
                 <LazyLoad height={214} once offset={100}>
                   <Styled.instaremImage>
-                    <Styled.reviewImage src="/static/images/app-ads/instarem.jpg" />
+                    <Styled.reviewImage
+                      src="/static/images/app-ads/instarem.jpg"
+                      height={240}
+                    />
                   </Styled.instaremImage>
                 </LazyLoad>
 
@@ -71,7 +76,9 @@ const Reviews = () => (
 
             <Styled.reviewSingle>
               <LazyLoad height={214} once offset={100}>
-                <Styled.reviewImage src="/static/images/home/fitcircle.png" />
+                <Styled.instaremImage>
+                  <Styled.reviewImage src="/static/images/app-ads/fitcircle.png" />
+                </Styled.instaremImage>
               </LazyLoad>
               <Styled.reviewImageTitle>FitCircle</Styled.reviewImageTitle>
               <Styled.reviewImageContent>
@@ -89,8 +96,9 @@ const Reviews = () => (
                 <LazyLoad height={214} once offset={100}>
                   <Styled.instaremImage>
                     <Styled.reviewImage
-                      src="/static/images/app-ads/hpca.jpg"
+                      src="/static/images/app-ads/hpca.png"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
@@ -111,6 +119,7 @@ const Reviews = () => (
                     <Styled.reviewImage
                       src="/static/images/app-ads/mssa.png"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
@@ -130,8 +139,9 @@ const Reviews = () => (
                 <LazyLoad height={214} once offset={100}>
                   <Styled.instaremImage>
                     <Styled.reviewImage
-                      src="/static/images/app-ads/citymall.webp"
+                      src="/static/images/app-ads/citymall.png"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
@@ -153,6 +163,7 @@ const Reviews = () => (
                     <Styled.reviewImage
                       src="/static/images/app-ads/beforeNurseryHindi.webp"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
@@ -198,6 +209,7 @@ const Reviews = () => (
                     <Styled.reviewImage
                       src="/static/images/app-ads/cardgame.webp"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
@@ -222,6 +234,7 @@ const Reviews = () => (
                     <Styled.reviewImage
                       src="/static/images/app-ads/325.webp"
                       width={324}
+                      height={240}
                     />
                   </Styled.instaremImage>
                 </LazyLoad>
