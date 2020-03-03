@@ -2,6 +2,82 @@ import styled from "styled-components";
 import * as global from "./../../utils/globalStyles";
 import { media } from "../../utils/globalStyles";
 
+export const topBgContainer = styled.div`
+  svg {
+    width: 100vw;
+    height: 60vw;
+  }
+  @media (max-width: 992px) {
+    svg {
+      width: 100vw;
+      height: 140vw;
+    }
+  }
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 150px;
+  z-index: -1;
+  overflow: hidden;
+`;
+
+export const midBgContainer = styled.div`
+  svg {
+    width: 100vw;
+    height: 60vw;
+  }
+  @media (max-width: 992px) {
+    svg {
+      width: 100vw;
+      height: 140vw;
+    }
+  }
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: '50%';
+  z-index: -1;
+  overflow: hidden;
+`;
+
+export const bottomBgContainer = styled.div`
+  svg {
+    width: 100vw;
+    height: 60vw;
+  }
+  @media (max-width: 992px) {
+    svg {
+      width: 100vw;
+      height: 140vw;
+    }
+  }
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: "100%";
+  z-index: -1;
+  overflow: hidden;
+`;
+
+export const footerBgContainer = styled.div`
+  svg {
+    width: 100vw;
+    height: 60vw;
+  }
+  @media (max-width: 992px) {
+    svg {
+      width: 100vw;
+      height: 140vw;
+    }
+  }
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: -200;
+  z-index: -1;
+  overflow: hidden;
+`;
+
 export const mainContainer = styled.div`
   padding: 6vw;
 `;
@@ -216,7 +292,7 @@ export const text2 = styled.div`
   position: relative;
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  ${'' /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); */}
   margin-top: 2vw;
   @media (max-width: 767px) {
     display: block;

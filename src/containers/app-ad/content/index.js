@@ -6,7 +6,6 @@ import * as Styled from "../styles";
 import Testimonials from "../../home/desktop/testimonials";
 import MobTestimonials from "../../home/mobile/testimonials";
 import Footer from "../../../components/footer";
-
 import Banner from "../../../components/Banner";
 import LazySvgLoader from "../../../components/LazySvgLoader";
 import dynamic from "next/dynamic";
@@ -19,6 +18,10 @@ import {
 import MobileProjects from "../MobileProjects";
 import Work1 from "../../work/images/Work1";
 import Projects from "./Projects";
+import WorkBannerBg from "../../work/images/workBannerBg";
+import LeftBg from "../../work/images/workBgLeft";
+import BottomBg from "../../work/images/workBottomBg";
+import Star from "../../work/images/star";
 // import Work2 from "../../work/images/Work2";
 
 let allTech = [...technologies, ...appTechnologies];
@@ -106,10 +109,11 @@ class GoogleMobileAd extends React.PureComponent {
         <Styled.mainContainer>
           <Styled.formContainer>
             <Styled.topTextContainer>
-              <Styled.text1>
-                {/* <Banner
-                  BannerSvg={() => ( */}
+              <Styled.topBgContainer>
+                <WorkBannerBg width="100%" mq={props.mq} />
+              </Styled.topBgContainer>
 
+              <Styled.text1>
                 <Styled.h2>Innovative Mobile App Development</Styled.h2>
                 <Styled.h3 style={{ textAlign: "left" }}>
                   <Styled.orange>Blazing Fast.</Styled.orange> Budget Friendly.{" "}
@@ -157,6 +161,9 @@ class GoogleMobileAd extends React.PureComponent {
             </Styled.text3>
           </Styled.text2>
 
+          <Styled.midBgContainer>
+            <LeftBg width="100%" height="100%" />
+          </Styled.midBgContainer>
           <Styled.outerContainer>
             <Styled.h2 style={{ textAlign: "center" }}>The Approach</Styled.h2>
             <Styled.p style={{ textAlign: "center" }}>
@@ -225,10 +232,21 @@ class GoogleMobileAd extends React.PureComponent {
             {/* </div> */}
           </Styled.outerContainer>
           <Styled.outerContainer>
+            <Styled.bottomBgContainer>
+              <Star width="100%" height="100%" />
+            </Styled.bottomBgContainer>
+
             <Styled.h2 style={{ textAlign: "center" }}>Our Projects</Styled.h2>
             <Projects />
           </Styled.outerContainer>
         </Styled.mainContainer>
+        <BottomBg
+          width="100%"
+          style={{
+            bottom: props.mq === "desktop" ? 350 : 550,
+            zIndex: -1
+          }}
+        />
         <Footer />
       </div>
     );
