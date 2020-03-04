@@ -100,3 +100,9 @@ export const a = styled.a`
   color: #4ac88d;
   text-decoration: none;
 `;
+
+export const greenBtn = styled.button`
+  ${global.mobileButton}
+  margin: 4vw auto;
+  display: block;
+`;

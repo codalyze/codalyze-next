@@ -371,7 +371,7 @@ export const bannerSvg = styled.div`
   height: auto;
   svg {
     z-index: -2;
-    width: 100%;
+    width: 95%;
     height: auto;
     position: absolute;
   }
