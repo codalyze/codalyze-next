@@ -239,6 +239,29 @@ class GoogleMobileAd extends React.PureComponent {
             <Styled.h2 style={{ textAlign: "center" }}>Our Projects</Styled.h2>
             <Projects />
           </Styled.outerContainer>
+          <Styled.text2>
+            <Styled.text3>
+              <Styled.imgContainer>
+                <img src="/static/images/mobile-app-dev.png" width="100%" />
+              </Styled.imgContainer>
+            </Styled.text3>
+            <Styled.text3>
+              <Styled.h2>
+                <span style={{ paddingLeft: "6vw" }}>Connect with us!</span>
+              </Styled.h2>
+              <Styled.test>
+                <ContactForm
+                  contactTitle="We would love to hear more about your project. Book a FREE consultation now!"
+                  onChangeText={this.onChangeText}
+                  onClickSendRequest={this.onClickSendRequest}
+                  emailError={this.state.emailError}
+                  data={this.state.data}
+                  contractStaffing={true}
+                  fullWidth
+                />
+              </Styled.test>
+            </Styled.text3>
+          </Styled.text2>
         </Styled.mainContainer>
         <BottomBg
           width="100%"
