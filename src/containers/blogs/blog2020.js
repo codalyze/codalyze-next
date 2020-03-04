@@ -1,5 +1,12 @@
 import React from "react";
 import * as Styled from "./styles";
+import Link from "next/link";
+
+const StartProject = ({ href }) => (
+  <Link href={href} passHref prefetch>
+    <Styled.greenBtn>START A PROJECT</Styled.greenBtn>
+  </Link>
+);
 
 const Blog = () => (
   <Styled.containerFluid>
@@ -69,6 +76,7 @@ const Blog = () => (
         if you’d like to talk about your next project with Codalyze today!
       </Styled.p>
     </Styled.container>
+    <StartProject href={"/start-a-project"} />
   </Styled.containerFluid>
 );
 
