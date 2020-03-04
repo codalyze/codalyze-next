@@ -1,6 +1,6 @@
 import React from "react";
 import * as Styled from "./styles";
-import Blog from "./blog";
+import Blog from "./blog2020";
 import Footer from "../../components/footer";
 import WorkBannerBg from "./images/workBannerBg";
 import Head from "next/head";

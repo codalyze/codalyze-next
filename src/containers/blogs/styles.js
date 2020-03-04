@@ -60,6 +60,18 @@ export const clutchImage = styled.img`
     padding-top: 5%;
   }
 `;
+
+export const clutchreviewImage = styled.img`
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    width: 80%;
+    padding-top: 5%;
+  }
+`;
+
 export const block = styled.div`
   width: 100%;
   right: 0;
