@@ -74,20 +74,6 @@ const Reviews = () => (
               </Styled.reviewSingle>
             </a>
 
-            <Styled.reviewSingle>
-              <LazyLoad height={214} once offset={100}>
-                <Styled.instaremImage>
-                  <Styled.reviewImage src="/static/images/app-ads/fitcircle.png" />
-                </Styled.instaremImage>
-              </LazyLoad>
-              <Styled.reviewImageTitle>FitCircle</Styled.reviewImageTitle>
-              <Styled.reviewImageContent>
-                FitCircle arranges community-based fitness programmes for
-                individuals and corporate groups. It allows users to chat with
-                nutritionists and health experts and members can avail the
-                services at various locations across Mumbai.
-              </Styled.reviewImageContent>
-            </Styled.reviewSingle>
             <a
               href="https://play.google.com/store/apps/details?id=org.hpcricket.app"
               style={{ textDecoration: "none", display: "flex" }}
@@ -249,6 +235,20 @@ const Reviews = () => (
                 </Styled.reviewImageContent>
               </Styled.reviewSingle>
             </a>
+            <Styled.reviewSingle>
+              <LazyLoad height={214} once offset={100}>
+                <Styled.instaremImage>
+                  <Styled.reviewImage src="/static/images/app-ads/fitcircle.png" />
+                </Styled.instaremImage>
+              </LazyLoad>
+              <Styled.reviewImageTitle>FitCircle</Styled.reviewImageTitle>
+              <Styled.reviewImageContent>
+                FitCircle arranges community-based fitness programmes for
+                individuals and corporate groups. It allows users to chat with
+                nutritionists and health experts and members can avail the
+                services at various locations across Mumbai.
+              </Styled.reviewImageContent>
+            </Styled.reviewSingle>
           </Styled.reviewImageBlocks>
         </Styled.reviewsBlock>
       </Styled.reviewsSection>
