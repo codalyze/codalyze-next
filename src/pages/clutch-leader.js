@@ -7,9 +7,9 @@ export default class BlogsPage extends React.Component {
         return (
             <>  
                 <Helmet
-                    title='Codalyze Technologies named 2019 Clutch Leader!'
+                    title=' Codalyze Proud to Be Named a Clutch Leader in India a Second Time!'
                     meta={[
-                        { property: 'og:title', content: 'Codalyze Technologies named 2019 Clutch Leader!' },
+                        { property: 'og:title', content: ' Codalyze Proud to Be Named a Clutch Leader in India a Second Time!' },
                         { property: 'description', content: 'We are a small group of JavaScript developers based out of Mumbai' },
                         { property: 'og:description', content: 'We are a small group of JavaScript developers based out of Mumbai' },
                         { property: 'og:image', content: 'https://www.codalyze.com/fb-share-2.png' },
@@ -22,7 +22,7 @@ export default class BlogsPage extends React.Component {
                         { property: 'twitter:description', content: 'We are a small group of JavaScript developers based out of Mumbai' },
                         { property: 'twitter:image', content: 'https://www.codalyze.com/fb-share-2.png' },
                         { property: 'twitter:image:alt', content: 'Codalyze Technologies' },
-                        { property: 'twitter:title', content: 'Codalyze Technologies named 2019 Clutch Leader!' },
+                        { property: 'twitter:title', content: ' Codalyze Proud to Be Named a Clutch Leader in India a Second Time!' },
                         { property: 'twitter:description', content: 'We are a small group of JavaScript developers based out of Mumbai' },
                     ]}
                 />
