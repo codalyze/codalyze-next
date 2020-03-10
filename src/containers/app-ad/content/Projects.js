@@ -12,6 +12,7 @@ const StartProject = ({ href }) => (
 const KMReview = ({ showOnSmallScreen }) => (
   <a
     href="https://play.google.com/store/apps/details?id=com.khelomore.player"
+    target="_blank"
     style={{ textDecoration: "none", display: "flex" }}
   >
     <Styled.reviewSingle showOnSmallScreen={showOnSmallScreen}>
@@ -54,6 +55,7 @@ const Reviews = () => (
           >
             <a
               href="https://play.google.com/store/apps/details?id=com.instarem.mobileapp"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -76,6 +78,7 @@ const Reviews = () => (
 
             <a
               href="https://play.google.com/store/apps/details?id=org.hpcricket.app"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -97,6 +100,7 @@ const Reviews = () => (
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.khelomore.mssa"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -119,6 +123,7 @@ const Reviews = () => (
             <KMReview />
             <a
               href="https://play.google.com/store/apps/details?id=com.citymall.app"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -141,6 +146,7 @@ const Reviews = () => (
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.tracingapp"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -187,6 +193,7 @@ const Reviews = () => (
             </a> */}
             <a
               href="https://play.google.com/store/apps/details?id=com.game.sevencentre"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>
@@ -212,6 +219,7 @@ const Reviews = () => (
             </a>
             <a
               href="https://play.google.com/store/apps/details?id=com.game.teendopaanch"
+              target="_blank"
               style={{ textDecoration: "none", display: "flex" }}
             >
               <Styled.reviewSingle>

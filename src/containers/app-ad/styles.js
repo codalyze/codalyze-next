@@ -35,7 +35,7 @@ export const midBgContainer = styled.div`
   position: absolute;
   left: 0;
   width: 100%;
-  top: '50%';
+  top: "50%";
   z-index: -1;
   overflow: hidden;
 `;
@@ -121,7 +121,11 @@ export const reviewSingle = styled.div`
   border: 1px solid #e3e3e3;
   border-radius: 25px;
   margin: 0 0 30px 30px;
-  box-shadow: 0px 1px #e3e3e3;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
   @media (min-width: 1280px) {
     display: ${props => (props.showOnSmallScreen ? "none" : "block")};
   }
@@ -227,13 +231,13 @@ export const outerContainer = styled.div`
   ${media.desktop`
 padding: 0 0;`}
 
-margin-top: 6vw;
+  margin-top: 6vw;
   .testimonialRow {
     padding: 0 0 !important;
     h2 {
       margin-bottom: 2vw !important;
     }
-    
+
     .slider-ad {
       max-width: 70%;
       margin: 0 auto;
@@ -292,7 +296,7 @@ export const text2 = styled.div`
   position: relative;
   border-radius: 10px;
   position: relative;
-  ${'' /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); */}
+  ${"" /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); */}
   margin-top: 2vw;
   @media (max-width: 767px) {
     display: block;
