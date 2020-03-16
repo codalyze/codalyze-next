@@ -10,6 +10,13 @@ export const footerTitle = styled.h1`
   margin: 0 0 15px;
 `;
 
+export const name = styled.div`
+  ${global.fontRobotoThin}
+  font-size: 15px;
+  color: #fff;
+  margin: 0 0 7px;
+`;
+
 export const ul = styled.ul`
   list-style-type: none;
   width: 100%;
@@ -67,7 +74,7 @@ export const footerSocialPage = styled.a`
 `;
 
 export const footerBlockTwo = styled.div`
-  padding: 80px 70px 0 0;
+  padding: 80px 60px 0 0;
 `;
 
 export const footerConnectBlock = styled.div`
