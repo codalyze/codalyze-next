@@ -1,0 +1,2 @@
+PEM_FILE_LOCATION=~/Downloads/cm-next-app.pem
+INSTANCE_NAME=ec2-user@ec2-15-207-16-227.ap-south-1.compute.amazonaws.com
