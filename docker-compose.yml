@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    container_name: codalyze_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: codalyze_server
+    ports: 
+    - "3000:3000"
