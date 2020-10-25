@@ -92,7 +92,7 @@ export const teamStarBgContainer = styled.div`
 export const teamRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 40px;
 `;
 

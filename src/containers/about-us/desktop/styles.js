@@ -106,7 +106,7 @@ export const TeamBg = styled.div`
 
 export const TeamPhotowrapper = styled(devisonDiv)`
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 `;
 export const Photo = styled('div')`
   width: 33.3%;
@@ -132,6 +132,14 @@ export const Photo = styled('div')`
     display: flex;
   }
   &:nth-child(9) {
+    justify-content: flex-end;
+    display: flex;
+  }
+  &:nth-child(11) {
+    justify-content: center;
+    display: flex;
+  }
+  &:nth-child(12) {
     justify-content: flex-end;
     display: flex;
   }
