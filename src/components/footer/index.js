@@ -92,8 +92,8 @@ export default class Footer extends React.PureComponent {
               <br />
               <Styled.h4>
                 Gaurav Kumar :&nbsp;
-                <Styled.contactUs href="telto: +91-9833-692503">
-                  +91-7903-700117
+                <Styled.contactUs href="telto: +91-8940-544033">
+                  +91-8940-544033
                 </Styled.contactUs>
               </Styled.h4>
             </Styled.footerContent>

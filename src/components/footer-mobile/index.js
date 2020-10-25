@@ -111,8 +111,8 @@ export default class FooterMobile extends React.PureComponent {
               mail@codalyze.com
             </Styled.footerContact>
             <Styled.name>Gaurav Kumar :&nbsp;
-            <Styled.footerContact href="telto: +91-9833-692503">
-              +91-7903-700117
+            <Styled.footerContact href="telto: +91-8940-544033">
+              +91-8940-544033
             </Styled.footerContact>
             </Styled.name>
           </Styled.footerConnectBlock>
