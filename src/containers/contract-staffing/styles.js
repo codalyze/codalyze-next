@@ -6,13 +6,6 @@ import Responsive from "./images/Responsive";
 import Reusable from "./images/Reusable";
 import * as global from "../../utils/globalStyles";
 
-export const PerformanceImage = styled(Performance)`
-  .performance_svg__arrow {
-    animation: ${rotateArrow} 4s linear infinite;
-    transform-origin: 250px 317px;
-  }
-`;
-
 const rotateArrow = keyframes`
   0% {
     transform: rotate(15deg);
@@ -24,6 +17,13 @@ const rotateArrow = keyframes`
 
   100% {
     transform: rotate(15deg);
+  }
+`;
+
+export const PerformanceImage = styled(Performance)`
+  .performance_svg__arrow {
+    animation: ${rotateArrow} 4s linear infinite;
+    transform-origin: 250px 317px;
   }
 `;
 
