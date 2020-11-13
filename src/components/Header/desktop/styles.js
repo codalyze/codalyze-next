@@ -3,7 +3,7 @@ import * as global from '../../../utils/globalStyles';
 
 export const HeaderA = styled(global.A)`
   margin-left: 40px;
-  font-size: 20px;
+  font-size: 18px;
   color: ${props => props.active ? '#4AC88D' : '#000'};
   text-decoration: none;
   &:hover {
