@@ -47,13 +47,17 @@ export const teamMembers = [
         url: "https://github.com/rajaishwary",
       },
       {
-        type: "linkedin",
-        url: "https://www.linkedin.com/in/rajaishwary/",
-      },
-      {
         type: "medium",
         url: "https://medium.com/@rajaishwary",
       },
+      {
+        type: "so",
+        url: "https://stackoverflow.com/users/3748307/rajaishwary",
+      },
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/rajaishwary/",
+      }
     ],
   },
   {
@@ -186,6 +190,54 @@ export const teamMembers = [
   },
   {
     id: 12,
+    image: "https://avatars2.githubusercontent.com/u/39748681?s=400&v=4",
+    name: "Sameer Kotwal",
+    position: "ReactJS, VueJS, React Native Expert",
+    socialButtons: [
+      {
+        type: "github",
+        url: "https://github.com/sameer-kotwal",
+      },
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/sameer-kotwal-a50424104/",
+      },
+    ],
+  },
+  {
+    id: 13,
+    image: "https://avatars0.githubusercontent.com/u/48326987?s=400&v=4",
+    name: "Shobhit Nigam",
+    position: "Web | Android | Data Science",
+    socialButtons: [
+      {
+        type: "github",
+        url: "https://github.com/Zombieteer",
+      },
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/shobhit-nigam/",
+      },
+    ],
+  },  
+  {
+    id: 14,
+    image: "https://avatars3.githubusercontent.com/u/58294632?s=400&v=4",
+    name: "Harish Ponna",
+    position: "ReactJS, Frontend master",
+    socialButtons: [
+      {
+        type: "github",
+        url: "https://github.com/harish-ponna-au6",
+      },
+      {
+        type: "linkedin",
+        url: "https://www.linkedin.com/in/harish-ponna-b9b885ba/",
+      },
+    ],
+  },
+  {
+    id: 15,
     image: "/static/images/about-us/Team/kanchan.jpeg",
     name: "Kanchan Jodha",
     position: "Quality Assurance",
@@ -197,7 +249,7 @@ export const teamMembers = [
     ],
   },
   {
-    id: 13,
+    id: 16,
     image: "/static/images/about-us/Team/khyati.jpeg",
     name: "Khyati Shah",
     position: "HR, Recruitment / Ops and small talk",
