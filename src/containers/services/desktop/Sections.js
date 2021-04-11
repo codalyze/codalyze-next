@@ -137,7 +137,7 @@ export default () => (
       </Styled.section>
     ))}
     <Styled.ButtonWrapper>
-      <StartProject href={"/start-a-project"} />
+      {/* <StartProject href={"/start-a-project"} /> */}
     </Styled.ButtonWrapper>
   </React.Fragment>
 );

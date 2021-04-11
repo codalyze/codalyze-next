@@ -282,7 +282,7 @@ export default class Work extends React.PureComponent {
                 zIndex: -1
               }}
             />
-            <div
+            {/* <div
               style={{
                 position: "absolute",
                 bottom: 150,
@@ -293,7 +293,7 @@ export default class Work extends React.PureComponent {
               <Link href={"/start-a-project"} passHref prefetch>
                 <Styled.specializeBtn>START A PROJECT</Styled.specializeBtn>
               </Link>
-            </div>
+            </div> */}
           </div>
           <Footer />
         </div>

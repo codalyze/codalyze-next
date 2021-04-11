@@ -54,7 +54,7 @@ const ReviewsMobile = () => (
         </Styled.reviewsBlockMob>
       ))}
     </Styled.reviewsListMob>
-    <StartProject href={"/start-a-project"} />
+    {/* <StartProject href={"/start-a-project"} /> */}
   </Styled.pageWrapper>
 );
 

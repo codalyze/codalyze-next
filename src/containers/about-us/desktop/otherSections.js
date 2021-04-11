@@ -103,7 +103,7 @@ export const TeamMember = () => {
             ))}
           </Styled.TeamPhotowrapper>
           <Styled.ButtonWrapper>
-            <StartProject href={"/start-a-project"} />
+            {/* <StartProject href={"/start-a-project"} /> */}
             {/* <Styled.Button>START A PROJECT</Styled.Button> */}
           </Styled.ButtonWrapper>
         </Styled.FlexContainer>
