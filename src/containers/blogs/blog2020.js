@@ -76,7 +76,7 @@ const Blog = () => (
         if you’d like to talk about your next project with Codalyze today!
       </Styled.p>
     </Styled.container>
-    <StartProject href={"/start-a-project"} />
+    {/* <StartProject href={"/start-a-project"} /> */}
   </Styled.containerFluid>
 );
 

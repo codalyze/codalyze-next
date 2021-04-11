@@ -21,10 +21,10 @@ const headerLinks = [
     name: "Career",
     href: "career"
   },
-  {
-    name: "Start a project",
-    href: "start-a-project"
-  },
+  // {
+  //   name: "Start a project",
+  //   href: "start-a-project"
+  // },
   {
     name: "Blogs",
     href: "clutch-leader"

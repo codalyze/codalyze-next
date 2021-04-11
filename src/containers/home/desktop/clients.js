@@ -32,7 +32,7 @@ const Clients = () => (
           );
         })}
       </Styled.techLogoRow>
-      <OurServices href={"/start-a-project"} />
+      {/* <OurServices href={"/start-a-project"} /> */}
     </Styled.FlexContainer>
   </Styled.techStackRow>
 );

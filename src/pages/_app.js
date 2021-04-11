@@ -12,7 +12,7 @@ import initLN from '../utils/initLN';
 import ReactGA from 'react-ga';
 
 export default class MyApp extends App {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.linkRefs = new Map();
@@ -30,18 +30,18 @@ export default class MyApp extends App {
     this.onResize = this.onResize.bind(this);
     this.lastPathName = props.router.pathname;
 
-    if (newPosition) this.state = {...newPosition};
+    if (newPosition) this.state = { ...newPosition };
   }
 
-  get pathname () {
+  get pathname() {
     return this.props.router.pathname;
   }
 
-  componentDidMount () {
+  componentDidMount() {
     ReactGA.initialize('UA-82744542-1');
     window.addEventListener('resize', this.onResize);
     this.handleRouteChangeStart(this.pathname);
-    this.setState({className: 'app-body'});
+    this.setState({ className: 'app-body' });
     loadWebFonts();
     initFreshChat();
     initLN();
@@ -50,41 +50,41 @@ export default class MyApp extends App {
       autoConfig: true, 	// set pixel's autoConfig
       debug: false, 		// enable logs
     };
-    const ReactPixel =  require('react-facebook-pixel').default;
+    const ReactPixel = require('react-facebook-pixel').default;
     ReactPixel.init('894109900975518', {}, options);
     ReactPixel.pageView();
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
   }
 
-  componentDidUpdate () {
+  componentDidUpdate() {
     if (this.lastPathName !== this.pathname) {
       this.lastPathName = this.pathname;
       this.handleRouteChangeStart(this.pathname);
-      const ReactPixel =  require('react-facebook-pixel').default;
+      const ReactPixel = require('react-facebook-pixel').default;
       ReactPixel.pageView();
     }
   }
 
-  componentDidCatch (x) {
+  componentDidCatch(x) {
     console.log(x);
   }
 
-  onResize () {
+  onResize() {
     const newPosition = this.calculatePosition(this.pathname);
     this.setState(newPosition);
   }
 
-  calculatePosition (url) {
+  calculatePosition(url) {
     if (url === '/') {
       if (typeof window === 'undefined' || !this.linkRefs.get('work')) {
-        return {left: 'unset', right: '-10px', top: 35.769229888916016, markerWidth: 20, href: ''};
+        return { left: 'unset', right: '-10px', top: 35.769229888916016, markerWidth: 20, href: '' };
       } else {
         const ref = this.linkRefs.get('work');
-        const {top} = ref.getBoundingClientRect();
-        return {top, markerWidth: 5, left: window.innerWidth - 50, href: 'index', right: 'unset'};
+        const { top } = ref.getBoundingClientRect();
+        return { top, markerWidth: 5, left: window.innerWidth - 50, href: 'index', right: 'unset' };
       }
     }
     const href = url.split('/')[1];
@@ -92,16 +92,16 @@ export default class MyApp extends App {
 
     if (!ref) return;
 
-    const {top, width: markerWidth, left} = ref.getBoundingClientRect();
+    const { top, width: markerWidth, left } = ref.getBoundingClientRect();
 
-    return {top, markerWidth, left, href, right: 'unset'};
+    return { top, markerWidth, left, href, right: 'unset' };
   }
 
   handleRouteChangeStart = (r) => {
     ReactGA.pageview(r);
     const newPosition = this.calculatePosition(r);
     if (!newPosition || newPosition.href === this.state.href) return;
-    this.setState({...newPosition, markerWidth: 10, left: newPosition.left + newPosition.markerWidth / 2 - 5});
+    this.setState({ ...newPosition, markerWidth: 10, left: newPosition.left + newPosition.markerWidth / 2 - 5 });
 
     setTimeout(() => {
       this.setState(newPosition);
@@ -159,6 +159,9 @@ export default class MyApp extends App {
         <PageTransition timeout={500} classNames="page-transition">
           <React.Fragment key={this.props.router.route}>
             <Transition />
+            <div style={{ height: 60, width: '100%', padding: '4px 10px' , backgroundColor: '#000', position: 'absolute', top: 84, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <p style={{ color: '#fff', fontSize: 20 }}>You have landed on the right page but we are not operational</p>
+            </div>
             <div className={this.state.className}>
               <Component {...pageProps} />
             </div>

@@ -21,10 +21,10 @@ const footerLinks = [
     name: "Career",
     href: "career"
   },
-  {
-    name: "Start a project",
-    href: "start-a-project"
-  },
+  // {
+  //   name: "Start a project",
+  //   href: "start-a-project"
+  // },
   {
     name: "App Development",
     href: "app-development"
@@ -90,12 +90,12 @@ export default class Footer extends React.PureComponent {
                 mail@codalyze.com
               </Styled.contactUs>
               <br />
-              <Styled.h4>
+              {/* <Styled.h4>
                 Gaurav Kumar :&nbsp;
                 <Styled.contactUs href="telto: +91-8940-544033">
                   +91-8940-544033
                 </Styled.contactUs>
-              </Styled.h4>
+              </Styled.h4> */}
             </Styled.footerContent>
           </Styled.footerRow>
         </Styled.container>

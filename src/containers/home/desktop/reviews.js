@@ -38,7 +38,7 @@ const Reviews = () => (
             <br /> relationships is something we cherish.
             <br /> Partner with us and experience a difference.
           </Styled.reviewsSubTitle>
-          <StartProject href={"/start-a-project"} />
+          {/* <StartProject href={"/start-a-project"} /> */}
         </Styled.reviewsBlock>
         <Styled.reviewsBlock>
           <Styled.reviewImageBlocks>
