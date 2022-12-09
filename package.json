@@ -30,7 +30,7 @@
     "@zeit/next-sass": "^1.0.1",
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "next": "^9.5.5",
     "next-page-transitions": "^1.0.0-alpha.4",
     "node-sass": "^4.13.1",
